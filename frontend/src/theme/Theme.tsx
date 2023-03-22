@@ -2,20 +2,23 @@ import { createTheme } from "@mui/material/styles";
 import { vars } from "./variables";
 
 const { 
-  primaryFont, 
-  white, 
-  grey200, grey400, grey500, grey600, grey700, grey800, grey900, gray50,
-  primary600, primary700, primary50, 
-  error700, error500, 
-  warning700, warning500, 
-  success700, success500, 
+  primaryFont, white, 
+  grey200, 
+  grey400, grey500, 
+  grey600, grey700, grey800, grey900, 
+  //gray50,
+  primary600, primary700, 
+  //primary50, 
+  //error700, error500, 
+  //warning700, warning500, 
+  //success700, success500, 
 } = vars;
 
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     background: {
-      default: '#000'
+      default: '#fff'
     },
     text: {
     },
@@ -39,13 +42,16 @@ const theme = createTheme({
   },
   mixins: {
     toolbar: {
-      minHeight: "3rem",
+      minHeight: "5.75rem",
+      position: 'absolute',
+      width: '100%'
     },
   },
   typography: {
     fontFamily: primaryFont,
     subtitle1: {
-      fontSize: '0.875rem'
+      fontSize: '1.25rem', //18px
+      color: grey500
     },
     h4:{
       fontWeight: 600,
@@ -53,10 +59,12 @@ const theme = createTheme({
       color: grey800
     },
     h6: {
-      fontWeight: 400
+      fontWeight: 700,
+      color: grey900
     },
     subtitle2: {
-      fontSize: '0.75rem'
+      fontSize: '0.857rem', //14px
+      color: grey500
     },
     caption: {
     
@@ -64,11 +72,20 @@ const theme = createTheme({
     body2: {
     },
     body1:{
+    
     }
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: `
+      .herobanner {
+        background-image: url(../assets/heroBgIm.png) ;
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
       `
     },
     MuiInputLabel: {
@@ -91,6 +108,21 @@ const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
+        root: {
+          textTransform: 'none'
+        },
+        text: {
+          color: grey600,
+          fontWeight: 600
+        },
+        contained: {
+          background: white,
+          color: grey700,
+          fontWeight: 600,
+          border: `1px solid ${grey200}`,
+          boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
+          borderRadius: '8px'
+        }
       }
     },
     MuiIconButton: {
@@ -102,8 +134,16 @@ const theme = createTheme({
     MuiSvgIcon: {
       styleOverrides: {
         fontSizeSmall: {
+          width: '1rem',
+          height: '1rem'
         },
         fontSizeMedium:{
+          width: '1.25rem',
+          height: '1.25rem'
+        },
+        fontSizeLarge:{
+          width: '2rem',
+          height: '2rem'
         }
       }
     },
@@ -135,13 +175,13 @@ const theme = createTheme({
     },
     MuiDialogContent: {
       styleOverrides: {
-        root: ({ theme }) => ({
+        root: () => ({
         }),
       },
     },
     MuiDialogActions: {
       styleOverrides: {
-        root: ({ theme }) => ({
+        root: () => ({
         })
       }
     },
