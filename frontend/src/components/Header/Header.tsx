@@ -13,7 +13,7 @@ import { LogoIcon } from '../../assets/icons';
 const Header = () => {
   return (
     <AppBar
-      position="fixed"
+      position="sticky"
       color="inherit"
       elevation={0}
     >
