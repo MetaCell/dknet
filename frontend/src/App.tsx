@@ -17,7 +17,7 @@ const App = () => {
         <Box sx={{
           overflow: {
             xs: "auto",
-            md: "hidden"
+            
           },
           width: "100vw"
 
