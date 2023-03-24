@@ -6,7 +6,7 @@ import theme from './theme/Theme';
 //components
 import Box from '@mui/material/Box';
 import { CssBaseline } from "@mui/material";
-import DashboardPage from './pages/DashboardPage';
+import HomePage from './pages/HomePage';
 
 
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
         overflow="auto" >
           <Box flex={1} display="flex" flexDirection="column" id='main-container'>
             <Routes>
-              <Route path="/" element={<DashboardPage/>} />
+              <Route path="/" element={<HomePage/>} />
             </Routes>
           </Box>
         </Box>
