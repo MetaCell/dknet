@@ -154,12 +154,20 @@ const theme = createTheme({
             background: primary600,
             border: `1px solid ${primary600}`,
             boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-            color: white
+            color: white,
+            '&:hover': {
+              background: primary700,
+              color: white,
+            }
           }
         },
         text: {
           color: grey600,
-          fontWeight: 600
+          fontWeight: 600,
+          '&:hover':{
+            backgroundColor: 'transparent',
+            color: grey600
+          }
         },
         contained: {
           background: white,
@@ -167,7 +175,12 @@ const theme = createTheme({
           fontWeight: 600,
           border: `1px solid ${grey200}`,
           boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-          borderRadius: '8px'
+          borderRadius: '8px',
+          '&:hover': {
+            background: grey50,
+            border: `1px solid ${checkboxBorderColor}`,
+            boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
+          }
         }
       }
     },
