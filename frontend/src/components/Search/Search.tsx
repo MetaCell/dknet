@@ -22,11 +22,11 @@ const Search = () => {
   return (
     <Paper
       component="form"
-      sx={{ p:'8px',display: 'flex', alignItems: 'center', width: 640, border: '1px solid #EAECF0', 
+      sx={{ p:'8px',display: 'flex', alignItems: 'center',  border: '1px solid #EAECF0',
         boxShadow: '0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03)',
         borderRadius: '12px' }}
     >
-      <FormControl sx={{ m: 0, minWidth: 259.5 }} size="small">
+      <FormControl fullWidth sx={{ m: 0 }} size="small">
         <Select
           id="simple-select"
           value={age}
@@ -43,7 +43,7 @@ const Search = () => {
         </Select>
       </FormControl>
       <Divider sx={{ height: 40, mr: 1, ml:1 }} orientation="vertical" />
-      <FormControl sx={{ m: 0, minWidth: 259.5 }} size="small">
+      <FormControl fullWidth sx={{ m: 0 }} size="small">
         <Select
           id="simple-select"
           value={age}
