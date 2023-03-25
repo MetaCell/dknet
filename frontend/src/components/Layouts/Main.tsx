@@ -9,7 +9,13 @@ import Search from "../Search/Search";
 
 const MainLayout = ({ children }) => {
   return (
-    <React.Fragment>
+    <Box sx={{
+      backgroundImage: 'url("/gridBg.svg")',
+      backgroundRepeat: 'np-repeat',
+      backgroundSize: 'cover',
+      minHeight: '100vh',
+      overflow: 'auto'
+    }}>
       <Container>
         <Header />
         <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center' gap={1} mt={7}>
@@ -21,7 +27,7 @@ const MainLayout = ({ children }) => {
         </Box>
         {children}
       </Container>
-    </React.Fragment>
+    </Box>
 
   )
 }
