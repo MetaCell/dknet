@@ -7,3 +7,9 @@ This app uses an export of the data from an [Airtable](https://airtable.com/app8
 
 ## Frontend
 The frontend will be a react app using json and json schema definitions to dynamically render the question&answer (assistant) page and the results grid with the filters
+
+## Deployment with CloudHarnerss
+see https://github.com/MetaCell/cloud-harness(https://github.com/MetaCell/cloud-harness) for more information about ClouodHarness
+all ci/cd related info is stored in the dkNET cloudharness repo branch.
+this is done to separate the application from it's deployment method/type
+to use the CloudHarness deployment please switch to the cloudharness branch
