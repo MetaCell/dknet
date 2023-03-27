@@ -1,0 +1,13 @@
+harness:
+  subdomain: www
+  secured: false
+  service:
+    port: 3000
+    auto: true
+  deployment:
+    auto: true
+    port: 3000
+  livenessProbe:
+    path: /
+  readinessProbe:
+    path: /
