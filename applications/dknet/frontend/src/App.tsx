@@ -12,7 +12,7 @@ const App = () => {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <Box>
-          <Typography variant='body2'>DSNET</Typography>
+          <Typography variant='body2'>dkNET</Typography>
         </Box>
       </ThemeProvider>
     </BrowserRouter>
