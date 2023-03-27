@@ -9,10 +9,8 @@ import FilteringAssistantLayout from "../components/Layouts/FilteringAssistant";
 
 const QuestionnairePage = () => {
   return (
-    <Container>
-      <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-      </Box>
-    </Container>
+    <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
+    </Box>
   )
 }
 const QuestionnairePageWithLayout = withLayout(FilteringAssistantLayout)(QuestionnairePage);

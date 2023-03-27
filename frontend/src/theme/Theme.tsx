@@ -1,17 +1,17 @@
 import { createTheme } from "@mui/material/styles";
 import { vars } from "./variables";
 
-const { 
-  primaryFont, white, 
-  grey200, 
-  grey400, grey500, 
-  grey600, grey700, grey800, grey900, 
+const {
+  primaryFont, white,
+  grey200,
+  grey400, grey500,
+  grey600, grey700, grey800, grey900,
   grey50,
-  primary600, primary700, 
-  //primary50, 
-  //error700, error500, 
-  //warning700, warning500, 
-  //success700, success500, 
+  primary600, primary700,
+  //primary50,
+  //error700, error500,
+  //warning700, warning500,
+  //success700, success500,
 } = vars;
 
 const theme = createTheme({
@@ -38,7 +38,7 @@ const theme = createTheme({
     }
   },
   shape: {
-   
+
   },
   mixins: {
     toolbar: {
@@ -57,21 +57,27 @@ const theme = createTheme({
       fontSize: "2.25rem",
       color: grey800
     },
+    h5: {
+      fontWeight: 600,
+      color: grey700,
+      fontSize: '1rem'
+    },
     h6: {
       fontWeight: 700,
       color: grey900
     },
     subtitle2: {
       fontSize: '0.857rem', //14px
-      color: grey500
+      color: primary700,
+      fontWeight: 600
     },
     caption: {
-    
+
     },
     body2: {
     },
     body1:{
-    
+
     }
   },
   components: {
@@ -221,7 +227,7 @@ const theme = createTheme({
     MuiSwitch: {
       styleOverrides: {
         root: {
-        
+
         }
       }
     },
@@ -233,7 +239,7 @@ const theme = createTheme({
     },
     MuiCircularProgress: {
       styleOverrides: {
-       
+
       }
     },
     MuiDivider:{
@@ -250,7 +256,7 @@ const theme = createTheme({
         }
       }
     },
-    
+
   }
 });
 

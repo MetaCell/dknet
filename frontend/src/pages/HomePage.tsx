@@ -6,6 +6,7 @@ import MainLayout from "../components/Layouts/Main";
 const HomePage = () => {
   return (
     <div>
+
     </div>
   )
 }

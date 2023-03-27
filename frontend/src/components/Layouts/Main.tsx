@@ -16,17 +16,27 @@ const MainLayout = ({ children }) => {
       minHeight: '100vh',
       overflow: 'auto'
     }}>
-      <Container>
+      <Container maxWidth='lg' sx={{ minHeight: '40%' }}>
         <Header />
-        <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center' gap={1} mt={7}>
+        <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center' gap={1} mt={7} mb={10}>
           <Typography variant='h4'>Find the right repository for your data.</Typography>
           <Typography variant='subtitle1'>Explore, filter and find the best repositories for your data and needs.</Typography>
           <Box display='flex' justifyContent='center' width={1} mt={2}>
-            <Search/>
+            <Search />
           </Box>
         </Box>
-        {children}
       </Container>
+      <Box
+        pt={9}
+        pb={9}
+        sx={{
+          background: '#FFFFFF',
+          minHeight: '60%',
+          borderRadius: '24px 24px 0px 0px',
+          border: '1px solid #fff'
+        }}>
+        {children}
+      </Box>
     </Box>
 
   )

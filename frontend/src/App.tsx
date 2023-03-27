@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import { CssBaseline } from "@mui/material";
 import HomePage from './pages/HomePage';
 import Questionnaire from "./pages/Questionnaire";
+import Repositories from "./pages/Repositories";
 
 const App = () => {
 
@@ -18,10 +19,8 @@ const App = () => {
         <Box sx={{
           overflow: {
             xs: "auto",
-
           },
           width: "100vw"
-
         }}
         height="100vh"
         display="flex"
@@ -30,7 +29,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/questionnaire" element={<Questionnaire />} />
-
+              <Route path="/repositories" element={<Repositories />} />
             </Routes>
           </Box>
         </Box>

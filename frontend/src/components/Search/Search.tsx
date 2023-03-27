@@ -6,18 +6,23 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Autocomplete from '@mui/material/Autocomplete';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { useNavigate } from "react-router";
 
 //icons
 
 const Search = () => {
 
   const [age, setAge] = React.useState('');
+  const navigate = useNavigate();
 
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value);
   };
+
+  const handleSearch = () => {
+    navigate('/repositories')
+  }
 
   return (
     <Paper
@@ -60,7 +65,7 @@ const Search = () => {
         </Select>
       </FormControl>
       <Divider sx={{ height: 40, mr: 1, ml:1 }} orientation="vertical" />
-      <Button variant="contained" className="search_btn">Search</Button>
+      <Button variant="contained" className="search_btn" onClick={handleSearch}>Search</Button>
     </Paper>
   );
 };
