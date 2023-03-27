@@ -13,3 +13,26 @@ see https://github.com/MetaCell/cloud-harness(https://github.com/MetaCell/cloud-
 all ci/cd related info is stored in the dkNET cloudharness repo branch.
 this is done to separate the application from it's deployment method/type
 to use the CloudHarness deployment please switch to the cloudharness branch
+
+### get the cloudharness code:
+```bash
+git clone https://github.com/MetaCell/cloud-harness.git
+```
+
+install the cloudharness tools
+follow the instructions(https://github.com/MetaCell/cloud-harness)
+
+### create namespace dknet
+```bash
+kubectl create ns dknet
+```
+
+### prepare the build and deploy
+```bash
+harness-deployment cloud-harness . -n dknet -e dev -dtls -i dknet
+```
+
+### deploy local with skaffold
+```bash
+skaffold dev --cleanup=false
+```
