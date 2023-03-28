@@ -16,6 +16,10 @@ const HomePage = () => {
         <Box display='flex' justifyContent='center' width={1} mt={2}>
           <Search/>
         </Box>
+        <Box display="flex" alignItems="center" gap={0.5} mt={3}>
+          <Typography variant='subtitle2'>Need help setting up filters?</Typography>
+          <Typography variant='body2' color="secondary" sx={{ fontWeight: 600 }} >Try our Filtering Assistant</Typography>
+        </Box>
       </Box>
     </>
   )
