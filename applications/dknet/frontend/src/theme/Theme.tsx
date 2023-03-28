@@ -11,9 +11,13 @@ const {
   primary50, 
   error700, error500, 
   warning700, warning500, 
-  success700, success500, 
+  success50, success700, success500, 
   checkboxBorderColor,
-  checkboxBgChecked
+  checkboxBgChecked,
+  cardBorderColor, 
+  cardBgColor,
+  cardChipBgColor,
+  warning50
 
 } = vars;
 
@@ -26,6 +30,7 @@ const theme = createTheme({
     text: {
     },
     grey: {
+      600: grey600,
       700: grey700,
       800: grey800,
       900: grey900
@@ -52,8 +57,9 @@ const theme = createTheme({
   typography: {
     fontFamily: primaryFont,
     subtitle1: {
-      fontSize: '1.25rem', //18px
-      color: grey500
+      fontSize: '1.25rem',
+      color: grey500,
+      fontWeight: 600
     },
     h4:{
       fontWeight: 600,
@@ -65,7 +71,7 @@ const theme = createTheme({
       color: grey900
     },
     subtitle2: {
-      fontSize: '0.857rem', //14px
+      fontSize: '0.875rem', //14px
       color: grey500
     },
     caption: {
@@ -73,7 +79,7 @@ const theme = createTheme({
     },
     body2: {
       fontSize: '0.875rem',
-      fontWeight: 400
+      fontWeight: 500
     },
     body1:{
     
@@ -103,6 +109,16 @@ const theme = createTheme({
         },
         filled: {
         },
+      }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          background: white,
+          border: `1px solid ${checkboxBorderColor}`,
+          borderRadius: '0.75rem',
+          boxShadow: 'none'
+        }
       }
     },
     MuiCardActionArea:     {
@@ -186,6 +202,46 @@ const theme = createTheme({
         }
       }
     },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          padding: '2px 8px',
+          background: cardChipBgColor,
+          borderRadius: '1rem',
+          height: 'auto',
+          '& .MuiChip-label':{
+            padding: 0,
+            fontSize: '0.75rem',
+            color: grey700,
+            fontWeight: 500
+          },
+          '& .MuiSvgIcon-root': {
+            width: '0.75rem', 
+            height: '0.75rem',
+            marginRight: '5px',
+            marginLeft: 0
+          },
+          '&.MuiChip-colorWarning': {
+            backgroundColor: warning50,
+            '& .MuiChip-label':{
+              color: warning700
+            },
+            '& .MuiSvgIcon-root':{
+              color: warning500,
+            }
+          },
+          '&.MuiChip-colorSuccess': {
+            backgroundColor: success50,
+            '& .MuiChip-label':{
+              color: success700
+            },
+            '& .MuiSvgIcon-root':{
+              color: success500,
+            }
+          }
+        }
+      }
+    },
     MuiIconButton: {
       styleOverrides: {
         colorPrimary: {
@@ -242,8 +298,8 @@ const theme = createTheme({
             },
             '& .MuiSvgIcon-root': {
               color: grey400
-            }
-          }
+            },
+          },
         },
         listbox: {
           '& .MuiAutocomplete-option': {

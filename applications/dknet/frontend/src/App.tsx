@@ -32,9 +32,6 @@ const App = () => {
             </Routes>
           </Box>
         </Box>
-        <Box>
-          <Typography variant='body2'>dkNET</Typography>
-        </Box>
       </ThemeProvider>
     </BrowserRouter>
   )

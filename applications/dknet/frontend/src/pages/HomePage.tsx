@@ -4,6 +4,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Header from '../components/Header/Header';
 import Search from '../components/Search/Search';
+import RepositoryCard from '../components/RepositoryCard/RepositoryCard';
 
 
 const HomePage = () => {
@@ -21,6 +22,7 @@ const HomePage = () => {
           <Typography variant='body2' color="secondary" sx={{ fontWeight: 600 }} >Try our Filtering Assistant</Typography>
         </Box>
       </Box>
+      <RepositoryCard/>
     </>
   )
 }

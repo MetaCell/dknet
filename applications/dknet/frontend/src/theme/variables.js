@@ -18,11 +18,16 @@ export const vars = {
   error700: '#B42318',
   error500: '#F04438',
 
+  warning50: '#FFFAEB',
   warning700: '#B54708',
   warning500: '#F79009',
 
+  success50: '#ECFDF3',
   success700: '#027A48',
   success500: '#12B76A',
   checkboxBorderColor: '#D0D5DD',
   checkboxBgChecked: '#AAE7C7',
+  cardBorderColor: '#83DCB2',
+  cardBgColor: '#F8FDFA',
+  cardChipBgColor: '#F2F4F7'
 };
