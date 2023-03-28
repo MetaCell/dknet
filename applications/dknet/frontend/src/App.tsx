@@ -5,6 +5,7 @@ import theme from './theme/Theme';
 
 //components
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { CssBaseline } from "@mui/material";
 import HomePage from './pages/HomePage';
 
@@ -30,6 +31,7 @@ const App = () => {
               <Route path="/" element={<HomePage/>} />
             </Routes>
           </Box>
+        </Box>
         <Box>
           <Typography variant='body2'>dkNET</Typography>
         </Box>
