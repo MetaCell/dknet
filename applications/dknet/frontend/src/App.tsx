@@ -30,6 +30,8 @@ const App = () => {
               <Route path="/" element={<HomePage/>} />
             </Routes>
           </Box>
+        <Box>
+          <Typography variant='body2'>dkNET</Typography>
         </Box>
       </ThemeProvider>
     </BrowserRouter>
