@@ -13,8 +13,8 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 const RepositoryCard = () => {
   return (
-    <Card sx={{ position:"relative", maxWidth: 789 }}>
-      <Box pr={3} position="absolute" right={0}>
+    <Card sx={{ position:"relative", maxWidth: 789 }} className="successCard">
+      <Box pr={3} position="absolute" right={0} top='-3px'>
         <Chip label="Best Match" className="cardBadge"/>
       </Box>
       <Box m={3} display="flex" gap={2.5}>

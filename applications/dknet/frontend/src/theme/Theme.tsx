@@ -7,7 +7,7 @@ const {
   grey400, grey500, 
   grey600, grey700, grey800, grey900, 
   grey50,
-  primary600, primary700, 
+  primary600, primary700, primary25, primary200,
   primary50, 
   error700, error500, 
   warning700, warning500, 
@@ -117,7 +117,11 @@ const theme = createTheme({
           background: white,
           border: `1px solid ${checkboxBorderColor}`,
           borderRadius: '0.75rem',
-          boxShadow: 'none'
+          boxShadow: 'none',
+          '&.successCard': {
+            background: primary25,
+            border:`1px solid ${primary200}`
+          }
         }
       }
     },
@@ -238,6 +242,13 @@ const theme = createTheme({
             '& .MuiSvgIcon-root':{
               color: success500,
             }
+          },
+          '&.cardBadge': {
+            background: success50,
+            borderRadius: '0px 0px 4px 4px',
+            '& .MuiChip-label':{
+              color: success700
+            },
           }
         }
       }
