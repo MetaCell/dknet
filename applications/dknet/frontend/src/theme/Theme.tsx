@@ -8,6 +8,12 @@ const {
   grey600, grey700, grey800, grey900,
   grey50,
   primary600, primary700,
+  primary50,
+  error700, error500,
+  warning700, warning500,
+  success700, success500,
+  checkboxBorderColor,
+  checkboxBgChecked,
   //primary50,
   //error700, error500,
   //warning700, warning500,
@@ -73,13 +79,15 @@ const theme = createTheme({
     },
     subtitle2: {
       fontSize: '0.857rem', //14px
-      color: primary700,
+      color: grey500,
       fontWeight: 600
     },
     caption: {
 
     },
     body2: {
+      fontSize: '0.875rem',
+      fontWeight: 400
     },
     body1:{
 
@@ -88,6 +96,16 @@ const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: `
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: ${grey200}; 
+        border-radius: 8px;
+      }
       `
     },
     MuiInputLabel: {
@@ -152,12 +170,20 @@ const theme = createTheme({
             background: primary600,
             border: `1px solid ${primary600}`,
             boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-            color: white
+            color: white,
+            '&:hover': {
+              background: primary700,
+              color: white,
+            }
           }
         },
         text: {
           color: grey600,
-          fontWeight: 600
+          fontWeight: 600,
+          '&:hover':{
+            backgroundColor: 'transparent',
+            color: grey600
+          }
         },
         contained: {
           background: white,
@@ -165,7 +191,12 @@ const theme = createTheme({
           fontWeight: 600,
           border: `1px solid ${grey200}`,
           boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-          borderRadius: '8px'
+          borderRadius: '8px',
+          '&:hover': {
+            background: grey50,
+            border: `1px solid ${checkboxBorderColor}`,
+            boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
+          }
         }
       }
     },
@@ -206,6 +237,45 @@ const theme = createTheme({
     MuiToggleButtonGroup: {
       styleOverrides: {
         root: {
+        }
+      }
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        root: {
+          '& .MuiChip-root': {
+            borderRadius: '6px',
+            background: white,
+            border: '1px solid #D0D5DD',
+            padding: '2px 4px 2px 9px',
+            '& .MuiChip-label': {
+              color: grey700,
+              fontSize: '0.857rem',
+              fontWeight: 500,
+              paddingLeft: 0,
+            },
+            '& .MuiSvgIcon-root': {
+              color: grey400
+            }
+          }
+        },
+        listbox: {
+          '& .MuiAutocomplete-option': {
+            margin: '4px 6px',
+            padding: 0,
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            color: grey900,
+            '&.Mui-focused': {
+              backgroundColor: grey50,
+              borderRadius: '6px'
+            },
+            '& .MuiSvgIcon-root': {
+              color: checkboxBorderColor,
+              borderRadius: '4px'
+            },
+
+          }
         }
       }
     },

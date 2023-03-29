@@ -10,7 +10,7 @@ import Filters from "../components/Filters";
 
 const RepositoriesPage = () => {
   return (
-    <Container maxWidth='lg'>
+    <Container>
       <Grid container spacing={2}>
         <Grid item xs={7}>
           xs=8
