@@ -19,7 +19,7 @@ const MainLayout = ({ children }) => {
       <Container maxWidth='lg' sx={{ minHeight: '40%' }}>
         <Header />
         <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center' gap={1} mt={7} mb={10}>
-          <Typography variant='h4'>Find the right repository for your data.</Typography>
+          <Typography variant='h1'>Find the right repository for your data.</Typography>
           <Typography variant='subtitle1'>Explore, filter and find the best repositories for your data and needs.</Typography>
           <Box display='flex' justifyContent='center' width={1} mt={2}>
             <Search />
