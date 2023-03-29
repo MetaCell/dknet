@@ -5,6 +5,7 @@ import theme from './theme/Theme';
 
 //components
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { CssBaseline } from "@mui/material";
 import HomePage from './pages/HomePage';
 import Questionnaire from "./pages/Questionnaire";
@@ -18,10 +19,7 @@ const App = () => {
         <Box sx={{
           overflow: {
             xs: "auto",
-
           },
-          width: "100vw"
-
         }}
         height="100vh"
         display="flex"
@@ -33,6 +31,9 @@ const App = () => {
 
             </Routes>
           </Box>
+        </Box>
+        <Box>
+          <Typography variant='body2'>dkNET</Typography>
         </Box>
       </ThemeProvider>
     </BrowserRouter>

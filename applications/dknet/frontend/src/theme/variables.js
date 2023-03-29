@@ -23,4 +23,6 @@ export const vars = {
 
   success700: '#027A48',
   success500: '#12B76A',
+  checkboxBorderColor: '#D0D5DD',
+  checkboxBgChecked: '#AAE7C7',
 };
