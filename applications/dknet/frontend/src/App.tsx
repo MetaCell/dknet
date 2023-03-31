@@ -8,7 +8,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { CssBaseline } from "@mui/material";
 import HomePage from './pages/HomePage';
-import Questionnaire from "./pages/Questionnaire";
 
 const App = () => {
 
@@ -27,8 +26,6 @@ const App = () => {
           <Box flex={1} display="flex" flexDirection="column" id='main-container'>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/questionnaire" element={<Questionnaire />} />
-
             </Routes>
           </Box>
         </Box>
