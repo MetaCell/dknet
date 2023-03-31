@@ -4,8 +4,8 @@ import React from "react";
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Chip from '@mui/material/Chip';
-import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
+import CircularProgressWithLabel from "./CircularProgressWithLabel";
 
 //icons
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
@@ -18,9 +18,8 @@ const RepositoryCard = () => {
         <Chip label="Best Match" className="cardBadge"/>
       </Box>
       <Box m={3} display="flex" gap={2.5}>
-        <div style={{ position: 'relative' }}>
-          <span style={{ position: 'absolute', top: '10px', left: '10px',fontWeight:700, fontSize: '0.875rem', color: '#0BA47D' }}>80</span>
-          <CircularProgress variant="determinate" value={80}/>
+        <div>
+          <CircularProgressWithLabel value={80}/>
         </div>
         <Box display="flex" flexDirection="column" width={1}>
           <Typography variant="subtitle1" color="grey.800">Title</Typography>

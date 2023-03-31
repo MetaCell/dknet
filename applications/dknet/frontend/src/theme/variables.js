@@ -18,8 +18,11 @@ export const vars = {
   primary25: '#F8FDFA',
 
   error700: '#B42318',
+  error600: '#D92D20',
   error500: '#F04438',
+  error25: '#FFFBFA',
 
+  warning25: '#FFFCF5',
   warning50: '#FFFAEB',
   warning700: '#B54708',
   warning500: '#F79009',

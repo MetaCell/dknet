@@ -9,8 +9,8 @@ const {
   grey50,
   primary600, primary700, primary25, primary200,
   primary50, 
-  error700, error500, 
-  warning700, warning500, 
+  error700, error500, error600, error25,
+  warning25, warning700, warning500, 
   success50, success700, success500, 
   checkboxBorderColor,
   checkboxBgChecked,
@@ -75,7 +75,8 @@ const theme = createTheme({
       color: grey500
     },
     caption: {
-    
+      fontWeight: 700,
+      fontSize: '0.875rem'
     },
     body2: {
       fontSize: '0.875rem',
@@ -97,6 +98,27 @@ const theme = createTheme({
       ::-webkit-scrollbar-thumb {
         background: ${grey200}; 
         border-radius: 8px;
+      }
+      .goodProgress {
+        color: ${primary600};
+        background: ${primary25};
+        .MuiCircularProgress-root {
+          color: ${primary600};
+        }
+      }
+      .averageProgress {
+        color: ${warning500};
+        background: ${warning25};
+        .MuiCircularProgress-root {
+          color: ${warning500};
+        }
+      }
+      .poorProgress {
+        color: ${error600};
+        background: ${error25};
+        .MuiCircularProgress-root {
+          color: ${error600};
+        }
       }
       `
     },
