@@ -10,10 +10,11 @@ const {
   primary600, primary700, 
   primary50, 
   error700, error500, 
-  warning700, warning500, 
+  warning700, warning500, warning300, warning25,
   success700, success500, 
   checkboxBorderColor,
-  checkboxBgChecked
+  checkboxBgChecked,
+  dialogBoxShadow
 
 } = vars;
 
@@ -26,15 +27,21 @@ const theme = createTheme({
     text: {
     },
     grey: {
+      600: grey600,
       700: grey700,
       800: grey800,
       900: grey900
+    },
+    warning: {
+      500: warning500,
+      700: warning700
     },
     action: {
       active: primary600
     },
     primary: {
-      main: primary600
+      main: primary600,
+      700: primary700
     },
     secondary: {
       main: primary700
@@ -52,7 +59,7 @@ const theme = createTheme({
   typography: {
     fontFamily: primaryFont,
     subtitle1: {
-      fontSize: '1.25rem', //18px
+      fontSize: '1.25rem', 
       color: grey500
     },
     h4:{
@@ -65,7 +72,7 @@ const theme = createTheme({
       color: grey900
     },
     subtitle2: {
-      fontSize: '0.857rem', //14px
+      fontSize: '0.875rem', 
       color: grey500
     },
     caption: {
@@ -91,6 +98,11 @@ const theme = createTheme({
       ::-webkit-scrollbar-thumb {
         background: ${grey200}; 
         border-radius: 8px;
+      }
+      .disclaimerBox {
+        backgroundColor: ${warning25};
+        border-radius: 12px;
+        border: 1px solid ${warning300};
       }
       `
     },
@@ -268,8 +280,40 @@ const theme = createTheme({
     MuiDialog: {
       styleOverrides: {
         root: {
+          "& .MuiDialog-container":{
+            justifyContent: "flex-end",
+            alignItems: "flex-start",
+            '& .MuiTypography-subtitle1': {
+              fontWeight: 500
+            },
+            '& .MuiTypography-subtitle2': {
+              fontWeight: 700
+            },
+            '& .MuiIconButton-root':{
+              '&:hover':{
+                backgroundColor: grey50,
+                borderRadius: '4px'
+              }
+            },
+            '& .MuiSvgIcon-root': {
+              color: grey500
+            },
+            '& .MuiDivider-root': {
+              marginTop: '1rem',
+              marginBottom: '1rem',
+              borderColor: grey200,
+              borderWidth: '1px'
+            }
+          }
         },
         paper: {
+          border: `1px solid ${grey200}`,
+          boxShadow: dialogBoxShadow,
+          borderRadius: 'unset',
+          padding: '22px',
+          maxWidth: '400px',
+          maxHeight: 'none',
+          height: '100%'
         },
       }
     },

@@ -20,9 +20,12 @@ export const vars = {
 
   warning700: '#B54708',
   warning500: '#F79009',
+  warning300: '#FEC84B',
+  warning25: '#FFFCF5',
 
   success700: '#027A48',
   success500: '#12B76A',
   checkboxBorderColor: '#D0D5DD',
   checkboxBgChecked: '#AAE7C7',
+  dialogBoxShadow: '0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03)'
 };
