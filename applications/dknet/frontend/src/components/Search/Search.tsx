@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 //components
 import Box from '@mui/material/Box';
@@ -6,9 +7,9 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Checkbox from '@mui/material/Checkbox';
-import Typography from '@mui/material/Typography';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
+import Container from '@mui/material/Container';
 
 //icons
 import ClearIcon from '@mui/icons-material/Clear';
@@ -19,14 +20,15 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 
 const Search = () => {
+  const navigate = useNavigate();
 
   return (
     <Paper
       component="form"
       sx={{
-        p: '8px', display: 'flex', alignItems: 'center', width: 640, border: '1px solid #EAECF0',
+        p: '8px', display: 'flex', alignItems: 'center', border: '1px solid #EAECF0',
         boxShadow: '0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03)',
-        borderRadius: '12px'
+        borderRadius: '12px',
       }}
     >
       <Autocomplete

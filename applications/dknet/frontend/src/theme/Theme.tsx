@@ -1,11 +1,11 @@
 import { createTheme } from "@mui/material/styles";
 import { vars } from "./variables";
 
-const { 
-  primaryFont, white, 
-  grey200, 
-  grey400, grey500, 
-  grey600, grey700, grey800, grey900, 
+const {
+  primaryFont, white,
+  grey200,
+  grey400, grey500,
+  grey600, grey700, grey800, grey900,
   grey50,
   primary600, primary700, 
   primary50, 
@@ -48,7 +48,7 @@ const theme = createTheme({
     }
   },
   shape: {
-   
+
   },
   mixins: {
     toolbar: {
@@ -62,10 +62,20 @@ const theme = createTheme({
       fontSize: '1.25rem', 
       color: grey500
     },
-    h4:{
+    h1:{
       fontWeight: 600,
       fontSize: "2.25rem",
       color: grey800
+    },
+    h4: {
+      fontWeight: 500,
+      color: grey700,
+      fontSize: '1rem'
+    },
+    h5: {
+      fontWeight: 600,
+      color: grey700,
+      fontSize: '1rem'
     },
     h6: {
       fontWeight: 700,
@@ -76,14 +86,14 @@ const theme = createTheme({
       color: grey500
     },
     caption: {
-    
+
     },
     body2: {
       fontSize: '0.875rem',
       fontWeight: 400
     },
     body1:{
-    
+
     }
   },
   components: {
@@ -261,7 +271,7 @@ const theme = createTheme({
           '& .MuiAutocomplete-option': {
             margin: '4px 6px',
             padding: 0,
-            fontSize: '0.875rem', 
+            fontSize: '0.875rem',
             fontWeight: 500,
             color: grey900,
             '&.Mui-focused': {
@@ -272,7 +282,7 @@ const theme = createTheme({
               color: checkboxBorderColor,
               borderRadius: '4px'
             },
-           
+
           }
         }
       }
@@ -332,7 +342,7 @@ const theme = createTheme({
     MuiSwitch: {
       styleOverrides: {
         root: {
-        
+
         }
       }
     },
@@ -344,7 +354,7 @@ const theme = createTheme({
     },
     MuiCircularProgress: {
       styleOverrides: {
-       
+
       }
     },
     MuiDivider:{
@@ -361,7 +371,7 @@ const theme = createTheme({
         }
       }
     },
-    
+
   }
 });
 
