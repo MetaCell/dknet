@@ -8,8 +8,8 @@ import Box from '@mui/material/Box';
 import { CssBaseline } from "@mui/material";
 import HomePage from './pages/HomePage';
 
-
 const App = () => {
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
@@ -17,17 +17,14 @@ const App = () => {
         <Box sx={{
           overflow: {
             xs: "auto",
-            
           },
-          width: "100vw"
-
         }}
         height="100vh"
         display="flex"
         overflow="auto" >
           <Box flex={1} display="flex" flexDirection="column" id='main-container'>
             <Routes>
-              <Route path="/" element={<HomePage/>} />
+              <Route path="/" element={<HomePage />} />
             </Routes>
           </Box>
         </Box>
