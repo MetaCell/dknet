@@ -1,17 +1,25 @@
 import React from 'react';
 
 //components
-import { Box, Typography } from '@mui/material';
-import Header from '../components/Header/Header';
-import Search from '../components/Search/Search';
 import withLayout from "../useLayout";
 
 import MainLayout from "../components/Layouts/Main";
+import Grid from "@mui/material/Grid";
+import Filters from "../components/Filters";
+import Container from "@mui/material/Container";
 
 
 const HomePage = () => {
   return (
-    <div></div>
+    <Container>
+      <Grid container spacing={2}>
+        <Grid item xs={7}>
+        </Grid>
+        <Grid item xs={5}>
+          <Filters />
+        </Grid>
+      </Grid>
+    </Container>
   )
 }
 const HomePageWithLayout = withLayout(MainLayout)(HomePage);

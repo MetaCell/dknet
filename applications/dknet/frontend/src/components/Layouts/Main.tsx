@@ -20,7 +20,7 @@ const MainLayout = ({ children }) => {
         <Header />
         <Grid container spacing={2} justifyContent='center' textAlign='center' mt={8}>
           <Grid item xs={12} sm={8}>
-            <Typography variant='h4'>Find the right repository for your data.</Typography>
+            <Typography variant='h1'>Find the right repository for your data.</Typography>
             <Typography variant='subtitle1'>Explore, filter and find the best repositories for your data and needs.</Typography>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -33,8 +33,18 @@ const MainLayout = ({ children }) => {
             </Box>
           </Grid>
         </Grid>
-        {children}
       </Container>
+      <Box
+        pt={9}
+        pb={9}
+        sx={{
+          background: '#FFFFFF',
+          minHeight: '60%',
+          borderRadius: '24px 24px 0px 0px',
+          border: '1px solid #fff'
+        }}>
+        {children}
+      </Box>
     </Box>
 
   )
