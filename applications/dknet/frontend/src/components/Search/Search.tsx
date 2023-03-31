@@ -22,7 +22,6 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 const Search = () => {
   const navigate = useNavigate();
 
-  const handleSearch = () => navigate('/repositories')
   return (
     <Paper
       component="form"
@@ -90,7 +89,7 @@ const Search = () => {
         )}
       />
       <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
-      <Button variant="contained" className="search_btn" onClick={handleSearch}>Search</Button>
+      <Button variant="contained" className="search_btn">Search</Button>
     </Paper>
   );
 };
