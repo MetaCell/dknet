@@ -8,17 +8,18 @@ const {
   grey600, grey700, grey800, grey900,
   grey50,
   primary600, primary700, primary25, primary200,
-  primary50, 
+  primary50,
   error700, error500, error600, error25,
-  warning25, warning700, warning500, 
-  success50, success700, success500, 
+  warning25, warning700, warning500,
+  success50, success700, success500,
   checkboxBorderColor,
   checkboxBgChecked,
-  cardBorderColor, 
+  cardBorderColor,
   cardBgColor,
   cardChipBgColor,
-  warning50
-
+  warning50,
+  warning300,
+  dialogBoxShadow
 } = vars;
 
 const theme = createTheme({
@@ -35,11 +36,16 @@ const theme = createTheme({
       800: grey800,
       900: grey900
     },
+    warning: {
+      500: warning500,
+      700: warning700
+    },
     action: {
       active: primary600
     },
     primary: {
-      main: primary600
+      main: primary600,
+      700: primary700
     },
     secondary: {
       main: primary700
@@ -81,7 +87,7 @@ const theme = createTheme({
       color: grey900
     },
     subtitle2: {
-      fontSize: '0.875rem', //14px
+      fontSize: '0.875rem',
       color: grey500
     },
     caption: {
@@ -108,6 +114,11 @@ const theme = createTheme({
       ::-webkit-scrollbar-thumb {
         background: ${grey200}; 
         border-radius: 8px;
+      }
+      .disclaimerBox {
+        backgroundColor: ${warning25};
+        border-radius: 12px;
+        border: 1px solid ${warning300};
       }
       .goodProgress {
         color: ${primary600};
@@ -252,7 +263,7 @@ const theme = createTheme({
             fontWeight: 500
           },
           '& .MuiSvgIcon-root': {
-            width: '0.75rem', 
+            width: '0.75rem',
             height: '0.75rem',
             marginRight: '5px',
             marginLeft: 0
@@ -367,8 +378,40 @@ const theme = createTheme({
     MuiDialog: {
       styleOverrides: {
         root: {
+          "& .MuiDialog-container":{
+            justifyContent: "flex-end",
+            alignItems: "flex-start",
+            '& .MuiTypography-subtitle1': {
+              fontWeight: 500
+            },
+            '& .MuiTypography-subtitle2': {
+              fontWeight: 700
+            },
+            '& .MuiIconButton-root':{
+              '&:hover':{
+                backgroundColor: grey50,
+                borderRadius: '4px'
+              }
+            },
+            '& .MuiSvgIcon-root': {
+              color: grey500
+            },
+            '& .MuiDivider-root': {
+              marginTop: '1rem',
+              marginBottom: '1rem',
+              borderColor: grey200,
+              borderWidth: '1px'
+            }
+          }
         },
         paper: {
+          border: `1px solid ${grey200}`,
+          boxShadow: dialogBoxShadow,
+          borderRadius: 'unset',
+          padding: '22px',
+          maxWidth: '400px',
+          maxHeight: 'none',
+          height: '100%'
         },
       }
     },
