@@ -3,10 +3,11 @@ import React from 'react';
 //components
 import withLayout from "../useLayout";
 
-import MainLayout from "../components/Layouts/Main";
+import MainLayout from "../Layouts/Main";
 import Grid from "@mui/material/Grid";
 import Filters from "../components/Filters";
 import Container from "@mui/material/Container";
+import RepositoryCard from '../components/RepositoryCard';
 
 
 const HomePage = () => {
@@ -14,6 +15,7 @@ const HomePage = () => {
     <Container>
       <Grid container spacing={2}>
         <Grid item xs={7}>
+          <RepositoryCard/>
         </Grid>
         <Grid item xs={5}>
           <Filters />
