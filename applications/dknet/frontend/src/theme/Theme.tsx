@@ -7,17 +7,19 @@ const {
   grey400, grey500,
   grey600, grey700, grey800, grey900,
   grey50,
-  primary600, primary700,
+  primary600, primary700, primary25, primary200,
   primary50,
-  error700, error500,
-  warning700, warning500,
-  success700, success500,
+  error700, error500, error600, error25,
+  warning25, warning700, warning500,
+  success50, success700, success500,
   checkboxBorderColor,
   checkboxBgChecked,
-  //primary50,
-  //error700, error500,
-  //warning700, warning500,
-  //success700, success500,
+  cardBorderColor,
+  cardBgColor,
+  cardChipBgColor,
+  warning50,
+  warning300,
+  dialogBoxShadow
 } = vars;
 
 const theme = createTheme({
@@ -29,15 +31,21 @@ const theme = createTheme({
     text: {
     },
     grey: {
+      600: grey600,
       700: grey700,
       800: grey800,
       900: grey900
+    },
+    warning: {
+      500: warning500,
+      700: warning700
     },
     action: {
       active: primary600
     },
     primary: {
-      main: primary600
+      main: primary600,
+      700: primary700
     },
     secondary: {
       main: primary700
@@ -55,8 +63,9 @@ const theme = createTheme({
   typography: {
     fontFamily: primaryFont,
     subtitle1: {
-      fontSize: '1.25rem', //18px
-      color: grey500
+      fontSize: '1.25rem',
+      color: grey500,
+      fontWeight: 600
     },
     h1:{
       fontWeight: 600,
@@ -78,16 +87,16 @@ const theme = createTheme({
       color: grey900
     },
     subtitle2: {
-      fontSize: '0.857rem', //14px
-      color: grey500,
-      fontWeight: 600
+      fontSize: '0.875rem',
+      color: grey500
     },
     caption: {
-
+      fontWeight: 700,
+      fontSize: '0.875rem'
     },
     body2: {
       fontSize: '0.875rem',
-      fontWeight: 400
+      fontWeight: 500
     },
     body1:{
 
@@ -106,6 +115,32 @@ const theme = createTheme({
         background: ${grey200}; 
         border-radius: 8px;
       }
+      .disclaimerBox {
+        backgroundColor: ${warning25};
+        border-radius: 12px;
+        border: 1px solid ${warning300};
+      }
+      .goodProgress {
+        color: ${primary600};
+        background: ${primary25};
+        .MuiCircularProgress-root {
+          color: ${primary600};
+        }
+      }
+      .averageProgress {
+        color: ${warning500};
+        background: ${warning25};
+        .MuiCircularProgress-root {
+          color: ${warning500};
+        }
+      }
+      .poorProgress {
+        color: ${error600};
+        background: ${error25};
+        .MuiCircularProgress-root {
+          color: ${error600};
+        }
+      }
       `
     },
     MuiInputLabel: {
@@ -117,6 +152,20 @@ const theme = createTheme({
         },
         filled: {
         },
+      }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          background: white,
+          border: `1px solid ${checkboxBorderColor}`,
+          borderRadius: '0.75rem',
+          boxShadow: 'none',
+          '&.successCard': {
+            background: primary25,
+            border:`1px solid ${primary200}`
+          }
+        }
       }
     },
     MuiCardActionArea:     {
@@ -200,6 +249,53 @@ const theme = createTheme({
         }
       }
     },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          padding: '2px 8px',
+          background: cardChipBgColor,
+          borderRadius: '1rem',
+          height: 'auto',
+          '& .MuiChip-label':{
+            padding: 0,
+            fontSize: '0.75rem',
+            color: grey700,
+            fontWeight: 500
+          },
+          '& .MuiSvgIcon-root': {
+            width: '0.75rem',
+            height: '0.75rem',
+            marginRight: '5px',
+            marginLeft: 0
+          },
+          '&.MuiChip-colorWarning': {
+            backgroundColor: warning50,
+            '& .MuiChip-label':{
+              color: warning700
+            },
+            '& .MuiSvgIcon-root':{
+              color: warning500,
+            }
+          },
+          '&.MuiChip-colorSuccess': {
+            backgroundColor: success50,
+            '& .MuiChip-label':{
+              color: success700
+            },
+            '& .MuiSvgIcon-root':{
+              color: success500,
+            }
+          },
+          '&.cardBadge': {
+            background: success50,
+            borderRadius: '0px 0px 4px 4px',
+            '& .MuiChip-label':{
+              color: success700
+            },
+          }
+        }
+      }
+    },
     MuiIconButton: {
       styleOverrides: {
         colorPrimary: {
@@ -256,8 +352,8 @@ const theme = createTheme({
             },
             '& .MuiSvgIcon-root': {
               color: grey400
-            }
-          }
+            },
+          },
         },
         listbox: {
           '& .MuiAutocomplete-option': {
@@ -282,8 +378,40 @@ const theme = createTheme({
     MuiDialog: {
       styleOverrides: {
         root: {
+          "& .MuiDialog-container":{
+            justifyContent: "flex-end",
+            alignItems: "flex-start",
+            '& .MuiTypography-subtitle1': {
+              fontWeight: 500
+            },
+            '& .MuiTypography-subtitle2': {
+              fontWeight: 700
+            },
+            '& .MuiIconButton-root':{
+              '&:hover':{
+                backgroundColor: grey50,
+                borderRadius: '4px'
+              }
+            },
+            '& .MuiSvgIcon-root': {
+              color: grey500
+            },
+            '& .MuiDivider-root': {
+              marginTop: '1rem',
+              marginBottom: '1rem',
+              borderColor: grey200,
+              borderWidth: '1px'
+            }
+          }
         },
         paper: {
+          border: `1px solid ${grey200}`,
+          boxShadow: dialogBoxShadow,
+          borderRadius: 'unset',
+          padding: '22px',
+          maxWidth: '400px',
+          maxHeight: 'none',
+          height: '100%'
         },
       }
     },
