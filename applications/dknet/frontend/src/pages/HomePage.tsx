@@ -7,6 +7,7 @@ import MainLayout from "../Layouts/Main";
 import Grid from "@mui/material/Grid";
 import Filters from "../components/Filters";
 import Container from "@mui/material/Container";
+import SortWidget from '../components/widgets/Sort';
 import RepositoryCard from '../components/RepositoryCard';
 
 
@@ -15,6 +16,7 @@ const HomePage = () => {
     <Container>
       <Grid container spacing={2}>
         <Grid item xs={7}>
+          <SortWidget/>
           <RepositoryCard/>
         </Grid>
         <Grid item xs={5}>
