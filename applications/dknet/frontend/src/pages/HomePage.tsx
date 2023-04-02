@@ -3,11 +3,11 @@ import React from 'react';
 //components
 import withLayout from "../useLayout";
 
-import MainLayout from "../components/Layouts/Main";
+import MainLayout from "../Layouts/Main";
 import Grid from "@mui/material/Grid";
 import Filters from "../components/Filters";
 import Container from "@mui/material/Container";
-import RepositoryCard from '../components/RepositoryCard/RepositoryCard';
+import RepositoryCard from '../components/RepositoryCard';
 
 
 const HomePage = () => {
