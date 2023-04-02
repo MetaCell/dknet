@@ -1,10 +1,10 @@
 import React from 'react';
 
 //components
-import Header from "../Header";
+import Header from "../components/Header";
 import Container from '@mui/material/Container';
 import { Box, Grid, Typography } from "@mui/material";
-import Search from "../Search/Search";
+import Search from "../components/Search/Search";
 
 
 const MainLayout = ({ children }) => {

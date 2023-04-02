@@ -7,15 +7,19 @@ const {
   grey400, grey500,
   grey600, grey700, grey800, grey900,
   grey50,
-  primary600, primary700, 
-  primary50, 
-  error700, error500, 
-  warning700, warning500, warning300, warning25,
-  success700, success500, 
+  primary600, primary700, primary25, primary200,
+  primary50,
+  error700, error500, error600, error25,
+  warning25, warning700, warning500,
+  success50, success700, success500,
   checkboxBorderColor,
   checkboxBgChecked,
+  cardBorderColor,
+  cardBgColor,
+  cardChipBgColor,
+  warning50,
+  warning300,
   dialogBoxShadow
-
 } = vars;
 
 const theme = createTheme({
@@ -59,8 +63,9 @@ const theme = createTheme({
   typography: {
     fontFamily: primaryFont,
     subtitle1: {
-      fontSize: '1.25rem', 
-      color: grey500
+      fontSize: '1.25rem',
+      color: grey500,
+      fontWeight: 600
     },
     h1:{
       fontWeight: 600,
@@ -82,15 +87,16 @@ const theme = createTheme({
       color: grey900
     },
     subtitle2: {
-      fontSize: '0.875rem', 
+      fontSize: '0.875rem',
       color: grey500
     },
     caption: {
-
+      fontWeight: 700,
+      fontSize: '0.875rem'
     },
     body2: {
       fontSize: '0.875rem',
-      fontWeight: 400
+      fontWeight: 500
     },
     body1:{
 
@@ -114,6 +120,27 @@ const theme = createTheme({
         border-radius: 12px;
         border: 1px solid ${warning300};
       }
+      .goodProgress {
+        color: ${primary600};
+        background: ${primary25};
+        .MuiCircularProgress-root {
+          color: ${primary600};
+        }
+      }
+      .averageProgress {
+        color: ${warning500};
+        background: ${warning25};
+        .MuiCircularProgress-root {
+          color: ${warning500};
+        }
+      }
+      .poorProgress {
+        color: ${error600};
+        background: ${error25};
+        .MuiCircularProgress-root {
+          color: ${error600};
+        }
+      }
       `
     },
     MuiInputLabel: {
@@ -125,6 +152,20 @@ const theme = createTheme({
         },
         filled: {
         },
+      }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          background: white,
+          border: `1px solid ${checkboxBorderColor}`,
+          borderRadius: '0.75rem',
+          boxShadow: 'none',
+          '&.successCard': {
+            background: primary25,
+            border:`1px solid ${primary200}`
+          }
+        }
       }
     },
     MuiCardActionArea:     {
@@ -208,6 +249,53 @@ const theme = createTheme({
         }
       }
     },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          padding: '2px 8px',
+          background: cardChipBgColor,
+          borderRadius: '1rem',
+          height: 'auto',
+          '& .MuiChip-label':{
+            padding: 0,
+            fontSize: '0.75rem',
+            color: grey700,
+            fontWeight: 500
+          },
+          '& .MuiSvgIcon-root': {
+            width: '0.75rem',
+            height: '0.75rem',
+            marginRight: '5px',
+            marginLeft: 0
+          },
+          '&.MuiChip-colorWarning': {
+            backgroundColor: warning50,
+            '& .MuiChip-label':{
+              color: warning700
+            },
+            '& .MuiSvgIcon-root':{
+              color: warning500,
+            }
+          },
+          '&.MuiChip-colorSuccess': {
+            backgroundColor: success50,
+            '& .MuiChip-label':{
+              color: success700
+            },
+            '& .MuiSvgIcon-root':{
+              color: success500,
+            }
+          },
+          '&.cardBadge': {
+            background: success50,
+            borderRadius: '0px 0px 4px 4px',
+            '& .MuiChip-label':{
+              color: success700
+            },
+          }
+        }
+      }
+    },
     MuiIconButton: {
       styleOverrides: {
         colorPrimary: {
@@ -264,8 +352,8 @@ const theme = createTheme({
             },
             '& .MuiSvgIcon-root': {
               color: grey400
-            }
-          }
+            },
+          },
         },
         listbox: {
           '& .MuiAutocomplete-option': {
