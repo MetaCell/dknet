@@ -44,7 +44,8 @@
             },
             {
                 "code": "cancer",
-                "label": "Cancer"
+                "label": "Cancer",
+                "color": "WARNING"
             },
             {
                 "code": "chemistry-chemical-biology-and-biochemistry",
@@ -62,18 +63,21 @@
     },
     {
         "code": "share-phi",
+        "label": "Share PHI",
         "question": "Will you be sharing human data with PHI?",
         "inputType": "BOOLEAN",
         "options": [
             {
                 "code": "yes",
                 "label": "Yes",
-                "icon": "Group"
+                "icon": "PeopleAltOutlined",
+                "color": "SUCCESS"
             },
             {
                 "code": "no",
                 "label": "No",
-                "icon": "Group Off"
+                "icon": "PersonOffOutlined",
+                "color": "WARNING"
             }
         ]
     },
@@ -95,23 +99,27 @@
     },
     {
         "code": "upload-frequecy",
+        "label": "Data be updated frequently",
         "question": "Will the data be updated frequently, i.e., they are part of an ongoing study that will uploaded in batches?",
         "inputType": "SINGLE",
         "options": [
             {
                 "code": "sync",
                 "label": "Yes",
-                "icon": "Sync"
+                "icon": "Sync",
+                "color": "SUCCESS"
             },
             {
                 "code": "no-sync",
                 "label": "No",
-                "icon": "Sync Disabled"
+                "icon": "SyncDisabled",
+                "color": "WARNING"
             },
             {
                 "code": "idky",
                 "label": "I don't know yet",
-                "icon": "Question Mark"
+                "icon": "QuestionMark",
+                "color": "WARNING"
             }
         ]
     },

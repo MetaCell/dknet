@@ -1,21 +1,21 @@
-import { FilterType } from '../config/enums'
+import { FilterType, FilterOptionColor } from '../config/enums'
 
 export interface IRepositoryAttributes {
-  filterCode: string,
-  optionCodes: string[]
+  [key: string]: string[]
 }
 
 export interface IRepository {
   code: string,
   label: string,
   url: string,
-  attributes: IRepositoryAttributes[]
+  attributes: IRepositoryAttributes
 }
 
 export interface IFilterOptions {
   code: string,
   label: string,
   icon: string,
+  color: string
 }
 
 export interface IFilter {

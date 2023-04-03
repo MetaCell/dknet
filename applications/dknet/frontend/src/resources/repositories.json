@@ -3,54 +3,24 @@
         "code": "repository-1",
         "label": "First repository 1",
         "url": "https://www.google.com",
-        "attributes": [
-            {
-                "filterCode": "data-type",
-                "optionCodes": ["clinical-trial", "..."]
-            },
-            {
-                "filterCode": "domains",
-                "optionCodes": ["addiction-&-hiv", "zebrafish-genetics"]
-            },
-            {
-                "filterCode": "share-phi",
-                "optionCodes": ["no"]
-            },
-            {
-                "filterCode": "upload-frequecy",
-                "optionCodes": ["idky"]
-            },
-            {
-                "filterCode": "dataset-funding",
-                "optionCodes": ["nih-institute"]
-            }
-        ]
+        "attributes": {
+            "data-type": ["clinical-trial", "..."],
+            "domains": ["addiction-&-hiv", "zebrafish-genetics"],
+            "share-phi": ["no"],
+            "upload-frequecy": ["idky"],
+            "dataset-funding": ["nih-institute"]
+        }
     },
     {
         "code": "repository-21",
         "label": "Second repository 2",
         "url": "https://www.google.com",
-        "attributes": [
-            {
-                "filterCode": "data-type",
-                "optionCodes": ["..."]
-            },
-            {
-                "filterCode": "domains",
-                "optionCodes": ["cancer", "chemistry-chemical-biology-and-biochemistry"]
-            },
-            {
-                "filterCode": "share-phi",
-                "optionCodes": ["yes"]
-            },
-            {
-                "filterCode": "upload-frequecy",
-                "optionCodes": ["sync"]
-            },
-            {
-                "filterCode": "dataset-funding",
-                "optionCodes": ["none"]
-            }
-        ]
+        "attributes": {
+            "data-type": ["..."],
+            "domains": ["cancer", "chemistry-chemical-biology-and-biochemistry"],
+            "share-phi": ["yes"],
+            "upload-frequecy": ["sync"],
+            "dataset-funding": ["none"]
+        }
     }    
 ]

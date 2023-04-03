@@ -3,7 +3,7 @@ import { ROWS_PER_PAGE } from "../config/constants"
 import filters from '../resources/filters.json'
 import repositories from '../resources/repositories.json'
 import { FilterType } from '../config/enums'
-import { IFilter, IFilterContext, IRepository } from './ContextInterfaces'
+import { IFilter, IFilterContext, IRepository } from './Interfaces'
 
 export const FilterContext = createContext(null)
 
@@ -37,6 +37,22 @@ const filterInitialState = (filter: IFilter) => {
   return singleFilterInitialState(filter)
 }
 
+const mapFilter = (filter: IFilter): IFilter => ({
+  ...filter,
+  options: filter.options.map((option) => ({
+    ...option,
+    color: option.color?.toLowerCase() || 'info'
+  }))
+})
+
+const mapRepository = (repository: IRepository): IRepository => ({
+  ...repository,
+  attributes: Object.entries(repository.attributes).reduce((a, attribute) => ({
+    ...a,
+    [attribute[0]]: attribute[1],
+  }), {})
+})
+
 export const FilterProvider = ({ children }) => {
   const [context, setContext] = useState<IFilterContext>({
     pageNumber: 0,
@@ -48,8 +64,8 @@ export const FilterProvider = ({ children }) => {
           ...filterInitialState(filter as IFilter)
         })
     }, {}),
-    allFilters: filters as IFilter[],
-    allRepositories: repositories as IRepository[]
+    allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
+    allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
   })
 
   return (
