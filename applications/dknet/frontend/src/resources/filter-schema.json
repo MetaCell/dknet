@@ -49,6 +49,19 @@
                             },
                             "icon": {
                                 "type": "string"
+                            },
+                            "color": {
+                                "type": "string",
+                                "enum": [
+                                    "INFO",
+                                    "SUCCESS",
+                                    "WARNING"
+                                ],
+                                "enumNames": [
+                                    "Info",
+                                    "Success",
+                                    "Warning"
+                                ]
                             }
                         },
                         "required": [

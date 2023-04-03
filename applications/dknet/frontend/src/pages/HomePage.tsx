@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
+import { useFilterContext } from '../context/Context'
 
 //components
 import withLayout from "../useLayout";
@@ -12,13 +13,28 @@ import RepositoryCard from '../components/RepositoryCard';
 import Typography from "@mui/material/Typography";
 import Stack from '@mui/material/Stack';
 
+
 const HomePage = () => {
+  const { context, setContext } = useFilterContext();
+  const [ repositories, setRepositories ] = useState([])
+
+  useEffect(() => {
+    // apply context.filterValues on the allFilters + allRepositories
+    const foundRepositories = context.allRepositories // .filter((repository) => {})
+    setRepositories(foundRepositories)
+  }, [context])
+
   return (
     <Container>
       <Grid container spacing={2}>
         <Grid item xs={7}>
           <SortWidget/>
-          <RepositoryCard/>
+          {repositories && repositories.map((repository) => {
+            return (
+              <RepositoryCard key={repository.code} repository={repository} />
+            )
+          })
+          }
         </Grid>
         <Grid item xs={5}>
           <Stack spacing={2}>

@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react"
+import { useFilterContext } from '../context/Context'
 
 //components
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Typography from "@mui/material/Typography";
-import SwitchWidget from "./widgets/Switch";
-import FormGroup from "@mui/material/FormGroup";
-import CheckBoxWidget from "./widgets/CheckBox";
-import FormLabel from '@mui/material/FormLabel';
-import Tooltip from "@mui/material/Tooltip";
-import IconButton from "@mui/material/IconButton";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
+import Typography from "@mui/material/Typography"
+import SwitchWidget from "./widgets/Switch"
+import FormGroup from "@mui/material/FormGroup"
+import CheckBoxWidget from "./widgets/CheckBox"
+import FormLabel from '@mui/material/FormLabel'
+import Tooltip from "@mui/material/Tooltip"
+import IconButton from "@mui/material/IconButton"
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
 
 import { vars } from "../theme/variables";
 import RadioGroupWidget from "./widgets/RadioGroup";
+import { Description } from "@mui/icons-material"
 
 const {
   grey700,
@@ -21,16 +23,17 @@ const {
 } = vars;
 
 const Filters = () => {
+  const { context, setContext } = useFilterContext()
+  const [ filters, setFilters ] = useState<any>([])
 
-  const switchFilters = [{
-    label: 'Human data compliant (HIPAA-Compliant)',
-  },
-  {
-    label: "Data updates support"
-  },
-  {
-    label: "Published Academic Work support"
-  }]
+  useEffect(() => {
+    // TODO: apply context.filterValues on the allFilters and create the filters
+    const filters = context.allFilters //
+    setFilters(filters)
+  }, [context])
+
+  const switchFilters = filters
+    .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
 
   const checkboxFilters = [{
     label: 'None (350)',
