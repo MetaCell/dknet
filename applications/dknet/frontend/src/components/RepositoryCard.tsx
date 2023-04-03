@@ -11,7 +11,9 @@ import CircularProgressWithLabel from "./CircularProgressWithLabel";
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-const RepositoryCard = () => {
+const RepositoryCard = (props) => {
+  const { repository } = props;
+  // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
     <Card sx={{ position:"relative", maxWidth: 789 }} className="successCard">
       <Box pr={3} position="absolute" right={0} top='-3px'>
@@ -22,7 +24,7 @@ const RepositoryCard = () => {
           <CircularProgressWithLabel value={80}/>
         </div>
         <Box display="flex" flexDirection="column" width={1}>
-          <Typography variant="subtitle1" color="grey.800">Title</Typography>
+          <Typography variant="subtitle1" color="grey.800">{repository.label}</Typography>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             <Chip label="DataType"/>
             <Chip label="DataType"/>

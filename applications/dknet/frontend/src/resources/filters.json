@@ -3,6 +3,7 @@
         "code": "data-type",
         "label": "Data Type",
         "question": "What is the data type you will be sharing?",
+        "description": "HELP TEXT ON What is the data type you will be sharing?",
         "inputType": "MULTI",
         "options": [
             {
@@ -73,6 +74,22 @@
                 "code": "no",
                 "label": "No",
                 "icon": "Group Off"
+            }
+        ]
+    },
+    {
+        "code": "hipaa-compliant",
+        "label": "Human data compliant (HIPAA-Compliant)",
+        "description": "HELP TEXT ON Will the data be HIPAA-compliant?",
+        "inputType": "BOOLEAN",
+        "options": [
+            {
+                "code": "yes",
+                "label": "Yes"
+            },
+            {
+                "code": "no",
+                "label": "No"
             }
         ]
     },
