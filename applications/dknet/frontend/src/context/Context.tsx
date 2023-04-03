@@ -3,29 +3,30 @@ import { ROWS_PER_PAGE } from "../config/constants"
 import filters from '../resources/filters.json'
 import repositories from '../resources/repositories.json'
 import { FilterType } from '../config/enums'
+import { IFilter, IFilterContext, IRepository } from './ContextInterfaces'
 
-export const FilterContext = createContext()
+export const FilterContext = createContext(null)
 
-const booleanFilterInitialState = (filter) => (
+const booleanFilterInitialState = (filter: IFilter) => (
   {
     [filter.code]: filter.options[0],
   }
 )
 
-const singleFilterInitialState = (filter) => (
+const singleFilterInitialState = (filter: IFilter) => (
   {
     [filter.code]: undefined,
   }
 )
 
-const multipleFilterInitialState = (filter) => (
+const multipleFilterInitialState = (filter: IFilter) => (
   {
     [filter.code]: undefined,
   }
 )
 
-const filterInitialState = (filter) => {
-  switch(filter.inputType) {
+const filterInitialState = (filter: IFilter) => {
+  switch (filter.inputType) {
     case FilterType.Boolean:
       return booleanFilterInitialState(filter)
     case FilterType.Single:
@@ -37,20 +38,20 @@ const filterInitialState = (filter) => {
 }
 
 export const FilterProvider = ({ children }) => {
-  const [context, setContext] = useState({ // initial state, I suggest also to create an interface
+  const [context, setContext] = useState<IFilterContext>({
     pageNumber: 0,
     rowsPerPage: ROWS_PER_PAGE,
     filterValues: filters.reduce((a, filter) => {
       return (
-        { 
+        {
           ...a,
-          ...filterInitialState(filter)
+          ...filterInitialState(filter as IFilter)
         })
     }, {}),
-    allFilters: filters,
-    allRepositories: repositories
+    allFilters: filters as IFilter[],
+    allRepositories: repositories as IRepository[]
   })
-  
+
   return (
     <FilterContext.Provider value={{ context, setContext }}>
       {children}

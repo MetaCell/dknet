@@ -1,0 +1,36 @@
+import { FilterType } from '../config/enums'
+
+export interface IRepositoryAttributes {
+  filterCode: string,
+  optionCodes: string[]
+}
+
+export interface IRepository {
+  code: string,
+  label: string,
+  url: string,
+  attributes: IRepositoryAttributes[]
+}
+
+export interface IFilterOptions {
+  code: string,
+  label: string,
+  icon: string,
+}
+
+export interface IFilter {
+  code: string,
+  label: string,
+  inputType: FilterType,
+  options: IFilterOptions[]
+}
+
+export interface IFilterContext {
+  pageNumber: number,
+  rowsPerPage: number,
+  filterValues: {
+    [key: string]: IFilterOptions | IFilterOptions[]
+  },
+  allFilters: IFilter[],
+  allRepositories: IRepository[]
+}
