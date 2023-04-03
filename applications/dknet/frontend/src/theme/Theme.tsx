@@ -378,40 +378,8 @@ const theme = createTheme({
     MuiDialog: {
       styleOverrides: {
         root: {
-          "& .MuiDialog-container":{
-            justifyContent: "flex-end",
-            alignItems: "flex-start",
-            '& .MuiTypography-subtitle1': {
-              fontWeight: 500
-            },
-            '& .MuiTypography-subtitle2': {
-              fontWeight: 700
-            },
-            '& .MuiIconButton-root':{
-              '&:hover':{
-                backgroundColor: grey50,
-                borderRadius: '4px'
-              }
-            },
-            '& .MuiSvgIcon-root': {
-              color: grey500
-            },
-            '& .MuiDivider-root': {
-              marginTop: '1rem',
-              marginBottom: '1rem',
-              borderColor: grey200,
-              borderWidth: '1px'
-            }
-          }
         },
         paper: {
-          border: `1px solid ${grey200}`,
-          boxShadow: dialogBoxShadow,
-          borderRadius: 'unset',
-          padding: '22px',
-          maxWidth: '400px',
-          maxHeight: 'none',
-          height: '100%'
         },
       }
     },
@@ -437,7 +405,39 @@ const theme = createTheme({
     MuiDrawer: {
       styleOverrides: {
         root: {
-        }
+          justifyContent: "flex-end",
+          alignItems: "flex-start",
+          '& .MuiTypography-subtitle1': {
+            fontWeight: 500
+          },
+          '& .MuiTypography-subtitle2': {
+            fontWeight: 700
+          },
+          '& .MuiIconButton-root':{
+            '&:hover':{
+              backgroundColor: grey50,
+              borderRadius: '4px'
+            }
+          },
+          '& .MuiSvgIcon-root': {
+            color: grey500
+          },
+          '& .MuiDivider-root': {
+            marginTop: '1rem',
+            marginBottom: '1rem',
+            borderColor: grey200,
+            borderWidth: '1px'
+          }
+        },
+        paper: {
+          border: `1px solid ${grey200}`,
+          boxShadow: dialogBoxShadow,
+          borderRadius: 'unset',
+          padding: '22px',
+          maxWidth: '400px',
+          maxHeight: 'none',
+          height: '100%'
+        },
       }
     },
     MuiCircularProgress: {

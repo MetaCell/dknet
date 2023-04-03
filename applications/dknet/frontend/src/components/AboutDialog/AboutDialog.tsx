@@ -1,15 +1,10 @@
 import React from "react";
 
 //components
-import { Dialog, 
-  DialogContent,  
+import { Drawer,  
   Box, 
-  LinearProgress, 
   Typography,
-  TextField, 
-  Link,Button, 
   IconButton,
-  DialogActions,
   Divider } from '@mui/material';
 
 //icons
@@ -17,7 +12,8 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const AboutDialog = ({ open, onClose }) => {
   return (
-    <Dialog 
+    <Drawer 
+      anchor="right"
       open={open} 
       onClose={onClose} 
       id="about-window"
@@ -74,7 +70,7 @@ const AboutDialog = ({ open, onClose }) => {
           <Typography variant="subtitle2" color="primary.700">Send Email</Typography>
         </Box>
       </Box>
-    </Dialog>
+    </Drawer>
   )
 }
 export default AboutDialog;
