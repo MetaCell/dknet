@@ -67,11 +67,6 @@ const CheckBoxWidget = ({ data }: any) => {
 
   return (
     <FormControlLabel
-      sx={{
-        fontSize: '14px',
-        fontWeight: '400',
-        color: '#667085',
-      }}
       control={<BpCheckbox />}
       label={
         <Typography>

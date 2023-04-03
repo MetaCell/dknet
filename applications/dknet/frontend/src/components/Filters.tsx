@@ -13,6 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 import { vars } from "../theme/variables";
+import RadioGroupWidget from "./widgets/RadioGroup";
 
 const {
   grey700,
@@ -84,6 +85,28 @@ const Filters = () => {
               checkboxFilters.map((row, index) => <CheckBoxWidget key={index} data={row} />)
             }
           </FormGroup>
+        </Box>
+        <Box>
+          <FormLabel
+            component="legend"
+            sx={{
+              color: grey700
+            }}
+          >
+            <Stack direction="row" alignItems='center'>
+              <Typography component='h4'>
+                Persistent identifier (PID)
+              </Typography>
+              <Tooltip title="Help">
+                <IconButton>
+                  <HelpOutlineIcon sx={{
+                    color: grey400,
+                  }} />
+                </IconButton>
+              </Tooltip>
+            </Stack>
+          </FormLabel>
+          <RadioGroupWidget />
         </Box>
       </Stack>
     </Box>

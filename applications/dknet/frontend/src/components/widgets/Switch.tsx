@@ -71,11 +71,6 @@ const SwitchWidget = ({ data }: any) => {
 
   return (
     <FormControlLabel
-      sx={{
-        fontSize: '14px',
-        fontWeight: '400',
-        color: '#667085',
-      }}
       control={<IOSSwitch onChange={onSwitchChange} sx={{ m: 1 }} defaultChecked />}
       label={
         <Stack direction="row" alignItems='center'>
