@@ -80,7 +80,7 @@
     {
         "code": "hipaa-compliant",
         "label": "Human data compliant (HIPAA-Compliant)",
-        "description": "HELP TEXT ON Will the data be HIPAA-compliant?",
+        "description": "HELP TEXT ON Will the data be HIPAA-compliant? and more",
         "inputType": "BOOLEAN",
         "options": [
             {
