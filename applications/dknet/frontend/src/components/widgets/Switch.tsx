@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import { useFilterContext } from '../../context/Context'
 
 //components
 import Box from '@mui/material/Box';
@@ -64,9 +65,23 @@ const IOSSwitch = styled((props: SwitchProps) => (
 }));
 
 const SwitchWidget = ({ data }: any) => {
+  const { context, setContext } = useFilterContext()
+  const filter = context.allFilters.filter((filter: any) => filter.code === data.code)[0]
 
   const onSwitchChange = (e: any) => {
-    console.log(e)
+    let newValue = null
+    if(e.target.checked) {
+      newValue = filter.options[0]
+    } else {
+      newValue = filter.options[1]
+    }
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [data.code]: newValue
+      }
+    })
   }
 
   return (
@@ -76,13 +91,18 @@ const SwitchWidget = ({ data }: any) => {
         fontWeight: '400',
         color: '#667085',
       }}
-      control={<IOSSwitch onChange={onSwitchChange} sx={{ m: 1 }} defaultChecked />}
+      control={
+        <IOSSwitch
+          onChange={onSwitchChange}
+          sx={{ m: 1 }}
+          checked={context.filterValues[data.code].code === filter.options[0].code}
+        />}
       label={
         <Stack direction="row" alignItems='center'>
           <Typography>
             {data.label}
           </Typography>
-          <Tooltip title="Help">
+          <Tooltip title={data.description}>
             <IconButton>
               <HelpOutlineIcon sx={{
                 color:'#98A2B3',
