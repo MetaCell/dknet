@@ -39,7 +39,7 @@ const Header = () => {
 
             <Box sx={{  display: 'flex' }}>
               <Button variant="text">Send us feedback</Button>
-              <Button variant="contained" onClick={handleOpen}>About Dknet Repo</Button>
+              <Button variant="outlined" onClick={handleOpen}>About Dknet Repo</Button>
               <AboutDialog open={openAboutDialog} onClose={handleClose}/>
             </Box>
 
