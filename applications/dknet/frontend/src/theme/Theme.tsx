@@ -45,7 +45,7 @@ const theme = createTheme({
     },
     primary: {
       main: primary600,
-      700: primary700
+      700: primary700,
     },
     secondary: {
       main: primary700
@@ -459,6 +459,12 @@ const theme = createTheme({
         }
       }
     },
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+        }
+      }
+    }
 
   }
 });
