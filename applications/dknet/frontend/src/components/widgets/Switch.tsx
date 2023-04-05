@@ -90,7 +90,7 @@ const SwitchWidget = ({ data }: any) => {
         <IOSSwitch
           onChange={onSwitchChange}
           sx={{ m: 1 }}
-          checked={context.filterValues[data.code].code === filter.options[0].code}
+          checked={context?.filterValues[data.code]?.code === filter.options[0].code}
         />}
       label={
         <Stack direction="row" alignItems='center'>

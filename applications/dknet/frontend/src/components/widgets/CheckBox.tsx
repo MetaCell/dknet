@@ -63,11 +63,22 @@ function BpCheckbox(props: CheckboxProps) {
   );
 }
 
-const CheckBoxWidget = ({ data }: any) => {
+const CheckBoxWidget = ({ data, selectedData, setSelectedData, onChangeCheckboxes, filterValues }: any) => {
+  const isChecked = filterValues?.some(row => row.code === data.code)
+  const onChangeCheckbox = (e) => {
+    let newValue = null
+    if (e.target.checked) {
+      newValue = [...selectedData, data]
+    } else {
+      newValue = selectedData.filter(row => row.code !== e.target.value)
+    }
+    setSelectedData(newValue)
+    onChangeCheckboxes(newValue)
+  }
 
   return (
     <FormControlLabel
-      control={<BpCheckbox />}
+      control={<BpCheckbox checked={isChecked} value={data.code} onChange={onChangeCheckbox} />}
       label={
         <Typography>
           {data.label}

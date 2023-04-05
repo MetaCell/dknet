@@ -1,18 +1,17 @@
-import React  from "react"
+import React, {  useState } from "react"
 
 //components
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from "@mui/material/Typography"
+import FormGroup from "@mui/material/FormGroup"
+import CheckBoxWidget from "./widgets/CheckBox"
 import FormLabel from '@mui/material/FormLabel'
 import Tooltip from "@mui/material/Tooltip"
 import IconButton from "@mui/material/IconButton"
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
 
 import { vars } from "../theme/variables";
-import RadioGroupWidget from "./widgets/RadioWidget";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControl from "@mui/material/FormControl";
 import { useFilterContext } from "../context/Context";
 
 const {
@@ -20,11 +19,12 @@ const {
   grey400
 } = vars;
 
-const CustomRadioGroup = ({ data }) => {
+const CustomCheckboxesGroup = ({ data }) => {
   const { context, setContext } = useFilterContext()
-  const filter = context.allFilters.find((filter: any) => filter.code === data.code)
-  const onRadioChange = (e: any) => {
-    const newValue = filter.options.find(row => row.code === e.target.value)
+  const [selectedData, setSelectedData] = useState(context.filterValues[data.code] || [])
+
+
+  const onChangeCheckboxes = (newValue) => {
     setContext({
       ...context,
       filterValues: {
@@ -55,18 +55,21 @@ const CustomRadioGroup = ({ data }) => {
           </Tooltip>
         </Stack>
       </FormLabel>
-      <FormControl>
-        <RadioGroup
-          onChange={onRadioChange}
-          defaultValue={context?.filterValues[data.code]?.code}
-          aria-labelledby="demo-customized-radios"
-          name="customized-radios"
-        >
-          {data.options.map((option, index) => <RadioGroupWidget key={index} data={option} />)}
-        </RadioGroup>
-      </FormControl>
+      <FormGroup>
+        {
+          data.options.map((row, index) =>
+            <CheckBoxWidget
+              key={index}
+              data={row}
+              selectedData={selectedData}
+              setSelectedData={setSelectedData}
+              onChangeCheckboxes={onChangeCheckboxes}
+              filterValues={context.filterValues[data.code]}
+            />)
+        }
+      </FormGroup>
     </Box>
   );
 };
 
-export default CustomRadioGroup;
+export default CustomCheckboxesGroup;
