@@ -1,0 +1,26 @@
+[
+    {
+        "code": "repository-1",
+        "label": "First repository 1",
+        "url": "https://www.google.com",
+        "attributes": {
+            "data-type": ["clinical-trial"],
+            "domains": ["addiction-&-hiv", "zebrafish-genetics"],
+            "share-phi": ["no"],
+            "upload-frequecy": ["idky"],
+            "dataset-funding": ["nih-institute"]
+        }
+    },
+    {
+        "code": "repository-21",
+        "label": "Second repository 2",
+        "url": "https://www.google.com",
+        "attributes": {
+            "data-type": ["..."],
+            "domains": ["cancer", "chemistry-chemical-biology-and-biochemistry"],
+            "share-phi": ["yes"],
+            "upload-frequecy": ["sync"],
+            "dataset-funding": ["none"]
+        }
+    }    
+]
