@@ -14,8 +14,12 @@ import IconButton from "@mui/material/IconButton"
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
 
 import { vars } from "../theme/variables";
-import RadioGroupWidget from "./widgets/RadioGroup";
+import RadioGroupWidget from "./widgets/RadioWidget";
 import { Description } from "@mui/icons-material"
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import CustomRadioGroup from "./CustomRadioGroup";
 
 const {
   grey700,
@@ -34,6 +38,11 @@ const Filters = () => {
 
   const switchFilters = filters
     .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
+
+
+  const radioFilters = filters
+    .filter((filter) => filter.inputType === "SINGLE" && filter.label !== undefined)
+
 
   const checkboxFilters = [{
     label: 'None (350)',
@@ -89,28 +98,10 @@ const Filters = () => {
             }
           </FormGroup>
         </Box>
-        <Box>
-          <FormLabel
-            component="legend"
-            sx={{
-              color: grey700
-            }}
-          >
-            <Stack direction="row" alignItems='center'>
-              <Typography component='h4'>
-                Persistent identifier (PID)
-              </Typography>
-              <Tooltip title="Help">
-                <IconButton>
-                  <HelpOutlineIcon sx={{
-                    color: grey400,
-                  }} />
-                </IconButton>
-              </Tooltip>
-            </Stack>
-          </FormLabel>
-          <RadioGroupWidget />
-        </Box>
+        {
+          radioFilters?.map((row, index) => <CustomRadioGroup data={row} key={index} />)
+        }
+
       </Stack>
     </Box>
   );

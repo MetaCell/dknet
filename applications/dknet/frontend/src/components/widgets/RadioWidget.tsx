@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Radio, { RadioProps } from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: '50%',
@@ -44,7 +42,6 @@ const BpCheckedIcon = styled(BpIcon)({
   },
 });
 
-// Inspired by blueprintjs
 function BpRadio(props: RadioProps) {
   return (
     <Radio
@@ -57,18 +54,8 @@ function BpRadio(props: RadioProps) {
   );
 }
 
-export default function CustomizedRadios() {
+export default function CustomizedRadios({ data }) {
   return (
-    <FormControl>
-      <RadioGroup
-        defaultValue="female"
-        aria-labelledby="demo-customized-radios"
-        name="customized-radios"
-      >
-        <FormControlLabel value="female" control={<BpRadio />} label="Female" />
-        <FormControlLabel value="male" control={<BpRadio />} label="Male" />
-        <FormControlLabel value="other" control={<BpRadio />} label="Other" />
-      </RadioGroup>
-    </FormControl>
+    <FormControlLabel value={data.code} control={<BpRadio />} label={data?.label} />
   );
 }

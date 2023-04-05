@@ -15,7 +15,7 @@ const booleanFilterInitialState = (filter: IFilter) => (
 
 const singleFilterInitialState = (filter: IFilter) => (
   {
-    [filter.code]: undefined,
+    [filter.code]: filter.options[0],
   }
 )
 
