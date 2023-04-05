@@ -3,23 +3,23 @@ import React from "react";
 //components 
 import Box from '@mui/material/Box';
 import Grid from "@mui/material/Grid"; 
+import Typography from "@mui/material/Typography";
 import Checkbox, { CheckboxProps } from "@mui/material/Checkbox";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import { styled } from "@mui/material/styles";
 
-const RowItem = styled(FormControlLabel)(({ theme }) => ({
-  padding: '16px 22px 16px 16px',
+//icons
+import { FeaturedIcon, FeaturedIconChecked } from "../icons";
+
+const Item = styled(Box)(({ theme }) => ({
+  display: 'flex',
   border: `1px solid ${theme.palette.grey[200]}`,
   borderRadius: '12px',
-  margin: 0,
   width: '100%',
   '& .MuiCheckbox-root': {
     padding: 0
   },
-  '& .MuiTypography-root': {
+  '& .MuiTypography-body2': {
     color: theme.palette.grey[700],
-    fontWeight: 500,
-    fontSize: '0.875rem',
     marginLeft: '12px',
     display: 'inline-block',
     width: '138px',
@@ -27,10 +27,17 @@ const RowItem = styled(FormControlLabel)(({ theme }) => ({
     overflow: 'hidden !important',
     textOverflow: 'ellipsis'
   },
+  '& .MuiTypography-body1': {
+    color: theme.palette.grey[700],
+    fontWeight: 500,
+    fontSize: '0.875rem',
+    marginTop: '8px'
+  },
   '&:hover': {
-    border: `1px solid ${theme.palette.primary['main']}}`
+    backgroundColor: '#F8FDFA',
+    border: `2px solid ${theme.palette.primary['main']}}`,
   }
-}));
+}))
 const BpIcon = styled('span')(() => ({
   borderRadius: 4,
   width: 16,
@@ -53,7 +60,7 @@ const BpCheckedIcon = styled(BpIcon)({
   },
 });
 
-function BpCheckbox(props: CheckboxProps) {
+function ItemCheckbox(props: CheckboxProps) {
   return (
     <Checkbox
       sx={{
@@ -84,7 +91,7 @@ const QuestionBox = () => {
     });
   };
     
-  const { gilad, jason, antoine,gd } = state;
+  const { gilad, jason, antoine } = state;
 
   return (
     <Box sx={{
@@ -95,66 +102,36 @@ const QuestionBox = () => {
     }}>
       <Grid container gap={1.5}>
         <Grid item display="flex" gap={1.5} width={1}>
-          <RowItem
-            control={
-              <BpCheckbox checked={gilad} onChange={handleChange} name="gilad"/>} label="Addiction & HIV"
-          />
-          <RowItem
-            control={
-              <BpCheckbox checked={jason} onChange={handleChange} name="jason"/>} label="Cancer"
-          />
-          <RowItem
-            control={
-              <BpCheckbox checked={antoine} onChange={handleChange} name="antoine"/>} label="Chemistry, chemical biology and biochemistry"
-          />
+          <Item p={2} >
+            <ItemCheckbox checked={gilad} onChange={handleChange} name="gilad"/>
+            <Typography variant="body2">Addiction & HIV</Typography> 
+          </Item>
+          <Item p={2}>
+            <ItemCheckbox checked={jason} onChange={handleChange} name="jason"/>
+            <Typography variant="body2">Cancer</Typography>
+          </Item>
+          <Item p={2}>
+            <ItemCheckbox checked={antoine} onChange={handleChange} name="antoine"/>
+            <Typography variant="body2">Chemistry, chemical biology and biochemistry</Typography>
+          </Item>
         </Grid>
-        <Grid item display="flex" gap={1.5} width={1}>
-          <RowItem
-            control={
-              <BpCheckbox checked={gilad} onChange={handleChange} name="gilad"/>} label="Diabetes, Digestive &Kidney Diseases"
-          />
-          <RowItem
-            control={
-              <BpCheckbox checked={jason} onChange={handleChange} name="jason"/>} label="Enzymology"
-          />
-          <RowItem
-            control={
-              <BpCheckbox checked={antoine} onChange={handleChange} name="antoine"/>} label="Fly genetics"
-          />
-        </Grid>
-        <Grid item display="flex" gap={1.5} width={1}>
-          <RowItem
-            control={
-              <BpCheckbox checked={gilad} onChange={handleChange} name="gilad"/>} label="Immunology"
-          />
-          <RowItem
-            control={
-              <BpCheckbox checked={jason} onChange={handleChange} name="jason"/>} label="Influenza"
-          />
-          <RowItem
-            control={
-              <BpCheckbox checked={antoine} onChange={handleChange} name="antoine"/>} label="Metabolomics"
-          />
-        </Grid>
-        <Grid item display="flex" gap={1.5} width={1}>
-          <RowItem
-            control={
-              <BpCheckbox checked={gilad} onChange={handleChange} name="gilad"/>} label="Microbiome"
-          />
-          <RowItem
-            control={
-              <BpCheckbox checked={jason} onChange={handleChange} name="jason"/>} label="Mouse genetics"
-          />
-          <RowItem
-            control={
-              <BpCheckbox checked={antoine} onChange={handleChange} name="antoine"/>} label="Neuroscience"
-          />
-        </Grid>
-        <Grid item display="flex" gap={1.5} width={1}>
-          <RowItem
-            control={
-              <BpCheckbox checked={gd} onChange={handleChange} name="gd"/>} label="Other"
-          />
+        <Grid item display="flex" gap={2} width={1}>
+          <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection='column'>
+            <Checkbox
+              sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
+              icon={<FeaturedIcon/>}
+              checkedIcon={<FeaturedIconChecked/>}
+            />
+            <Typography variant="body1">Multiple</Typography>
+          </Item>
+          <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection='column'>
+            <Checkbox
+              sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
+              icon={<FeaturedIcon/>}
+              checkedIcon={<FeaturedIconChecked/>}
+            />
+            <Typography variant="body1">Only one</Typography>
+          </Item>
         </Grid>
       </Grid>
     </Box>
