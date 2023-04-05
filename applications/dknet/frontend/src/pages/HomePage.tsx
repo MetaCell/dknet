@@ -4,22 +4,12 @@ import { useFilterContext } from '../context/Context'
 //components
 import withLayout from "../useLayout"
 
-<<<<<<< HEAD
-import MainLayout from "../Layouts/Main";
-import Grid from "@mui/material/Grid";
-import Filters from "../components/Filters";
-import Container from "@mui/material/Container";
-import SortWidget from '../components/widgets/Sort';
-import RepositoryCard from '../components/RepositoryCard';
-import QuestionBox from '../components/QuestionBox/QuestionBox';
-=======
 import MainLayout from "../Layouts/Main"
 import Grid from "@mui/material/Grid"
 import Filters from "../components/Filters"
 import Container from "@mui/material/Container"
 import SortWidget from '../components/widgets/Sort'
 import RepositoryCard from '../components/RepositoryCard'
->>>>>>> 0e716a27320e3172dbc80c2afdb5cdba7be01823
 
 
 const HomePage = () => {
