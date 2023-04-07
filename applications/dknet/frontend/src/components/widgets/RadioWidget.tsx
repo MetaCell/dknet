@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Radio, { RadioProps } from '@mui/material/Radio';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import CustomFormControlLabel from "./CustomFormControlLabel";
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: '50%',
   width: 16,
   height: 16,
-  boxShadow:'inset 0 0 0 1px #0BA47D, inset 0 -1px 0 #0BA47D',
+  boxShadow:'inset 0 0 0 1px #98A2B3, inset 0 -1px 0 #98A2B3',
   backgroundColor: '#fff',
   backgroundImage:
     theme.palette.mode === 'dark'
@@ -31,6 +30,7 @@ const BpIcon = styled('span')(({ theme }) => ({
 const BpCheckedIcon = styled(BpIcon)({
   backgroundColor: '#D1F2DF',
   backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))',
+  boxShadow:'inset 0 0 0 1px #0BA47D, inset 0 -1px 0 #0BA47D',
   '&:before': {
     display: 'block',
     width: 16,
