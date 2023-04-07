@@ -12,6 +12,7 @@ import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import CustomFormControlLabel from "./CustomFormControlLabel";
 
 const IOSSwitch = styled((props: SwitchProps) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -85,27 +86,24 @@ const SwitchWidget = ({ data }: any) => {
   }
 
   return (
-    <FormControlLabel
-      control={
-        <IOSSwitch
-          onChange={onSwitchChange}
-          sx={{ m: 1 }}
-          checked={context?.filterValues[data.code]?.code === filter.options[0].code}
-        />}
-      label={
-        <Stack direction="row" alignItems='center'>
-          <Typography>
-            {data.label}
-          </Typography>
-          <Tooltip title={data.description}>
-            <IconButton>
-              <HelpOutlineIcon sx={{
-                color:'#98A2B3',
-              }} />
-            </IconButton>
-          </Tooltip>
-        </Stack>
-      }
+    <CustomFormControlLabel
+      control={<IOSSwitch
+        onChange={onSwitchChange}
+        sx={{ m: 1 }}
+        checked={context?.filterValues[data.code]?.code === filter.options[0].code}/>}
+      label={<Stack direction="row" alignItems='center'>
+        <Typography>
+          {data.label}
+        </Typography>
+        <Tooltip title={data.description}>
+          <IconButton>
+            <HelpOutlineIcon sx={{
+              color: '#98A2B3',
+            }}/>
+          </IconButton>
+        </Tooltip>
+      </Stack>}
+      value={undefined}
     />
   );
 };

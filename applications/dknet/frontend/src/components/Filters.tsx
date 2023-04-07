@@ -32,7 +32,6 @@ const Filters = () => {
   const checkboxFilters = filters
     .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)
 
-
   return (
     <Box sx={{
       background: '#FCFCFD',

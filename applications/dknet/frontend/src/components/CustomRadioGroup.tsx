@@ -46,7 +46,7 @@ const CustomRadioGroup = ({ data }) => {
           <Typography component='h4'>
             {data.label}
           </Typography>
-          <Tooltip title="Help">
+          <Tooltip title={data.description}>
             <IconButton>
               <HelpOutlineIcon sx={{
                 color: grey400,

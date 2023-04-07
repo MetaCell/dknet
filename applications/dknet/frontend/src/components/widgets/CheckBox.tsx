@@ -5,6 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
+import CustomFormControlLabel from "./CustomFormControlLabel";
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: 6,
@@ -77,13 +78,12 @@ const CheckBoxWidget = ({ data, selectedData, setSelectedData, onChangeCheckboxe
   }
 
   return (
-    <FormControlLabel
-      control={<BpCheckbox checked={isChecked} value={data.code} onChange={onChangeCheckbox} />}
-      label={
-        <Typography>
-          {data.label}
-        </Typography>
-      }
+    <CustomFormControlLabel
+      control={<BpCheckbox checked={isChecked} value={data.code} onChange={onChangeCheckbox}/>}
+      label={<Typography>
+        {data.label}
+      </Typography>}
+      value={undefined}
     />
   );
 };
