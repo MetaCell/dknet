@@ -10,7 +10,7 @@ import Filters from "../components/Filters"
 import Container from "@mui/material/Container"
 import SortWidget from '../components/widgets/Sort'
 import RepositoryCard from '../components/RepositoryCard'
-import QuestionBox from '../components/QuestionBox/QuestionBox'
+import Questions from '../components/Questions'
 
 
 const HomePage = () => {
@@ -34,7 +34,7 @@ const HomePage = () => {
             )
           })
           }
-          <QuestionBox/>
+          <Questions/>
         </Grid>
         <Grid item xs={5}>
           <Filters />
