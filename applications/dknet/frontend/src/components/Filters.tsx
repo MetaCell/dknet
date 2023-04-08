@@ -7,19 +7,9 @@ import Stack from '@mui/material/Stack'
 import Typography from "@mui/material/Typography"
 import SwitchWidget from "./widgets/Switch"
 import FormGroup from "@mui/material/FormGroup"
-import CheckBoxWidget from "./widgets/CheckBox"
-import FormLabel from '@mui/material/FormLabel'
-import Tooltip from "@mui/material/Tooltip"
-import IconButton from "@mui/material/IconButton"
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
+import CustomRadioGroup from "./CustomRadioGroup";
+import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 
-import { vars } from "../theme/variables"
-import { Description } from "@mui/icons-material"
-
-const {
-  grey700,
-  grey400
-} = vars;
 
 const Filters = () => {
   const { context, setContext } = useFilterContext()
@@ -34,15 +24,13 @@ const Filters = () => {
   const switchFilters = filters
     .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
 
-  const checkboxFilters = [{
-    label: 'None (350)',
-  },
-  {
-    label: "Partial (350)"
-  },
-  {
-    label: "Full (750)"
-  }]
+
+  const radioFilters = filters
+    .filter((filter) => filter.inputType === "SINGLE" && filter.label !== undefined)
+
+
+  const checkboxFilters = filters
+    .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)
 
   return (
     <Box sx={{
@@ -62,32 +50,14 @@ const Filters = () => {
             }
           </FormGroup>
         </Box>
-        <Box>
-          <FormLabel
-            component="legend"
-            sx={{
-              color: grey700
-            }}
-          >
-            <Stack direction="row" alignItems='center'>
-              <Typography component='h4'>
-                Data citation support
-              </Typography>
-              <Tooltip title="Help">
-                <IconButton>
-                  <HelpOutlineIcon sx={{
-                    color: grey400,
-                  }} />
-                </IconButton>
-              </Tooltip>
-            </Stack>
-          </FormLabel>
-          <FormGroup>
-            {
-              checkboxFilters.map((row, index) => <CheckBoxWidget key={index} data={row} />)
-            }
-          </FormGroup>
-        </Box>
+        {
+          checkboxFilters?.map((row, index) => <CustomCheckboxesGroup data={row} key={index} />)
+        }
+
+        {
+          radioFilters?.map((row, index) => <CustomRadioGroup data={row} key={index} />)
+        }
+
       </Stack>
     </Box>
   );
