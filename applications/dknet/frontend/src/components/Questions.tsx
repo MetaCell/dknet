@@ -3,29 +3,37 @@ import React from 'react';
 //components
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
-import { MultipleItemsCheckbox, TwoItemsCheckbox, checkboxOptions, checkboxTwoOptions } from './questionUtilities';
+import Checkbox from "@mui/material/Checkbox";
 import QuestionBox from './QuestionBox/QuestionBox';
 import CheckBoxWidget from './widgets/CheckBox';
+import { styled } from "@mui/material/styles";
+
+//icons
+import { FeaturedIcon, FeaturedIconChecked } from './icons';
 
 const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
   border: `1px solid ${theme.palette.grey[200]}`,
   borderRadius: '12px',
   width: '100%',
+  '& .MuiFormControlLabel-root': {
+    margin: 0
+  },
   '& .MuiCheckbox-root': {
     padding: 0
   },
-  '& .MuiTypography-body2': {
+  '& .MuiTypography-body1': {
     color: theme.palette.grey[700],
     marginLeft: '12px',
     display: 'inline-block',
     width: '138px',
     whiteSpace: 'nowrap',
     overflow: 'hidden !important',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
+    fontWeight: 500,
+    fontSize: '0.875rem',
   },
-  '& .MuiTypography-body1': {
+  '& .MuiTypography-body2': {
     color: theme.palette.grey[700],
     fontWeight: 500,
     fontSize: '0.875rem',
@@ -37,31 +45,99 @@ const Item = styled(Box)(({ theme }) => ({
   }
 })); 
 
+const checkboxTwoOptions = [
+  {
+    label: 'Multiple',
+    checked: false, 
+  },
+  {
+    label: 'Only one',
+    checked: false
+  }
+]
+const data = [
+  {
+    label: 'Addiction & HIV',
+    checked: false
+  },
+  {
+    label: 'Cancer',
+    checked: false
+  },
+  {
+    label: 'Chemistry, chemical biology and biochemistry',
+    checked: false
+  },
+  {
+    label: 'Diabetes, Digestive &Kidney Diseases',
+    checked: false
+  },
+  {
+    label: 'Enzymology',
+    checked: false
+  },
+  {
+    label: 'Fly genetics',
+    checked: false
+  },
+  {
+    label: 'Immunology',
+    checked: false
+  },
+  {
+    label: 'Influenza',
+    checked: false
+  },
+  {
+    label: 'Metabolomics',
+    checked: false
+  },
+  {
+    label: 'Microbiome',
+    checked: false
+  },
+  {
+    label: 'Mouse genetics', 
+    checked: false
+  },
+  {
+    label: 'Neuroscience', 
+    checked: false
+  },
+  {
+    label: 'Physiology', 
+    checked: false
+  },
+  {
+    label: 'Structural biology', 
+    checked: false
+  },
+  {
+    label: 'Zebrafish genetics', 
+    checked: false
+  },
+  {
+    label: 'Other', 
+    checked: false
+  }
+]
+
 const Questions = () => {
 
-  const [state, setState] = React.useState([...checkboxOptions]);
-  const [state2, setState2] = React.useState([...checkboxTwoOptions])
-    
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>, option, index) => {
-    const newValues = [...checkboxOptions];
-    newValues[index].checked = event.target.checked;
-    setState(newValues);
-  };
+  const [state, setState] = React.useState([...checkboxTwoOptions])
 
-  const handleChange2 = (event: React.ChangeEvent<HTMLInputElement>, option, index) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>, option, index) => {
     const newValues = [...checkboxTwoOptions];
     newValues[index].checked = event.target.checked;
-    setState2(newValues);
+    setState(newValues);
   };
 
   return (
     <>
       <QuestionBox>
         {
-          state.map((option, index) => 
+          data.map((option, index) => 
             <Item p={2} key={index}>
-              {/* <MultipleItemsCheckbox checked={option.checked} onChange={(e) => handleChange(e, option, index)} name={option.label}/>
-              <Typography variant="body2">{option.label}</Typography>  */}
               <CheckBoxWidget data={option}/>
             </Item> 
           )
@@ -69,10 +145,15 @@ const Questions = () => {
       </QuestionBox>
       <QuestionBox>
         {
-          state2.map((option, index) => 
+          state.map((option, index) => 
             <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection='column' key={index}>
-              <TwoItemsCheckbox checked={option.checked} onChange={(e) => handleChange2(e, option, index)} name={option.label}/>
-              <Typography variant="body1">{option.label}</Typography>
+              <Checkbox 
+                sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
+                icon={<FeaturedIcon/>}
+                checked={option.checked} onChange={(e) => handleChange(e, option, index)} name={option.label}
+                checkedIcon={<FeaturedIconChecked/>}
+              />
+              <Typography variant="body2">{option.label}</Typography>
             </Item>
           )
         }
