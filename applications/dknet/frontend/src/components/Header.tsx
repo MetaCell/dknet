@@ -7,7 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import AboutDialog from "./AboutDialog/AboutDialog";
+import AboutDialog from "./AboutDialog";
 
 //icons
 import { LogoIcon } from '../assets/icons';

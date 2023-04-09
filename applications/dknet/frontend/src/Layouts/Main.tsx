@@ -4,7 +4,7 @@ import React from 'react';
 import Header from "../components/Header";
 import Container from '@mui/material/Container';
 import { Box, Grid, Typography } from "@mui/material";
-import Search from "../components/Search/Search";
+import Search from "../components/Search";
 
 
 const MainLayout = ({ children }) => {

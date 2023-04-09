@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import { MultipleItemsCheckbox, TwoItemsCheckbox, checkboxOptions, checkboxTwoOptions } from './questionUtilities';
 import QuestionBox from './QuestionBox/QuestionBox';
+import CheckBoxWidget from './widgets/CheckBox';
 
 const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -59,8 +60,9 @@ const Questions = () => {
         {
           state.map((option, index) => 
             <Item p={2} key={index}>
-              <MultipleItemsCheckbox checked={option.checked} onChange={(e) => handleChange(e, option, index)} name={option.label}/>
-              <Typography variant="body2">{option.label}</Typography> 
+              {/* <MultipleItemsCheckbox checked={option.checked} onChange={(e) => handleChange(e, option, index)} name={option.label}/>
+              <Typography variant="body2">{option.label}</Typography>  */}
+              <CheckBoxWidget data={option}/>
             </Item> 
           )
         }
