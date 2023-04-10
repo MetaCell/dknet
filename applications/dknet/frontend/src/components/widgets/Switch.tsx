@@ -2,16 +2,14 @@ import React from "react"
 import { useFilterContext } from '../../context/Context'
 
 //components
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from "@mui/material/Typography";
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import CustomFormControlLabel from "./CustomFormControlLabel";
 
 const IOSSwitch = styled((props: SwitchProps) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -85,32 +83,24 @@ const SwitchWidget = ({ data }: any) => {
   }
 
   return (
-    <FormControlLabel
-      sx={{
-        fontSize: '14px',
-        fontWeight: '400',
-        color: '#667085',
-      }}
-      control={
-        <IOSSwitch
-          onChange={onSwitchChange}
-          sx={{ m: 1 }}
-          checked={context.filterValues[data.code].code === filter.options[0].code}
-        />}
-      label={
-        <Stack direction="row" alignItems='center'>
-          <Typography>
-            {data.label}
-          </Typography>
-          <Tooltip title={data.description}>
-            <IconButton>
-              <HelpOutlineIcon sx={{
-                color:'#98A2B3',
-              }} />
-            </IconButton>
-          </Tooltip>
-        </Stack>
-      }
+    <CustomFormControlLabel
+      control={<IOSSwitch
+        onChange={onSwitchChange}
+        sx={{ m: 1 }}
+        checked={context.filterValues[data.code].code === filter.options[0].code}/>}
+      label={<Stack direction="row" alignItems='center'>
+        <Typography>
+          {data.label}
+        </Typography>
+        <Tooltip title={data.description}>
+          <IconButton>
+            <HelpOutlineIcon sx={{
+              color: '#98A2B3',
+            }}/>
+          </IconButton>
+        </Tooltip>
+      </Stack>}
+      value={undefined}
     />
   );
 };

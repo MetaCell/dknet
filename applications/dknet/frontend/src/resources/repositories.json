@@ -4,7 +4,7 @@
         "label": "First repository 1",
         "url": "https://www.google.com",
         "attributes": {
-            "data-type": ["clinical-trial", "..."],
+            "data-type": ["clinical-trial"],
             "domains": ["addiction-&-hiv", "zebrafish-genetics"],
             "share-phi": ["no"],
             "upload-frequecy": ["idky"],

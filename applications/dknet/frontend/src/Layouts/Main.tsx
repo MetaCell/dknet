@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { Box, Grid, Typography } from "@mui/material";
-import Search from "../components/Search/Search";
+import Search from "../components/Search";
 import FiltersAssistantDialog from "../components/FiltersAssistantDialog";
 
 
