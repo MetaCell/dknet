@@ -5,6 +5,13 @@
 A big parts of the application will be dynamically rendered based on the files in the resource folder
 the filter-schema.json file describes the structure of the filter and repository entities
 
+## installation & run
+
+```bash
+npm install
+npm run start
+```
+
 ### sample files
 in the resource folder there is an example json with repositories and an example json with filters.
 the repositories json is self explaining and refers to the filters.json (optionCodes and filterCode)
