@@ -1,10 +1,34 @@
+/**
+ * This script fetches data from an Airtable table using the Airtable API,
+ * processes the data, and saves it to a JSON file. The script uses the
+ * `request` module to make a GET request to the Airtable API, and then
+ * extracts the relevant data from the response. The data is then transformed
+ * into a new data structure that is more suitable for use in an application.
+ *
+ * Parameters:
+ * - `baseId`: string - the ID of the Airtable base to query
+ * - `tableName`: string - the name of the table in the Airtable base to query
+ * - `pat`: string - the Personal Access Token to use for authentication
+ *
+ * Returns:
+ * None
+ * 
+ * Outputs:
+ * file: filters.json
+ *
+ * Example usage:
+ * ```
+ * node QuestionFilters_AirTableCoversionToJSON.js
+ * ```
+ */
+
 const fs = require('fs');
 const request = require('request');
 
 // Set up Airtable API credentials
 const baseId = 'app8GwPKlzcZUj3lo';
 const tableName = 'tblsgKKi5vQSBV5kW';
-const pat = 'pat8Cf0G6nFuUHfhD.08c14f434abbb756f9834b044b07665dcac155f8a16efc1b60ff6e7298a0c5f3';
+const pat = 'Insert your Personal Access Token here';
 
 // Set up Airtable API endpoint URL
 const url = `https://api.airtable.com/v0/${baseId}/${tableName}?sortField=FilterOrder&sortDirection=asc`;
