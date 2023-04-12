@@ -72,6 +72,11 @@ const theme = createTheme({
       fontSize: "2.25rem",
       color: grey800
     },
+    h2:{
+      fontWeight: 600,
+      fontSize: "1.286rem",
+      color: grey800
+    },
     h4: {
       fontWeight: 500,
       color: grey700,
@@ -215,16 +220,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
-          '&.search_btn':{
-            background: primary600,
-            border: `1px solid ${primary600}`,
-            boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-            color: white,
-            '&:hover': {
-              background: primary700,
-              color: white,
-            }
-          }
+          borderRadius: '8px',
         },
         text: {
           color: grey600,
@@ -235,12 +231,21 @@ const theme = createTheme({
           }
         },
         contained: {
+          background: primary600,
+          border: `1px solid ${primary600}`,
+          boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
+          color: white,
+          '&:hover': {
+            background: primary700,
+            color: white,
+          }
+        },
+        outlined: {
           background: white,
           color: grey700,
           fontWeight: 600,
           border: `1px solid ${grey200}`,
           boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-          borderRadius: '8px',
           '&:hover': {
             background: grey50,
             border: `1px solid ${checkboxBorderColor}`,
@@ -456,6 +461,15 @@ const theme = createTheme({
     MuiInputBase:{
       styleOverrides:{
         root: {
+        }
+      }
+    },
+    MuiFormControlLabel:{
+      styleOverrides:{
+        root: {
+          fontSize: '14px',
+          fontWeight: '400',
+          color: grey500,
         }
       }
     },

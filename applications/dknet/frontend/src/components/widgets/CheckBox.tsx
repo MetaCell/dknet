@@ -1,10 +1,10 @@
 import React from "react";
 
 //components
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
+import CustomFormControlLabel from "./CustomFormControlLabel";
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: 6,
@@ -63,21 +63,26 @@ function BpCheckbox(props: CheckboxProps) {
   );
 }
 
-const CheckBoxWidget = ({ data }: any) => {
+const CheckBoxWidget = ({ data, selectedData, setSelectedData, onChangeCheckboxes, filterValues }: any) => {
+  const isChecked = filterValues?.some(row => row.code === data.code)
+  const onChangeCheckbox = (e) => {
+    let newValue = null
+    if (e.target.checked) {
+      newValue = [...selectedData, data]
+    } else {
+      newValue = selectedData.filter(row => row.code !== e.target.value)
+    }
+    setSelectedData(newValue)
+    onChangeCheckboxes(newValue)
+  }
 
   return (
-    <FormControlLabel
-      sx={{
-        fontSize: '14px',
-        fontWeight: '400',
-        color: '#667085',
-      }}
-      control={<BpCheckbox />}
-      label={
-        <Typography>
-          {data.label}
-        </Typography>
-      }
+    <CustomFormControlLabel
+      control={<BpCheckbox checked={isChecked} value={data.code} onChange={onChangeCheckbox}/>}
+      label={<Typography>
+        {data.label}
+      </Typography>}
+      value={undefined}
     />
   );
 };

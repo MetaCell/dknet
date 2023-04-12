@@ -3,11 +3,19 @@ import React from 'react';
 //components
 import Header from "../components/Header";
 import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
 import { Box, Grid, Typography } from "@mui/material";
-import Search from "../components/Search/Search";
+import Search from "../components/Search";
+import FiltersAssistantDialog from "../components/FiltersAssistantDialog";
 
 
 const MainLayout = ({ children }) => {
+  const [open, setOpen] = React.useState(false);
+
+  const viewFilterAssistant = () => {
+    setOpen(true);
+
+  }
   return (
     <Box sx={{
       backgroundImage: 'url("/gridBg.svg")',
@@ -29,7 +37,7 @@ const MainLayout = ({ children }) => {
           <Grid item xs={12} sm={8}>
             <Box display='flex' alignItems='center' justifyContent='center' width={1}>
               <Typography variant='subtitle2' mr={1}>Need help setting up filters? </Typography>
-              <Typography variant='body2' color="secondary" sx={{ fontWeight: 600 }} >Try our Filtering Assistant</Typography>
+              <Button variant='text' sx={{ fontWeight: 600, color: '#088E75' }} onClick={viewFilterAssistant} >Try our Filtering Assistant</Button>
             </Box>
           </Grid>
         </Grid>
@@ -45,6 +53,7 @@ const MainLayout = ({ children }) => {
         }}>
         {children}
       </Box>
+      <FiltersAssistantDialog open={open} setOpen={setOpen} />
     </Box>
 
   )
