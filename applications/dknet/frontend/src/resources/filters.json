@@ -1,0 +1,149 @@
+[
+    {
+        "code": "data-type",
+        "label": "Data Type",
+        "question": "What is the data type you will be sharing?",
+        "description": "HELP TEXT ON What is the data type you will be sharing?",
+        "inputType": "MULTI",
+        "options": [
+            {
+                "code": "clinical-trial",
+                "label": "Clinical Trial"
+            },
+            {
+                "code": "crystallography",
+                "label": "Crystallography"
+            },
+            {
+                "code": "cytometry",
+                "label": "Cytometry"
+            },
+            {
+                "code": "electron-microscopy",
+                "label": "Electron microscopy"
+            },
+            {
+                "code": "...",
+                "label": "..."
+            },
+            {
+                "code": "sequence",
+                "label": "Sequence"
+            }
+        ]
+    },
+    {
+        "code": "domains",
+        "label": "Domains",
+        "question": "What domain do the data belong to?",
+        "inputType": "MULTI",
+        "options": [
+            {
+                "code": "addiction-&-hiv",
+                "label": "Addiction & HIV"
+            },
+            {
+                "code": "cancer",
+                "label": "Cancer",
+                "color": "WARNING"
+            },
+            {
+                "code": "chemistry-chemical-biology-and-biochemistry",
+                "label": "Chemistry, chemical biology and biochemistry"
+            },
+            {
+                "code": "...",
+                "label": "..."
+            },
+            {
+                "code": "zebrafish-genetics",
+                "label": "Zebrafish genetics"
+            }
+        ]
+    },
+    {
+        "code": "share-phi",
+        "label": "Share PHI",
+        "question": "Will you be sharing human data with PHI?",
+        "inputType": "BOOLEAN",
+        "options": [
+            {
+                "code": "yes",
+                "label": "Yes",
+                "icon": "PeopleAltOutlined",
+                "color": "SUCCESS"
+            },
+            {
+                "code": "no",
+                "label": "No",
+                "icon": "PersonOffOutlined",
+                "color": "WARNING"
+            }
+        ]
+    },
+    {
+        "code": "hipaa-compliant",
+        "label": "Human data compliant (HIPAA-Compliant)",
+        "description": "HELP TEXT ON Will the data be HIPAA-compliant? and more",
+        "inputType": "BOOLEAN",
+        "options": [
+            {
+                "code": "yes",
+                "label": "Yes"
+            },
+            {
+                "code": "no",
+                "label": "No"
+            }
+        ]
+    },
+    {
+        "code": "upload-frequecy",
+        "label": "Data be updated frequently",
+        "question": "Will the data be updated frequently, i.e., they are part of an ongoing study that will uploaded in batches?",
+        "inputType": "SINGLE",
+        "options": [
+            {
+                "code": "sync",
+                "label": "Yes",
+                "icon": "Sync",
+                "color": "SUCCESS"
+            },
+            {
+                "code": "no-sync",
+                "label": "No",
+                "icon": "SyncDisabled",
+                "color": "WARNING"
+            },
+            {
+                "code": "idky",
+                "label": "I don't know yet",
+                "icon": "QuestionMark",
+                "color": "WARNING"
+            }
+        ]
+    },
+    {
+        "code": "dataset-funding",
+        "label": "Dataset Funding",
+        "inputType": "SINGLE",
+        "options": [
+            {
+                "code": "none",
+                "label": "None"
+            },
+            {
+                "code": "niddk-source",
+                "label": "NIDDK Source"
+            },
+            {
+                "code": "nih-institute",
+                "label": "NIH Institute"
+            },
+            {
+                "code": "nih-source",
+                "label": "NIH Source"
+            }
+        ]
+    }
+]

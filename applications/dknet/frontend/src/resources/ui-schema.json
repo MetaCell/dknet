@@ -1,0 +1,46 @@
+{
+    "filter": {
+        "uiSchema": {
+            "ui:order": [
+                "code",
+                "label",
+                "question",
+                "tooltip",
+                "inputType",
+                "option"
+            ],
+            "code": {},
+            "label": {},
+            "question": {
+                "ui:widget": "textarea",
+                "ui:options": {
+                    "rows": 5
+                }
+            },
+            "tooltip": {
+                "ui:widget": "textarea",
+                "ui:disabled": true,
+                "ui:options": {
+                    "rows": 5
+                }
+            },
+            "inputType": {
+                "ui:widget": "radio"
+            }
+        }
+    },
+    "repository": {
+        "uiSchema": {
+            "ui:order": [
+                "code",
+                "label",
+                "url",
+                "attribute"
+            ],
+            "code": {},
+            "label": {},
+            "url": {},
+            "attribute": {}
+        }
+    }
+}
