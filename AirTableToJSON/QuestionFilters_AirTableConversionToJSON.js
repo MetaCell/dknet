@@ -23,12 +23,18 @@
  */
 
 const fs = require('fs');
+const { exit } = require('process');
 const request = require('request');
+
+if(process.argv.length !== 3) {
+  console.log(`USAGE: node ${process.argv[1]} <PAT>`);
+  exit(1);
+}
 
 // Set up Airtable API credentials
 const baseId = 'app8GwPKlzcZUj3lo';
 const tableName = 'tblsgKKi5vQSBV5kW';
-const pat = 'Insert your Personal Access Token here';
+const pat = process.argv[2];
 
 // Set up Airtable API endpoint URL
 const url = `https://api.airtable.com/v0/${baseId}/${tableName}?sortField=FilterOrder&sortDirection=asc`;
