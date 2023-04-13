@@ -82,7 +82,8 @@ request.get({ url: url, headers: headers }, function (error, response, body) {
         'label': fields['Label (Name)'],
         'question': fields['User question'],
         'inputType': fields['InputType'],
-        'options': answers
+        'options': answers,
+        'HelpText': fields['Help text']
     };   
   });
 
