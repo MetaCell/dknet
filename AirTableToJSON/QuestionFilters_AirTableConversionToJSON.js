@@ -44,9 +44,11 @@ const headers = {
   'Content-Type': 'application/json'
 };
 
-// Make a GET request to the Airtable API
-request.get({ url: url, headers: headers }, function (error, response, body) {
-  if (error) {
+// Make a GET request to the Airtable API for the filters
+request.get({ url: url, headers: headers }, function (error, response, body) 
+{
+  if (error) 
+  {
     console.error(error);
     return;
   }
@@ -58,37 +60,44 @@ request.get({ url: url, headers: headers }, function (error, response, body) {
   const records = data.records;
 
   // Map the records array to a new array of objects with only the fields data
-  const dataToSave = data.records.map(function (record) {
+  const filters = data.records.map(function (record) 
+  {
     const fields = record.fields;
-    console.log('Working hard')
-    
     // Split the answers string into an array if it's not undefined
     let inputOptionsArray = fields['InputOptions'] ? fields['InputOptions'].split(';'):[];
     let InputIconsArray = fields['InputIcons'] ? fields['InputIcons'].split(';'):[];
+    let InputColorsArray = fields['InputColors'] ? fields['InputColors'].split(';'):[];
     let answers = [];
-
     if (inputOptionsArray.length > 0){
-      inputOptionsArray.forEach(function(inputOption,index){
+      inputOptionsArray.forEach(function(inputOption,index)
+      {
         const code = inputOption.toLowerCase().replace(/\s+/g, '-');
         const icon = InputIconsArray[index] || '';
-        answers.push({'code': code, 'label': inputOption, 'icon': icon }); 
+        const colors = InputColorsArray[index] || '';
+        answers.push({
+          'code': code, 
+          'label': inputOption, 
+          'icon': icon, 
+          'color': colors, 
+        }); 
       });               
       };
-  
-
-    // Rename or re-word fields as necessary
-    return {
-        'code': fields['Code (Column Name)'],
+  // Rename or re-word fields as necessary
+  return {   
+    'code': fields['Code (Column Name)'],
         'label': fields['Label (Name)'],
         'question': fields['User question'],
-        'inputType': fields['InputType'],
-        'options': answers,
-        'HelpText': fields['Help text']
-    };   
-  });
+        'description': fields['Help text'], // check if this is tooltip or description
+        'inputType': 
+            fields['InputType'],
+            //'enum': ["SINGLE","MULTI","BOOLEAN"],
+            //'enumNames': ["Single select","Multi select","Boolean"],
+        'options': answers
+    };
+});
 
-  // Write the data to a JSON file
-  fs.writeFile('filters.json', JSON.stringify(dataToSave), function (err) {
+// Write the data to a JSON file
+  fs.writeFile('filters.json', JSON.stringify(filters), function (err) {
     if (err) {
       console.error(err);
       return;
