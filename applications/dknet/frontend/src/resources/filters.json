@@ -109,7 +109,7 @@
         "label": "Domain",
         "question": "Which domain(s) does the data belong to?",
         "description": "Select the primary domain of your data;  if your domain is not on the list, select other.",
-        "inputType": "SINGLE",
+        "inputType": "MULTI",
         "options": [
             {
                 "code": "multiple",
