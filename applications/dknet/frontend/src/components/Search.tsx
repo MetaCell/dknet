@@ -34,7 +34,7 @@ const Search = () => {
       <CustomAutoComplete
         options={context.allFilters[0].options}
         onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[0])}
-        defaultValue={context.filterValues[context.allFilters[0].code]}
+        defaultValue={context.filterValues[context.allFilters[0].code] || []}
         placeholder={context.allFilters[0].label}
       />
 
@@ -42,7 +42,7 @@ const Search = () => {
       <CustomAutoComplete
         options={context.allFilters[1].options}
         onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[1])}
-        defaultValue={context.filterValues[context.allFilters[1].code]}
+        defaultValue={context.filterValues[context.allFilters[1].code] || []}
         placeholder={context.allFilters[1].label}
       />
 
