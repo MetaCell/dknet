@@ -1,148 +1,407 @@
 [
     {
-        "code": "data-type",
+        "code": "DataTypeQuestion",
         "label": "Data Type",
-        "question": "What is the data type you will be sharing?",
-        "description": "HELP TEXT ON What is the data type you will be sharing?",
+        "question": "What type(s) of data will you be sharing?",
+        "description": "Are your data primarily of one data type, e.g., imaging, or have you collected multiple primary data types, e.g., correlated imaging and physiology.  ",
         "inputType": "MULTI",
         "options": [
             {
-                "code": "clinical-trial",
-                "label": "Clinical Trial"
+                "code": "multiple-data-types",
+                "label": "Multiple data types",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "bioactivity-screens",
+                "label": "Bioactivity screens",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "clinincal-trial",
+                "label": "Clinincal trial",
+                "icon": "",
+                "color": ""
             },
             {
                 "code": "crystallography",
-                "label": "Crystallography"
-            },
-            {
-                "code": "cytometry",
-                "label": "Cytometry"
+                "label": "Crystallography",
+                "icon": "",
+                "color": ""
             },
             {
                 "code": "electron-microscopy",
-                "label": "Electron microscopy"
+                "label": "Electron microscopy",
+                "icon": "",
+                "color": ""
             },
             {
-                "code": "...",
-                "label": "..."
+                "code": "gene-expression",
+                "label": "Gene expression",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "genomic",
+                "label": "Genomic",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "genotype-phenotype",
+                "label": "Genotype-Phenotype",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "imaging",
+                "label": "Imaging",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "interaction/pathways",
+                "label": "Interaction/pathways",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "kinetics",
+                "label": "Kinetics",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "neuron-reconstruction",
+                "label": "Neuron reconstruction",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "physiological",
+                "label": "Physiological",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "protein-structure",
+                "label": "Protein structure",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "proteomic",
+                "label": "Proteomic",
+                "icon": "",
+                "color": ""
             },
             {
                 "code": "sequence",
-                "label": "Sequence"
+                "label": "Sequence",
+                "icon": "",
+                "color": ""
             }
         ]
     },
     {
-        "code": "domains",
-        "label": "Domains",
-        "question": "What domain do the data belong to?",
+        "code": "DomainQuestion",
+        "label": "Domain",
+        "question": "Which domain(s) does the data belong to?",
+        "description": "Select the primary domain of your data;  if your domain is not on the list, select other.",
         "inputType": "MULTI",
         "options": [
             {
-                "code": "addiction-&-hiv",
-                "label": "Addiction & HIV"
+                "code": "multiple",
+                "label": "Multiple",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "addiction-and-hiv",
+                "label": "Addiction and HIV",
+                "icon": "",
+                "color": ""
             },
             {
                 "code": "cancer",
                 "label": "Cancer",
-                "color": "WARNING"
+                "icon": "",
+                "color": ""
             },
             {
-                "code": "chemistry-chemical-biology-and-biochemistry",
-                "label": "Chemistry, chemical biology and biochemistry"
+                "code": "chemistry,-chemical-biology-and-biochemistry",
+                "label": "Chemistry, chemical biology and biochemistry",
+                "icon": "",
+                "color": ""
             },
             {
-                "code": "...",
-                "label": "..."
+                "code": "diabetes,-digestive-and-kidney-diseases",
+                "label": "Diabetes, Digestive and Kidney Diseases",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "enzymology",
+                "label": "Enzymology",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "fly-genetics",
+                "label": "Fly genetics",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "immunology",
+                "label": "Immunology",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "influenza",
+                "label": "Influenza",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "metabolomics",
+                "label": "Metabolomics",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "microbiome",
+                "label": "Microbiome",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "mouse-genetics",
+                "label": "Mouse genetics",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "neuroscience",
+                "label": "Neuroscience",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "protein",
+                "label": "Protein",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "structural-biology",
+                "label": "Structural biology",
+                "icon": "",
+                "color": ""
             },
             {
                 "code": "zebrafish-genetics",
-                "label": "Zebrafish genetics"
+                "label": "Zebrafish genetics",
+                "icon": "",
+                "color": ""
             }
         ]
     },
     {
-        "code": "share-phi",
-        "label": "Share PHI",
-        "question": "Will you be sharing human data with PHI?",
+        "code": "HumanSubjectQuestion",
+        "label": "Human Subjects",
+        "question": "Are human subjects involved?",
+        "description": "will you be sharing data collected from humans",
         "inputType": "BOOLEAN",
         "options": [
             {
                 "code": "yes",
                 "label": "Yes",
-                "icon": "PeopleAltOutlined",
-                "color": "SUCCESS"
+                "icon": "Group",
+                "color": ""
             },
             {
                 "code": "no",
                 "label": "No",
-                "icon": "PersonOffOutlined",
-                "color": "WARNING"
+                "icon": "Group Off",
+                "color": ""
             }
         ]
     },
     {
-        "code": "hipaa-compliant",
-        "label": "Human data compliant (HIPAA-Compliant)",
-        "description": "HELP TEXT ON Will the data be HIPAA-compliant? and more",
+        "code": "PhiHippa",
+        "label": "PHI/HIPPA",
+        "question": "Will the dataset handling have to comply with HIPAA?",
+        "description": "HIPAA= Health Information Portability and Accountability Act.  A US regulation governing the sharing of protected health information.  Other countries have other governing regulations.",
         "inputType": "BOOLEAN",
         "options": [
             {
                 "code": "yes",
-                "label": "Yes"
+                "label": "Yes",
+                "icon": "Health and Safety",
+                "color": ""
             },
             {
                 "code": "no",
-                "label": "No"
+                "label": "No",
+                "icon": "Remove Moderator",
+                "color": ""
             }
         ]
     },
     {
-        "code": "upload-frequecy",
-        "label": "Data be updated frequently",
+        "code": "qVersioning (from Questions / Responses)",
+        "label": "Versioning",
         "question": "Will the data be updated frequently, i.e., they are part of an ongoing study that will uploaded in batches?",
+        "description": "Do you anticipate publishing multiple versions of a given data set or will you deposit the data at the study end?",
         "inputType": "SINGLE",
         "options": [
             {
-                "code": "sync",
+                "code": "yes",
                 "label": "Yes",
                 "icon": "Sync",
-                "color": "SUCCESS"
+                "color": ""
             },
             {
-                "code": "no-sync",
+                "code": "no",
                 "label": "No",
-                "icon": "SyncDisabled",
-                "color": "WARNING"
+                "icon": "Sync Disabled",
+                "color": ""
             },
             {
-                "code": "idky",
+                "code": "i-don't-know-yet",
                 "label": "I don't know yet",
-                "icon": "QuestionMark",
-                "color": "WARNING"
+                "icon": "Question Mark",
+                "color": ""
             }
         ]
     },
     {
-        "code": "dataset-funding",
-        "label": "Dataset Funding",
+        "code": "CitationsQuestion",
+        "label": "Citation",
+        "question": "How important is data citation to you?",
+        "description": "Citing a dataset like you would any other publication ensures that you receive credit if the dataset is reused, but not all repositories support full data citation",
         "inputType": "SINGLE",
         "options": [
             {
-                "code": "none",
-                "label": "None"
+                "code": "not-at-all",
+                "label": "Not at all",
+                "icon": "Hdr Strong",
+                "color": ""
             },
             {
-                "code": "niddk-source",
-                "label": "NIDDK Source"
+                "code": "somewhat",
+                "label": "Somewhat",
+                "icon": "Join Right",
+                "color": ""
             },
             {
-                "code": "nih-institute",
-                "label": "NIH Institute"
+                "code": "crucial",
+                "label": "Crucial",
+                "icon": "Hdr Weak",
+                "color": ""
+            }
+        ]
+    },
+    {
+        "code": "FundingSourceQuestion",
+        "label": "FundingSource",
+        "question": "Is the dataset funded, at least in part, by the NIH?",
+        "description": "Some repositories have restrictions on eligible funding sources",
+        "inputType": "SINGLE",
+        "options": [
+            {
+                "code": "non-nih",
+                "label": "Non NIH",
+                "icon": "",
+                "color": ""
             },
             {
-                "code": "nih-source",
-                "label": "NIH Source"
+                "code": "yes,-by-an-niddk-source",
+                "label": "yes, by an NIDDK source",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "yes,-by-another-nih-source",
+                "label": "yes, by another NIH source",
+                "icon": "",
+                "color": ""
+            }
+        ]
+    },
+    {
+        "code": "qPublished (from Questions / Responses)",
+        "label": "Published",
+        "question": "Will the dataset support any published academic work?",
+        "description": "Will your data be published in conjunction with a research paper?",
+        "inputType": "BOOLEAN",
+        "options": [
+            {
+                "code": "yes",
+                "label": "Yes",
+                "icon": "School",
+                "color": ""
+            },
+            {
+                "code": "no",
+                "label": "No",
+                "icon": "Close",
+                "color": ""
+            }
+        ]
+    },
+    {
+        "code": "PIDQuestion",
+        "label": "PID Type",
+        "question": "Will you need a PID for the published dataset?",
+        "description": "Some funders and journals (NIH included) require that your dataset be assigned a persistent identifier (PID).  Some specifically require a DOI.",
+        "inputType": "SINGLE",
+        "options": [
+            {
+                "code": "no",
+                "label": "No",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "yes,any",
+                "label": "Yes,any",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "yes,-doi-only",
+                "label": "Yes, DOI only",
+                "icon": "",
+                "color": ""
+            }
+        ]
+    },
+    {
+        "code": "qCost (from Questions / Responses)",
+        "label": "Cost",
+        "inputType": "SINGLE",
+        "options": [
+            {
+                "code": "yes",
+                "label": "Yes",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "sometimes",
+                "label": "Sometimes",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "no",
+                "label": "No",
+                "icon": "",
+                "color": ""
             }
         ]
     }

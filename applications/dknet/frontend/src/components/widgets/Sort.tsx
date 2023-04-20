@@ -49,7 +49,7 @@ const SortWidget = () => {
   };
   return (
     <>
-      <Button variant="contained"
+      <Button variant="outlined"
         aria-controls={open ? 'sortMenu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}

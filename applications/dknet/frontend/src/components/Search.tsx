@@ -47,7 +47,7 @@ const Search = () => {
       />
 
       <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
-      <Button variant="contained" className="search_btn">Search</Button>
+      <Button variant="contained">Search</Button>
     </Paper>
   );
 };
