@@ -5,8 +5,8 @@
  * extracts the relevant data from the response. The data is then transformed
  * into a new data structure that is more suitable for use in an application.
  * 
- * NB the variable prefixes_list specifies which fields you want to display
- * 
+ * NB the prefixes_list contains the airtable fields we are interested in. The field names correspond to the label we want to use
+ *
  * Parameters:
  * - `baseId`: string - the ID of the Airtable base to query
  * - `tableName`: string - the name of the table in the Airtable base to query
@@ -23,7 +23,6 @@
  * node Repositories_AirTableCoversionToJSON.js PersonalAccessToken
  * ```
  */
-
 const fs = require('fs');
 const { exit } = require('process');
 const request = require('request');
@@ -32,8 +31,6 @@ if(process.argv.length !== 3) {
   console.log(`USAGE: node ${process.argv[1]} <PAT>`);
   exit(1);
 }
- 
-
 // Set up Airtable API credentials
 const baseId = 'app8GwPKlzcZUj3lo';
 const tableName = 'tblZcO1YqPXGfX6YH';
@@ -97,20 +94,29 @@ request.get({ url: url, headers: headers }, function (error, response, body)
 
     // Name of Repo
     let codename = '';
+    let labelname = '';
     if (typeof fields['resourceName'] === 'string'){
       codename = fields['resourceName'].toLowerCase().replace(/\s+/g, '-');
+      labelname = fields['resourceName'];
     } else if (Array.isArray(fields['resourceName'])){
-      codename = fields['resourceName']
-      .filter((value) => value !== null)
-      .map((value) => value.toString())
-      .join('-')
-      .toLowerCase().replace(/\s+/g, '-');
+        // Define codename
+        codename = fields['resourceName']
+        .filter((value) => value !== null)
+        .map((value) => value.toString())
+        .join('-')
+        .toLowerCase().replace(/\s+/g, '-');
+        //Define labelname
+        labelname = fields['resourceName']
+        .filter((value) => value !== null)
+        .map((value) => value.toString())
+        .join('-');
     }
 
     // Create attribute to hold all attributes for all prefixes
-    const prefixAttributes = {};
-
+    //const prefixAttributes = {};
+    let attributes = {};
     // Loop through repo options
+    let prefixAttributes = {};
     for (prefix of prefixes_list) {
             let inputList = [];
             if (typeof fields[prefix] === 'string'){
@@ -120,33 +126,36 @@ request.get({ url: url, headers: headers }, function (error, response, body)
               .filter((value) => value !== null)
               .map((value) => value.toString());
             }
+            let prefixAttributesList = [];
             if (inputList.length > 0) {
               
               const fieldIcon = `${prefix}_icon` in fields ? fields[`${prefix}_icon`].split(';') : [];
               const fieldColor = `${prefix}_color` in fields ? fields[`${prefix}_color`].split(';') : [];
-              let prefixAttributesList = [];
+              
 
               inputList.forEach(function (option, index) {
                 const code = option.toLowerCase().replace(/\s+/g, '-');
                 const icon = `${prefix}_icon` in fields ? (fieldIcon[index] || '') : '';
                 const color = `${prefix}_color` in fields ? (fieldColor[index] || 'INFO') : 'INFO';
 
-                prefixAttributesList.push({
-                  'code': code,
-                  'icon': icon,
-                  'color': color
-                });
-              });
-            prefixAttributes[prefix] = prefixAttributesList  
-            }    
+                //prefixAttributesList.push({
+                  //'code': code,
+                  //'label': option,
+                  //'icon': icon,
+                  //'color': color
+                //});
+                prefixAttributesList.push(code)
+              }); 
+            }
+        prefixAttributes[prefix] = prefixAttributesList;
     }
 
     // Return fields
     return {
       'code': codename,
-      'label': fields['resourceName'],
+      'label': labelname,
       'url': fields['URL'],
-      ...prefixAttributes
+      'attributes': prefixAttributes
     };
   });
   // Write the data to a JSON file
