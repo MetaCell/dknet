@@ -8,7 +8,7 @@
  * Parameters:
  * - `baseId`: string - the ID of the Airtable base to query
  * - `tableName`: string - the name of the table in the Airtable base to query
- * - `pat`: string - the Personal Access Token to use for authentication
+ * - `pat`: string - the Personal Access Token to use for authentication. Remember to input this as an argument in the terminal
  *
  * Returns:
  * None
@@ -18,7 +18,7 @@
  *
  * Example usage:
  * ```
- * node QuestionFilters_AirTableCoversionToJSON.js
+ * node QuestionFilters_AirTableCoversionToJSON.js PersonalAccessToken
  * ```
  */
 
