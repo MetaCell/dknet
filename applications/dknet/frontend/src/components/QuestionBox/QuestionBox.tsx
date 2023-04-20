@@ -11,6 +11,7 @@ const QuestionBox = (props) => {
       background: '#FFF',
       borderRadius: 6,
       padding: 2,
+      marginTop: 2,
       boxShadow: '0px 10px 40px -10px #EAECF0, 0px 0px 1px rgba(0, 0, 0, 0.25)'
     }}>
       <Grid 

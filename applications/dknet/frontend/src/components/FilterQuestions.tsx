@@ -6,7 +6,47 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
 import ProgressBar from "./widgets/ProgressBar";
+import QuestionBox from "./QuestionBox/QuestionBox";
+import CheckBoxWidget from "./widgets/CheckBox";
+import { styled } from "@mui/material/styles";
+import { data } from "./Questions";
 
+//icons
+import { FeaturedIcon, FeaturedIconChecked } from './icons';
+
+export const Item = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  border: `1px solid ${theme.palette.grey[200]}`,
+  borderRadius: '12px',
+  width: '100%',
+  '& .MuiFormControlLabel-root': {
+    margin: 0
+  },
+  '& .MuiCheckbox-root': {
+    padding: 0
+  },
+  '& .MuiTypography-body1': {
+    color: theme.palette.grey[700],
+    marginLeft: '12px',
+    display: 'inline-block',
+    width: '138px',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden !important',
+    textOverflow: 'ellipsis',
+    fontWeight: 500,
+    fontSize: '0.875rem',
+  },
+  '& .MuiTypography-body2': {
+    color: theme.palette.grey[700],
+    fontWeight: 500,
+    fontSize: '0.875rem',
+    marginTop: '8px'
+  },
+  '&:hover': {
+    backgroundColor: '#F8FDFA',
+    border: `1px solid ${theme.palette.primary['main']}}`,
+  }
+})); 
 
 function a11yProps(index: number) {
   return {
@@ -98,6 +138,15 @@ export default function FilterQuestions({ questionsTabs, onClickNext, progress, 
           questionsTabs.map((question, index) =>
             <TabPanel key={index} value={value} index={index}>
               {question}
+              <QuestionBox>
+                {
+                  data.map((option, index) => 
+                    <Item p={2} key={index}>
+                      <CheckBoxWidget data={option}/>
+                    </Item> 
+                  )
+                }
+              </QuestionBox>
             </TabPanel>)
         }
         <Button variant='contained' onClick={onClickNext}>Next</Button>

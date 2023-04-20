@@ -3,7 +3,7 @@ import React from 'react';
 //components
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Checkbox from "@mui/material/Checkbox";
+import Radio from '@mui/material/Radio';
 import QuestionBox from './QuestionBox/QuestionBox';
 import CheckBoxWidget from './widgets/CheckBox';
 import { styled } from "@mui/material/styles";
@@ -11,7 +11,7 @@ import { styled } from "@mui/material/styles";
 //icons
 import { FeaturedIcon, FeaturedIconChecked } from './icons';
 
-const Item = styled(Box)(({ theme }) => ({
+export const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
   border: `1px solid ${theme.palette.grey[200]}`,
   borderRadius: '12px',
@@ -45,17 +45,7 @@ const Item = styled(Box)(({ theme }) => ({
   }
 })); 
 
-const checkboxTwoOptions = [
-  {
-    label: 'Multiple',
-    checked: false, 
-  },
-  {
-    label: 'Only one',
-    checked: false
-  }
-]
-const data = [
+export const data = [
   {
     label: 'Addiction & HIV',
     checked: false
@@ -124,13 +114,12 @@ const data = [
 
 const Questions = () => {
 
-  const [state, setState] = React.useState([...checkboxTwoOptions])
+  const [selectedValue, setSelectedValue] = React.useState('one');
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>, option, index) => {
-    const newValues = [...checkboxTwoOptions];
-    newValues[index].checked = event.target.checked;
-    setState(newValues);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(event.target.value);
   };
+
 
   return (
     <>
@@ -144,19 +133,33 @@ const Questions = () => {
         }
       </QuestionBox>
       <QuestionBox>
-        {
-          state.map((option, index) => 
-            <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection='column' key={index}>
-              <Checkbox 
-                sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
-                icon={<FeaturedIcon/>}
-                checked={option.checked} onChange={(e) => handleChange(e, option, index)} name={option.label}
-                checkedIcon={<FeaturedIconChecked/>}
-              />
-              <Typography variant="body2">{option.label}</Typography>
-            </Item>
-          )
-        }
+        <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection="column">
+          <Radio
+            checked={selectedValue === 'one'}
+            onChange={handleChange}
+            value="one"
+            name="radio-buttons"
+            sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
+            icon={<FeaturedIcon/>}
+            checkedIcon={<FeaturedIconChecked/>}
+            inputProps={{ 'aria-label': 'Only one' }}
+          />
+          <Typography variant="body2">Only one</Typography>
+        </Item>
+        <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection="column">
+          <Radio
+            checked={selectedValue === 'multiple'}
+            onChange={handleChange}
+            value="multiple"
+            name="radio-buttons"
+            sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
+            icon={<FeaturedIcon/>}
+            checkedIcon={<FeaturedIconChecked/>}
+            inputProps={{ 'aria-label': 'Multiple' }}
+          />
+          <Typography variant="body2">Multiple</Typography>
+        </Item>
+
       </QuestionBox>
     </>
   ) 
