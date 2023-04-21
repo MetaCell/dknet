@@ -3,7 +3,7 @@ import { useFilterContext } from '../context/Context'
 
 //components
 import Box from '@mui/material/Box'
-import Link from '@mui/icons-material/Link'
+import Link from '@mui/material/Link'
 import Card from '@mui/material/Card'
 import Chip from '@mui/material/Chip'
 import Typography from '@mui/material/Typography'
@@ -44,7 +44,7 @@ const RepositoryCard = (props) => {
           <CircularProgressWithLabel value={80} />
         </div>
         <Box display="flex" flexDirection="column" width={1}>
-          <Typography variant="subtitle1" color="grey.800"><Link target="_blank" to={repository.url}>{repository.label}</Link></Typography>
+          <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
               filterLabels.map((row, index) => <Chip key={index} label={row} />)
