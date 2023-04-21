@@ -14,7 +14,7 @@ import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 const Filters = () => {
   const { context, setContext } = useFilterContext()
 
-  const filters = context.allFilters.slice(0)
+  const filters = context.allFilters.slice(2)
 
   const switchFilters = filters
     .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
