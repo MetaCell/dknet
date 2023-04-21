@@ -15,9 +15,10 @@
         "code": "repository-21",
         "label": "Second repository 2",
         "url": "https://www.google.com",
+        "attrib1": "edsrhwerjhwej",
         "attributes": {
             "data-type": ["..."],
-            "domains": ["cancer", "chemistry-chemical-biology-and-biochemistry"],
+            "domains": ["addiction-&-hiv", "cancer", "chemistry-chemical-biology-and-biochemistry"],
             "share-phi": ["yes"],
             "upload-frequecy": ["sync"],
             "dataset-funding": ["none"]
