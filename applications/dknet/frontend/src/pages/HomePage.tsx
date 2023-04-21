@@ -36,7 +36,6 @@ const HomePage = () => {
             )
           })
           }
-          <Questions/>
         </Grid>
         <Grid item xs={5}>
           <Stack spacing={2}>
