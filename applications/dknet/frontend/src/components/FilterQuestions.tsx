@@ -9,10 +9,6 @@ import ProgressBar from "./widgets/ProgressBar";
 import QuestionBox from "./QuestionBox/QuestionBox";
 import CheckBoxWidget from "./widgets/CheckBox";
 import { styled } from "@mui/material/styles";
-import { data } from "./Questions";
-
-//icons
-import { FeaturedIcon, FeaturedIconChecked } from './icons';
 
 export const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -81,7 +77,7 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export default function FilterQuestions({ questionsTabs, onClickNext, progress, handleChange, value }) {
+export default function FilterQuestions({ questionsTabs, questionPanel, onClickNext, progress, handleChange, value }) {
 
   return (
     <Grid container spacing={2} height='100%'>
@@ -140,11 +136,13 @@ export default function FilterQuestions({ questionsTabs, onClickNext, progress, 
               {question}
               <QuestionBox>
                 {
-                  data.map((option, index) => 
-                    <Item p={2} key={index}>
-                      <CheckBoxWidget data={option}/>
-                    </Item> 
-                  )
+                  questionPanel.map((data) => {
+                    data.options.map((option, index) => 
+                      <Item p={2} key={index}>
+                        <CheckBoxWidget data={option.label}/>
+                      </Item>
+                    )
+                  })
                 }
               </QuestionBox>
             </TabPanel>)

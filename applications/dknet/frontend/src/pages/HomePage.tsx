@@ -12,7 +12,6 @@ import SortWidget from '../components/widgets/Sort';
 import RepositoryCard from '../components/RepositoryCard';
 import Typography from "@mui/material/Typography";
 import Stack from '@mui/material/Stack';
-import Questions from '../components/Questions';
 
 
 const HomePage = () => {
