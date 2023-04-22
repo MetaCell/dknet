@@ -1,10 +1,10 @@
 [
     {
-        "code": "DataType",
+        "code": "DataTypeQuestion",
         "label": "Data Type",
         "question": "What type(s) of data will you be sharing?",
         "description": "Are your data primarily of one data type, e.g., imaging, or have you collected multiple primary data types, e.g., correlated imaging and physiology.  ",
-        "inputType": "MULTI",
+        "inputType": "SINGLE",
         "options": [
             {
                 "code": "multiple-data-types",
@@ -105,11 +105,11 @@
         ]
     },
     {
-        "code": "DomainType",
+        "code": "DomainQuestion",
         "label": "Domain",
         "question": "Which domain(s) does the data belong to?",
         "description": "Select the primary domain of your data;  if your domain is not on the list, select other.",
-        "inputType": "MULTI",
+        "inputType": "SINGLE",
         "options": [
             {
                 "code": "multiple",
@@ -210,8 +210,8 @@
         ]
     },
     {
-        "code": "HumanSubjectInvolved",
-        "label": "Human Subjects Data Supported?",
+        "code": "HumanSubjectQuestion",
+        "label": "Human Subjects",
         "question": "Are human subjects involved?",
         "description": "will you be sharing data collected from humans",
         "inputType": "BOOLEAN",
@@ -220,19 +220,19 @@
                 "code": "yes",
                 "label": "Yes",
                 "icon": "Group",
-                "color": "SUCCESS"
+                "color": ""
             },
             {
                 "code": "no",
                 "label": "No",
                 "icon": "Group Off",
-                "color": "INFO"
+                "color": ""
             }
         ]
     },
     {
         "code": "PhiHippa",
-        "label": "PHI/HIPPA compliance?",
+        "label": "PHI/HIPPA",
         "question": "Will the dataset handling have to comply with HIPAA?",
         "description": "HIPAA= Health Information Portability and Accountability Act.  A US regulation governing the sharing of protected health information.  Other countries have other governing regulations.",
         "inputType": "BOOLEAN",
@@ -241,19 +241,19 @@
                 "code": "yes",
                 "label": "Yes",
                 "icon": "Health and Safety",
-                "color": "SUCCESS"
+                "color": ""
             },
             {
                 "code": "no",
                 "label": "No",
                 "icon": "Remove Moderator",
-                "color": "INFO"
+                "color": ""
             }
         ]
     },
     {
-        "code": "VersioningSupport",
-        "label": "Versioning Supported?",
+        "code": "qVersioning (from Questions / Responses)",
+        "label": "Versioning",
         "question": "Will the data be updated frequently, i.e., they are part of an ongoing study that will uploaded in batches?",
         "description": "Do you anticipate publishing multiple versions of a given data set or will you deposit the data at the study end?",
         "inputType": "SINGLE",
@@ -262,25 +262,25 @@
                 "code": "yes",
                 "label": "Yes",
                 "icon": "Sync",
-                "color": "SUCCESS"
+                "color": ""
             },
             {
                 "code": "no",
                 "label": "No",
                 "icon": "Sync Disabled",
-                "color": "WARNING"
+                "color": ""
             },
             {
                 "code": "i-don't-know-yet",
                 "label": "I don't know yet",
                 "icon": "Question Mark",
-                "color": "INFO"
+                "color": ""
             }
         ]
     },
     {
-        "code": "CitationImportance",
-        "label": "Data Citation Important?",
+        "code": "CitationsQuestion",
+        "label": "Citation",
         "question": "How important is data citation to you?",
         "description": "Citing a dataset like you would any other publication ensures that you receive credit if the dataset is reused, but not all repositories support full data citation",
         "inputType": "SINGLE",
@@ -289,25 +289,25 @@
                 "code": "not-at-all",
                 "label": "Not at all",
                 "icon": "Hdr Strong",
-                "color": "WARNING"
+                "color": ""
             },
             {
                 "code": "somewhat",
                 "label": "Somewhat",
                 "icon": "Join Right",
-                "color": "INFO"
+                "color": ""
             },
             {
                 "code": "crucial",
                 "label": "Crucial",
                 "icon": "Hdr Weak",
-                "color": "SUCCESS"
+                "color": ""
             }
         ]
     },
     {
-        "code": "FundingSource",
-        "label": "Funding Source",
+        "code": "FundingSourceQuestion",
+        "label": "FundingSource",
         "question": "Is the dataset funded, at least in part, by the NIH?",
         "description": "Some repositories have restrictions on eligible funding sources",
         "inputType": "SINGLE",
@@ -315,26 +315,26 @@
             {
                 "code": "non-nih",
                 "label": "Non NIH",
-                "icon": "Check Circle",
-                "color": "SUCCESS"
-            },
-            {
-                "code": "yes,-by-another-nih-source",
-                "label": "yes, by another NIH source",
-                "icon": "Error",
-                "color": "WARNING"
+                "icon": "",
+                "color": ""
             },
             {
                 "code": "yes,-by-an-niddk-source",
                 "label": "yes, by an NIDDK source",
-                "icon": "Error",
-                "color": "WARNING"
+                "icon": "",
+                "color": ""
+            },
+            {
+                "code": "yes,-by-another-nih-source",
+                "label": "yes, by another NIH source",
+                "icon": "",
+                "color": ""
             }
         ]
     },
     {
-        "code": "Published",
-        "label": "Supports Published Work?",
+        "code": "qPublished (from Questions / Responses)",
+        "label": "Published",
         "question": "Will the dataset support any published academic work?",
         "description": "Will your data be published in conjunction with a research paper?",
         "inputType": "BOOLEAN",
@@ -343,19 +343,19 @@
                 "code": "yes",
                 "label": "Yes",
                 "icon": "School",
-                "color": "SUCCESS"
+                "color": ""
             },
             {
                 "code": "no",
                 "label": "No",
                 "icon": "Close",
-                "color": "INFO"
+                "color": ""
             }
         ]
     },
     {
         "code": "PIDQuestion",
-        "label": "PID Supported?",
+        "label": "PID Type",
         "question": "Will you need a PID for the published dataset?",
         "description": "Some funders and journals (NIH included) require that your dataset be assigned a persistent identifier (PID).  Some specifically require a DOI.",
         "inputType": "SINGLE",
@@ -364,146 +364,44 @@
                 "code": "no",
                 "label": "No",
                 "icon": "",
-                "color": "WARNING"
+                "color": ""
             },
             {
-                "code": "yes,-any",
-                "label": "Yes, any",
+                "code": "yes,any",
+                "label": "Yes,any",
                 "icon": "",
-                "color": "SUCCESS"
+                "color": ""
             },
             {
                 "code": "yes,-doi-only",
                 "label": "Yes, DOI only",
                 "icon": "",
-                "color": "SUCCESS"
+                "color": ""
             }
         ]
     },
     {
-        "code": "Cost",
-        "label": "Cost Involved?",
-        "description": "Does depositing data involve costs to the depositor?",
+        "code": "qCost (from Questions / Responses)",
+        "label": "Cost",
         "inputType": "SINGLE",
         "options": [
             {
-                "code": "no",
-                "label": "no",
-                "icon": "Check Circle",
-                "color": "SUCCESS"
+                "code": "yes",
+                "label": "Yes",
+                "icon": "",
+                "color": ""
             },
             {
                 "code": "sometimes",
-                "label": "sometimes",
-                "icon": "Error",
-                "color": "WARNING"
-            },
-            {
-                "code": "yes",
-                "label": "yes",
-                "icon": "Error",
-                "color": "WARNING"
-            }
-        ]
-    },
-    {
-        "code": "SizeLimits",
-        "label": "Data Size Limits?",
-        "inputType": "SINGLE",
-        "options": [
-            {
-                "code": "no",
-                "label": "no",
-                "icon": "Check Circle",
-                "color": "SUCCESS"
-            },
-            {
-                "code": "yes",
-                "label": "yes",
-                "icon": "Error",
-                "color": "WARNING"
-            },
-            {
-                "code": "contact",
-                "label": "contact",
-                "icon": "Error",
-                "color": "WARNING"
-            }
-        ]
-    },
-    {
-        "code": "Restrictions",
-        "label": "Data Access Restrictions",
-        "description": "Does the repository provide access to the data with minimal or no restrictions?",
-        "inputType": "SINGLE",
-        "options": [
-            {
-                "code": "-",
-                "label": " ",
-                "icon": " ",
-                "color": " "
-            },
-            {
-                "code": "no-restrictions",
-                "label": "no restrictions",
-                "icon": "Check Circle",
-                "color": "SUCCESS"
-            },
-            {
-                "code": "minimal-restrictions",
-                "label": "minimal restrictions",
-                "icon": "Error",
-                "color": "WARNING"
-            },
-            {
-                "code": "significant-restrictions",
-                "label": "significant restrictions",
-                "icon": "Error",
-                "color": "WARNING"
-            },
-            {
-                "code": "significant-but-not-justified-restrictions",
-                "label": "significant but not justified restrictions",
-                "icon": "Error",
-                "color": "WARNING"
-            }
-        ]
-    },
-    {
-        "code": "Application",
-        "label": "Application Required?",
-        "inputType": "SINGLE",
-        "options": [
-            {
-                "code": "yes",
-                "label": "yes",
-                "icon": "Error",
-                "color": "WARNING"
+                "label": "Sometimes",
+                "icon": "",
+                "color": ""
             },
             {
                 "code": "no",
-                "label": "no",
-                "icon": "Check Circle",
-                "color": "SUCCESS"
-            }
-        ]
-    },
-    {
-        "code": "ContactPerson",
-        "label": "Contact Person Required?",
-        "inputType": "SINGLE",
-        "options": [
-            {
-                "code": "yes",
-                "label": "yes",
-                "icon": "Check Circle",
-                "color": "SUCCESS"
-            },
-            {
-                "code": "no",
-                "label": "no",
-                "icon": "Cancel",
-                "color": "WARNING"
+                "label": "No",
+                "icon": "",
+                "color": ""
             }
         ]
     }

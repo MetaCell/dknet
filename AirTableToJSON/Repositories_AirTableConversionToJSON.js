@@ -1,28 +1,3 @@
-/**
- * This script fetches data from an Airtable table using the Airtable API,
- * processes the data, and saves it to a JSON file. The script uses the
- * `request` module to make a GET request to the Airtable API, and then
- * extracts the relevant data from the response. The data is then transformed
- * into a new data structure that is more suitable for use in an application.
- * 
- * NB the prefixes_list contains the airtable fields we are interested in. The field names correspond to the label we want to use
- *
- * Parameters:
- * - `baseId`: string - the ID of the Airtable base to query
- * - `tableName`: string - the name of the table in the Airtable base to query
- * - `pat`: string - the Personal Access Token to use for authentication. Remember to input this as an argument in the terminal
- *
- * Returns:
- * None
- * 
- * Outputs:
- * file: repositories.json
- *
- * Example usage:
- * ```
- * node Repositories_AirTableCoversionToJSON.js PersonalAccessToken
- * ```
- */
 const fs = require('fs');
 const { exit } = require('process');
 const request = require('request');
@@ -31,6 +6,8 @@ if(process.argv.length !== 3) {
   console.log(`USAGE: node ${process.argv[1]} <PAT>`);
   exit(1);
 }
+ 
+
 // Set up Airtable API credentials
 const baseId = 'app8GwPKlzcZUj3lo';
 const tableName = 'tblZcO1YqPXGfX6YH';
@@ -48,28 +25,21 @@ const headers = {
 let repositories = [];
 // Preparing each Repository attribute (List of Columns)
 prefixes_list = [
-  'qDataTypeList (from Questions / Responses)',
-  'qDomainList (from Questions / Responses)',
+  'DataType',
+  'DomainList',
   'qSize (from Questions / Responses)',
-  'qFundingSource (from Questions / Responses)',
-  'qCitationMetadata (from Questions / Responses)',
-  'qVersioning (from Questions / Responses)',
+  'Funding Sources Supported',
+  'Citation Support',
+  'Versioning Supported',
   'acc (from Questions / Responses)',
   'qCost (from Questions / Responses)',
-  'qPhi (from Questions / Responses)',
-  'qHIPAA (from Questions / Responses)',
   'qApplication (from Questions / Responses)',
   'qContact (from Questions / Responses)',
-  'DataTypeQuestion',
-  'DomainQuestion',
   'HumanSubjectQuestion',
   'PhiHippa',
-  'CitationsQuestion',
-  'FundingSourceQuestion',
-  'qPublished (from Questions / Responses',
+  'qPublished (from Questions / Responses)',
   'PIDQuestion'
 ];
-
 
 // Make a GET request to the Airtable API for the filters
 request.get({ url: url, headers: headers }, function (error, response, body) 
@@ -119,6 +89,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
     let prefixAttributes = {};
     for (prefix of prefixes_list) {
             let inputList = [];
+            // Make sure it is a string
             if (typeof fields[prefix] === 'string'){
               inputList = fields[prefix] ? fields[prefix].split(';') : [];
             } else if (Array.isArray(fields[prefix])){
@@ -126,28 +97,16 @@ request.get({ url: url, headers: headers }, function (error, response, body)
               .filter((value) => value !== null)
               .map((value) => value.toString());
             }
+            //Now add to the array
             let prefixAttributesList = [];
             if (inputList.length > 0) {
-              
-              const fieldIcon = `${prefix}_icon` in fields ? fields[`${prefix}_icon`].split(';') : [];
-              const fieldColor = `${prefix}_color` in fields ? fields[`${prefix}_color`].split(';') : [];
-              
-
               inputList.forEach(function (option, index) {
                 const code = option.toLowerCase().replace(/\s+/g, '-');
-                const icon = `${prefix}_icon` in fields ? (fieldIcon[index] || '') : '';
-                const color = `${prefix}_color` in fields ? (fieldColor[index] || 'INFO') : 'INFO';
-
-                //prefixAttributesList.push({
-                  //'code': code,
-                  //'label': option,
-                  //'icon': icon,
-                  //'color': color
-                //});
                 prefixAttributesList.push(code)
               }); 
             }
-        prefixAttributes[prefix] = prefixAttributesList;
+            FilterCode=fields[`${prefix}_FilterCode`]        
+            prefixAttributes[FilterCode] = prefixAttributesList;
     }
 
     // Return fields
