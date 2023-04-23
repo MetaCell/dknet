@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 //components
 import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import CustomFormControlLabel from "./CustomFormControlLabel";
+import { useFilterContext } from "../../context/Context";
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: 6,
@@ -63,8 +64,10 @@ function BpCheckbox(props: CheckboxProps) {
   );
 }
 
-const CheckBoxWidget = ({ data, selectedData, setSelectedData, onChangeCheckboxes, filterValues }: any) => {
-  const isChecked = filterValues?.some(row => row.code === data.code)
+const CheckBoxWidget = ({ data, filter }: any) => {
+  const { context, setContext } = useFilterContext()
+  const selectedData = context.filterValues[filter.code] || []
+
   const onChangeCheckbox = (e) => {
     let newValue = null
     if (e.target.checked) {
@@ -72,13 +75,25 @@ const CheckBoxWidget = ({ data, selectedData, setSelectedData, onChangeCheckboxe
     } else {
       newValue = selectedData.filter(row => row.code !== e.target.value)
     }
-    setSelectedData(newValue)
-    onChangeCheckboxes(newValue)
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [filter.code]: newValue
+      }
+    })
   }
+
+  const checked = selectedData.some(row => row.code === data.code)
 
   return (
     <CustomFormControlLabel
-      control={<BpCheckbox checked={isChecked} value={data.code} onChange={onChangeCheckbox}/>}
+      control={
+        <BpCheckbox
+          checked={selectedData.some(row => row.code === data.code)}
+          value={data.code}
+          onChange={onChangeCheckbox}
+        />}
       label={<Typography>
         {data.label}
       </Typography>}

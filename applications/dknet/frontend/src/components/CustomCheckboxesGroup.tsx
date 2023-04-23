@@ -1,4 +1,4 @@
-import React, {  useState } from "react"
+import React, { useEffect, useState } from "react"
 
 //components
 import Box from '@mui/material/Box'
@@ -12,7 +12,6 @@ import IconButton from "@mui/material/IconButton"
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
 
 import { vars } from "../theme/variables";
-import { useFilterContext } from "../context/Context";
 
 const {
   grey700,
@@ -20,19 +19,6 @@ const {
 } = vars;
 
 const CustomCheckboxesGroup = ({ data }) => {
-  const { context, setContext } = useFilterContext()
-  const [selectedData, setSelectedData] = useState(context.filterValues[data.code] || [])
-
-
-  const onChangeCheckboxes = (newValue) => {
-    setContext({
-      ...context,
-      filterValues: {
-        ...context.filterValues,
-        [data.code]: newValue
-      }
-    })
-  }
 
   return (
     <Box>
@@ -61,10 +47,7 @@ const CustomCheckboxesGroup = ({ data }) => {
             <CheckBoxWidget
               key={index}
               data={row}
-              selectedData={selectedData}
-              setSelectedData={setSelectedData}
-              onChangeCheckboxes={onChangeCheckboxes}
-              filterValues={context.filterValues[data.code]}
+              filter={data}
             />)
         }
       </FormGroup>
