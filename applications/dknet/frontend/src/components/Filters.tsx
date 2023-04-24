@@ -13,21 +13,14 @@ import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 
 const Filters = () => {
   const { context, setContext } = useFilterContext()
-  const [ filters, setFilters ] = useState<any>([])
 
-  useEffect(() => {
-    // TODO: apply context.filterValues on the allFilters and create the filters
-    const filters = context.allFilters //
-    setFilters(filters)
-  }, [context])
+  const filters = context.allFilters.slice(2)
 
   const switchFilters = filters
     .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
 
-
   const radioFilters = filters
     .filter((filter) => filter.inputType === "SINGLE" && filter.label !== undefined)
-
 
   const checkboxFilters = filters
     .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)

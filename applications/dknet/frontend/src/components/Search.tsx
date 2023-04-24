@@ -1,26 +1,26 @@
-import React from "react";
-import { useNavigate } from 'react-router-dom';
+import React  from "react";
 
 //components
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
-import Checkbox from '@mui/material/Checkbox';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
-import Container from '@mui/material/Container';
 
 //icons
-import ClearIcon from '@mui/icons-material/Clear';
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-const checkedIcon = <CheckBoxIcon fontSize="small" />;
-
+import { useFilterContext } from "../context/Context";
+import CustomAutoComplete from "./widgets/CustomAutoComplete";
 
 const Search = () => {
-  const navigate = useNavigate();
+  const { context, setContext } = useFilterContext();
+
+  const onChangeFilterValue = (value, filter) => {
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [filter.code]: value
+      }
+    })
+  }
 
   return (
     <Paper
@@ -31,63 +31,21 @@ const Search = () => {
         borderRadius: '12px',
       }}
     >
-      <Autocomplete
-        multiple
-        limitTags={2}
-        options={data}
-        size="small"
-        fullWidth
-        getOptionLabel={(option) => option.title}
-        filterSelectedOptions
-        ChipProps={{ deleteIcon: <ClearIcon fontSize="small" /> }}
-        renderOption={(props, option, { selected }) => (
-          <li {...props}>
-            <Checkbox
-              icon={icon}
-              checkedIcon={checkedIcon}
-              style={{ marginRight: 8 }}
-              checked={selected}
-            />
-            {option.title}
-          </li>
-        )}
-
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            placeholder="Data Type"
-          />
-        )}
+      <CustomAutoComplete
+        options={context.allFilters[0].options}
+        onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[0])}
+        defaultValue={context.filterValues[context.allFilters[0].code] || []}
+        placeholder={context.allFilters[0].label}
       />
+
       <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
-      <Autocomplete
-        multiple
-        limitTags={2}
-        options={data}
-        size="small"
-        fullWidth
-        getOptionLabel={(option) => option.title}
-        filterSelectedOptions
-        ChipProps={{ deleteIcon: <ClearIcon fontSize="small" /> }}
-        renderOption={(props, option, { selected }) => (
-          <li {...props}>
-            <Checkbox
-              icon={icon}
-              checkedIcon={checkedIcon}
-              style={{ marginRight: 8 }}
-              checked={selected}
-            />
-            {option.title}
-          </li>
-        )}
-
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            placeholder="Domains"
-          />
-        )}
+      <CustomAutoComplete
+        options={context.allFilters[1].options}
+        onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[1])}
+        defaultValue={context.filterValues[context.allFilters[1].code] || []}
+        placeholder={context.allFilters[1].label}
       />
+
       <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
       <Button variant="contained">Search</Button>
     </Paper>
@@ -95,19 +53,3 @@ const Search = () => {
 };
 
 export default Search;
-
-const data = [
-  { title: 'The Shaw', year: 1994 },
-  { title: 'The Godfar', year: 1972 },
-  { title: 'The rt II', year: 1974 },
-  { title: 'The Darkt', year: 2008 },
-  { title: '1 Men', year: 1957 },
-  { title: "chiner's List", year: 1993 },
-  { title: 'Pulp Fiction', year: 1994 },
-  { title: 'The Go', year: 1966 },
-  { title: 'Fight Club', year: 1999 },
-  { title: "One Fle", year: 1975 },
-  { title: 'Goodfellas', year: 1990 },
-  { title: 'The Matrix', year: 1999 },
-  { title: 'Seven Samurai', year: 1954 },
-];
