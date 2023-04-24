@@ -31,6 +31,9 @@ if(process.argv.length !== 3) {
   exit(1);
 }
 
+const resourcesFolder = '../applications/dknet/frontend/src/resources'
+const fileName = `${resourcesFolder}/filters.json`
+
 // Set up Airtable API credentials
 const baseId = 'app8GwPKlzcZUj3lo';
 const tableName = 'tblsgKKi5vQSBV5kW';
@@ -84,8 +87,8 @@ request.get({ url: url, headers: headers }, function (error, response, body)
       };
   // Rename or re-word fields as necessary
   return {   
-    'code': fields['Code (Column Name)'],
-        'label': fields['Label (Name)'],
+    'code': fields['Code (Filter Name)'],
+        'label': fields['Label (Filter Name)'],
         'question': fields['User question'],
         'description': fields['Help text'], // check if this is tooltip or description
         'inputType': 
@@ -97,11 +100,11 @@ request.get({ url: url, headers: headers }, function (error, response, body)
 });
 
 // Write the data to a JSON file
-  fs.writeFile('filters.json', JSON.stringify(filters), function (err) {
+  fs.writeFile(fileName, JSON.stringify(filters, null, 3), function (err) {
     if (err) {
       console.error(err);
       return;
     }
-    console.log('Data saved to filters.json');
+    console.log(`Data saved to ${fileName} `)
   });
 });
