@@ -19,7 +19,8 @@ const {
   cardChipBgColor,
   warning50,
   warning300,
-  dialogBoxShadow
+  dialogBoxShadow,
+  repoSuccessBoxshadow
 } = vars;
 
 const theme = createTheme({
@@ -168,7 +169,8 @@ const theme = createTheme({
           boxShadow: 'none',
           '&.successCard': {
             background: primary25,
-            border:`1px solid ${primary200}`
+            border:`1px solid ${primary200}`,
+            boxShadow: repoSuccessBoxshadow
           }
         }
       }
