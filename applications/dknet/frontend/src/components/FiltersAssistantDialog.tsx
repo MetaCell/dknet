@@ -28,17 +28,11 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
 
   const questionsTabs = filters.reduce((filtered, option) => {
     if (option?.question) {
-      filtered.push(option?.question);
-    }
-    return filtered;
-  }, []);
-
-  const questionPanel = filters.reduce((filtered, option) => {
-    if(option) {
       filtered.push(option);
     }
     return filtered;
   }, []);
+
 
   useEffect(() => {
     // TODO: apply context.filterValues on the allFilters and create the filters
@@ -102,7 +96,7 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
         </IconButton>
       </DialogTitle>
       <DialogContent sx={{ backgroundColor: "#F9FAFB" }}>
-        <FilterQuestions questionsTabs={questionsTabs} questionPanel={questionPanel} onClickNext={onClickNext} progress={progress} handleChange={handleChange} value={value} />
+        <FilterQuestions questionsTabs={questionsTabs} onClickNext={onClickNext} progress={progress} handleChange={handleChange} value={value} />
       </DialogContent>
     </Dialog>
   );
