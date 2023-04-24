@@ -5,12 +5,12 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
-import Radio from "@mui/material/Radio";
 import ProgressBar from "./widgets/ProgressBar";
 import QuestionBox from "./QuestionBox/QuestionBox";
 import CheckBoxWidget from "./widgets/CheckBox";
 import { styled } from "@mui/material/styles";
-import { FeaturedIcon, FeaturedIconChecked } from "./icons";
+import Radio from '@mui/material/Radio';
+import { FeaturedIcon, FeaturedIconChecked } from './icons';
 
 export const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -79,14 +79,13 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export default function FilterQuestions({ questionsTabs, questionPanel, onClickNext, progress, handleChange, value }) {
+export default function FilterQuestions({ questionsTabs, onClickNext, progress, handleChange, value }) {
 
   // const [selectedValue, setSelectedValue] = React.useState('one');
 
   // const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   //   setSelectedValue(event.target.value);
   // };
-  console.log("Panel: ", questionPanel);
 
   return (
     <Grid container spacing={2} height='100%'>
@@ -131,7 +130,7 @@ export default function FilterQuestions({ questionsTabs, questionPanel, onClickN
           >
             {
               questionsTabs?.map((question, index) =>
-                <Tab key={index} label={question} {...a11yProps(index)} />
+                <Tab key={index} label={question?.question} {...a11yProps(index)} />
               )
             }
           </Tabs>
@@ -142,16 +141,28 @@ export default function FilterQuestions({ questionsTabs, questionPanel, onClickN
         {
           questionsTabs.map((question, index) =>
             <TabPanel key={index} value={value} index={index}>
-              {question}
+              {question?.question}
               <QuestionBox>
                 {
-                  questionPanel.map((data) => {
-                    data.options.map((option, index) => 
-                      <Item p={2} key={index}>
-                        <CheckBoxWidget data={option.label}/>
+                  question?.options.map((data) =>
+                    question?.inputType === 'MULTI' ? <Item p={2} key={data?.label}>
+                      <CheckBoxWidget
+                        data={data}
+                        filter={data}
+                      />
+                    </Item> :
+                      <Item key={data?.label} pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection="column">
+                        <Radio
+                          value={data?.code}
+                          name={question?.code}
+                          sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
+                          icon={<FeaturedIcon />}
+                          checkedIcon={<FeaturedIconChecked />}
+                          inputProps={{ 'aria-label': data?.label }}
+                        />
+                        <Typography variant="body2">{data?.label}</Typography>
                       </Item>
-                    )
-                  })
+                  )
                 }
               </QuestionBox>
               {/* <QuestionBox>
