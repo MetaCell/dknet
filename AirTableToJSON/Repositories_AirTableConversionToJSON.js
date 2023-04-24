@@ -6,8 +6,10 @@ if(process.argv.length !== 3) {
   console.log(`USAGE: node ${process.argv[1]} <PAT>`);
   exit(1);
 }
- 
 
+const resourcesFolder = '../applications/dknet/frontend/src/resources'
+const fileName = `${resourcesFolder}/repositories.json`
+ 
 // Set up Airtable API credentials
 const baseId = 'app8GwPKlzcZUj3lo';
 const tableName = 'tblZcO1YqPXGfX6YH';
@@ -118,12 +120,12 @@ request.get({ url: url, headers: headers }, function (error, response, body)
     };
   });
   // Write the data to a JSON file
-  fs.writeFile('repositories.json', JSON.stringify(repositories, null, 5), function (err) {
+  fs.writeFile(fileName, JSON.stringify(repositories, null, 5), function (err) {
   if (err) {
     console.error(err);
     return;
   }
-  console.log('Data saved to repositories.json');
-  });
+  console.log(`Data saved to ${fileName} `)
+});
 });
 
