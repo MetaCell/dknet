@@ -81,12 +81,6 @@ function TabPanel(props: TabPanelProps) {
 
 export default function FilterQuestions({ questionsTabs, onClickNext, progress, handleChange, value }) {
 
-  // const [selectedValue, setSelectedValue] = React.useState('one');
-
-  // const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setSelectedValue(event.target.value);
-  // };
-
   return (
     <Grid container spacing={2} height='100%'>
       <Grid item xs={0} md={4} display='flex' flexDirection='column' justifyContent='space-between'>
@@ -165,35 +159,6 @@ export default function FilterQuestions({ questionsTabs, onClickNext, progress, 
                   )
                 }
               </QuestionBox>
-              {/* <QuestionBox>
-                <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection="column">
-                  <Radio
-                    checked={selectedValue === 'one'}
-                    onChange={handleRadioChange}
-                    value="one"
-                    name="radio-buttons"
-                    sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
-                    icon={<FeaturedIcon/>}
-                    checkedIcon={<FeaturedIconChecked/>}
-                    inputProps={{ 'aria-label': 'Only one' }}
-                  />
-                  <Typography variant="body2">Only one</Typography>
-                </Item>
-                <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection="column">
-                  <Radio
-                    checked={selectedValue === 'multiple'}
-                    onChange={handleRadioChange}
-                    value="multiple"
-                    name="radio-buttons"
-                    sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
-                    icon={<FeaturedIcon/>}
-                    checkedIcon={<FeaturedIconChecked/>}
-                    inputProps={{ 'aria-label': 'Multiple' }}
-                  />
-                  <Typography variant="body2">Multiple</Typography>
-                </Item>
-
-              </QuestionBox> */}
             </TabPanel>)
         }
         <Button variant='contained' onClick={onClickNext}>Next</Button>

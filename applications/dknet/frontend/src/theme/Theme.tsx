@@ -12,7 +12,7 @@ const {
   error700, error500, error600, error25,
   warning25, warning700, warning500,
   success50, success700, success500,
-  check48BorderColor,
+  checkboxBorderColor,
   checkboxBgChecked,
   cardBorderColor,
   cardBgColor,
