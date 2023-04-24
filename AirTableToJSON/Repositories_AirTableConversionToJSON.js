@@ -118,7 +118,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
     };
   });
   // Write the data to a JSON file
-  fs.writeFile('repositories.json', JSON.stringify(repositories), function (err) {
+  fs.writeFile('repositories.json', JSON.stringify(repositories, null, 5), function (err) {
   if (err) {
     console.error(err);
     return;

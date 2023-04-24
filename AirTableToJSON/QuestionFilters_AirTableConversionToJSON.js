@@ -84,8 +84,8 @@ request.get({ url: url, headers: headers }, function (error, response, body)
       };
   // Rename or re-word fields as necessary
   return {   
-    'code': fields['Code (Column Name)'],
-        'label': fields['Label (Name)'],
+    'code': fields['Code (Filter Name)'],
+        'label': fields['Label (Filter Name)'],
         'question': fields['User question'],
         'description': fields['Help text'], // check if this is tooltip or description
         'inputType': 
@@ -97,7 +97,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
 });
 
 // Write the data to a JSON file
-  fs.writeFile('filters.json', JSON.stringify(filters), function (err) {
+  fs.writeFile('filters.json', JSON.stringify(filters, null, 3), function (err) {
     if (err) {
       console.error(err);
       return;
