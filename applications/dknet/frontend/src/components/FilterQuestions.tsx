@@ -5,10 +5,12 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
+import Radio from "@mui/material/Radio";
 import ProgressBar from "./widgets/ProgressBar";
 import QuestionBox from "./QuestionBox/QuestionBox";
 import CheckBoxWidget from "./widgets/CheckBox";
 import { styled } from "@mui/material/styles";
+import { FeaturedIcon, FeaturedIconChecked } from "./icons";
 
 export const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -79,6 +81,13 @@ function TabPanel(props: TabPanelProps) {
 
 export default function FilterQuestions({ questionsTabs, questionPanel, onClickNext, progress, handleChange, value }) {
 
+  // const [selectedValue, setSelectedValue] = React.useState('one');
+
+  // const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setSelectedValue(event.target.value);
+  // };
+  console.log("Panel: ", questionPanel);
+
   return (
     <Grid container spacing={2} height='100%'>
       <Grid item xs={0} md={4} display='flex' flexDirection='column' justifyContent='space-between'>
@@ -145,6 +154,35 @@ export default function FilterQuestions({ questionsTabs, questionPanel, onClickN
                   })
                 }
               </QuestionBox>
+              {/* <QuestionBox>
+                <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection="column">
+                  <Radio
+                    checked={selectedValue === 'one'}
+                    onChange={handleRadioChange}
+                    value="one"
+                    name="radio-buttons"
+                    sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
+                    icon={<FeaturedIcon/>}
+                    checkedIcon={<FeaturedIconChecked/>}
+                    inputProps={{ 'aria-label': 'Only one' }}
+                  />
+                  <Typography variant="body2">Only one</Typography>
+                </Item>
+                <Item pb={4} pt={4} justifyContent="center" alignItems="center" flexDirection="column">
+                  <Radio
+                    checked={selectedValue === 'multiple'}
+                    onChange={handleRadioChange}
+                    value="multiple"
+                    name="radio-buttons"
+                    sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
+                    icon={<FeaturedIcon/>}
+                    checkedIcon={<FeaturedIconChecked/>}
+                    inputProps={{ 'aria-label': 'Multiple' }}
+                  />
+                  <Typography variant="body2">Multiple</Typography>
+                </Item>
+
+              </QuestionBox> */}
             </TabPanel>)
         }
         <Button variant='contained' onClick={onClickNext}>Next</Button>
