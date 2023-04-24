@@ -10,7 +10,22 @@ import QuestionBox from "./QuestionBox/QuestionBox";
 import CheckBoxWidget from "./widgets/CheckBox";
 import { styled } from "@mui/material/styles";
 import Radio from '@mui/material/Radio';
-import { FeaturedIcon, FeaturedIconChecked } from './icons';
+
+//icons
+import { FeaturedIcon, 
+  FeaturedIconChecked, 
+  PeopleAltOutlined, 
+  PeopleAltOutlinedChecked,
+  PersonOffOutlined, 
+  PersonOffOutlinedChecked,
+  Sync, 
+  SyncChecked,
+  SyncDisabled,
+  SyncDisabledChecked, 
+  QuestionMark,
+  QuestionMarkChecked
+} 
+  from './icons';
 
 export const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -80,7 +95,7 @@ function TabPanel(props: TabPanelProps) {
 }
 
 export default function FilterQuestions({ questionsTabs, onClickNext, progress, handleChange, value }) {
-
+  console.log("Panel: ", questionsTabs);
   return (
     <Grid container spacing={2} height='100%'>
       <Grid item xs={0} md={4} display='flex' flexDirection='column' justifyContent='space-between'>
@@ -150,8 +165,32 @@ export default function FilterQuestions({ questionsTabs, onClickNext, progress, 
                           value={data?.code}
                           name={question?.code}
                           sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
-                          icon={<FeaturedIcon />}
-                          checkedIcon={<FeaturedIconChecked />}
+                          icon={
+                            data.icon === "PeopleAltOutlined"?
+                              <PeopleAltOutlined/> :
+                              data.icon === "PersonOffOutlined"?
+                                <PersonOffOutlined/> :
+                                data.icon === "Sync"?
+                                  <Sync/>: 
+                                  data.icon === "SyncDisabled"?
+                                    <SyncDisabled/>:
+                                    data.icon === "QuestionMark"?
+                                      <QuestionMark/>: 
+                                      <FeaturedIcon />
+                          }
+                          checkedIcon={
+                            data.icon === "PeopleAltOutlined"?
+                              <PeopleAltOutlinedChecked/> :
+                              data.icon === "PersonOffOutlined"?
+                                <PersonOffOutlinedChecked/> :
+                                data.icon === "Sync"?
+                                  <SyncChecked/>: 
+                                  data.icon === "SyncDisabled"?
+                                    <SyncDisabledChecked/>:
+                                    data.icon === "QuestionMark"?
+                                      <QuestionMarkChecked/>: 
+                                      <FeaturedIconChecked />
+                          }
                           inputProps={{ 'aria-label': data?.label }}
                         />
                         <Typography variant="body2">{data?.label}</Typography>
