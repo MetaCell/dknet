@@ -17,7 +17,7 @@ import * as MUIcon from "@mui/icons-material"
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
     padding: 0, 
-    maxWidth: 681
+    minWidth: 681
   }
 }));
 
