@@ -7,10 +7,19 @@ import Link from '@mui/material/Link'
 import Card from '@mui/material/Card'
 import Chip from '@mui/material/Chip'
 import Typography from '@mui/material/Typography'
+import CardContent from "@mui/material/CardContent";
 import CircularProgressWithLabel from "./CircularProgressWithLabel"
+import { styled } from "@mui/material/styles";
 
 //icons
 import * as MUIcon from "@mui/icons-material"
+
+const RepoCardContent= styled(CardContent)(() => ({
+  '&.MuiCardContent-root': {
+    padding: 0, 
+    maxWidth: 681
+  }
+}));
 
 const getMuiIcon = (icon) => {
   if (!icon) {
@@ -35,22 +44,23 @@ const RepositoryCard = (props) => {
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
-    <Card sx={{ position: "relative", maxWidth: 789 }} className="successCard">
-      <Box pr={3} position="absolute" right={0} top='-3px'>
-        <Chip label="Best Match" className="cardBadge" />
+    <Card sx={{ position: 'relative', minWidth: 789, marginBottom: '1rem' }} className="successCard">
+      <Box pr={3} position='absolute' right={0} top='-3px'>
+        <Chip label="Best Match" className="cardBadge"/>
       </Box>
       <Box m={3} display="flex" gap={2.5}>
         <div>
           <CircularProgressWithLabel value={80} />
         </div>
-        <Box display="flex" flexDirection="column" width={1}>
+        <RepoCardContent>
           <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
-              filterLabels.map((row, index) => <Chip key={index} label={row} />)
+              filterLabels.slice(0,3).map((row, index) => <Chip key={index} label={row} />)
             }
+            <Chip label={`+${filterLabels.length - 3}`} />
           </Box>
-          <Box mt={2.5} gap={2.5} display="flex" width={1}>
+          <Box mt={2.5} display="flex" width={1}>
             <Box width={1}>
               {
                 context.allFilters
@@ -76,7 +86,7 @@ const RepositoryCard = (props) => {
               }
             </Box>
           </Box>
-        </Box>
+        </RepoCardContent>
       </Box>
     </Card>
   )

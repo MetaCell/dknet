@@ -26,20 +26,20 @@ const HomePage = () => {
 
   return (
     <Container>
-      <Grid container spacing={2}>
-        <Grid item xs={7}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} display='flex' justifyContent='flex-end'>
+      <Grid display="flex">
+        <Grid item sx={{ paddingRight: '1rem' }}>
+          <Grid spacing={2}>
+            <Grid item display='flex' justifyContent='flex-end' mb={2}>
               <SortWidget/>
             </Grid>
             {
-              repositories && repositories.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
+              repositories && repositories.map((repository, index) => <Grid item key={index}>
                 <RepositoryCard key={repository.code} repository={repository} />
               </Grid>)
             }
           </Grid>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item sx={{ paddingLeft: '1rem' }}>
           <Stack spacing={2}>
             <Filters />
             <Box sx={{
