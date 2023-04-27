@@ -20,7 +20,6 @@ const {
   warning50,
   warning300,
   dialogBoxShadow,
-  repoSuccessBoxshadow
 } = vars;
 
 const theme = createTheme({
@@ -170,7 +169,7 @@ const theme = createTheme({
           '&.successCard': {
             background: primary25,
             border:`1px solid ${primary200}`,
-            boxShadow: repoSuccessBoxshadow
+            boxShadow: dialogBoxShadow
           }
         }
       }
