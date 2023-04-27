@@ -24,14 +24,17 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const [value, setValue] = useState(0);
   const [progress, setProgress] = useState(0);
   const { context, setContext } = useFilterContext()
-  const [ filters, setFilters ] = useState<any>([])
+  const [filters, setFilters] = useState<any>([])
+  const [height, setHeight] = useState([]);
+  const [translateValue, setTranslateValue] = useState(0);
 
   const questionsTabs = filters.reduce((filtered, option) => {
     if (option?.question) {
-      filtered.push(option?.question);
+      filtered.push(option);
     }
     return filtered;
   }, []);
+
 
   useEffect(() => {
     // TODO: apply context.filterValues on the allFilters and create the filters
@@ -44,7 +47,27 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   };
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+    setValue((prevValue) => {
+      if (newValue === prevValue + 1) {
+        setTranslateValue((prev) => {
+          return prev + height[value]
+        })
+      } else if (newValue === prevValue - 1) {
+        setTranslateValue((prev) => {
+          return prev - height[value - 1]
+        })
+      } else if (newValue > prevValue + 1) {
+        const sum = height?.slice(0, newValue)?.reduce((acc, index) => (acc + index), 0);
+        setTranslateValue(sum);
+      } else {
+        const sum = height?.slice(0, newValue - 1)?.reduce((acc, index) => (acc + index), 0);
+        setTranslateValue((prev) => {
+          return prev - sum
+        })
+      }
+
+      return newValue
+    });
   };
 
 
@@ -53,6 +76,11 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       setValue(value+1)
       updateProgress(value+1)
     }
+  }
+
+  const onClickPrev = () => {
+    setValue(value - 1)
+    updateProgress(value - 1)
   }
 
   const updateProgress = (number) => {
@@ -71,12 +99,12 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       sx={{
         "& .MuiPaper-root": {
           height: '100%',
-          borderRadius: '12px'
+          borderRadius: '0.75rem'
         }
       }}
     >
       <DialogTitle sx={{
-        borderBottom: '1px solid #EAECF0',
+        borderBottom: '0.0625rem solid #EAECF0',
       }}>
         <Typography variant='h2'>
           Filtering Assistant
@@ -94,8 +122,20 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent sx={{ backgroundColor: "#F9FAFB" }}>
-        <FilterQuestions questionsTabs={questionsTabs} onClickNext={onClickNext} progress={progress} handleChange={handleChange} value={value} />
+      <DialogContent sx={{ backgroundColor: "#F9FAFB", height: 'calc(100vh - 3.60rem)' }}>
+        <FilterQuestions
+          setHeight={setHeight}
+          open={open}
+          questionsTabs={questionsTabs}
+          onClickNext={onClickNext}
+          progress={progress}
+          handleChange={handleChange}
+          onClickPrev={onClickPrev}
+          value={value}
+          height={height}
+          setTranslateValue={setTranslateValue}
+          translateValue={translateValue}
+        />
       </DialogContent>
     </Dialog>
   );
