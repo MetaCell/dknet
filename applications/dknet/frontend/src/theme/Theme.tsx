@@ -20,6 +20,7 @@ const {
   warning50,
   warning300,
   dialogBoxShadow,
+  primary500
 } = vars;
 
 const theme = createTheme({
@@ -79,8 +80,9 @@ const theme = createTheme({
     },
     h4: {
       fontWeight: 500,
+      lineHeight: '143%',
       color: grey700,
-      fontSize: '1rem'
+      fontSize: '0.875rem'
     },
     h5: {
       fontWeight: 600,
@@ -117,7 +119,7 @@ const theme = createTheme({
         background: transparent;
       }
       ::-webkit-scrollbar-thumb {
-        background: ${grey200}; 
+        background: ${grey200};
         border-radius: 8px;
       }
       .disclaimerBox {
@@ -148,6 +150,21 @@ const theme = createTheme({
       }
       `
     },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          borderLeft: `0.0625rem solid ${grey200}`,
+          overflow: 'initial'
+        },
+      }
+    },
+    MuiTabs: {
+      styleOverrides: {
+        scroller: {
+          overflow: 'initial'
+        },
+      }
+    },
     MuiInputLabel: {
       styleOverrides: {
         root: {
@@ -168,8 +185,7 @@ const theme = createTheme({
           boxShadow: 'none',
           '&.successCard': {
             background: primary25,
-            border:`1px solid ${primary200}`,
-            boxShadow: dialogBoxShadow
+            border:`1px solid ${primary200}`
           }
         }
       }
@@ -221,7 +237,10 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
-          borderRadius: '8px',
+          borderRadius: '0.5rem',
+          minHeight: '2.25rem',
+          lineHeight: 1,
+          fontSize: '0.875rem'
         },
         text: {
           color: grey600,
@@ -232,13 +251,14 @@ const theme = createTheme({
           }
         },
         contained: {
-          background: primary600,
+          background: primary500,
           border: `1px solid ${primary600}`,
           boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
           color: white,
           '&:hover': {
-            background: primary700,
+            background: primary600,
             color: white,
+            boxShadow: '0 1px 2px rgba(16, 24, 40, 0.05)',
           }
         },
         outlined: {
@@ -386,13 +406,17 @@ const theme = createTheme({
         root: {
         },
         paper: {
+          height: 'calc(100vh - 4rem)',
+          maxHeight: 'calc(100vh - 4rem)'
         },
       }
     },
     MuiDialogContent: {
       styleOverrides: {
-        root: () => ({
-        }),
+        root: {
+          overflow: 'hidden',
+          padding: 0
+        }
       },
     },
     MuiDialogActions: {
