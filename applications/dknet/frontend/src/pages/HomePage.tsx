@@ -17,7 +17,7 @@ import Stack from '@mui/material/Stack';
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
-
+ 
   useEffect(() => {
     // apply context.filterValues on the allFilters + allRepositories
     const foundRepositories = context.allRepositories // .filter((repository) => {})

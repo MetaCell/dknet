@@ -6,6 +6,7 @@ import { FilterType } from '../config/enums'
 import { IFilter, IFilterContext, IRepository } from './Interfaces'
 
 export const FilterContext = createContext(null)
+export const FilterUpdateContext = createContext(null)
 
 const booleanFilterInitialState = (filter: IFilter) => (
   {
@@ -66,13 +67,47 @@ export const FilterProvider = ({ children }) => {
     }, {}),
     allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
     allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
-  })
+  });
+
+  const sortRepositories = (sortValue:string) => {
+
+    if(sortValue === 'Alphabetical (A-Z)'){
+      const newRepositories = context.allRepositories.sort((a, b) => a.label.localeCompare(b.label));
+      setContext(
+        {
+          ...context, 
+          allRepositories: newRepositories
+        }
+      )
+    }
+    else if(sortValue === 'Alphabetical (Z-A)'){
+      const newRepositories = context.allRepositories.sort((a, b) => a.label.localeCompare(b.label)).reverse();
+      setContext(
+        {
+          ...context, 
+          allRepositories: newRepositories
+        }
+      )
+    }
+    else {
+      const newRepositories = repositories.map((repository) => mapRepository(repository as IRepository))
+      setContext(
+        {
+          ...context, 
+          allRepositories: newRepositories
+        }
+      )
+    }
+  }
 
   return (
     <FilterContext.Provider value={{ context, setContext }}>
-      {children}
+      <FilterUpdateContext.Provider value={sortRepositories}>
+        {children}
+      </FilterUpdateContext.Provider>
     </FilterContext.Provider>
   )
 }
 
 export const useFilterContext = () => useContext(FilterContext)
+export const useFilterUpdateContext = () => useContext(FilterUpdateContext)
