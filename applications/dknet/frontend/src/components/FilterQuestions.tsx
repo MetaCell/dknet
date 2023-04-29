@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import RadioGroup from '@mui/material/RadioGroup';
 import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
 import ProgressBar from "./widgets/ProgressBar";
@@ -80,35 +81,29 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, open, setHeight, setTranslateValue, height, translateValue }) {
+export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, open, setHeight, setTranslateValue, height, translateValue, closeDialog }) {
 
   const ref = useRef(null);
 
   useLayoutEffect(() => {
-    const temparr = Array.from(ref?.current?.childNodes).map((el: any) => el.clientHeight);
-    setHeight(temparr)
+    const questionDOMHeightArr = Array.from(ref?.current?.childNodes).map((el: any) => el.clientHeight);
+    setHeight(questionDOMHeightArr)
   }, [open]);
 
   useEffect(() => {
     const keyDownHandler = (event: any) => {
       if (event.key === 'Enter') {
+        event.preventDefault();
         if (questionsTabs.length - 1 !== value) {
-          const currentIndex = 0;
-          event.preventDefault();
-          handleNext(currentIndex + 1);
-        } else {
-          alert('Steps Over')
+          handleNext(value);
         }
-
       }
     };
-
     document.addEventListener('keydown', keyDownHandler);
-
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
-  }, [value, translateValue]);
+  });
 
 
   const handleNext = (index: number) => {
@@ -261,34 +256,37 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                   }}>{question?.question}</Typography>
                   <QuestionBox>
                     {
-                      question?.options.map((data) =>
-                        question?.inputType === 'MULTI' ? <Item key={data?.label}>
-                          <CheckBoxWidget
-                            data={data}
-                            filter={data}
-                          />
-                        </Item> :
-                          <Item key={data?.label} justifyContent="center" alignItems="center" flexDirection="column">
-                            {/* <Radio
-                              value={data?.code}
-                              name={question?.code}
-                              sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }}
-                              icon={<FeaturedIcon />}
-                              checkedIcon={<FeaturedIconChecked />}
-                              inputProps={{ 'aria-label': data?.label }}
-                            />
-                            <Typography variant="body2">{data?.label}</Typography> */}
-
-                            <FormControlLabel name={question?.code} value={data?.code} control={<Radio />} label={data?.code} />
-                          </Item>
-                      )
+                      question?.inputType === 'MULTI' ? question?.options.map((data) => <Item key={data?.label}>
+                        <CheckBoxWidget
+                          data={data}
+                          filter={data}
+                        />
+                      </Item> ) :
+                        <RadioGroup
+                          aria-labelledby="demo-radio-buttons-group-label"
+                          defaultValue="female"
+                          name="radio-buttons-group"
+                        >
+                          { question?.options.map((data) =>
+                            <Item key={data?.code} justifyContent="center" alignItems="center" flexDirection="column">
+                              <FormControlLabel
+                                key={data?.code}
+                                name={question?.code}
+                                value={data?.code}
+                                control={ <Radio icon={<FeaturedIcon />} checkedIcon={<FeaturedIconChecked />} sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }
+                                } />}
+                                label={data?.code}
+                              />
+                            </Item>
+                          ) }
+                        </RadioGroup>
                     }
                   </QuestionBox>
                   {!nextStep && (
                     <Box display='flex' alignItems='center'>
                       {value !== 0 && <Button sx={{ mr: 1 }} variant='outlined' onClick={() => handlePrev(index)}>Prev</Button>}
                       {questionsTabs?.length === value + 1 ? (
-                        <Button variant='contained' onClick={() => console.log('Go to results')}>Go to results</Button>
+                        <Button variant='contained' onClick={closeDialog}>Go to results</Button>
                       ) : (
                         <>
                           <Box display='flex' alignItems='center' flexGrow={1}>
