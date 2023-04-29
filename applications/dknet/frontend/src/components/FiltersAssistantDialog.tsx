@@ -21,7 +21,7 @@ const Transition = React.forwardRef(function Transition(
 
 
 export default function FiltersAssistantDialog({ open, setOpen }) {
-  const [value, setValue] = useState(0);
+  const [tabValue, setTabValue] = useState(0);
   const [progress, setProgress] = useState(0);
   const { context, setContext } = useFilterContext()
   const [filters, setFilters] = useState<any>([])
@@ -47,19 +47,19 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   };
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue((prevValue) => {
-      if (newValue === prevValue + 1) {
+    setTabValue((prevValue) => {
+      if (newValue === prevValue + 1) { // when next tab question is clicked on 
         setTranslateValue((prev) => {
-          return prev + height[value]
+          return prev + height[tabValue]
         })
-      } else if (newValue === prevValue - 1) {
+      } else if (newValue === prevValue - 1) { // when previous tab question is clicked on 
         setTranslateValue((prev) => {
-          return prev - height[value - 1]
+          return prev - height[tabValue - 1]
         })
-      } else if (newValue > prevValue + 1) {
+      } else if (newValue > prevValue + 1) { // when other than next question is selected in increasing order
         const sum = height?.slice(0, newValue)?.reduce((acc, index) => (acc + index), 0);
         setTranslateValue(sum);
-      } else {
+      } else { // when other than previous question is selected in decreasing order
         const sum = height?.slice(0, newValue - 1)?.reduce((acc, index) => (acc + index), 0);
         setTranslateValue((prev) => {
           return prev - sum
@@ -72,15 +72,15 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
 
 
   const onClickNext = () => {
-    if ( value !== (questionsTabs.length - 1)) {
-      setValue(value+1)
-      updateProgress(value+1)
+    if ( tabValue !== (questionsTabs.length - 1)) {
+      setTabValue(tabValue+1)
+      updateProgress(tabValue+1)
     }
   }
 
   const onClickPrev = () => {
-    setValue(value - 1)
-    updateProgress(value - 1)
+    setTabValue(tabValue - 1)
+    updateProgress(tabValue - 1)
   }
 
   const updateProgress = (number) => {
@@ -131,10 +131,11 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
           progress={progress}
           handleChange={handleChange}
           onClickPrev={onClickPrev}
-          value={value}
+          value={tabValue}
           height={height}
           setTranslateValue={setTranslateValue}
           translateValue={translateValue}
+          closeDialog={() => setOpen(false)}
         />
       </DialogContent>
     </Dialog>
