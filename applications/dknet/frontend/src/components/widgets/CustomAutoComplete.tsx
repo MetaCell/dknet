@@ -20,6 +20,7 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, default
   useEffect(() => {
     setValue(defaultValue)
   }, [defaultValue])
+  console.log("Values: ", value);
   return (
     <Autocomplete
       multiple

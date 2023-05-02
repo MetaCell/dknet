@@ -6,6 +6,7 @@ import { FilterType } from '../config/enums'
 import { IFilter, IFilterContext, IRepository } from './Interfaces'
 
 export const FilterContext = createContext(null)
+export const FilterUpdateContext = createContext(null)
 
 const booleanFilterInitialState = (filter: IFilter) => (
   {
@@ -68,11 +69,18 @@ export const FilterProvider = ({ children }) => {
     allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
   })
 
+  const filterRepositories = () => {
+    console.log("You reached me!!!")
+  }
+
   return (
     <FilterContext.Provider value={{ context, setContext }}>
-      {children}
+      <FilterUpdateContext.Provider value={filterRepositories}>
+        {children}
+      </FilterUpdateContext.Provider>
     </FilterContext.Provider>
   )
 }
 
 export const useFilterContext = () => useContext(FilterContext)
+export const useFilterUpdateContext = () => useContext(FilterUpdateContext) 

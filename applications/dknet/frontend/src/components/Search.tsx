@@ -12,6 +12,7 @@ import CustomAutoComplete from "./widgets/CustomAutoComplete";
 const Search = () => {
   const { context, setContext } = useFilterContext();
 
+  console.log("Filters: ", context.allFilters)
   const onChangeFilterValue = (value, filter) => {
     setContext({
       ...context,

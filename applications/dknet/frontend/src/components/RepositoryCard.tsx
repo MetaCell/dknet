@@ -47,7 +47,7 @@ const RepositoryCard = (props) => {
           <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
-              filterLabels.map((row, index) => <Chip key={index} label={row} />)
+              repository.attributes.DataType.map((row, index) => <Chip key={index} label={row} />)
             }
           </Box>
           <Box mt={2.5} gap={2.5} display="flex" width={1}>
