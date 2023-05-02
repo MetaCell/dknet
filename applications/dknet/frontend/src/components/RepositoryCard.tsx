@@ -26,8 +26,8 @@ const RepositoryCard = (props) => {
 
   const filterLabels = [];
 
-  for (const prop in repository.attributes) {
-    const codeObj = context.allFilters.find(item => item.code === prop);
+  for (const prop in repository.attributes.DataType) {
+    const codeObj = context.allFilters[0].options.find(item => item.code === repository.attributes.DataType[prop]);
     if (codeObj && codeObj.label) {
       filterLabels.push(codeObj.label)
     }
@@ -47,7 +47,7 @@ const RepositoryCard = (props) => {
           <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
-              repository.attributes.DataType.map((row, index) => <Chip key={index} label={row} />)
+              filterLabels.map((row, index) => <Chip key={index} label={row} />)
             }
           </Box>
           <Box mt={2.5} gap={2.5} display="flex" width={1}>
@@ -55,6 +55,7 @@ const RepositoryCard = (props) => {
               {
                 context.allFilters
                   .filter((filter: any) => filter.label) // show only attributes of filters with a label
+                  .filter((filter: any) => filter.code !== 'DataType')
                   .map((filter: any) => {
                     const attributeValues = repository.attributes[filter.code]
                     if (!attributeValues) {
