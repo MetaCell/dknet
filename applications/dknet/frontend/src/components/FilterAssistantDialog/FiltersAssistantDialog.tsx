@@ -88,6 +88,13 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
     setProgress(newProgressValue)
   }
 
+  const closeDialog = () => {
+    setTranslateValue(0);
+    setOpen(false);
+    setTabValue(0);
+    setProgress(0);
+  }
+
   return (
     <Dialog
       open={open}
@@ -135,7 +142,7 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
           height={height}
           setTranslateValue={setTranslateValue}
           translateValue={translateValue}
-          closeDialog={() => setOpen(false)}
+          closeDialog={closeDialog}
         />
       </DialogContent>
     </Dialog>
