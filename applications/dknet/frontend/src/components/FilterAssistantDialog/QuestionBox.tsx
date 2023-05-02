@@ -5,13 +5,7 @@ import Box from '@mui/material/Box';
 import Grid from "@mui/material/Grid";
 
 const QuestionBox = (props: any) => {
-  let gridTemplateColumns: string;
-
-  if (props.inputType === 'MULTI') {
-    gridTemplateColumns = props.children.length == 2 ? 'repeat(2,auto)' : props.children.length == 4 ? 'repeat(4, auto)' : 'repeat(3, auto)';
-  } else {
-    gridTemplateColumns = 'auto';
-  }
+  const gridTemplateColumns = props.inputType === 'MULTI' ? (props.children.length == 2 ? 'repeat(2,auto)' : props.children.length == 4 ? 'repeat(4, auto)' : 'repeat(3, auto)') : 'auto';
   return (
     <Box sx={{
       background: '#FFF',
