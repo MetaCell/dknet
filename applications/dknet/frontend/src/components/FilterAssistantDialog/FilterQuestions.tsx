@@ -6,13 +6,15 @@ import Box from '@mui/material/Box';
 import RadioGroup from '@mui/material/RadioGroup';
 import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
-import ProgressBar from "./widgets/ProgressBar";
-import QuestionBox from "./QuestionBox";
-import CheckBoxWidget from "./widgets/CheckBox";
+import ProgressBar from "../widgets/ProgressBar";
+import QuestionBox from "../QuestionBox";
+import CheckBoxWidget from "../widgets/CheckBox";
 import { styled } from "@mui/material/styles";
 import Radio from '@mui/material/Radio';
-import { FeaturedIcon, FeaturedIconChecked } from '../assets/icons';
+import { FeaturedIcon, FeaturedIconChecked } from '../../assets/icons';
 import { FormControlLabel } from "@mui/material";
+import FilterDialogRadio from "../widgets/FilterDialogRadio";
+import DialogStepFooter from "./DialogStepFooter";
 
 export const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -259,59 +261,29 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                       question?.inputType === 'MULTI' ? question?.options.map((data) => <Item key={data?.label}>
                         <CheckBoxWidget
                           data={data}
-                          filter={data}
+                          filter={question}
                         />
                       </Item> ) :
                         <RadioGroup
+                          sx={{
+                            width: '100%',
+                            display: 'grid',
+                            gap: 1.5,
+                            gridTemplateColumns: question?.options.length == 2 ? 'repeat(2, auto)' : question?.options.length == 4 ? 'repeat(4,  auto)' : 'repeat(3, auto)'
+                          }}
                           aria-labelledby="demo-radio-buttons-group-label"
                           defaultValue="female"
                           name="radio-buttons-group"
                         >
                           { question?.options.map((data) =>
-                            <Item key={data?.code} justifyContent="center" alignItems="center" flexDirection="column">
-                              <FormControlLabel
-                                key={data?.code}
-                                name={question?.code}
-                                value={data?.code}
-                                control={ <Radio icon={<FeaturedIcon />} checkedIcon={<FeaturedIconChecked />} sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }
-                                } />}
-                                label={data?.code}
-                              />
+                            <Item key={data?.code}>
+                              <FilterDialogRadio data={data} filter={data} question={question} />
                             </Item>
                           ) }
                         </RadioGroup>
                     }
                   </QuestionBox>
-                  {!nextStep && (
-                    <Box display='flex' alignItems='center'>
-                      {value !== 0 && <Button sx={{ mr: 1 }} variant='outlined' onClick={() => handlePrev(index)}>Prev</Button>}
-                      {questionsTabs?.length === value + 1 ? (
-                        <Button variant='contained' onClick={closeDialog}>Go to results</Button>
-                      ) : (
-                        <>
-                          <Box display='flex' alignItems='center' flexGrow={1}>
-                            <Button variant='contained' onClick={() => handleNext(index)}>
-                              Next
-                            </Button>
-
-                            <Typography sx={{
-                              ml: 1,
-                              fontWeight: 400,
-                              fontSize: '0.875rem',
-                              lineHeight: '143%',
-                              color: '#98A2B3',
-                            }}>
-                              or press Enter
-                            </Typography>
-                          </Box>
-                          <Button onClick={() => handleNext(index)}>
-                            Skip
-                          </Button>
-                        </>
-                      )}
-                    </Box>
-                  )}
-
+                  {!nextStep && <DialogStepFooter  handlePrev={handlePrev} index={index} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />}
                 </Box>
               </>
             )
