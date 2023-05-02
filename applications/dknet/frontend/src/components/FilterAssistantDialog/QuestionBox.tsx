@@ -4,8 +4,14 @@ import React from "react";
 import Box from '@mui/material/Box';
 import Grid from "@mui/material/Grid";
 
-const QuestionBox = (props) => {
+const QuestionBox = (props: any) => {
+  let gridTemplateColumns: string;
 
+  if (props.inputType === 'MULTI') {
+    gridTemplateColumns = props.children.length == 2 ? 'repeat(2,auto)' : props.children.length == 4 ? 'repeat(4, auto)' : 'repeat(3, auto)';
+  } else {
+    gridTemplateColumns = 'auto';
+  }
   return (
     <Box sx={{
       background: '#FFF',
@@ -19,10 +25,7 @@ const QuestionBox = (props) => {
         container
         gap={1.5}
         display="grid"
-        gridTemplateColumns={props.children.length == 2? 'repeat(2,auto)':
-          props.children.length == 4? 'repeat(4, auto)':
-            'repeat(3, auto)'
-        }
+        gridTemplateColumns={gridTemplateColumns}
       >
         {
           props.children

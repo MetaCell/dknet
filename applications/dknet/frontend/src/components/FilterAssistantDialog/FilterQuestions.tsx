@@ -7,13 +7,13 @@ import RadioGroup from '@mui/material/RadioGroup';
 import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
 import ProgressBar from "../widgets/ProgressBar";
-import QuestionBox from "../QuestionBox";
+import QuestionBox from "./QuestionBox";
 import CheckBoxWidget from "../widgets/CheckBox";
 import { styled } from "@mui/material/styles";
 import Radio from '@mui/material/Radio';
 import { FeaturedIcon, FeaturedIconChecked } from '../../assets/icons';
 import { FormControlLabel } from "@mui/material";
-import FilterDialogRadio from "../widgets/FilterDialogRadio";
+import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
 
 export const Item = styled(Box)(({ theme }) => ({
@@ -256,7 +256,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                     lineHeight: '150%',
                     color: '#1D2939'
                   }}>{question?.question}</Typography>
-                  <QuestionBox>
+                  <QuestionBox inputType={question?.inputType}>
                     {
                       question?.inputType === 'MULTI' ? question?.options.map((data) => <Item key={data?.label}>
                         <CheckBoxWidget

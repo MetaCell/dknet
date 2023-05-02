@@ -24,8 +24,17 @@ const FilterDialogRadio = ({ data, question }: any) => {
   return (
     <FormControlLabel
       key={data?.code}
+      labelPlacement="bottom"
       name={question?.code}
       value={data?.code}
+      sx={{
+        width: '100%',
+        '& .MuiTypography-body1': {
+          width: '100%',
+          margin: 0,
+          textAlign: 'center'
+        },
+      }}
       control={ <Radio
         checked={selectedData.code === data.code}
         onChange={onChangeCheckbox}
