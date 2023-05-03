@@ -2,14 +2,14 @@ import React from "react";
 
 //components
 import Radio from '@mui/material/Radio';
-import { FeaturedIcon, FeaturedIconChecked } from '../../assets/icons';
 import { FormControlLabel } from "@mui/material";
 import { useFilterContext } from "../../context/Context";
-
+import Icon from '@mui/material/Icon';
 
 const FilterDialogRadio = ({ data, question }: any) => {
   const { context, setContext } = useFilterContext()
   const selectedData = context.filterValues[question?.code] || {}
+  const iconName = data?.icon?.split(' ').join('_').toLowerCase() || ""
 
   const onChangeCheckbox = (e) => {
     setContext({
@@ -38,7 +38,7 @@ const FilterDialogRadio = ({ data, question }: any) => {
       control={ <Radio
         checked={selectedData.code === data.code}
         onChange={onChangeCheckbox}
-        icon={<FeaturedIcon />} checkedIcon={<FeaturedIconChecked />} sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }
+        icon={<Icon>{iconName}</Icon>} checkedIcon={<Icon>{iconName}</Icon>} sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }
         } />}
       label={data?.code}
     />
