@@ -55,12 +55,13 @@ const RepositoryCard = (props) => {
               {
                 context.allFilters
                   .filter((filter: any) => filter.label) // show only attributes of filters with a label
-                  .filter((filter: any) => filter.code !== 'DataType')
                   .map((filter: any) => {
+
                     const attributeValues = repository.attributes[filter.code]
                     if (!attributeValues) {
                       return null
                     }
+                    
                     return (
                       <Box key={filter.code} display="flex" justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
                         <Typography key={filter.code} variant="body2" color="grey.600">{filter.label}</Typography>

@@ -69,13 +69,22 @@ export const FilterProvider = ({ children }) => {
     allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
   })
 
-  const filterRepositories = () => {
-    console.log("You reached me!!!")
+  const filterLabels= (context) => {
+    if(context.filterValues.DataType){
+      context.allFilters[0].options = context.filterValues.DataType
+    }
+    if(context.filterValues.DomainType){
+      context.allFilters[1].options = context.filterValues.DomainType
+    }
+    context.allRepositories.map((repo) => {
+      repo.attributes.DataType.filter((item) => item === "multiple-data-types")
+    })
+    console.log("repos: ", context.allRepositories)
   }
-
+ 
   return (
     <FilterContext.Provider value={{ context, setContext }}>
-      <FilterUpdateContext.Provider value={filterRepositories}>
+      <FilterUpdateContext.Provider value={filterLabels}>
         {children}
       </FilterUpdateContext.Provider>
     </FilterContext.Provider>

@@ -1,4 +1,4 @@
-import React  from "react";
+import React, { useEffect }  from "react";
 
 //components
 import Paper from '@mui/material/Paper';
@@ -6,13 +6,13 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 
 //icons
-import { useFilterContext } from "../context/Context";
+import { useFilterContext, useFilterUpdateContext } from "../context/Context";
 import CustomAutoComplete from "./widgets/CustomAutoComplete";
 
 const Search = () => {
   const { context, setContext } = useFilterContext();
+  const filterLabels = useFilterUpdateContext();
 
-  console.log("Filters: ", context.allFilters)
   const onChangeFilterValue = (value, filter) => {
     setContext({
       ...context,
@@ -22,6 +22,11 @@ const Search = () => {
       }
     })
   }
+  
+  useEffect(() => {
+    filterLabels(context)
+  }, [context, filterLabels])
+  
 
   return (
     <Paper
