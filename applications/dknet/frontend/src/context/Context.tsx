@@ -77,7 +77,6 @@ export const FilterProvider = ({ children }) => {
     if(context.filterValues.DomainType){
       context.allFilters[1].options = context.filterValues.DomainType
     }
-    console.log('context: ', context)
     // context.allRepositories.map((repo) => {
     //   repo.attributes.DataType.filter((item) => item === "multiple-data-types")
     // })
