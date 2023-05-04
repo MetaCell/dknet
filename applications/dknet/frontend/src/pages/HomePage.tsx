@@ -26,8 +26,8 @@ const HomePage = () => {
 
   return (
     <Container>
-      <Grid display="flex">
-        <Grid item sx={{ paddingRight: '1rem' }}>
+      <Grid container spacing={2}>
+        <Grid md={8.5} item>
           <Grid spacing={2}>
             <Grid item display='flex' justifyContent='flex-end' mb={2}>
               <SortWidget/>
@@ -39,7 +39,7 @@ const HomePage = () => {
             }
           </Grid>
         </Grid>
-        <Grid item sx={{ paddingLeft: '1rem' }}>
+        <Grid md={3.5} item>
           <Stack spacing={2}>
             <Filters />
             <Box sx={{

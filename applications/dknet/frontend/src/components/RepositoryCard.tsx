@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography'
 import CardContent from "@mui/material/CardContent";
 import CircularProgressWithLabel from "./CircularProgressWithLabel"
 import { styled } from "@mui/material/styles";
-
+import Grid from "@mui/material/Grid";
 //icons
 import * as MUIcon from "@mui/icons-material"
 
@@ -61,56 +61,28 @@ const RepositoryCard = (props) => {
             <Chip label={`+${filterLabels.length - 3}`} />
           </Box>
           <Box mt={2.5} display="flex" width={1} gap={3}>
-            <Box width={1/2}>
-              {
-                context.allFilters
-                  .filter((filter: any) => filter.label) // show only attributes of filters with a label
-                  .slice(0,context.allFilters.length/2)
-                  .map((filter: any) => {
-                    const attributeValues = repository.attributes[filter.code]
-                    if (!attributeValues) {
-                      return null
-                    }
-                    return (
-                      <Box key={filter.code} display="flex" justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
-                        <Typography key={filter.code} variant="body2" color="grey.600">{filter.label}</Typography>
-                        {
-                          attributeValues.map((attribute: any) =>
-                            filter.options.map((option: any) => (option.code === attribute &&
-                              <Chip key={option.code} label={option.label} color={option.color} icon={option.icon && getMuiIcon(option.icon)} />
-                            ))
-                          )
-                        }
-                      </Box>
-                    )
-                  })
-              }
-            </Box>
-            <Box width={1/2}>
-              {
-                context.allFilters
-                  .filter((filter: any) => filter.label) // show only attributes of filters with a label
-                  .slice(context.allFilters.length/2)
-                  .map((filter: any) => {
-                    const attributeValues = repository.attributes[filter.code]
-                    if (!attributeValues) {
-                      return null
-                    }
-                    return (
-                      <Box key={filter.code} display="flex" justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
-                        <Typography key={filter.code} variant="body2" color="grey.600">{filter.label}</Typography>
-                        {
-                          attributeValues.map((attribute: any) =>
-                            filter.options.map((option: any) => (option.code === attribute &&
-                              <Chip key={option.code} label={option.label} color={option.color} icon={option.icon && getMuiIcon(option.icon)} />
-                            ))
-                          )
-                        }
-                      </Box>
-                    )
-                  })
-              }
-            </Box>
+            <Grid container spacing={2}>
+              {context.allFilters.filter((filter: any) => filter.label).map((filter: any) => {
+                const attributeValues = repository.attributes[filter.code]
+                if (!attributeValues) {
+                  return null
+                }
+                return (
+                  <Grid key={filter.code} item md={6}>
+                    <Box display="flex" justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
+                      <Typography variant="body2" color="grey.600">{filter.label}</Typography>
+                      {
+                        attributeValues.map((attribute: any) =>
+                          filter.options.map((option: any) => (option.code === attribute &&
+                            <Chip key={option.code} label={option.label} color={option.color} icon={option.icon && getMuiIcon(option.icon)} />
+                          ))
+                        )
+                      }
+                    </Box>
+                  </Grid>
+                )
+              })}
+            </Grid>
           </Box>
         </RepoCardContent>
       </Box>
