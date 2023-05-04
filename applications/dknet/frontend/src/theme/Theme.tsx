@@ -150,6 +150,19 @@ const theme = createTheme({
       }
       `
     },
+
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          '&.Mui-checked': {
+            '& + p': {
+              color: '#05796B'
+            }
+          }
+        }
+      },
+    },
+
     MuiTab: {
       styleOverrides: {
         root: {
@@ -492,6 +505,7 @@ const theme = createTheme({
     MuiFormControlLabel:{
       styleOverrides:{
         root: {
+          flexGrow: 1,
           fontSize: '14px',
           fontWeight: '400',
           color: grey500,

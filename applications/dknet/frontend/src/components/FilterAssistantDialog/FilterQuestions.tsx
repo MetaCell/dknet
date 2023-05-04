@@ -15,10 +15,21 @@ import { FeaturedIcon, FeaturedIconChecked } from '../../assets/icons';
 import { FormControlLabel } from "@mui/material";
 import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
+import { vars } from '../../theme/variables.js'
+
+const {
+  grey200,
+  primary25,
+  primary600,
+  grey500,
+  cardChipBgColor,
+  grey700,
+  grey800
+} = vars;
 
 export const Item = styled(Box)(({ theme }) => ({
   display: 'flex',
-  border: `0.0625rem solid ${theme.palette.grey[200]}`,
+  border: `0.0625rem solid ${grey200}`,
   borderRadius: '0.75rem',
   width: '100%',
   '& .MuiFormControlLabel-root': {
@@ -46,9 +57,13 @@ export const Item = styled(Box)(({ theme }) => ({
     marginTop: '0.5rem'
   },
   '&:hover': {
-    backgroundColor: '#F8FDFA',
     border: `0.0625rem solid ${theme.palette.primary['main']}}`,
-  }
+  },
+  '&.checked-state': {
+    background: primary25,
+    boxShadow: `0 0 0 0.0625rem ${primary600}`,
+    border: `0.0625rem solid ${theme.palette.primary['main']}}`,
+  },
 }));
 
 function a11yProps(index: number) {
@@ -161,7 +176,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
         '& em': {
           fontStyle: 'normal',
           fontSize: '0.875rem',
-          color: '#667085',
+          color: grey500,
           position: 'relative',
           lineHeight: '143%',
         },
@@ -172,16 +187,16 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           left: '-0.5rem',
           top: 0,
           position: 'absolute',
-          background: '#F2F4F7',
+          background: cardChipBgColor,
           borderRadius: '0.375rem',
           transition: 'all ease-in-out 1s'
         },
         "&.Mui-selected": {
           background: 'transparent',
           borderRadius: '0.375rem',
-          color: '#344054',
+          color: grey700,
           '& em': {
-            color: '#344054',
+            color: grey700,
           },
           '&:before': {
             width: 'calc(100% + 0.5rem)',
@@ -223,7 +238,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                   textAlign: 'left',
                   lineHeight: '143%',
                   textTransform: 'inherit',
-                  color: '#667085',
+                  color: grey500,
                   fontSize: '0.875rem',
                   fontWeight: 400,
                 }
@@ -239,7 +254,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           <ProgressBar progress={progress} />
         </Box>
       </Grid>
-      <Grid item xs={0} md={9} sx={{ borderLeft: '0.0625rem solid #EAECF0', height: '100%' }}>
+      <Grid item xs={0} md={9} sx={{ borderLeft: `0.0625rem solid ${grey200}`, height: '100%' }}>
         <Box ref={ref} sx={{ height: '100%', transition: 'transform ease-in-out .4s', transform: `translateY(-${translateValue}px)` }} px={5}>
           {questionsTabs.map((question, index) => {
             const isActive = value === index;
@@ -254,10 +269,11 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                     fontWeight: 400,
                     fontSize: '1.25rem',
                     lineHeight: '150%',
-                    color: '#1D2939'
+                    color: grey800
                   }}>{question?.question}</Typography>
                   <QuestionBox inputType={question?.inputType}>
                     {
+                      // Add className='checked-state' in <Item is checkbox is selected
                       question?.inputType === 'MULTI' ? question?.options.map((data) => <Item key={data?.label}>
                         <CheckBoxWidget
                           data={data}
@@ -276,6 +292,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                           name="radio-buttons-group"
                         >
                           { question?.options.map((data) =>
+                            // Add className='checked-state' in <Item is checkbox is selected
                             <Item key={data?.code}>
                               <FilterDialogRadio data={data} filter={data} question={question} />
                             </Item>

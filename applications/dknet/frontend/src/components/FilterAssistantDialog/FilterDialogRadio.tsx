@@ -5,6 +5,14 @@ import Radio from '@mui/material/Radio';
 import { FormControlLabel } from "@mui/material";
 import { useFilterContext } from "../../context/Context";
 import Icon from '@mui/material/Icon';
+import { vars } from '../../theme/variables.js';
+
+const {
+  white,
+  primary600,
+  grey700,
+  grey200
+} = vars
 
 const FilterDialogRadio = ({ data, question }: any) => {
   const { context, setContext } = useFilterContext()
@@ -35,11 +43,25 @@ const FilterDialogRadio = ({ data, question }: any) => {
           textAlign: 'center'
         },
       }}
-      control={ <Radio
-        checked={selectedData.code === data.code}
-        onChange={onChangeCheckbox}
-        icon={<Icon>{iconName}</Icon>} checkedIcon={<Icon>{iconName}</Icon>} sx={{ '& .MuiSvgIcon-root': { fill: 'none' } }
-        } />}
+      control={
+        <Radio
+          checked={selectedData.code === data.code}
+          onChange={onChangeCheckbox}
+          icon={<Icon sx={{ color: grey700, fontSize: '0.75rem' }}>{iconName}</Icon>}
+          checkedIcon={<Icon sx={{ fontSize: '0.75rem' }}>{iconName}</Icon>}
+          sx={{
+            border: `0.0625rem solid ${grey200}`,
+            padding: '0.3125rem',
+            mb: 1,
+            borderRadius: '0.25rem',
+            '&.Mui-checked': {
+              backgroundColor: primary600,
+              borderColor: primary600,
+              color: white
+            },
+            '& .MuiSvgIcon-root': { fill: 'none' }
+          }}
+        />}
       label={data?.code}
     />
   );
