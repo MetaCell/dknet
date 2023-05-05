@@ -17,7 +17,7 @@ import * as MUIcon from "@mui/icons-material"
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
     padding: 0, 
-    minWidth: 681
+    maxWidth: 681
   }
 }));
 
@@ -44,7 +44,7 @@ const RepositoryCard = (props) => {
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
-    <Card sx={{ position: 'relative', minWidth: 789, marginBottom: '1rem' }} className="successCard">
+    <Card sx={{ position: 'relative', maxWidth: 789, marginBottom: '1rem' }} className="successCard">
       <Box pr={3} position='absolute' right={0} top='-3px'>
         <Chip label="Best Match" className="cardBadge"/>
       </Box>
