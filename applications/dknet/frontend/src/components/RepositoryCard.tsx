@@ -27,13 +27,14 @@ const RepositoryCard = (props) => {
   const filterLabels = [];
 
   for (const prop in repository.attributes.DataType) {
-    const codeObj = context.allFilters[0].options.filter(item => item.code === repository.attributes.DataType[prop]);
+    console.log('filter options: ', context.allFilters[0].options)
+    console.log('filter', context.allFilters[0])
+    const codeObj = context.allFilters[0].options.find(item => item.code === repository.attributes.DataType[prop])
+  
     if (codeObj && codeObj.label) {
       filterLabels.push(codeObj.label)
     }
   }
-  // console.log('filter labels: ', filterLabels)
-  // console.log('all filters', context.allFilters[0].options)
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
