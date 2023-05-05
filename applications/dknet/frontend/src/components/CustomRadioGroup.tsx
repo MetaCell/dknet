@@ -1,4 +1,5 @@
 import React  from "react"
+import { useFilterUpdateContext } from "../context/Context"
 
 //components
 import Box from '@mui/material/Box'
@@ -22,6 +23,7 @@ const {
 
 const CustomRadioGroup = ({ data }) => {
   const { context, setContext } = useFilterContext()
+  const updateFilter = useFilterUpdateContext();
   const filter = context.allFilters.find((filter: any) => filter.code === data.code)
   const onRadioChange = (e: any) => {
     const newValue = filter.options.find(row => row.code === e.target.value)

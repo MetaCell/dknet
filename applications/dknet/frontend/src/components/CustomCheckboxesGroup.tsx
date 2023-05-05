@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { useFilterContext } from "../context/Context"
 
 //components
 import Box from '@mui/material/Box'
