@@ -169,7 +169,9 @@ const theme = createTheme({
           '&.successCard': {
             background: primary25,
             border:`1px solid ${primary200}`,
-            boxShadow: dialogBoxShadow
+            '&:hover': {
+              boxShadow: dialogBoxShadow
+            }
           }
         }
       }
