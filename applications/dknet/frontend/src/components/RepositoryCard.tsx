@@ -61,7 +61,7 @@ const RepositoryCard = (props) => {
             <Chip label={`+${filterLabels.length - 3}`} />
           </Box>
           <Box mt={2.5} display="flex" width={1}>
-            <Grid container spacing={2}>
+            <Grid container columnSpacing={3}>
               {context.allFilters.filter((filter: any) => filter.label).map((filter: any) => {
                 const attributeValues = repository.attributes[filter.code]
                 if (!attributeValues) {
