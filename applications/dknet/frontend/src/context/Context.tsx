@@ -7,6 +7,7 @@ import { IFilter, IFilterContext, IRepository } from './Interfaces'
 
 export const FilterContext = createContext(null)
 export const FilterUpdateContext = createContext(null)
+export const FilterSortContext = createContext(null)
 
 const booleanFilterInitialState = (filter: IFilter) => (
   {
@@ -70,7 +71,7 @@ export const FilterProvider = ({ children }) => {
   });
 
   const sortRepositories = (sortValue:string) => {
-
+    console.log("sort value: ", sortValue)
     if(sortValue === 'Alphabetical (A-Z)'){
       const newRepositories = context.allRepositories.sort((a, b) => a.label.localeCompare(b.label));
       setContext(
@@ -99,11 +100,32 @@ export const FilterProvider = ({ children }) => {
       )
     }
   }
+  const updateFilter = (newValue, filter) => {
+
+    let filteredData = repositories.map((repository) => mapRepository(repository as IRepository))
+
+    if(newValue && filter){
+      for(const prop in newValue){
+        filteredData = filteredData.filter(obj => obj.attributes[filter.code][prop] === newValue[prop].code);
+      }
+    }
+
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [filter.code]: newValue
+      },
+      allRepositories: filteredData
+    })
+  }
 
   return (
     <FilterContext.Provider value={{ context, setContext }}>
-      <FilterUpdateContext.Provider value={sortRepositories}>
-        {children}
+      <FilterUpdateContext.Provider value={updateFilter}>
+        <FilterSortContext.Provider value={sortRepositories}>
+          {children}
+        </FilterSortContext.Provider>
       </FilterUpdateContext.Provider>
     </FilterContext.Provider>
   )
@@ -111,3 +133,4 @@ export const FilterProvider = ({ children }) => {
 
 export const useFilterContext = () => useContext(FilterContext)
 export const useFilterUpdateContext = () => useContext(FilterUpdateContext)
+export const useFilterSortContext = () => useContext(FilterSortContext)
