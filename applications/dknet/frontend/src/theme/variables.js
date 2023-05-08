@@ -11,6 +11,7 @@ export const vars = {
   grey900: '#101828',
   grey50:'#F9FAFB',
 
+  primary500: '#10B881',
   primary600: '#0BA47D',
   primary700: '#088E75',
   primary200: '#83DCB2',
@@ -36,5 +37,5 @@ export const vars = {
   dialogBoxShadow: '0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03)',
   cardBorderColor: '#83DCB2',
   cardBgColor: '#F8FDFA',
-  cardChipBgColor: '#F2F4F7', 
+  cardChipBgColor: '#F2F4F7'
 };
