@@ -100,38 +100,15 @@ export const FilterProvider = ({ children }) => {
       )
     }
   }
-  const updateFilter = (newValue, filter) => {
-    console.log("newValue: ", newValue)
-    console.log("filter: ", filter)
-    let filteredData = repositories.map((repository) => mapRepository(repository as IRepository))
-
-    if(newValue && filter){
-      for(const prop in newValue){
-        filteredData = filteredData.filter(obj => obj.attributes[filter.code][prop] === newValue[prop].code);
-      }
-    }
-
-    setContext({
-      ...context,
-      filterValues: {
-        ...context.filterValues,
-        [filter.code]: newValue
-      },
-      allRepositories: filteredData
-    })
-  }
 
   return (
     <FilterContext.Provider value={{ context, setContext }}>
-      <FilterUpdateContext.Provider value={updateFilter}>
-        <FilterSortContext.Provider value={sortRepositories}>
-          {children}
-        </FilterSortContext.Provider>
-      </FilterUpdateContext.Provider>
+      <FilterSortContext.Provider value={sortRepositories}>
+        {children}
+      </FilterSortContext.Provider>
     </FilterContext.Provider>
   )
 }
 
 export const useFilterContext = () => useContext(FilterContext)
-export const useFilterUpdateContext = () => useContext(FilterUpdateContext)
 export const useFilterSortContext = () => useContext(FilterSortContext)

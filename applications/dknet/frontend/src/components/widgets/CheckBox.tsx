@@ -5,7 +5,7 @@ import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import CustomFormControlLabel from "./CustomFormControlLabel";
-import { useFilterContext, useFilterUpdateContext } from "../../context/Context";
+import { useFilterContext } from "../../context/Context";
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: 6,
@@ -66,7 +66,6 @@ function BpCheckbox(props: CheckboxProps) {
 
 const CheckBoxWidget = ({ data, filter }: any) => {
   const { context, setContext } = useFilterContext()
-  const updateFilter = useFilterUpdateContext()
   const selectedData = context.filterValues[filter.code] || []
 
   const onChangeCheckbox = (e) => {
