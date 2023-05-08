@@ -6,7 +6,6 @@ import { FilterType } from '../config/enums'
 import { IFilter, IFilterContext, IRepository } from './Interfaces'
 
 export const FilterContext = createContext(null)
-export const FilterUpdateContext = createContext(null)
 
 const booleanFilterInitialState = (filter: IFilter) => (
   {
@@ -68,34 +67,12 @@ export const FilterProvider = ({ children }) => {
     allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
     allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
   })
-  const updateFilter = (newValue, filter) => {
-    
-    let filteredData = repositories.map((repository) => mapRepository(repository as IRepository))
-
-    if(newValue && filter){
-      for(const prop in newValue){
-        filteredData = context.allRepositories.filter(obj => obj.attributes[filter.code][prop] === newValue[prop].code);
-      }
-    }
-
-    setContext({
-      ...context,
-      filterValues: {
-        ...context.filterValues,
-        [filter.code]: newValue
-      }, 
-      allRepositories: filteredData
-    })
-  }
 
   return (
     <FilterContext.Provider value={{ context, setContext }}>
-      <FilterUpdateContext.Provider value={updateFilter}>
-        {children}
-      </FilterUpdateContext.Provider>
+      {children}
     </FilterContext.Provider>
   )
 }
 
 export const useFilterContext = () => useContext(FilterContext)
-export const useFilterUpdateContext = () => useContext(FilterUpdateContext)
