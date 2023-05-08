@@ -44,8 +44,13 @@ const RepositoryCard = (props) => {
           <CircularProgressWithLabel value={80} />
         </div>
         <Box display="flex" flexDirection="column" width={1}>
-          <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
-          <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
+          <Box width='1'>
+            <Link href={repository.url} target="_blank">
+              <Typography variant="subtitle1" color="grey.800">{repository.label}</Typography>
+            </Link>
+          </Box>
+
+          <Box display="flex" flexWrap='wrap' alignItems="center" gap={0.5} mt={0.5}>
             {
               filterLabels.map((row, index) => <Chip key={index} label={row} />)
             }
