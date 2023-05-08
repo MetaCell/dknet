@@ -17,6 +17,15 @@ import Stack from '@mui/material/Stack';
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
+  console.log("filter values: ", context.filterValues)
+
+  function isObject(value) {
+    return (
+      typeof value === 'object' &&
+      value !== null &&
+      !Array.isArray(value)
+    );
+  }
 
   useEffect(() => {
     // apply context.filterValues on the allFilters + allRepositories
@@ -26,28 +35,29 @@ const HomePage = () => {
         if (context.filterValues[key] === undefined) {
           continue; 
         }
-    
-        if (Array.isArray(context.filterValues[key])) {
-          // let match = false;
-          
+        
+        if (Array.isArray(context.filterValues[key]) && context.filterValues[key].length !== 0) {
+          let match  = false
           const codes = context.filterValues[key].map((item) => item.code)
-          if(codes.toString() !== repository.attributes[key].toString()){
-            console.log("match!")
-            return false;
-            // break;
+          if(codes.toString() === repository.attributes[key].toString()){
+            match = true;
+            break;
           }
-
-          // if (!match){ return false; }
+          if (!match){ return false; }
         }
-    
-        // if (typeof(context.filterValues[key]) === 'object') {
-        //   if (repository.attributes[key].code !== context.filterValues[key]) {
-        //     return false;
-        //   }
-        // }
+        else if(isObject(context.filterValues[key])){
+          console.log("are you here?: ", context.filterValues[key].code)
+          console.log("repo attributes: ", repository.attributes[key][0])
+          if (repository.attributes[key][0] !== context.filterValues[key].code) {
+            return false;
+          }
+        }
+
       }
-      return true;
+      return true
     });
+
+    
     console.log("found repos: ", foundRepositories)
 
     setRepositories(foundRepositories)
