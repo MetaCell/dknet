@@ -101,7 +101,8 @@ export const FilterProvider = ({ children }) => {
     }
   }
   const updateFilter = (newValue, filter) => {
-
+    console.log("newValue: ", newValue)
+    console.log("filter: ", filter)
     let filteredData = repositories.map((repository) => mapRepository(repository as IRepository))
 
     if(newValue && filter){
