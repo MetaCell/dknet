@@ -17,15 +17,6 @@ import Stack from '@mui/material/Stack';
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
-  console.log("filter values: ", context.filterValues)
-
-  function isObject(value) {
-    return (
-      typeof value === 'object' &&
-      value !== null &&
-      !Array.isArray(value)
-    );
-  }
 
   useEffect(() => {
     // apply context.filterValues on the allFilters + allRepositories
@@ -45,10 +36,9 @@ const HomePage = () => {
           }
           if (!match){ return false; }
         }
-        else if(isObject(context.filterValues[key])){
-          console.log("are you here?: ", context.filterValues[key].code)
-          console.log("repo attributes: ", repository.attributes[key][0])
-          if (repository.attributes[key][0] !== context.filterValues[key].code) {
+
+        if(context.filterValues[key].code ==="no-restrictions" || context.filterValues[key].code ==="minimal-restrictions" || context.filterValues[key].code ==="significant-restrictions" || context.filterValues[key].code ==="significant-but-not-justified-restrictions"){
+          if(repository.attributes[key][0] !== context.filterValues[key].code){
             return false;
           }
         }
