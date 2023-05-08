@@ -203,6 +203,12 @@ const theme = createTheme({
         }
       }
     },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+        }
+      }
+    }, 
     MuiCardActionArea:     {
       styleOverrides: {
         root: {
