@@ -18,6 +18,20 @@ const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
 
+  function areEqual(array1, array2) {
+    if (array1.length === array2.length) {
+      return array1.every(element => {
+        if (array2.includes(element)) {
+          return true;
+        }
+  
+        return false;
+      });
+    }
+  
+    return false;
+  }
+
   useEffect(() => {
     // apply context.filterValues on the allFilters + allRepositories
     const foundRepositories = context.allRepositories.filter((repository) => {
@@ -28,9 +42,12 @@ const HomePage = () => {
         }
         
         if (Array.isArray(context.filterValues[key]) && context.filterValues[key].length !== 0) {
+          
           let match  = false
           const codes = context.filterValues[key].map((item) => item.code)
-          if(codes.toString() === repository.attributes[key].toString()){
+       
+          const filteredCodes = repository.attributes[key].filter((item) => item !== "")
+          if(areEqual(codes, filteredCodes)){
             match = true;
             break;
           }
