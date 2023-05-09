@@ -75,19 +75,19 @@ const HomePage = () => {
   return (
     <Container>
       <Grid container spacing={2}>
-        <Grid item xs={7}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} display='flex' justifyContent='flex-end'>
+        <Grid md={8.5} item>
+          <Grid spacing={2}>
+            <Grid item display='flex' justifyContent='flex-end' mb={2}>
               <SortWidget/>
             </Grid>
             {
-              repositories && repositories.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
+              repositories && repositories.map((repository, index) => <Grid item key={index}>
                 <RepositoryCard key={repository.code} repository={repository} />
               </Grid>)
             }
           </Grid>
         </Grid>
-        <Grid item xs={5}>
+        <Grid md={3.5} item>
           <Stack spacing={2}>
             <Filters />
             <Box sx={{
