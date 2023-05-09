@@ -16,7 +16,7 @@ import Stack from '@mui/material/Stack';
 
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
-  const [ repositories, setRepositories ] = useState([])
+  const [ repositories, setRepositories ] = useState([]);
 
   function areEqual(array1, array2) {
     if (array1.length === array2.length) {
@@ -35,21 +35,21 @@ const HomePage = () => {
   useEffect(() => {
     // apply context.filterValues on the allFilters + allRepositories
     const foundRepositories = context.allRepositories.filter((repository) => {
-
+  
       for (const key in context.filterValues) {
         if (context.filterValues[key] === undefined) {
           continue; 
         }
         
         if (Array.isArray(context.filterValues[key]) && context.filterValues[key].length !== 0) {
-          
+          console.log("I am ano arr: ", context.filterValues[key])
           let match  = false
-          const codes = context.filterValues[key].map((item) => item.code)
-       
+
+          const tempCodes = context.filterValues[key].map((item) => item.code)
           const filteredCodes = repository.attributes[key].filter((item) => item !== "")
-          if(areEqual(codes, filteredCodes)){
+
+          if(areEqual(tempCodes, filteredCodes)){
             match = true;
-            break;
           }
           if (!match){ return false; }
         }
@@ -59,13 +59,15 @@ const HomePage = () => {
             return false;
           }
         }
+        // if(!Array.isArray(context.filterValues[key])){
+        //   if(repository.attributes[key][0] !== context.filterValues[key].code){
+        //     return false;
+        //   }
+        // }
 
       }
       return true
     });
-
-    
-    console.log("found repos: ", foundRepositories)
 
     setRepositories(foundRepositories)
   }, [context])

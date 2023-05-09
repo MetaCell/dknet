@@ -58,7 +58,7 @@ const CustomRadioGroup = ({ data }) => {
       <FormControl>
         <RadioGroup
           onChange={onRadioChange}
-          defaultValue={context?.filterValues[data.code]?.code}
+          value={context?.filterValues[data.code]?.code || ''}
           aria-labelledby="demo-customized-radios"
           name="customized-radios"
         >
