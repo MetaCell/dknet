@@ -19,50 +19,28 @@ const HomePage = () => {
   const [ repositories, setRepositories ] = useState([])
   console.log("filter values: ", context.filterValues)
 
-  function isObject(value) {
-    return (
-      typeof value === 'object' &&
-      value !== null &&
-      !Array.isArray(value)
-    );
+  const filterReposByOneFilterValue = (allRepositories, filterKey, filterValueObject) => {
+    return allRepositories.reduce((matchedRepos, repository) => {
+      if (repository.attributes[filterKey].includes(filterValueObject.code)) {
+        matchedRepos.push(repository)
+      }
+      return matchedRepos
+    }, [])
   }
 
   useEffect(() => {
-    // apply context.filterValues on the allFilters + allRepositories
-    const foundRepositories = context.allRepositories.filter((repository) => {
-
-      for (const key in context.filterValues) {
-        if (context.filterValues[key] === undefined) {
-          continue; 
+    let latestMatchedRepos = context.allRepositories
+    Object.keys(context.filterValues).forEach(key => {
+      if (context.filterValues[key] !== undefined) {
+        if ((Array.isArray(context.filterValues[key]) && context.filterValues[key].length > 0)
+          || (!Array.isArray(context.filterValues[key]) && context.filterValues[key].code)) {
+          latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, context.filterValues[key])
         }
-        
-        if (Array.isArray(context.filterValues[key]) && context.filterValues[key].length !== 0) {
-          let match  = false
-          const codes = context.filterValues[key].map((item) => item.code)
-          if(codes.toString() === repository.attributes[key].toString()){
-            match = true;
-            break;
-          }
-          if (!match){ return false; }
-        }
-        else if(isObject(context.filterValues[key])){
-          console.log("are you here?: ", context.filterValues[key].code)
-          console.log("repo attributes: ", repository.attributes[key][0])
-          if (repository.attributes[key][0] !== context.filterValues[key].code) {
-            return false;
-          }
-        }
-
       }
-      return true
-    });
-
-    
-    console.log("found repos: ", foundRepositories)
-
-    setRepositories(foundRepositories)
+    })
+    setRepositories(latestMatchedRepos)
   }, [context])
-
+  console.log(repositories)
   return (
     <Container>
       <Grid container spacing={2}>

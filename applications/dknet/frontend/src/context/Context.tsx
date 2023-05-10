@@ -11,7 +11,7 @@ export const FilterSortContext = createContext(null)
 
 const booleanFilterInitialState = (filter: IFilter) => (
   {
-    [filter.code]: filter.options[0],
+    [filter.code]: undefined,
   }
 )
 
@@ -76,7 +76,7 @@ export const FilterProvider = ({ children }) => {
       const newRepositories = context.allRepositories.sort((a, b) => a.label.localeCompare(b.label));
       setContext(
         {
-          ...context, 
+          ...context,
           allRepositories: newRepositories
         }
       )
@@ -85,7 +85,7 @@ export const FilterProvider = ({ children }) => {
       const newRepositories = context.allRepositories.sort((a, b) => a.label.localeCompare(b.label)).reverse();
       setContext(
         {
-          ...context, 
+          ...context,
           allRepositories: newRepositories
         }
       )
@@ -94,7 +94,7 @@ export const FilterProvider = ({ children }) => {
       const newRepositories = repositories.map((repository) => mapRepository(repository as IRepository))
       setContext(
         {
-          ...context, 
+          ...context,
           allRepositories: newRepositories
         }
       )
