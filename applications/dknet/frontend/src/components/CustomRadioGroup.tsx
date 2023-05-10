@@ -13,7 +13,7 @@ import { vars } from "../theme/variables";
 import RadioGroupWidget from "./widgets/RadioWidget";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
-import { useFilterContext, useFilterUpdateContext } from "../context/Context";
+import { useFilterContext } from "../context/Context";
 
 const {
   grey700,
@@ -22,7 +22,6 @@ const {
 
 const CustomRadioGroup = ({ data }) => {
   const { context, setContext } = useFilterContext()
-  const updateFilter = useFilterUpdateContext()
   const filter = context.allFilters.find((filter: any) => filter.code === data.code)
   const onRadioChange = (e: any) => {
     const newValue = filter.options.find(row => row.code === e.target.value)
@@ -59,7 +58,7 @@ const CustomRadioGroup = ({ data }) => {
       <FormControl>
         <RadioGroup
           onChange={onRadioChange}
-          defaultValue={context?.filterValues[data.code]?.code}
+          value={context?.filterValues[data.code]?.code || ''}
           aria-labelledby="demo-customized-radios"
           name="customized-radios"
         >

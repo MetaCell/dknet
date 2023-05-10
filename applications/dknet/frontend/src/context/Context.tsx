@@ -120,11 +120,9 @@ export const FilterProvider = ({ children }) => {
 
   return (
     <FilterContext.Provider value={{ context, setContext }}>
-      <FilterUpdateContext.Provider value={updateFilter}>
-        <FilterSortContext.Provider value={sortRepositories}>
-          {children}
-        </FilterSortContext.Provider>
-      </FilterUpdateContext.Provider>
+      <FilterSortContext.Provider value={sortRepositories}>
+        {children}
+      </FilterSortContext.Provider>
     </FilterContext.Provider>
   )
 }

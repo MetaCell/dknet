@@ -5,31 +5,43 @@ import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import CustomFormControlLabel from "./CustomFormControlLabel";
-import { useFilterContext, useFilterUpdateContext } from "../../context/Context";
+import { useFilterContext } from "../../context/Context";
+import { vars } from '../../theme/variables.js'
+
+const {
+  checkboxBorderColor,
+  primary50,
+  primary600
+} = vars;
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: 6,
   width: 20,
   height: 20,
-  boxShadow:'inset 0 0 0 1px #D0D5DD, inset 0 -1px 0 #D0D5DD',
+  boxShadow:`inset 0 0 0 0.0625rem ${checkboxBorderColor}, inset 0 -1px 0 ${checkboxBorderColor}`,
+
+  'input:hover ~ &': {
+    backgroundColor: primary50,
+    boxShadow: `inset 0 0 0 0.0625rem ${primary600}, inset 0 -0.0625rem 0 ${primary600}`,
+  },
 
   '.Mui-focusVisible &': {
-    outline: '2px auto #D1F2DF',
+    outline: `0.125rem auto ${primary50}`,
     outlineOffset: 2,
   },
   '.Mui-checked &': {
-    boxShadow:'inset 0 0 0 1px #0BA47D, inset 0 -1px 0 #0BA47D',
+    boxShadow:`inset 0 0 0 0.0625rem ${primary600}, inset 0 -0.0625rem 0 ${primary600}`,
 
   },
 
   'input:disabled ~ &': {
     boxShadow: 'none',
-    background: '#D0D5DD',
+    background: checkboxBorderColor,
   },
 }));
 
 const BpCheckedIcon = styled(BpIcon)({
-  backgroundColor: '#D1F2DF',
+  backgroundColor: 'transparent',
   '&:before': {
     display: 'block',
     width: 16,
@@ -44,7 +56,7 @@ const BpCheckedIcon = styled(BpIcon)({
     content: '""',
   },
   'input:hover ~ &': {
-    backgroundColor: '#D1F2DF',
+    backgroundColor: 'transparent',
   },
 });
 
@@ -66,7 +78,6 @@ function BpCheckbox(props: CheckboxProps) {
 
 const CheckBoxWidget = ({ data, filter }: any) => {
   const { context, setContext } = useFilterContext()
-  const updateFilter = useFilterUpdateContext()
   const selectedData = context.filterValues[filter.code] || []
 
   const onChangeCheckbox = (e) => {
