@@ -71,7 +71,6 @@ export const FilterProvider = ({ children }) => {
   });
 
   const sortRepositories = (sortValue:string) => {
-    console.log("sort value: ", sortValue)
     if(sortValue === 'Alphabetical (A-Z)'){
       const newRepositories = context.allRepositories.sort((a, b) => a.label.localeCompare(b.label));
       setContext(
@@ -101,8 +100,6 @@ export const FilterProvider = ({ children }) => {
     }
   }
   const updateFilter = (newValue, filter) => {
-    console.log("newValue: ", newValue)
-    console.log("filter: ", filter)
     let filteredData = repositories.map((repository) => mapRepository(repository as IRepository))
 
     if(newValue && filter){

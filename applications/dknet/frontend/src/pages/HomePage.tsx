@@ -17,7 +17,6 @@ import Stack from '@mui/material/Stack';
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
-  console.log("filter values: ", context.filterValues)
 
   const filterReposByOneFilterValue = (allRepositories, filterKey, filterValueObject) => {
     return allRepositories.reduce((matchedRepos, repository) => {
@@ -40,7 +39,7 @@ const HomePage = () => {
     })
     setRepositories(latestMatchedRepos)
   }, [context])
-  console.log(repositories)
+
   return (
     <Container>
       <Grid container spacing={2}>
