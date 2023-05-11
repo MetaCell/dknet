@@ -66,6 +66,7 @@ const RepositoryCard = (props) => {
             <Link
               href={repository.url}
               target="_blank"
+              underline='hover'
             >
               <CardTitle variant="subtitle1" color="grey.800">{repository.label}</CardTitle>
             </Link>
