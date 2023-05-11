@@ -2,42 +2,12 @@ import React, { createContext, useContext, useState } from "react"
 import { ROWS_PER_PAGE } from "../config/constants"
 import filters from '../resources/filters.json'
 import repositories from '../resources/repositories.json'
-import { FilterType } from '../config/enums'
 import { IFilter, IFilterContext, IRepository } from './Interfaces'
+import { resetFilters } from "../utils/helpers";
 
 export const FilterContext = createContext(null)
 export const FilterUpdateContext = createContext(null)
 export const FilterSortContext = createContext(null)
-
-const booleanFilterInitialState = (filter: IFilter) => (
-  {
-    [filter.code]: undefined,
-  }
-)
-
-const singleFilterInitialState = (filter: IFilter) => (
-  {
-    [filter.code]: undefined,
-  }
-)
-
-const multipleFilterInitialState = (filter: IFilter) => (
-  {
-    [filter.code]: undefined,
-  }
-)
-
-const filterInitialState = (filter: IFilter) => {
-  switch (filter.inputType) {
-    case FilterType.Boolean:
-      return booleanFilterInitialState(filter)
-    case FilterType.Single:
-      return singleFilterInitialState(filter)
-    case FilterType.Multiple:
-      return multipleFilterInitialState(filter)
-  }
-  return singleFilterInitialState(filter)
-}
 
 const mapFilter = (filter: IFilter): IFilter => ({
   ...filter,
@@ -59,13 +29,7 @@ export const FilterProvider = ({ children }) => {
   const [context, setContext] = useState<IFilterContext>({
     pageNumber: 0,
     rowsPerPage: ROWS_PER_PAGE,
-    filterValues: filters.reduce((a, filter) => {
-      return (
-        {
-          ...a,
-          ...filterInitialState(filter as IFilter)
-        })
-    }, {}),
+    filterValues: resetFilters(),
     allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
     allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
   });
