@@ -87,7 +87,6 @@ const CheckBoxWidget = ({ data, filter }: any) => {
     } else {
       newValue = selectedData.filter(row => row.code !== e.target.value)
     }
-    // updateFilter(newValue, filter)
     setContext({
       ...context,
       filterValues: {
