@@ -1,4 +1,5 @@
 import React from "react";
+import { useFilterSortContext } from "../../context/Context";
 
 //components
 import Button from '@mui/material/Button';
@@ -39,7 +40,14 @@ const labels = [
 ];
 
 const SortWidget = () => {
+  const sortRepositories = useFilterSortContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [selectedValue, setSelectedValue] = React.useState('Highest Score');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(event.target.value);
+    sortRepositories(event.target.value);
+  };
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -47,6 +55,7 @@ const SortWidget = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <>
       <Button variant="outlined"
@@ -76,7 +85,7 @@ const SortWidget = () => {
       >
         {labels.map((label) => (
           <SortMenuItem key={label} value={label}>
-            <Radio/>
+            <Radio checked={selectedValue===label} value={label} onChange={handleChange}/>
             <ListItemText primary={label} />
           </SortMenuItem>
         ))}

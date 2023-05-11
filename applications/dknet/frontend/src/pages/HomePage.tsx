@@ -17,11 +17,31 @@ import Stack from '@mui/material/Stack';
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
- 
+
+  const filterReposByOneFilterValue = (allRepositories, filterKey, filterValueObject) => {
+    console.log("filterValueObject: ", filterValueObject.code)
+    return allRepositories.reduce((matchedRepos, repository) => {
+      if (repository.attributes[filterKey].includes(filterValueObject.code)) {
+        matchedRepos.push(repository)
+      }
+      return matchedRepos
+    }, [])
+  }
+
   useEffect(() => {
-    // apply context.filterValues on the allFilters + allRepositories
-    const foundRepositories = context.allRepositories // .filter((repository) => {})
-    setRepositories(foundRepositories)
+    let latestMatchedRepos = context.allRepositories
+
+    Object.keys(context.filterValues).forEach(key => {
+      if (context.filterValues[key] !== undefined) {
+        console.log("key: ", context.filterValues[key])
+        if ((Array.isArray(context.filterValues[key]) && context.filterValues[key].length > 0)
+          || (!Array.isArray(context.filterValues[key]) && context.filterValues[key].code)) {
+          latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, context.filterValues[key])
+        }
+      }
+    })
+
+    setRepositories(latestMatchedRepos)
   }, [context])
 
   return (
@@ -33,7 +53,7 @@ const HomePage = () => {
               <SortWidget/>
             </Grid>
             {
-              repositories && repositories.map((repository, index) => <Grid item key={index}>
+              repositories && repositories.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
                 <RepositoryCard key={repository.code} repository={repository} />
               </Grid>)
             }
