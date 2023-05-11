@@ -23,11 +23,12 @@ const RepoCardContent= styled(CardContent)(() => ({
   }
 }));
 
-const CardTitle = styled(Typography)(() => ({
+const CardTitleLink = styled(Link)(() => ({
   display: '-webkit-box',
   overflow: 'hidden',
   WebkitLineClamp: '2',
   WebkitBoxOrient: 'vertical',
+  textOverflow: 'ellipsis',
 }));
 
 const getMuiIcon = (icon) => {
@@ -62,14 +63,18 @@ const RepositoryCard = (props) => {
           <CircularProgressWithLabel value={80} />
         </div>
         <RepoCardContent>
-          <Tooltip title={repository.label}>
-            <Link
-              href={repository.url}
-              target="_blank"
-            >
-              <CardTitle variant="subtitle1" color="grey.800">{repository.label}</CardTitle>
-            </Link>
-          </Tooltip>
+          <Box display="flex" flexWrap='wrap' width={1} overflow='hidden'>
+            <Tooltip title={repository.label}>
+              <CardTitleLink
+                href={repository.url}
+                target="_blank"
+                underline='hover'
+                variant="subtitle1" color="grey.800"
+              >
+                {repository.label}
+              </CardTitleLink>
+            </Tooltip>
+          </Box>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
               filterLabels.slice(0,3).map((row, index) => <Chip key={index} label={row} />)
