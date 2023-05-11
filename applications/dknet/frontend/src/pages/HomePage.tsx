@@ -18,18 +18,37 @@ const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
 
+  const filterReposByOneFilterValue = (allRepositories, filterKey, filterValueObject) => {
+    return allRepositories.reduce((matchedRepos, repository) => {
+      if (repository.attributes[filterKey].includes(filterValueObject.code)) {
+        matchedRepos.push(repository)
+      }
+      return matchedRepos
+    }, [])
+  }
+
   useEffect(() => {
-    // apply context.filterValues on the allFilters + allRepositories
-    const foundRepositories = context.allRepositories // .filter((repository) => {})
-    setRepositories(foundRepositories)
+    let latestMatchedRepos = context.allRepositories
+    Object.keys(context.filterValues).forEach(key => {
+      if (context.filterValues[key] !== undefined) {
+        if (Array.isArray(context.filterValues[key]) && context.filterValues[key].length > 0) {
+          context.filterValues[key].map(row => {
+            latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, row)
+          })
+        } else if (!Array.isArray(context.filterValues[key]) && context.filterValues[key].code) {
+          latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, context.filterValues[key])
+        }
+      }
+    })
+    setRepositories(latestMatchedRepos)
   }, [context])
 
   return (
     <Container>
       <Grid container spacing={2}>
-        <Grid item xs={7}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} display='flex' justifyContent='flex-end'>
+        <Grid md={8.5} item>
+          <Grid spacing={2}>
+            <Grid item display='flex' justifyContent='flex-end' mb={2}>
               <SortWidget/>
             </Grid>
             {
@@ -39,7 +58,7 @@ const HomePage = () => {
             }
           </Grid>
         </Grid>
-        <Grid item xs={5}>
+        <Grid md={3.5} item>
           <Stack spacing={2}>
             <Filters />
             <Box sx={{
