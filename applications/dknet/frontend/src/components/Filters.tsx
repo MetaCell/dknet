@@ -42,7 +42,7 @@ const Filters = () => {
     }}>
       <Stack spacing={2}>
         <Box display='flex' justifyContent='space-between'>
-          <Typography variant='h5' lineHeight='1'>Filter Results</Typography>
+          <Typography variant='h5' lineHeight='unset'>Filter Results</Typography>
           <Button variant='text' sx={{ fontWeight: 600, color: '#088E75', minHeight: 'unset'  }} onClick={onClearFilters}>Clear Filters</Button>
         </Box>
         <Box>
