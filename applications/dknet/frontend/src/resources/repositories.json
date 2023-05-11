@@ -1,5 +1,61 @@
 [
      {
+          "code": "this-is-the-really-long-repository-name-in-order-to-test-the-format-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-accelerating-medicines-partnership-type-2-diabetes-knowledge-portal-(amp-t2d)",
+          "label": "This is the Really long repository name in order to test the format xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxAccelerating Medicines Partnership Type 2 Diabetes Knowledge Portal (AMP-T2D)",
+          "url": "www.google.com",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [
+                    "diabetes,-digestive-and-kidney-diseases"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih",
+                    "yes,-by-another-nih-source",
+                    "-yes,-by-an-niddk-source",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
           "code": "accelerating-medicines-partnership-type-2-diabetes-knowledge-portal-(amp-t2d)",
           "label": "Accelerating Medicines Partnership Type 2 Diabetes Knowledge Portal (AMP-T2D)",
           "url": "www.google.com",
