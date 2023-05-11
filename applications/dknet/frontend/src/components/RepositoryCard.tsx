@@ -28,7 +28,6 @@ const CardTitleLink = styled(Link)(() => ({
   WebkitLineClamp: '2',
   WebkitBoxOrient: 'vertical',
   textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
 }));
 
 const getMuiIcon = (icon) => {
@@ -66,8 +65,7 @@ const RepositoryCard = (props) => {
                 href={repository.url}
                 target="_blank"
                 underline='hover'
-                variant='subtitle1'
-                color="grey.800"
+                variant="subtitle1" color="grey.800"
               >
                 {repository.label}
               </CardTitleLink>
