@@ -1,8 +1,5 @@
 [
    {
-      "options": []
-   },
-   {
       "code": "DataType",
       "label": "Data Type",
       "question": "What type(s) of data will you be sharing?",
