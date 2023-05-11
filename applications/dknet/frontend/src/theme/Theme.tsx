@@ -198,11 +198,20 @@ const theme = createTheme({
           boxShadow: 'none',
           '&.successCard': {
             background: primary25,
-            border:`1px solid ${primary200}`
+            border:`1px solid ${primary200}`,
+            '&:hover': {
+              boxShadow: dialogBoxShadow
+            }
           }
         }
       }
     },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+        }
+      }
+    }, 
     MuiCardActionArea:     {
       styleOverrides: {
         root: {

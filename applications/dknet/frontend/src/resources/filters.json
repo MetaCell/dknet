@@ -19,8 +19,8 @@
             "color": ""
          },
          {
-            "code": "clinincal-trial",
-            "label": "Clinincal trial",
+            "code": "clinical-trial",
+            "label": "Clinical trial",
             "icon": "",
             "color": ""
          },
@@ -260,21 +260,15 @@
       "options": [
          {
             "code": "yes",
-            "label": "Yes",
+            "label": "yes",
             "icon": "Sync",
             "color": "SUCCESS"
          },
          {
             "code": "no",
-            "label": "No",
+            "label": "no",
             "icon": "Sync Disabled",
             "color": "WARNING"
-         },
-         {
-            "code": "i-don't-know-yet",
-            "label": "I don't know yet",
-            "icon": "Question Mark",
-            "color": "INFO"
          }
       ]
    },
@@ -341,13 +335,13 @@
       "options": [
          {
             "code": "yes",
-            "label": "Yes",
+            "label": "yes",
             "icon": "School",
             "color": "SUCCESS"
          },
          {
             "code": "no",
-            "label": "No",
+            "label": "no",
             "icon": "Close",
             "color": "INFO"
          }
