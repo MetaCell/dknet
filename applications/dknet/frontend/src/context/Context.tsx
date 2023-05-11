@@ -63,16 +63,6 @@ export const FilterProvider = ({ children }) => {
       )
     }
   }
-
-  const filterLabels= (context) => {
-
-    if(context.filterValues.DataType){
-      context.allFilters[0].options = context.filterValues.DataType
-    }
-    if(context.filterValues.DomainType){
-      context.allFilters[1].options = context.filterValues.DomainType
-    }
-  }
  
   return (
     <FilterContext.Provider value={{ context, setContext }}>

@@ -6,12 +6,11 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 
 //icons
-import { useFilterContext, useFilterUpdateContext } from "../context/Context";
+import { useFilterContext } from "../context/Context";
 import CustomAutoComplete from "./widgets/CustomAutoComplete";
 
 const Search = () => {
   const { context, setContext } = useFilterContext();
-  const filterLabels = useFilterUpdateContext();
 
   const onChangeFilterValue = (value, filter) => {
     setContext({
@@ -23,11 +22,6 @@ const Search = () => {
     })
   }
   
-  useEffect(() => {
-    filterLabels(context)
-  }, [context, filterLabels])
-  
-
   return (
     <Paper
       component="form"

@@ -33,18 +33,6 @@ const RepositoryCard = (props) => {
   const { context } = useFilterContext()
   const { repository } = props;
 
-  const filterLabels = [];
-
-  for (const prop in repository.attributes.DataType) {
-    console.log('filter options: ', context.allFilters[0].options)
-    console.log('filter', context.allFilters[0])
-    const codeObj = context.allFilters[0].options.find(item => item.code === repository.attributes.DataType[prop])
-  
-    if (codeObj && codeObj.label) {
-      filterLabels.push(codeObj.label)
-    }
-  }
-
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
     <Card sx={{ position: 'relative', maxWidth: 789, marginBottom: '1rem' }} className="successCard">
@@ -59,13 +47,13 @@ const RepositoryCard = (props) => {
           <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
-              filterLabels.slice(0,3).map((row, index) => <Chip key={index} label={row} />)
+              repository.attributes.DataType.map((row, index) => <Chip key={index} label={row} />)
             }
-            <Chip label={`+${filterLabels.length - 3}`} />
           </Box>
           <Box mt={2.5} display="flex" width={1}>
             <Grid container columnSpacing={3}>
-              {context.allFilters.filter((filter: any) => filter.label).map((filter: any) => {
+              {context.allFilters.slice(1).filter((filter: any) => filter.label).map((filter: any) => {
+
                 const attributeValues = repository.attributes[filter.code]
                 if (!attributeValues) {
                   return null
