@@ -19,6 +19,7 @@ const HomePage = () => {
   const [ repositories, setRepositories ] = useState([])
 
   const filterReposByOneFilterValue = (allRepositories, filterKey, filterValueObject) => {
+    console.log("filterValueObject: ", filterValueObject.code)
     return allRepositories.reduce((matchedRepos, repository) => {
       if (repository.attributes[filterKey].includes(filterValueObject.code)) {
         matchedRepos.push(repository)
@@ -29,14 +30,17 @@ const HomePage = () => {
 
   useEffect(() => {
     let latestMatchedRepos = context.allRepositories
+
     Object.keys(context.filterValues).forEach(key => {
       if (context.filterValues[key] !== undefined) {
+        console.log("key: ", context.filterValues[key])
         if ((Array.isArray(context.filterValues[key]) && context.filterValues[key].length > 0)
           || (!Array.isArray(context.filterValues[key]) && context.filterValues[key].code)) {
           latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, context.filterValues[key])
         }
       }
     })
+
     setRepositories(latestMatchedRepos)
   }, [context])
 
