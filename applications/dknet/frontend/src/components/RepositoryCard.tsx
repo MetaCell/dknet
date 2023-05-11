@@ -9,7 +9,6 @@ import Chip from '@mui/material/Chip'
 import Typography from '@mui/material/Typography'
 import CardContent from "@mui/material/CardContent";
 import Tooltip from "@mui/material/Tooltip";
-import CircularProgressWithLabel from "./CircularProgressWithLabel"
 import Grid from "@mui/material/Grid";
 //icons
 import * as MUIcon from "@mui/icons-material"
@@ -17,17 +16,19 @@ import * as MUIcon from "@mui/icons-material"
 import { styled } from "@mui/material/styles";
 
 const RepoCardContent= styled(CardContent)(() => ({
+  width: '100%',
   '&.MuiCardContent-root': {
-    padding: 0,
-    maxWidth: 681
+    padding: 0
   }
 }));
 
-const CardTitle = styled(Typography)(() => ({
+const CardTitleLink = styled(Link)(() => ({
   display: '-webkit-box',
   overflow: 'hidden',
   WebkitLineClamp: '2',
   WebkitBoxOrient: 'vertical',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
 }));
 
 const getMuiIcon = (icon) => {
@@ -58,19 +59,21 @@ const RepositoryCard = (props) => {
         <Chip label="Best Match" className="cardBadge"/>
       </Box>
       <Box m={3} display="flex" gap={2.5}>
-        <div>
-          <CircularProgressWithLabel value={80} />
-        </div>
         <RepoCardContent>
-          <Tooltip title={repository.label}>
-            <Link
-              href={repository.url}
-              target="_blank"
-              underline='hover'
-            >
-              <CardTitle variant="subtitle1" color="grey.800">{repository.label}</CardTitle>
-            </Link>
-          </Tooltip>
+          <Box display="flex" flexWrap='wrap' width={1} overflow='hidden'>
+            <Tooltip title={repository.label}>
+              <CardTitleLink
+                href={repository.url}
+                target="_blank"
+                underline='hover'
+                variant='subtitle1'
+                color="grey.800"
+              >
+                {repository.label}
+              </CardTitleLink>
+            </Tooltip>
+          </Box>
+
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
               filterLabels.slice(0,3).map((row, index) => <Chip key={index} label={row} />)
