@@ -9,6 +9,8 @@ import SwitchWidget from "./widgets/Switch"
 import FormGroup from "@mui/material/FormGroup"
 import CustomRadioGroup from "./CustomRadioGroup";
 import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
+import { Button } from "@mui/material"
+import { resetFilters } from "../utils/helpers";
 
 
 const Filters = () => {
@@ -25,6 +27,13 @@ const Filters = () => {
   const checkboxFilters = filters
     .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)
 
+  const onClearFilters = () => {
+    setContext({
+      ...context,
+      filterValues: resetFilters(),
+    })
+  }
+
   return (
     <Box sx={{
       background: '#FCFCFD',
@@ -33,8 +42,8 @@ const Filters = () => {
     }}>
       <Stack spacing={2}>
         <Box display='flex' justifyContent='space-between'>
-          <Typography variant='h5'>Filter Results</Typography>
-          <Typography variant='subtitle2'>Clear Filters</Typography>
+          <Typography variant='h5' lineHeight='1'>Filter Results</Typography>
+          <Button variant='text' sx={{ fontWeight: 600, color: '#088E75', minHeight: 'unset'  }} onClick={onClearFilters}>Clear Filters</Button>
         </Box>
         <Box>
           <FormGroup>
