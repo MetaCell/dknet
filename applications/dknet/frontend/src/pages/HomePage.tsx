@@ -48,7 +48,8 @@ const HomePage = () => {
       <Grid container spacing={2}>
         <Grid md={8} item>
           <Grid spacing={2}>
-            <Grid item display='flex' justifyContent='flex-end' mb={2}>
+            <Grid item display='flex' justifyContent='space-between' alignItems='center' mb={2}>
+              <Typography variant='h5' lineHeight='unset' color='grey.900'>{repositories.length} repositories matching your criteria</Typography>
               <SortWidget/>
             </Grid>
             {

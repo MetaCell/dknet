@@ -8,7 +8,6 @@ import Card from '@mui/material/Card'
 import Chip from '@mui/material/Chip'
 import Typography from '@mui/material/Typography'
 import CardContent from "@mui/material/CardContent";
-import CircularProgressWithLabel from "./CircularProgressWithLabel"
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 //icons
@@ -16,8 +15,7 @@ import * as MUIcon from "@mui/icons-material"
 
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
-    padding: 0, 
-    // maxWidth: 681
+    padding: 0
   }
 }));
 
@@ -49,9 +47,6 @@ const RepositoryCard = (props) => {
         <Chip label="Best Match" className="cardBadge"/>
       </Box>
       <Box m={3} display="flex" gap={2.5}>
-        {/* <div>
-          <CircularProgressWithLabel value={80} />
-        </div> */}
         <RepoCardContent>
           <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
