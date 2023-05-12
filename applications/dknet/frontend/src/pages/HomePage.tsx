@@ -45,7 +45,7 @@ const HomePage = () => {
 
   return (
     <Container>
-      <Grid container spacing={2}>
+      <Grid container columnSpacing={4}>
         <Grid md={8} item>
           <Grid spacing={2}>
             <Grid item display='flex' justifyContent='space-between' alignItems='center' mb={2}>
