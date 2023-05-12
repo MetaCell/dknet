@@ -17,7 +17,7 @@ import * as MUIcon from "@mui/icons-material"
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
     padding: 0, 
-    maxWidth: 681
+    // maxWidth: 681
   }
 }));
 
@@ -49,9 +49,9 @@ const RepositoryCard = (props) => {
         <Chip label="Best Match" className="cardBadge"/>
       </Box>
       <Box m={3} display="flex" gap={2.5}>
-        <div>
+        {/* <div>
           <CircularProgressWithLabel value={80} />
-        </div>
+        </div> */}
         <RepoCardContent>
           <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>

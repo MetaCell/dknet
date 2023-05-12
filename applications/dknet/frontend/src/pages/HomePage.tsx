@@ -46,7 +46,7 @@ const HomePage = () => {
   return (
     <Container>
       <Grid container spacing={2}>
-        <Grid md={8.5} item>
+        <Grid md={8} item>
           <Grid spacing={2}>
             <Grid item display='flex' justifyContent='flex-end' mb={2}>
               <SortWidget/>
@@ -58,7 +58,7 @@ const HomePage = () => {
             }
           </Grid>
         </Grid>
-        <Grid md={3.5} item>
+        <Grid md={4} item>
           <Stack spacing={2}>
             <Filters />
             <Box sx={{
