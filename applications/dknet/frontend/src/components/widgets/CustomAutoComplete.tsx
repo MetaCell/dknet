@@ -16,7 +16,7 @@ const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 
-const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, defaultValue }) => {
+const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptionEqualToValue, defaultValue, noOptionsText }) => {
   const [value, setValue] = useState([])
 
   useEffect(() => {
@@ -34,8 +34,8 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, default
       filterSelectedOptions
       onChange={(event, value) => onChangeFilterValue(value)}
       ChipProps={{ deleteIcon: <ClearIcon fontSize="small" /> }}
-      isOptionEqualToValue={(option, value) => option.label === value.label}
-      noOptionsText={<Typography variant="caption">No match</Typography>}
+      isOptionEqualToValue={(option, value) => isOptionEqualToValue(option, value)}
+      noOptionsText={<Typography variant="caption">{noOptionsText}</Typography>}
       renderOption={(props, option, { selected }) => (
         <li {...props}>
           <Checkbox
