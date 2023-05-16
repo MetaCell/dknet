@@ -16,8 +16,10 @@ import Grid from "@mui/material/Grid";
 import * as MUIcon from "@mui/icons-material"
 
 const RepoCardContent= styled(CardContent)(() => ({
+  width: '100%',
   '&.MuiCardContent-root': {
-    padding: 0
+    padding: 0,
+    maxWidth: 681
   }
 }));
 
@@ -70,6 +72,7 @@ const RepositoryCard = (props) => {
               </CardTitleLink>
             </Tooltip>
           </Box>
+
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
               filterLabels.slice(0,3).map((row, index) => <Chip key={index} label={row} />)
