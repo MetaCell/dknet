@@ -8,6 +8,8 @@ import Card from '@mui/material/Card'
 import Chip from '@mui/material/Chip'
 import Typography from '@mui/material/Typography'
 import CardContent from "@mui/material/CardContent";
+import Tooltip from "@mui/material/Tooltip";
+import CircularProgressWithLabel from "./CircularProgressWithLabel"
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 //icons
@@ -17,6 +19,14 @@ const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
     padding: 0
   }
+}));
+
+const CardTitleLink = styled(Link)(() => ({
+  display: '-webkit-box',
+  overflow: 'hidden',
+  WebkitLineClamp: '2',
+  WebkitBoxOrient: 'vertical',
+  textOverflow: 'ellipsis',
 }));
 
 const getMuiIcon = (icon) => {
@@ -48,7 +58,18 @@ const RepositoryCard = (props) => {
       </Box>
       <Box m={3} display="flex" gap={2.5}>
         <RepoCardContent>
-          <Link href={repository.url} target="_blank"><Typography variant="subtitle1" color="grey.800">{repository.label}</Typography></Link>
+          <Box display="flex" flexWrap='wrap' width={1} overflow='hidden'>
+            <Tooltip title={repository.label}>
+              <CardTitleLink
+                href={repository.url}
+                target="_blank"
+                underline='hover'
+                variant="subtitle1" color="grey.800"
+              >
+                {repository.label}
+              </CardTitleLink>
+            </Tooltip>
+          </Box>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
               filterLabels.slice(0,3).map((row, index) => <Chip key={index} label={row} />)
