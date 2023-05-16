@@ -22,6 +22,7 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
   useEffect(() => {
     setValue(defaultValue)
   }, [defaultValue])
+  
   return (
     <Autocomplete
       multiple

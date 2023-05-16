@@ -40,15 +40,7 @@ const getMuiIcon = (icon) => {
 const RepositoryCard = (props) => {
   const { context } = useFilterContext()
   const { repository } = props;
-
-  const filterLabels = [];
-
-  for (const prop in repository.attributes) {
-    const codeObj = context.allFilters.find(item => item.code === prop);
-    if (codeObj && codeObj.label) {
-      filterLabels.push(codeObj.label)
-    }
-  }
+  const filterLabels = Object.values(repository.attributes)[0] as Array<string>
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
@@ -72,13 +64,13 @@ const RepositoryCard = (props) => {
           </Box>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
-              filterLabels.slice(0,3).map((row, index) => <Chip key={index} label={row} />)
+              filterLabels.map((row, index) => <Chip key={index} label={row} />)
             }
-            <Chip label={`+${filterLabels.length - 3}`} />
           </Box>
           <Box mt={2.5} display="flex" width={1}>
             <Grid container columnSpacing={3}>
-              {context.allFilters.filter((filter: any) => filter.label).map((filter: any) => {
+              {context.allFilters.slice(1).filter((filter: any) => filter.label).map((filter: any) => {
+
                 const attributeValues = repository.attributes[filter.code]
                 if (!attributeValues) {
                   return null
