@@ -9,16 +9,17 @@ import Chip from '@mui/material/Chip'
 import Typography from '@mui/material/Typography'
 import CardContent from "@mui/material/CardContent";
 import Tooltip from "@mui/material/Tooltip";
+import CircularProgressWithLabel from "./CircularProgressWithLabel"
+import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 //icons
 import * as MUIcon from "@mui/icons-material"
 
-import { styled } from "@mui/material/styles";
-
 const RepoCardContent= styled(CardContent)(() => ({
   width: '100%',
   '&.MuiCardContent-root': {
-    padding: 0
+    padding: 0,
+    maxWidth: 681
   }
 }));
 
