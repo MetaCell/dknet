@@ -1,4 +1,4 @@
-import React  from "react";
+import React, { useEffect }  from "react";
 
 //components
 import Paper from '@mui/material/Paper';
@@ -21,7 +21,7 @@ const Search = () => {
       }
     })
   }
-
+  
   return (
     <Paper
       component="form"
@@ -34,16 +34,20 @@ const Search = () => {
       <CustomAutoComplete
         options={context.allFilters[0].options}
         onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[0])}
+        isOptionEqualToValue={(option, value) => option.code === value.code}
         defaultValue={context.filterValues[context.allFilters[0].code] || []}
         placeholder={context.allFilters[0].label}
+        noOptionsText={"No match"}
       />
 
       <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
       <CustomAutoComplete
         options={context.allFilters[1].options}
         onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[1])}
+        isOptionEqualToValue={(option, value) => option.code === value.code}
         defaultValue={context.filterValues[context.allFilters[1].code] || []}
         placeholder={context.allFilters[1].label}
+        noOptionsText={"No match"}
       />
 
       <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
