@@ -17,27 +17,39 @@ import Stack from '@mui/material/Stack';
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
-
+  
   const filterReposByOneFilterValue = (allRepositories, filterKey, filterValueObject) => {
-    return allRepositories.reduce((matchedRepos, repository) => {
-      if (repository.attributes[filterKey].includes(filterValueObject.code)) {
-        matchedRepos.push(repository)
-      }
-      return matchedRepos
-    }, [])
+    return allRepositories.filter((repository) => repository.attributes[filterKey].includes(filterValueObject.code))
   }
 
   useEffect(() => {
-    let latestMatchedRepos = context.allRepositories
+    const latestMatchedRepos = context.allRepositories
+
     Object.keys(context.filterValues).forEach(key => {
-      if (context.filterValues[key] !== undefined) {
-        if (Array.isArray(context.filterValues[key]) && context.filterValues[key].length > 0) {
-          context.filterValues[key].map(row => {
-            latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, row)
-          })
-        } else if (!Array.isArray(context.filterValues[key]) && context.filterValues[key].code) {
-          latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, context.filterValues[key])
+  
+      if(context.filterValues[key] !== undefined){
+        let rows = [];
+        if(Array.isArray(context.filterValues[key]) && context.filterValues[key].length > 0){
+          rows = context.filterValues[key]
         }
+        else if(!Array.isArray(context.filterValues[key]) && context.filterValues[key].code){
+          rows.push(context.filterValues[key])
+        }
+        console.log("rows: ", rows)
+        // rows.forEach(row => {
+        //   latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, row)
+        // })
+
+        // console.log("rows: ", rows)
+        // latestMatchedRepos = latestMatchedRepos.filter(repository => {
+        //   console.log("repository.attributes ", repository.attributes)
+        //   repository.attributes[key].forEach(row => {
+        //     console.log("row: ", row)
+        //     console.log("repository.attributes[key][row]: ", repository.attributes[key][row] )
+        //     return rows.includes(row)
+        //   }
+        //   )
+        // })
       }
     })
     setRepositories(latestMatchedRepos)
