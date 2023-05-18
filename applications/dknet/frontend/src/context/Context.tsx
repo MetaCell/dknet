@@ -63,7 +63,7 @@ export const FilterProvider = ({ children }) => {
       )
     }
   }
-
+ 
   return (
     <FilterContext.Provider value={{ context, setContext }}>
       <FilterSortContext.Provider value={sortRepositories}>

@@ -1,4 +1,4 @@
-import React  from "react";
+import React, { useEffect }  from "react";
 
 //components
 import Paper from '@mui/material/Paper';
@@ -21,7 +21,7 @@ const Search = () => {
       }
     })
   }
-
+  
   return (
     <Paper
       component="form"

@@ -17,42 +17,32 @@ import Stack from '@mui/material/Stack';
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
-  
-  const filterReposByOneFilterValue = (allRepositories, filterKey, filterValueObject) => {
-    return allRepositories.filter((repository) => repository.attributes[filterKey].includes(filterValueObject.code))
-  }
+
+
 
   useEffect(() => {
-    const latestMatchedRepos = context.allRepositories
-
-    Object.keys(context.filterValues).forEach(key => {
-  
-      if(context.filterValues[key] !== undefined){
-        let rows = [];
-        if(Array.isArray(context.filterValues[key]) && context.filterValues[key].length > 0){
-          rows = context.filterValues[key]
-        }
-        else if(!Array.isArray(context.filterValues[key]) && context.filterValues[key].code){
-          rows.push(context.filterValues[key])
-        }
-        console.log("rows: ", rows)
-        // rows.forEach(row => {
-        //   latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, row)
-        // })
-
-        // console.log("rows: ", rows)
-        // latestMatchedRepos = latestMatchedRepos.filter(repository => {
-        //   console.log("repository.attributes ", repository.attributes)
-        //   repository.attributes[key].forEach(row => {
-        //     console.log("row: ", row)
-        //     console.log("repository.attributes[key][row]: ", repository.attributes[key][row] )
-        //     return rows.includes(row)
-        //   }
-        //   )
-        // })
+    const newFilterValues = {}
+    const filterValuesClone = Object.assign({}, context.filterValues)
+    Object.keys(filterValuesClone).filter(key => filterValuesClone[key] !== undefined).forEach(key => {
+      if(!Array.isArray(filterValuesClone[key])) {
+        filterValuesClone[key] = [filterValuesClone[key]]
       }
+      newFilterValues[key] = []
+      filterValuesClone[key].forEach(valueObj => {
+        newFilterValues[key].push(valueObj.code)
+      })
     })
-    setRepositories(latestMatchedRepos)
+    const match = []
+    for (const repository of context.allRepositories) {
+      for(const key of Object.keys(newFilterValues)){
+        if (repository.attributes[key].some(val => newFilterValues[key].includes(val))) {
+          match.push(repository)
+          break
+        }
+      }
+    }
+
+    setRepositories(match)
   }, [context])
 
   return (
