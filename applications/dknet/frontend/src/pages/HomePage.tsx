@@ -18,29 +18,31 @@ const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const [ repositories, setRepositories ] = useState([])
 
-  const filterReposByOneFilterValue = (allRepositories, filterKey, filterValueObject) => {
-    return allRepositories.reduce((matchedRepos, repository) => {
-      if (repository.attributes[filterKey].includes(filterValueObject.code)) {
-        matchedRepos.push(repository)
-      }
-      return matchedRepos
-    }, [])
-  }
+
 
   useEffect(() => {
-    let latestMatchedRepos = context.allRepositories
-    Object.keys(context.filterValues).forEach(key => {
-      if (context.filterValues[key] !== undefined) {
-        if (Array.isArray(context.filterValues[key]) && context.filterValues[key].length > 0) {
-          context.filterValues[key].map(row => {
-            latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, row)
-          })
-        } else if (!Array.isArray(context.filterValues[key]) && context.filterValues[key].code) {
-          latestMatchedRepos = filterReposByOneFilterValue(latestMatchedRepos, key, context.filterValues[key])
+    const newFilterValues = {}
+    const filterValuesClone = Object.assign({}, context.filterValues)
+    Object.keys(filterValuesClone).filter(key => filterValuesClone[key] !== undefined).forEach(key => {
+      if(!Array.isArray(filterValuesClone[key])) {
+        filterValuesClone[key] = [filterValuesClone[key]]
+      }
+      newFilterValues[key] = []
+      filterValuesClone[key].forEach(valueObj => {
+        newFilterValues[key].push(valueObj.code)
+      })
+    })
+    const match = []
+    for (const repository of context.allRepositories) {
+      for(const key of Object.keys(newFilterValues)){
+        if (repository.attributes[key].some(val => newFilterValues[key].includes(val))) {
+          match.push(repository)
+          break
         }
       }
-    })
-    setRepositories(latestMatchedRepos)
+    }
+
+    setRepositories(match)
   }, [context])
 
   return (
