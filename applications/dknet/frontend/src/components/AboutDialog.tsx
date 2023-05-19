@@ -1,21 +1,24 @@
 import React from "react";
 
 //components
-import { Drawer,  
-  Box, 
+import {
+  Drawer,
+  Box,
   Typography,
   IconButton,
-  Divider } from '@mui/material';
+  Divider,
+} from '@mui/material';
 
 //icons
 import CloseIcon from '@mui/icons-material/Close';
+import { MetacellLogoIcon } from "../assets/icons";
 
 const AboutDialog = ({ open, onClose }) => {
   return (
-    <Drawer 
+    <Drawer
       anchor="right"
-      open={open} 
-      onClose={onClose} 
+      open={open}
+      onClose={onClose}
       id="about-window"
       PaperProps={{ sx: { m: 0 } }}
     >
@@ -69,6 +72,12 @@ const AboutDialog = ({ open, onClose }) => {
           </div>
           <Typography variant="subtitle2" color="primary.700">Send Email</Typography>
         </Box>
+      </Box>
+      <Box mt={12} display="flex" justifyContent="center" alignItems="center">
+        <Typography variant="body2" mr={1} color="grey.600">Powered by</Typography>
+        <MetacellLogoIcon sx={{ '&.MuiSvgIcon-root': {
+          width: 'auto'
+        } }}/>
       </Box>
     </Drawer>
   )
