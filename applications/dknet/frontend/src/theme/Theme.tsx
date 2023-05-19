@@ -150,16 +150,7 @@ const theme = createTheme({
       }
       `
     },
-    MuiContainer: {
-      styleOverrides:{
-        root: {
-          '&.MuiContainer-root': {
-            padding: 0
-          }
-        }
-      }
-    },
-
+    
     MuiCheckbox: {
       styleOverrides: {
         root: {

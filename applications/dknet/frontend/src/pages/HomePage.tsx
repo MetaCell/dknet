@@ -44,7 +44,7 @@ const HomePage = () => {
   }, [context])
 
   return (
-    <Container>
+    <Container disableGutters>
       <Grid container columnSpacing={4}>
         <Grid md={8} item>
           <Grid spacing={2}>
