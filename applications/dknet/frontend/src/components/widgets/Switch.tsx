@@ -81,7 +81,7 @@ const SwitchWidget = ({ data }: any) => {
       }
     })
   }
-  console.log(context?.filterValues[data.code], 'context?.filterValues[data.code]')
+
   return (
     <CustomFormControlLabel
       control={<IOSSwitch
