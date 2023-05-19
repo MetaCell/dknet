@@ -16,6 +16,7 @@ import { FormControlLabel } from "@mui/material";
 import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
 import { vars } from '../../theme/variables.js'
+import { useFilterContext } from "../../context/Context";
 
 const {
   grey200,
@@ -141,6 +142,12 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
 
     onClickPrev()
   }
+
+  const { context, setContext } = useFilterContext()
+
+  const setCheckedStateMultipleOptions = (question, data) => context?.filterValues[question.code]?.filter((selectedValue) => selectedValue?.code === data?.code).length > 0 ? 'checked-state' : ''
+
+  const setCheckedStateSingleOption = (question, data) => context?.filterValues[question.code]?.code === data?.code ? 'checked-state' : ''
 
   const classes = {
     active: {
@@ -274,12 +281,15 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                   <QuestionBox inputType={question?.inputType}>
                     {
                       // Add className='checked-state' in <Item is checkbox is selected
-                      question?.inputType === 'MULTI' ? question?.options.map((data) => <Item key={data?.label}>
-                        <CheckBoxWidget
-                          data={data}
-                          filter={question}
-                        />
-                      </Item> ) :
+                      question?.inputType === 'MULTI' ? question?.options.map((data) => {
+                        return (
+                          <Item key={data?.label} className={setCheckedStateMultipleOptions(question, data)}>
+                            <CheckBoxWidget
+                              data={data}
+                              filter={question}
+                            />
+                          </Item>
+                        )} ) :
                         <RadioGroup
                           sx={{
                             width: '100%',
@@ -293,7 +303,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                         >
                           { question?.options.map((data) =>
                             // Add className='checked-state' in <Item is checkbox is selected
-                            <Item key={data?.code}>
+                            <Item key={data?.code} className={setCheckedStateSingleOption(question, data)}>
                               <FilterDialogRadio data={data} filter={data} question={question} />
                             </Item>
                           ) }
