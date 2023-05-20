@@ -46,9 +46,9 @@ const HomePage = () => {
   }, [context])
 
   return (
-    <Container>
-      <Grid container spacing={2}>
-        <Grid md={8.5} item>
+    <Container disableGutters>
+      <Grid container columnSpacing={4}>
+        <Grid md={8} item>
           <Grid spacing={2}>
             <Grid item display='flex' justifyContent='space-between' alignItems='center' mb={2}>
               <Typography variant='h5' lineHeight='unset' color='grey.900'>{repositories.length} repositories matching your criteria</Typography>
@@ -61,7 +61,7 @@ const HomePage = () => {
             }
           </Grid>
         </Grid>
-        <Grid md={3.5} item>
+        <Grid md={4} item>
           <Stack spacing={2}>
             <Filters />
             <Box sx={{

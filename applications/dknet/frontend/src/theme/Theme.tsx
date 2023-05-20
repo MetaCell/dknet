@@ -150,7 +150,7 @@ const theme = createTheme({
       }
       `
     },
-
+    
     MuiCheckbox: {
       styleOverrides: {
         root: {
