@@ -11,6 +11,7 @@ import QuestionBox from "./QuestionBox";
 import CheckBoxWidget from "../widgets/CheckBox";
 import { styled } from "@mui/material/styles";
 import Radio from '@mui/material/Radio';
+import Tooltip from '@mui/material/Tooltip';
 import { FeaturedIcon, FeaturedIconChecked } from '../../assets/icons';
 import { FormControlLabel } from "@mui/material";
 import FilterDialogRadio from "./FilterDialogRadio";
@@ -253,7 +254,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
             >
               {
                 questionsTabs?.map((question, index) =>
-                  <Tab key={index} label={<Typography component='em'>{question?.question }</Typography>} {...a11yProps(index)} />
+                  <Tab key={index} label={<Typography component='em'>{question?.question}</Typography>} {...a11yProps(index)} />
                 )
               }
             </Tabs>
@@ -283,13 +284,16 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                       // Add className='checked-state' in <Item is checkbox is selected
                       question?.inputType === 'MULTI' ? question?.options.map((data) => {
                         return (
-                          <Item key={data?.label} className={setCheckedStateMultipleOptions(question, data)}>
-                            <CheckBoxWidget
-                              data={data}
-                              filter={question}
-                            />
-                          </Item>
-                        )} ) :
+                          <Tooltip title={data.label} key={data?.label}>
+                            <Item className={setCheckedStateMultipleOptions(question, data)}>
+                              <CheckBoxWidget
+                                data={data}
+                                filter={question}
+                              />
+                            </Item>
+                          </Tooltip>
+                        )
+                      }) :
                         <RadioGroup
                           sx={{
                             width: '100%',
@@ -301,16 +305,16 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                           defaultValue="female"
                           name="radio-buttons-group"
                         >
-                          { question?.options.map((data) =>
+                          {question?.options.map((data) =>
                             // Add className='checked-state' in <Item is checkbox is selected
                             <Item key={data?.code} className={setCheckedStateSingleOption(question, data)}>
                               <FilterDialogRadio data={data} filter={data} question={question} />
                             </Item>
-                          ) }
+                          )}
                         </RadioGroup>
                     }
                   </QuestionBox>
-                  {!nextStep && <DialogStepFooter  handlePrev={handlePrev} index={index} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />}
+                  {!nextStep && <DialogStepFooter handlePrev={handlePrev} index={index} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />}
                 </Box>
               </>
             )
