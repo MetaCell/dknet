@@ -9,7 +9,6 @@ import Chip from '@mui/material/Chip'
 import Typography from '@mui/material/Typography'
 import CardContent from "@mui/material/CardContent";
 import Tooltip from "@mui/material/Tooltip";
-import CircularProgressWithLabel from "./CircularProgressWithLabel"
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 //icons
@@ -39,15 +38,18 @@ const getMuiIcon = (icon) => {
 
 const RepositoryCard = (props) => {
   const { context } = useFilterContext()
-  const { repository } = props;
+  const { isBestMatch, repository } = props;
   const filterLabels = Object.values(repository.attributes)[0] as Array<string>
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
     <Card sx={{ position: 'relative', maxWidth: 789, marginBottom: '1rem' }} className="successCard">
-      <Box pr={3} position='absolute' right={0} top='-3px'>
-        <Chip label="Best Match" className="cardBadge"/>
-      </Box>
+      {
+        isBestMatch &&
+          <Box pr={3} position='absolute' right={0} top='-3px'>
+            <Chip label="Best Match" className="cardBadge"/>
+          </Box>
+      }
       <Box m={3} display="flex" gap={2.5}>
         <RepoCardContent>
           <Box display="flex" flexWrap='wrap' width={1} overflow='hidden'>
@@ -58,7 +60,7 @@ const RepositoryCard = (props) => {
                 underline='hover'
                 variant="subtitle1" color="grey.800"
               >
-                {repository.label}
+                {repository.label} - Score: {repository.pctMatch}% ({repository.score} points)
               </CardTitleLink>
             </Tooltip>
           </Box>

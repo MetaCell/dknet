@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { useFilterContext } from '../context/Context'
 
 //components
@@ -14,7 +14,7 @@ import { resetFilters } from "../utils/helpers";
 
 
 const Filters = () => {
-  const { context, setContext } = useFilterContext()
+  const { context, setContext, scoreRepositories } = useFilterContext()
 
   const filters = context.allFilters.slice(2)
 
@@ -31,6 +31,7 @@ const Filters = () => {
     setContext({
       ...context,
       filterValues: resetFilters(),
+      allRepositories: scoreRepositories()
     })
   }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 //components
 import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
@@ -91,12 +91,10 @@ const CheckBoxWidget = ({ data, filter }: any) => {
       ...context,
       filterValues: {
         ...context.filterValues,
-        [filter.code]: newValue
+        [filter.code]: newValue.length !== 0 ? newValue : undefined
       }
     })
   }
-
-  const checked = selectedData.some(row => row.code === data.code)
 
   return (
     <CustomFormControlLabel
