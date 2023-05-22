@@ -1,5 +1,5 @@
 import React from "react";
-import { useFilterSortContext } from "../../context/Context";
+import { useFilterContext } from "../../context/Context";
 
 //components
 import Button from '@mui/material/Button';
@@ -40,7 +40,7 @@ const labels = [
 ];
 
 const SortWidget = () => {
-  const sortRepositories = useFilterSortContext();
+  const { sortRepositories } = useFilterContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [selectedValue, setSelectedValue] = React.useState('Highest Score');
 

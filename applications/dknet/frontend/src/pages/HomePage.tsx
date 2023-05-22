@@ -18,35 +18,7 @@ import LaunchPage from "./LaunchPage";
 
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
-  const [ repositories, setRepositories ] = useState([])
   const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
-
-
-
-  useEffect(() => {
-    const newFilterValues = {}
-    const filterValuesClone = Object.assign({}, context.filterValues)
-    Object.keys(filterValuesClone).filter(key => filterValuesClone[key] !== undefined).forEach(key => {
-      if(!Array.isArray(filterValuesClone[key])) {
-        filterValuesClone[key] = [filterValuesClone[key]]
-      }
-      newFilterValues[key] = []
-      filterValuesClone[key].forEach(valueObj => {
-        newFilterValues[key].push(valueObj.code)
-      })
-    })
-    const match = []
-    for (const repository of context.allRepositories) {
-      for(const key of Object.keys(newFilterValues)){
-        if (repository.attributes[key].some(val => newFilterValues[key].includes(val))) {
-          match.push(repository)
-          break
-        }
-      }
-    }
-
-    setRepositories(match)
-  }, [context])
 
   return (
     <Container>
