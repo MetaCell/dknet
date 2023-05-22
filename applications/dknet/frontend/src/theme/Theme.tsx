@@ -211,7 +211,7 @@ const theme = createTheme({
         root: {
         }
       }
-    }, 
+    },
     MuiCardActionArea:     {
       styleOverrides: {
         root: {
