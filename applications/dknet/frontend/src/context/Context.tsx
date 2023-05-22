@@ -2,11 +2,10 @@ import React, { createContext, useContext, useState } from "react"
 import { ROWS_PER_PAGE } from "../config/constants"
 import filters from '../resources/filters.json'
 import repositories from '../resources/repositories.json'
-import { IFilter, IFilterOptions, IFilterContext, IRepository } from './Interfaces'
+import { IFilter, IFilterContext, IRepository } from './Interfaces'
 import { resetFilters } from "../utils/helpers";
 
 export const FilterContext = createContext(null)
-export const FilterUpdateContext = createContext(null)
 
 const mapFilter = (filter: IFilter): IFilter => ({
   ...filter,
@@ -104,4 +103,3 @@ export const FilterProvider = ({ children }) => {
 }
 
 export const useFilterContext = () => useContext(FilterContext)
-export const useFilterUpdateContext = () => useContext(FilterUpdateContext)

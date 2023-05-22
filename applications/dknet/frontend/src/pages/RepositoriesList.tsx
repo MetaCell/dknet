@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useFilterContext } from '../context/Context'
 
 //components
 import Box from '@mui/material/Box';
 import Grid from "@mui/material/Grid";
 import Filters from "../components/Filters";
-import Container from "@mui/material/Container";
 import SortWidget from '../components/widgets/Sort';
 import RepositoryCard from '../components/RepositoryCard';
 import Typography from "@mui/material/Typography";
@@ -13,7 +12,7 @@ import Stack from '@mui/material/Stack';
 
 
 const RepositoriesList = () => {
-  const { context, setContext } = useFilterContext();
+  const { context } = useFilterContext();
 
   return (
     <Grid container spacing={2} sx={{
@@ -29,7 +28,7 @@ const RepositoriesList = () => {
           </Grid>
           {
             context.allRepositories && context.allRepositories.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
-              <RepositoryCard key={repository.code} repository={repository} />
+              <RepositoryCard key={repository.code} repository={repository} isBestMatch={index === 0}/>
             </Grid>)
           }
         </Grid>
