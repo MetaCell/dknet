@@ -31,7 +31,7 @@ const MainLayout = ({ children }) => {
             <Typography variant='h1'>Find the right repository for your data.</Typography>
             <Typography variant='subtitle1'>Explore, filter and find the best repositories for your data and needs.</Typography>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} display="flex" justifyContent="center">
             <Search/>
           </Grid>
           <Grid item xs={12} sm={8}>
