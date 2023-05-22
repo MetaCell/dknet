@@ -8,7 +8,9 @@ export interface IRepository {
   code: string,
   label: string,
   url: string,
-  attributes: IRepositoryAttributes
+  attributes: IRepositoryAttributes,
+  score?: number,
+  pctMatch?: number
 }
 
 export interface IFilterOptions {
@@ -28,6 +30,7 @@ export interface IFilter {
 export interface IFilterContext {
   pageNumber: number,
   rowsPerPage: number,
+  sortBy: string,
   filterValues: {
     [key: string]: IFilterOptions | IFilterOptions[]
   },

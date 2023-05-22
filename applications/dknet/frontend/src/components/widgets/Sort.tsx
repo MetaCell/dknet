@@ -1,5 +1,5 @@
 import React from "react";
-import { useFilterSortContext } from "../../context/Context";
+import { useFilterContext } from "../../context/Context";
 
 //components
 import Button from '@mui/material/Button';
@@ -40,13 +40,16 @@ const labels = [
 ];
 
 const SortWidget = () => {
-  const sortRepositories = useFilterSortContext();
+  const { context, setContext } = useFilterContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [selectedValue, setSelectedValue] = React.useState('Highest Score');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
-    sortRepositories(event.target.value);
+    setContext({
+      ...context,
+      sortBy: event.target.value
+    })
   };
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
