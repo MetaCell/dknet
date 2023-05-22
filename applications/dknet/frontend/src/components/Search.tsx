@@ -33,31 +33,25 @@ const Search = () => {
         minWidth: '640px'
       }}
     >
-      <Grid container>
-        <Grid item xs={6} display="flex">
-          <CustomAutoComplete
-            options={context.allFilters[0].options}
-            onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[0])}
-            isOptionEqualToValue={(option, value) => option.code === value.code}
-            defaultValue={context.filterValues[context.allFilters[0].code] || []}
-            placeholder={context.allFilters[0].label}
-            noOptionsText={"No match"}
-          />
-          <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
-        </Grid>
-        <Grid item xs={6} display="flex">
-          <CustomAutoComplete
-            options={context.allFilters[1].options}
-            onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[1])}
-            isOptionEqualToValue={(option, value) => option.code === value.code}
-            defaultValue={context.filterValues[context.allFilters[1].code] || []}
-            placeholder={context.allFilters[1].label}
-            noOptionsText={"No match"}
-          />
-          
-          <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
-        </Grid>
-      </Grid>
+      <CustomAutoComplete
+        options={context.allFilters[0].options}
+        onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[0])}
+        isOptionEqualToValue={(option, value) => option.code === value.code}
+        defaultValue={context.filterValues[context.allFilters[0].code] || []}
+        placeholder={context.allFilters[0].label}
+        noOptionsText={"No match"}
+      />
+      <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
+      <CustomAutoComplete
+        options={context.allFilters[1].options}
+        onChangeFilterValue={(value) => onChangeFilterValue(value, context.allFilters[1])}
+        isOptionEqualToValue={(option, value) => option.code === value.code}
+        defaultValue={context.filterValues[context.allFilters[1].code] || []}
+        placeholder={context.allFilters[1].label}
+        noOptionsText={"No match"}
+      />
+
+      <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
       <Button variant="contained">Search</Button>
     </Paper>
   );
