@@ -12,7 +12,7 @@
  *
  * Returns:
  * None
- * 
+ *
  * Outputs:
  * file: filters.json
  *
@@ -48,9 +48,9 @@ const headers = {
 };
 
 // Make a GET request to the Airtable API for the filters
-request.get({ url: url, headers: headers }, function (error, response, body) 
+request.get({ url: url, headers: headers }, function (error, response, body)
 {
-  if (error) 
+  if (error)
   {
     console.error(error);
     return;
@@ -63,7 +63,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
   const records = data.records;
 
   // Map the records array to a new array of objects with only the fields data
-  const filters = data.records.map(function (record) 
+  const filters = data.records.map(function (record)
   {
     const fields = record.fields;
     // Split the answers string into an array if it's not undefined
@@ -78,20 +78,20 @@ request.get({ url: url, headers: headers }, function (error, response, body)
         const icon = InputIconsArray[index] || '';
         const colors = InputColorsArray[index] || '';
         answers.push({
-          'code': code, 
-          'label': inputOption, 
-          'icon': icon, 
-          'color': colors, 
-        }); 
-      });               
+          'code': code,
+          'label': inputOption,
+          'icon': icon.replace(/\s+/g, ''),
+          'color': colors,
+        });
+      });
       };
   // Rename or re-word fields as necessary
-  return {   
+  return {
     'code': fields['Code (Filter Name)'],
         'label': fields['Label (Filter Name)'],
         'question': fields['User question'],
         'description': fields['Help text'], // check if this is tooltip or description
-        'inputType': 
+        'inputType':
             fields['InputType'],
             //'enum': ["SINGLE","MULTI","BOOLEAN"],
             //'enumNames': ["Single select","Multi select","Boolean"],
