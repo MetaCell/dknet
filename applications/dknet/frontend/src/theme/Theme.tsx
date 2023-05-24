@@ -127,6 +127,12 @@ const theme = createTheme({
         border-radius: 12px;
         border: 1px solid ${warning300};
       }
+      .dialogSendBtn {
+        &.MuiButtonBase-root{
+          padding: 0;
+          color: ${primary700};
+        }
+      }
       .goodProgress {
         color: ${primary600};
         background: ${primary25};
