@@ -13,6 +13,7 @@ import {
 
 //icons
 import CloseIcon from '@mui/icons-material/Close';
+import { MetacellLogoIcon } from "../assets/icons";
 
 const AboutDialog = ({ open, onClose }) => {
   return (
@@ -73,6 +74,12 @@ const AboutDialog = ({ open, onClose }) => {
           <Typography variant="subtitle2" color="grey.700">Michael Bar-Sinai</Typography>
           <Typography variant="body2" color="grey.500">Associate of IQSS @ Harvard University</Typography>
         </Stack>
+      </Box>
+      <Box mt={12} display="flex" justifyContent="center" alignItems="center">
+        <Typography variant="body2" mr={1} color="grey.600">Powered by</Typography>
+        <MetacellLogoIcon sx={{ '&.MuiSvgIcon-root': {
+          width: 'auto'
+        } }}/>
       </Box>
     </Drawer>
   )

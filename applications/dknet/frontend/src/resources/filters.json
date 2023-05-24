@@ -214,7 +214,7 @@
       "label": "Human Subjects Data Supported?",
       "question": "Are human subjects involved?",
       "description": "will you be sharing data collected from humans",
-      "inputType": "BOOLEAN",
+      "inputType": "MULTI",
       "options": [
          {
             "code": "yes",
@@ -225,7 +225,7 @@
          {
             "code": "no",
             "label": "No",
-            "icon": "Group Off",
+            "icon": "GroupOff",
             "color": "INFO"
          }
       ]
@@ -235,18 +235,18 @@
       "label": "PHI/HIPPA compliance?",
       "question": "Will the dataset handling have to comply with HIPAA?",
       "description": "HIPAA= Health Information Portability and Accountability Act.  A US regulation governing the sharing of protected health information.  Other countries have other governing regulations.",
-      "inputType": "BOOLEAN",
+      "inputType": "MULTI",
       "options": [
          {
             "code": "yes",
             "label": "Yes",
-            "icon": "Health and Safety",
+            "icon": "HealthandSafety",
             "color": "SUCCESS"
          },
          {
             "code": "no",
             "label": "No",
-            "icon": "Remove Moderator",
+            "icon": "RemoveModerator",
             "color": "INFO"
          }
       ]
@@ -267,7 +267,7 @@
          {
             "code": "no",
             "label": "no",
-            "icon": "Sync Disabled",
+            "icon": "SyncDisabled",
             "color": "WARNING"
          }
       ]
@@ -282,19 +282,19 @@
          {
             "code": "not-at-all",
             "label": "Not at all",
-            "icon": "Hdr Strong",
+            "icon": "HdrStrong",
             "color": "WARNING"
          },
          {
             "code": "somewhat",
             "label": "Somewhat",
-            "icon": "Join Right",
+            "icon": "JoinRight",
             "color": "INFO"
          },
          {
             "code": "crucial",
             "label": "Crucial",
-            "icon": "Hdr Weak",
+            "icon": "HdrWeak",
             "color": "SUCCESS"
          }
       ]
@@ -309,7 +309,7 @@
          {
             "code": "non-nih",
             "label": "Non NIH",
-            "icon": "Check Circle",
+            "icon": "CheckCircle",
             "color": "SUCCESS"
          },
          {
@@ -328,10 +328,10 @@
    },
    {
       "code": "Published",
-      "label": "Supports Published Work?",
+      "label": "Requires Published Article?",
       "question": "Will the dataset support any published academic work?",
       "description": "Will your data be published in conjunction with a research paper?",
-      "inputType": "BOOLEAN",
+      "inputType": "MULTI",
       "options": [
          {
             "code": "yes",
@@ -383,7 +383,7 @@
          {
             "code": "no",
             "label": "no",
-            "icon": "Check Circle",
+            "icon": "CheckCircle",
             "color": "SUCCESS"
          },
          {
@@ -403,12 +403,13 @@
    {
       "code": "SizeLimits",
       "label": "Data Size Limits?",
+      "description": "Are you willing to consider repositories with size limits?",
       "inputType": "MULTI",
       "options": [
          {
             "code": "no",
             "label": "no",
-            "icon": "Check Circle",
+            "icon": "CheckCircle",
             "color": "SUCCESS"
          },
          {
@@ -429,18 +430,18 @@
       "code": "Restrictions",
       "label": "Data Access Restrictions",
       "description": "Does the repository provide access to the data with minimal or no restrictions?",
-      "inputType": "SINGLE",
+      "inputType": "MULTI",
       "options": [
          {
             "code": "-",
             "label": " ",
-            "icon": " ",
+            "icon": "",
             "color": " "
          },
          {
             "code": "no-restrictions",
             "label": "no restrictions",
-            "icon": "Check Circle",
+            "icon": "CheckCircle",
             "color": "SUCCESS"
          },
          {
@@ -466,7 +467,8 @@
    {
       "code": "Application",
       "label": "Application Required?",
-      "inputType": "BOOLEAN",
+      "description": "Are you willing to consider repositories where an application is required to access the data?",
+      "inputType": "MULTI",
       "options": [
          {
             "code": "yes",
@@ -477,7 +479,7 @@
          {
             "code": "no",
             "label": "no",
-            "icon": "Check Circle",
+            "icon": "CheckCircle",
             "color": "SUCCESS"
          }
       ]
@@ -485,12 +487,13 @@
    {
       "code": "ContactPerson",
       "label": "Contact Person Required?",
-      "inputType": "BOOLEAN",
+      "description": "Do you need to have a person to contact?",
+      "inputType": "MULTI",
       "options": [
          {
             "code": "yes",
             "label": "yes",
-            "icon": "Check Circle",
+            "icon": "CheckCircle",
             "color": "SUCCESS"
          },
          {

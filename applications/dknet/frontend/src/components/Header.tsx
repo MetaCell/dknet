@@ -25,6 +25,13 @@ const Header = () => {
     setOpenDialogWindow(false);
   };
 
+  const redirectToFeedback = () => {
+    window.open(
+      'https://docs.google.com/forms/d/1STDRw2utI994HViAmTTjvKQvr7PDf_7KGNXRbdZwLGM/edit?ts=646dd444',
+      '_blank'
+    )
+  }
+
   return (
     <AppBar position="static" sx={{ background: 'transparent', boxShadow: 'none' }}>
       <Container fixed>
@@ -38,7 +45,7 @@ const Header = () => {
             </Box>
 
             <Box sx={{  display: 'flex' }}>
-              <Button variant="text">Send us feedback</Button>
+              <Button variant="text" onClick={redirectToFeedback}>Send us feedback</Button>
               <Button variant="outlined" onClick={handleOpen}>About Dknet Repo</Button>
               <AboutDialog open={openAboutDialog} onClose={handleClose}/>
             </Box>
