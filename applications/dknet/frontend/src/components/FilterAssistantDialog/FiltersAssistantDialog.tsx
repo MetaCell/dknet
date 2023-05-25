@@ -48,11 +48,11 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setTabValue((prevValue) => {
-      if (newValue === prevValue + 1) { // when next tab question is clicked on 
+      if (newValue === prevValue + 1) { // when next tab question is clicked on
         setTranslateValue((prev) => {
           return prev + height[tabValue]
         })
-      } else if (newValue === prevValue - 1) { // when previous tab question is clicked on 
+      } else if (newValue === prevValue - 1) { // when previous tab question is clicked on
         setTranslateValue((prev) => {
           return prev - height[tabValue - 1]
         })
@@ -98,6 +98,7 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   return (
     <Dialog
       open={open}
+      onClose={closeDialog}
       TransitionComponent={Transition}
       keepMounted
       aria-describedby="alert-dialog-slide-description"
