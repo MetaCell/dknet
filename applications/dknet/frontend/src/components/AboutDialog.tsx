@@ -74,6 +74,11 @@ const AboutDialog = ({ open, onClose }) => {
           <Typography variant="subtitle2" color="grey.700">Michael Bar-Sinai</Typography>
           <Typography variant="body2" color="grey.500">Associate of IQSS @ Harvard University</Typography>
         </Stack>
+        <Divider />
+        <Stack>
+          <Typography variant="subtitle2" color="grey.700">Jeffrey S. Grethe</Typography>
+          <Typography variant="body2" color="grey.500"> University of California, San Diego</Typography>
+        </Stack>
       </Box>
       <Box mt={12} display="flex" justifyContent="center" alignItems="center">
         <Typography variant="body2" mr={1} color="grey.600">Powered by</Typography>
