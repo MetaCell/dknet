@@ -24,21 +24,32 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
   useEffect(() => {
     setValue(defaultValue)
   }, [defaultValue])
-  
+
   return (
     <Autocomplete
       multiple
       limitTags={2}
       options={options}
+      disableClearable
       size="small"
       sx={{
-        minWidth: 260,
+        width: '260px',
         '& .MuiChip-label': {
           display: "inline-block",
-          width:'70px', 
+          width: '70px',
           whiteSpace: 'nowrap',
           overflow: "hidden",
           textOverflow: "ellipsis"
+        },
+        '& .MuiInputBase-root': {
+          flexWrap: "nowrap",
+          overflowX: "hidden"
+        },
+        '& .MuiOutlinedInput-root': {
+          paddingRight: '40px !important',
+        },
+        '& .MuiAutocomplete-endAdornment': {
+          right: '0 !important'
         }
       }}
       value={value}
