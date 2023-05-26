@@ -6,6 +6,8 @@ import Checkbox from '@mui/material/Checkbox';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Typography from "@mui/material/Typography";
+import Tooltip from "@mui/material/Tooltip";
+import Chip from '@mui/material/Chip';
 
 //icons
 import ClearIcon from '@mui/icons-material/Clear';
@@ -22,14 +24,30 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
   useEffect(() => {
     setValue(defaultValue)
   }, [defaultValue])
-  
+
   return (
     <Autocomplete
       multiple
       limitTags={2}
       options={options}
+      disableClearable
       size="small"
-      fullWidth
+      sx={{
+        width: '260px',
+        '& .MuiChip-label': {
+          display: "inline-block",
+          width: '70px',
+          whiteSpace: 'nowrap',
+          overflow: "hidden",
+          textOverflow: "ellipsis"
+        },
+        '& .MuiOutlinedInput-root': {
+          paddingRight: '40px !important',
+        },
+        '& .MuiAutocomplete-endAdornment': {
+          right: '0 !important'
+        }
+      }}
       value={value}
       getOptionLabel={(option: any) => option.label}
       filterSelectedOptions
@@ -37,6 +55,13 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
       ChipProps={{ deleteIcon: <ClearIcon fontSize="small" /> }}
       isOptionEqualToValue={(option, value) => isOptionEqualToValue(option, value)}
       noOptionsText={<Typography variant="caption">{noOptionsText}</Typography>}
+      renderTags={(value, getTagProps) =>
+        value.map((option, index) => (
+          <Tooltip key={index} title={option.label}>
+            <Chip label={option.label} {...getTagProps({ index })} />
+          </Tooltip>
+        ))
+      }
       renderOption={(props, option, { selected }) => (
         <li {...props}>
           <Checkbox
