@@ -41,10 +41,6 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
           overflow: "hidden",
           textOverflow: "ellipsis"
         },
-        '& .MuiInputBase-root': {
-          flexWrap: "nowrap",
-          overflowX: "hidden"
-        },
         '& .MuiOutlinedInput-root': {
           paddingRight: '40px !important',
         },
