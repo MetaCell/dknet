@@ -35,8 +35,6 @@ prefixes_list = [
   'Versioning Supported',
   'acc (from Questions / Responses)',
   'qCost (from Questions / Responses)',
-  'qApplication (from Questions / Responses)',
-  'qContact (from Questions / Responses)',
   'HumanSubjectQuestion',
   'PhiHippa',
   'Published',

@@ -32,12 +32,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -91,12 +85,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -145,12 +133,6 @@
                     "significant-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -205,12 +187,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -259,12 +235,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -318,12 +288,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -373,12 +337,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -431,12 +389,6 @@
                ],
                "Cost": [
                     "sometimes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -493,12 +445,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -552,12 +498,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -608,12 +548,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -661,12 +595,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -719,12 +647,6 @@
                ],
                "Cost": [
                     "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -779,12 +701,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -831,12 +747,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -886,12 +796,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -945,12 +849,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1000,12 +898,6 @@
                     "minimal-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -1061,12 +953,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1120,12 +1006,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1175,12 +1055,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -1233,12 +1107,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -1294,12 +1162,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1353,12 +1215,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1404,12 +1260,6 @@
                ],
                "Restrictions": [],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -1461,12 +1311,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1515,12 +1359,6 @@
                ],
                "Cost": [
                     "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -1574,12 +1412,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1628,12 +1460,6 @@
                     "significant-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -1687,12 +1513,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1739,12 +1559,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -1798,12 +1612,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -1851,12 +1659,6 @@
                ],
                "Cost": [
                     "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -1908,12 +1710,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -1969,12 +1765,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     ""
@@ -2026,12 +1816,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2079,12 +1863,6 @@
                     "minimal-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -2136,12 +1914,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -2196,12 +1968,6 @@
                "Cost": [
                     "yes"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2255,12 +2021,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2312,12 +2072,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2366,12 +2120,6 @@
                ],
                "Cost": [
                     "yes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -2424,12 +2172,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2478,12 +2220,6 @@
                ],
                "Cost": [
                     "yes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -2537,12 +2273,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2593,12 +2323,6 @@
                ],
                "Cost": [
                     "sometimes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -2652,12 +2376,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2705,12 +2423,6 @@
                     "minimal-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -2766,12 +2478,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2821,12 +2527,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -2880,12 +2580,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -2935,12 +2629,6 @@
                     "significant-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -2994,12 +2682,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3050,12 +2732,6 @@
                ],
                "Cost": [
                     "sometimes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -3110,12 +2786,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3167,12 +2837,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3219,12 +2883,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -3278,12 +2936,6 @@
                "Cost": [
                     "yes"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3333,12 +2985,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -3392,12 +3038,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3447,12 +3087,6 @@
                     "significant-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -3505,12 +3139,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3557,12 +3185,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -3613,12 +3235,6 @@
                     "minimal-restrictions"
                ],
                "Cost": [
-                    "yes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "yes"
                ],
                "HumanSubjectInvolved": [
@@ -3674,12 +3290,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3729,12 +3339,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -3788,12 +3392,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3845,12 +3443,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -3898,12 +3490,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -3955,12 +3541,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -4008,12 +3588,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -4067,12 +3641,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -4123,12 +3691,6 @@
                ],
                "Cost": [
                     "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -4181,12 +3743,6 @@
                "Cost": [
                     "no"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -4236,12 +3792,6 @@
                "Cost": [
                     "sometimes"
                ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -4290,12 +3840,6 @@
                     "minimal-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
@@ -4349,12 +3893,6 @@
                "Cost": [
                     "sometimes"
                ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
                "HumanSubjectInvolved": [
                     "yes",
                     "no",
@@ -4404,12 +3942,6 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
                     "no"
                ],
                "HumanSubjectInvolved": [
