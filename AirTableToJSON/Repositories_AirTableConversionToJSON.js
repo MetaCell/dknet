@@ -39,7 +39,7 @@ prefixes_list = [
   'qContact (from Questions / Responses)',
   'HumanSubjectQuestion',
   'PhiHippa',
-  'qPublished (from Questions / Responses)',
+  'Published',
   'PIDQuestion'
 ];
 
