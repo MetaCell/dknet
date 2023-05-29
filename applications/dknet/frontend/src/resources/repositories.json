@@ -1,82 +1,253 @@
 [
      {
-          "code": "accelerating-medicines-partnership-type-2-diabetes-knowledge-portal-(amp-t2d)",
-          "label": "Accelerating Medicines Partnership Type 2 Diabetes Knowledge Portal (AMP-T2D)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "genotype-phenotype"
-               ],
-               "DomainType": [
-                    "diabetes,-digestive-and-kidney-diseases"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "influenza-research-database-(ird)",
-          "label": "Influenza Research Database (IRD)",
-          "url": "www.google.com",
+          "code": "nimh-data-archive",
+          "label": "NIMH Data Archive",
+          "url": "https://scicrunch.org/resolver/SCR_004434",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
                ],
                "DomainType": [
-                    "influenza"
+                    "neuroscience"
                ],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "yes"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "strenda-",
+          "label": "STRENDA ",
+          "url": "https://scicrunch.org/resolver/SCR_017422",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "enzymology"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "yes"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "european-genome-phenome-archive",
+          "label": "European Genome phenome Archive",
+          "url": "https://scicrunch.org/resolver/SCR_004944",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "yes"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "cambridge-crystallographic-data-centre-(ccdc)",
+          "label": "Cambridge Crystallographic Data Centre (CCDC)",
+          "url": "https://scicrunch.org/resolver/SCR_014707",
+          "attributes": {
+               "DataType": [
+                    "crystallography"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "yes"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "intact",
+          "label": "IntAct",
+          "url": "https://scicrunch.org/resolver/SCR_006944",
+          "attributes": {
+               "DataType": [
+                    "interaction/pathways"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -102,7 +273,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -112,9 +283,239 @@
           }
      },
      {
-          "code": "research-collaboratory-for-structural-bioinformatics-protein-data-bank-(rcsb-pdb)",
-          "label": "Research Collaboratory for Structural Bioinformatics Protein Data Bank (RCSB PDB)",
-          "url": "www.google.com",
+          "code": "cancer-nanotechnology-laboratory-(cananolab)",
+          "label": "Cancer Nanotechnology Laboratory (caNanoLab)",
+          "url": "https://scicrunch.org/resolver/SCR_013717",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "cancer"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "peptideatlas",
+          "label": "PeptideAtlas",
+          "url": "https://scicrunch.org/resolver/SCR_006783",
+          "attributes": {
+               "DataType": [
+                    "proteomic"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "physionet",
+          "label": "PhysioNet",
+          "url": "https://scicrunch.org/resolver/SCR_007345",
+          "attributes": {
+               "DataType": [
+                    "physiological"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "coherent-x-ray-imaging-data-bank-(cxidb)",
+          "label": "Coherent X-Ray Imaging Data Bank (CXIDB)",
+          "url": "https://scicrunch.org/resolver/SCR_014722",
+          "attributes": {
+               "DataType": [
+                    "imaging"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "universal-protein-resource",
+          "label": "Universal Protein Resource",
+          "url": "https://scicrunch.org/resolver/SCR_002380",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -126,13 +527,122 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "protein-circular-dichroism-data-bank-(pcddb)",
+          "label": "Protein Circular Dichroism Data Bank (PCDDB)",
+          "url": "https://scicrunch.org/resolver/SCR_017428",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "ncbi-assembly-archive-viewer",
+          "label": "NCBI Assembly Archive Viewer",
+          "url": "https://scicrunch.org/resolver/SCR_012917",
+          "attributes": {
+               "DataType": [
+                    "genomic"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -142,7 +652,7 @@
                     "no-restrictions"
                ],
                "Cost": [
-                    "yes"
+                    "no"
                ],
                "Application": [
                     "no"
@@ -158,7 +668,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -168,9 +678,177 @@
           }
      },
      {
-          "code": "genbank",
-          "label": "GenBank",
-          "url": "www.google.com",
+          "code": "mendeley-data",
+          "label": "Mendeley Data",
+          "url": "https://scicrunch.org/resolver/SCR_015671",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "emdataresource.org",
+          "label": "EMDataResource.org",
+          "url": "https://scicrunch.org/resolver/SCR_003207",
+          "attributes": {
+               "DataType": [
+                    "electron-microscopy"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "yes"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "network-data-exchange-(ndex)",
+          "label": "Network Data Exchange (NDEx)",
+          "url": "https://scicrunch.org/resolver/SCR_003943",
+          "attributes": {
+               "DataType": [
+                    "interaction/pathways"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "contact"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "european-nucleotide-archive-(ena)",
+          "label": "European Nucleotide Archive (ENA)",
+          "url": "https://scicrunch.org/resolver/SCR_006515",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -180,12 +858,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -211,7 +890,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -221,27 +900,27 @@
           }
      },
      {
-          "code": "mgnify",
-          "label": "MGnify",
-          "url": "www.google.com",
+          "code": "proteomexchange",
+          "label": "ProteomeXchange",
+          "url": "https://scicrunch.org/resolver/SCR_004055",
           "attributes": {
                "DataType": [
-                    "sequence"
+                    "proteomic"
                ],
                "DomainType": [
-                    "microbiome"
+                    "structural-biology"
                ],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -257,7 +936,7 @@
                     "no"
                ],
                "ContactPerson": [
-                    "no"
+                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -267,8 +946,8 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
-                    "no"
+               "undefined": [
+                    "yes"
                ],
                "PIDQuestion": [
                     "no",
@@ -277,9 +956,9 @@
           }
      },
      {
-          "code": "mass-spectrometry-interactive-virtual-environment-(massive)",
-          "label": "Mass spectrometry Interactive Virtual Environment (MassIVE)",
-          "url": "www.google.com",
+          "code": "kinetic-models-of-biological-systems-(kimosys)",
+          "label": "Kinetic Models of Biological Systems (KiMoSys)",
+          "url": "https://scicrunch.org/resolver/SCR_017423",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -291,13 +970,72 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "niddk-information-network-(dknet)",
+          "label": "NIDDK Information Network (dkNET)",
+          "url": "https://scicrunch.org/resolver/SCR_001606",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "diabetes,-digestive-and-kidney-diseases"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "not-at-all",
+                    "somewhat",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -323,7 +1061,65 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "database-of-interacting-proteins-(dip)",
+          "label": "Database of Interacting Proteins (DIP)",
+          "url": "https://scicrunch.org/resolver/SCR_003167",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -333,12 +1129,12 @@
           }
      },
      {
-          "code": "crystallography-open-database-(cod)",
-          "label": "Crystallography Open Database (COD)",
-          "url": "www.google.com",
+          "code": "pdbj---protein-data-bank-japan",
+          "label": "PDBj - Protein Data Bank Japan",
+          "url": "https://scicrunch.org/resolver/SCR_008912",
           "attributes": {
                "DataType": [
-                    "crystallography"
+                    "protein-structure"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -347,17 +1143,17 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
-                    "yes"
+                    "no"
                ],
                "Restrictions": [
                     "no-restrictions"
@@ -379,8 +1175,8 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
-                    "yes"
+               "undefined": [
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -389,12 +1185,12 @@
           }
      },
      {
-          "code": "inorganic-crystal-structure-database-(icsd)",
-          "label": "Inorganic Crystal Structure Database (ICSD)",
-          "url": "www.google.com",
+          "code": "pubchem-substance",
+          "label": "PubChem Substance",
+          "url": "https://scicrunch.org/resolver/SCR_004742",
           "attributes": {
                "DataType": [
-                    "crystallography"
+                    "multiple-data-types"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -403,13 +1199,402 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "yes"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "national-addiction-and-hiv-data-archive-program-(nahdap)",
+          "label": "National Addiction and HIV Data Archive Program (NAHDAP)",
+          "url": "https://scicrunch.org/resolver/SCR_000636",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "addiction-and-hiv"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "1000-functional-connectomes-project",
+          "label": "1000 Functional Connectomes Project",
+          "url": "https://scicrunch.org/resolver/SCR_005361",
+          "attributes": {
+               "DataType": [
+                    "imaging"
+               ],
+               "DomainType": [
+                    "neuroscience"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "dna-databank-of-japan-(ddbj)",
+          "label": "DNA DataBank of Japan (DDBJ)",
+          "url": "https://scicrunch.org/resolver/SCR_002359",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "yes"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "database-of-genomic-variants-archive-(dgva)",
+          "label": "Database of Genomic Variants Archive (DGVa)",
+          "url": "https://scicrunch.org/resolver/SCR_004896",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "arrayexpress",
+          "label": "ArrayExpress",
+          "url": "https://scicrunch.org/resolver/SCR_002964",
+          "attributes": {
+               "DataType": [
+                    "gene-expression"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "mouse-genome-informatics-(mgi)",
+          "label": "Mouse Genome Informatics (MGI)",
+          "url": "https://scicrunch.org/resolver/SCR_006460",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [
+                    "mouse-genetics"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "niddk-central-repository",
+          "label": "NIDDK Central Repository",
+          "url": "https://scicrunch.org/resolver/SCR_006542",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "diabetes,-digestive-and-kidney-diseases"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -433,9 +1618,175 @@
                     ""
                ],
                "PhiHippa": [
+                    "yes"
+               ],
+               "undefined": [
                     "no"
                ],
-               "Published": [
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "zebrafish-information-network-(zfin)",
+          "label": "Zebrafish Information Network (ZFIN)",
+          "url": "https://scicrunch.org/resolver/SCR_002560",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "zebrafish-genetics"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "yes"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "yes"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "mirbase",
+          "label": "miRBase",
+          "url": "https://scicrunch.org/resolver/SCR_003152",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "uniprotkb",
+          "label": "UniProtKB",
+          "url": "https://scicrunch.org/resolver/SCR_004426",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "protein"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
                     "yes"
                ],
                "PIDQuestion": [
@@ -447,7 +1798,7 @@
      {
           "code": "flowrepository",
           "label": "FLOWRepository",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_013779",
           "attributes": {
                "DataType": [
                     "cytometry"
@@ -457,13 +1808,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -489,7 +1840,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -502,27 +1853,25 @@
      {
           "code": "cell-image-library-(cil)",
           "label": "Cell Image Library (CIL)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_003510",
           "attributes": {
                "DataType": [
                     "imaging"
                ],
-               "DomainType": [
-                    "general"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "contact"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "crucial",
-                    "somewhat",
                     "not-at-all",
+                    "somewhat",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -548,7 +1897,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -562,25 +1911,25 @@
      {
           "code": "clinicaltrials.gov",
           "label": "ClinicalTrials.gov",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_002309",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "clinical-trial"
                ],
                "DomainType": [
-                    "general"
+                    "clinical"
                ],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -605,10 +1954,11 @@
                "PhiHippa": [
                     "yes"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
+                    "yes,-any",
                     "no",
                     ""
                ]
@@ -617,25 +1967,25 @@
      {
           "code": "chembl",
           "label": "ChEMBL",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_014042",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
                ],
                "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
+                    "drug-discovery"
                ],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -648,7 +1998,7 @@
                     "no"
                ],
                "Application": [
-                    "no"
+                    "yes"
                ],
                "ContactPerson": [
                     "no"
@@ -661,70 +2011,10 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "structural-biology-grid",
-          "label": "Structural Biology Grid",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "protein-structure"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "crucial",
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "yes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
                     "no",
                     ""
                ]
@@ -733,25 +2023,23 @@
      {
           "code": "japanese-genotype-phenotype-archive-(jga)",
           "label": "Japanese Genotype-phenotype Archive (JGA)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_003118",
           "attributes": {
                "DataType": [
                     "genotype-phenotype"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -777,7 +2065,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -789,7 +2077,7 @@
      {
           "code": "flybase",
           "label": "FlyBase",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_006549",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -801,13 +2089,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -833,10 +2121,69 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "structural-biology-grid",
+          "label": "Structural Biology Grid",
+          "url": "https://scicrunch.org/resolver/SCR_003511",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "yes"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
                     "no",
                     ""
                ]
@@ -845,7 +2192,7 @@
      {
           "code": "neuromorpho.org",
           "label": "NeuroMorpho.Org",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_002145",
           "attributes": {
                "DataType": [
                     "neuron-reconstruction"
@@ -857,13 +2204,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -889,7 +2236,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -901,7 +2248,7 @@
      {
           "code": "the-immunology-database-and-analysis-portal-(immport)",
           "label": "The Immunology Database and Analysis Portal (ImmPort)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_012804",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -913,13 +2260,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -945,7 +2292,117 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "genomernai",
+          "label": "GenomeRNAi",
+          "url": "https://scicrunch.org/resolver/SCR_013088",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "yes"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "worldwide-protein-data-bank-(wwpdb)",
+          "label": "Worldwide Protein Data Bank (wwPDB)",
+          "url": "https://scicrunch.org/resolver/SCR_006555",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -957,25 +2414,23 @@
      {
           "code": "figshareplus",
           "label": "FigsharePlus",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_021762",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "yes"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -1001,179 +2456,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "worldwide-protein-data-bank-(wwpdb)",
-          "label": "Worldwide Protein Data Bank (wwPDB)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "protein-structure"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "genomernai",
-          "label": "GenomeRNAi",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "genotype-phenotype"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "yes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "zenodo",
-          "label": "ZENODO",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "crucial",
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "sometimes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -1187,26 +2470,24 @@
      {
           "code": "nih-figshare",
           "label": "NIH Figshare",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_017580",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "yes"
                ],
                "FundingSource": [
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "crucial",
-                    "somewhat",
                     "not-at-all",
+                    "somewhat",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -1232,7 +2513,7 @@
                "PhiHippa": [
                     "yes"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -1242,28 +2523,84 @@
           }
      },
      {
+          "code": "zenodo",
+          "label": "ZENODO",
+          "url": "https://scicrunch.org/resolver/SCR_004129",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
           "code": "gene-expression-omnibus-(geo)",
           "label": "Gene Expression Omnibus (GEO)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_005012",
           "attributes": {
                "DataType": [
                     "gene-expression"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "somewhat",
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -1289,7 +2626,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -1301,25 +2638,23 @@
      {
           "code": "ncbi-database-of-genotypes-and-phenotypes",
           "label": "NCBI database of Genotypes and Phenotypes",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_002709",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "genotype-phenotype"
                ],
-               "DomainType": [
-                    "general"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -1345,7 +2680,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -1357,7 +2692,7 @@
      {
           "code": "openneuro",
           "label": "OpenNeuro",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_005031",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -1369,15 +2704,15 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "crucial",
-                    "somewhat",
                     "not-at-all",
+                    "somewhat",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -1403,7 +2738,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -1417,25 +2752,23 @@
      {
           "code": "european-variation-archive-(eva)",
           "label": "European Variation Archive (EVA)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_017425",
           "attributes": {
                "DataType": [
                     "sequence"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -1461,7 +2794,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -1473,10 +2806,10 @@
      {
           "code": "biological-magnetic-resonance-data-bank-(bmrb)",
           "label": "Biological Magnetic Resonance Data Bank (BMRB)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_002296",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "nmr-spectroscopy"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -1485,530 +2818,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "nimh-data-archive",
-          "label": "NIMH Data Archive",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "neuroscience"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "significant-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "european-genome-phenome-archive",
-          "label": "European Genome phenome Archive",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "genotype-phenotype"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "significant-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "strenda-",
-          "label": "STRENDA ",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "enzymology"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "crucial",
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "yes"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "cambridge-crystallographic-data-centre-(ccdc)",
-          "label": "Cambridge Crystallographic Data Centre (CCDC)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "crystallography"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "yes"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "intact",
-          "label": "IntAct",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "interaction/pathways"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "cancer-nanotechnology-laboratory-(cananolab)",
-          "label": "Cancer Nanotechnology Laboratory (caNanoLab)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "peptideatlas",
-          "label": "PeptideAtlas",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "proteomic"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "physionet",
-          "label": "PhysioNet",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "physiological"
-               ],
-               "DomainType": [
-                    "general"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "crucial",
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "sometimes"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "yes"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "coherent-x-ray-imaging-data-bank-(cxidb)",
-          "label": "Coherent X-Ray Imaging Data Bank (CXIDB)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "imaging"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "crucial",
-                    "somewhat",
-                    "not-at-all",
                     ""
                ],
                "VersioningSupport": [
@@ -2034,407 +2850,8 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "protein-circular-dichroism-data-bank-(pcddb)",
-          "label": "Protein Circular Dichroism Data Bank (PCDDB)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "protein-structure"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "universal-protein-resource",
-          "label": "Universal Protein Resource",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "yes"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "mendeley-data",
-          "label": "Mendeley Data",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "crucial",
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "ncbi-assembly-archive-viewer",
-          "label": "NCBI Assembly Archive Viewer",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "genomic"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "european-nucleotide-archive-(ena)",
-          "label": "European Nucleotide Archive (ENA)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "sequence"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "network-data-exchange-(ndex)",
-          "label": "Network Data Exchange (NDEx)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "interaction/pathways"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "contact"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "emdataresource.org",
-          "label": "EMDataResource.org",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "electron-microscopy"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "yes"
                ],
                "PIDQuestion": [
                     "no",
@@ -2445,7 +2862,7 @@
      {
           "code": "analysis,-visualization,-and-informatics-lab-space-(anvil)",
           "label": "Analysis, Visualization, and Informatics Lab-space (AnVIL)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_017469",
           "attributes": {
                "DataType": [
                     "genomic"
@@ -2457,13 +2874,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -2489,7 +2906,63 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "metabolomics-workbench-(metwb)",
+          "label": "Metabolomics Workbench (MetWB)",
+          "url": "https://scicrunch.org/resolver/SCR_013794",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "metabolomics"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "yes"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -2501,27 +2974,25 @@
      {
           "code": "dataverse-network-project",
           "label": "Dataverse Network Project",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_001997",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "crucial",
-                    "somewhat",
                     "not-at-all",
+                    "somewhat",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -2547,7 +3018,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -2559,27 +3030,27 @@
           }
      },
      {
-          "code": "metabolomics-workbench-(metwb)",
-          "label": "Metabolomics Workbench (MetWB)",
-          "url": "www.google.com",
+          "code": "accelerating-medicines-partnership-type-2-diabetes-knowledge-portal-(amp-t2d)",
+          "label": "Accelerating Medicines Partnership Type 2 Diabetes Knowledge Portal (AMP-T2D)",
+          "url": "https://scicrunch.org/resolver/SCR_003743",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "genotype-phenotype"
                ],
                "DomainType": [
-                    "metabolomics"
+                    "diabetes,-digestive-and-kidney-diseases"
                ],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "somewhat",
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -2592,7 +3063,284 @@
                     "no"
                ],
                "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "influenza-research-database-(ird)",
+          "label": "Influenza Research Database (IRD)",
+          "url": "https://scicrunch.org/resolver/SCR_006641",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "influenza"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "genbank",
+          "label": "GenBank",
+          "url": "https://scicrunch.org/resolver/SCR_002760",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
                     "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "research-collaboratory-for-structural-bioinformatics-protein-data-bank-(rcsb-pdb)",
+          "label": "Research Collaboratory for Structural Bioinformatics Protein Data Bank (RCSB PDB)",
+          "url": "https://scicrunch.org/resolver/SCR_012820",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "yes"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "mgnify",
+          "label": "MGnify",
+          "url": "https://scicrunch.org/resolver/SCR_016429",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [
+                    "microbiome"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "mass-spectrometry-interactive-virtual-environment-(massive)",
+          "label": "Mass spectrometry Interactive Virtual Environment (MassIVE)",
+          "url": "https://scicrunch.org/resolver/SCR_013665",
+          "attributes": {
+               "DataType": [
+                    "proteomic"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
                ],
                "ContactPerson": [
                     "yes"
@@ -2605,8 +3353,120 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "inorganic-crystal-structure-database-(icsd)",
+          "label": "Inorganic Crystal Structure Database (ICSD)",
+          "url": "https://scicrunch.org/resolver/SCR_017429",
+          "attributes": {
+               "DataType": [
+                    "crystallography"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "yes"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "crystallography-open-database-(cod)",
+          "label": "Crystallography Open Database (COD)",
+          "url": "https://scicrunch.org/resolver/SCR_005874",
+          "attributes": {
+               "DataType": [
+                    "crystallography"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "yes"
                ],
                "PIDQuestion": [
                     "no",
@@ -2617,89 +3477,27 @@
      {
           "code": "image-data-resource-(idr)",
           "label": "Image Data Resource (IDR)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_017421",
           "attributes": {
                "DataType": [
                     "imaging"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "yes"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "figshare",
-          "label": "FigShare",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "crucial",
-                    "somewhat",
-                    "not-at-all",
                     ""
                ],
                "VersioningSupport": [
-                    "yes"
+                    "no"
                ],
                "Restrictions": [
                     "no-restrictions"
@@ -2721,8 +3519,8 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
-                    "no"
+               "undefined": [
+                    "yes"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -2735,25 +3533,23 @@
      {
           "code": "sicas-medical-image-repository",
           "label": "SICAS Medical Image Repository",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_017420",
           "attributes": {
                "DataType": [
                     "imaging"
                ],
-               "DomainType": [
-                    "general"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -2769,7 +3565,7 @@
                     "no"
                ],
                "ContactPerson": [
-                    "no"
+                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -2777,12 +3573,14 @@
                     ""
                ],
                "PhiHippa": [
-                    "no"
+                    "yes"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
                     "no",
                     ""
                ]
@@ -2791,7 +3589,7 @@
      {
           "code": "pdbe---protein-data-bank-in-europe",
           "label": "PDBe - Protein Data Bank in Europe",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_004312",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -2803,13 +3601,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -2835,7 +3633,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -2845,27 +3643,83 @@
           }
      },
      {
-          "code": "global-proteome-machine-database-(gpm-db)",
-          "label": "Global Proteome Machine Database (GPM DB)",
-          "url": "www.google.com",
+          "code": "figshare",
+          "label": "FigShare",
+          "url": "https://scicrunch.org/resolver/SCR_004328",
           "attributes": {
                "DataType": [
-                    "proteomic"
+                    "multiple-data-types"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
-                    "no"
+                    "yes"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "global-proteome-machine-database-(gpm-db)",
+          "label": "Global Proteome Machine Database (GPM DB)",
+          "url": "https://scicrunch.org/resolver/SCR_006617",
+          "attributes": {
+               "DataType": [
+                    "proteomic"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -2891,63 +3745,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "ncbi-sequence-read-archive-(sra)",
-          "label": "NCBI Sequence Read Archive (SRA)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "sequence"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -2959,7 +3757,7 @@
      {
           "code": "metabolights",
           "label": "MetaboLights",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_014663",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -2971,13 +3769,13 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -3003,7 +3801,61 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "ncbi-sequence-read-archive-(sra)",
+          "label": "NCBI Sequence Read Archive (SRA)",
+          "url": "https://scicrunch.org/resolver/SCR_004891",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -3015,25 +3867,23 @@
      {
           "code": "electron-microscopy-data-bank-at-pdbe-(msd-ebi)",
           "label": "Electron Microscopy Data Bank at PDBe (MSD-EBI)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_006506",
           "attributes": {
                "DataType": [
                     "electron-microscopy"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -3059,64 +3909,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "open-science-framework",
-          "label": "Open Science Framework",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -3128,25 +3921,23 @@
      {
           "code": "dbsnp",
           "label": "dbSNP",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_002338",
           "attributes": {
                "DataType": [
                     "sequence"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "yes"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -3171,7 +3962,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -3183,7 +3974,7 @@
      {
           "code": "pubchem-bioassay",
           "label": "PubChem BioAssay",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_010734",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -3195,14 +3986,14 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "somewhat",
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -3228,7 +4019,7 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "no"
                ],
                "PIDQuestion": [
@@ -3239,9 +4030,64 @@
           }
      },
      {
+          "code": "open-science-framework",
+          "label": "Open Science Framework",
+          "url": "https://scicrunch.org/resolver/SCR_003238",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
           "code": "proteomics-identifications-(pride)",
           "label": "Proteomics Identifications (PRIDE)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_003411",
           "attributes": {
                "DataType": [
                     "proteomic"
@@ -3253,141 +4099,29 @@
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "yes"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "dbvar",
-          "label": "dbVar",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "sequence"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "cancer-imaging-archive-(tcia)",
-          "label": "Cancer Imaging Archive (TCIA)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "imaging"
-               ],
-               "DomainType": [
-                    "cancer"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "crucial",
-                    "somewhat",
-                    "not-at-all",
                     ""
                ],
                "VersioningSupport": [
-                    "yes"
+                    "no"
                ],
                "Restrictions": [
                     "minimal-restrictions"
                ],
                "Cost": [
-                    "sometimes"
+                    "no"
                ],
                "Application": [
-                    "yes"
+                    "no"
                ],
                "ContactPerson": [
-                    "no"
+                    "yes"
                ],
                "HumanSubjectInvolved": [
                     "yes",
@@ -3397,12 +4131,10 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
-                    "no"
+               "undefined": [
+                    "yes"
                ],
                "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
                     "no",
                     ""
                ]
@@ -3411,26 +4143,24 @@
      {
           "code": "dryad-digital-repository",
           "label": "Dryad Digital Repository",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_005910",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
                ],
-               "DomainType": [
-                    "multiple"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "yes"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "somewhat",
-                    "not-at-all",
+                    "crucial",
                     ""
                ],
                "VersioningSupport": [
@@ -3456,8 +4186,120 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
+               "undefined": [
                     "yes"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "dbvar",
+          "label": "dbVar",
+          "url": "https://scicrunch.org/resolver/SCR_003219",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "Application": [
+                    "no"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ]
+          }
+     },
+     {
+          "code": "cancer-imaging-archive-(tcia)",
+          "label": "Cancer Imaging Archive (TCIA)",
+          "url": "https://scicrunch.org/resolver/SCR_008927",
+          "attributes": {
+               "DataType": [
+                    "imaging"
+               ],
+               "DomainType": [
+                    "cancer"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    "somewhat",
+                    "crucial",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "Application": [
+                    "yes"
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "undefined": [
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -3470,427 +4312,23 @@
      {
           "code": "biological-general-repository-for-interaction-datasets-(biogrid)",
           "label": "Biological General Repository for Interaction Datasets (BioGRID)",
-          "url": "www.google.com",
+          "url": "https://scicrunch.org/resolver/SCR_007393",
           "attributes": {
                "DataType": [
                     "interaction/pathways"
                ],
-               "DomainType": [
-                    "general"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
                "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "yes"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "kinetic-models-of-biological-systems-(kimosys)",
-          "label": "Kinetic Models of Biological Systems (KiMoSys)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "proteomexchange",
-          "label": "ProteomeXchange",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "proteomic"
-               ],
-               "DomainType": [
-                    "structural-biology"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "yes"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "niddk-information-network-(dknet)",
-          "label": "NIDDK Information Network (dkNET)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "diabetes,-digestive-and-kidney-diseases"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
                     "-"
                ],
                "CitationImportance": [
                     "crucial",
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "database-of-interacting-proteins-(dip)",
-          "label": "Database of Interacting Proteins (DIP)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "protein-structure"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "pubchem-substance",
-          "label": "PubChem Substance",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "national-addiction-and-hiv-data-archive-program-(nahdap)",
-          "label": "National Addiction and HIV Data Archive Program (NAHDAP)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "addiction-and-hiv"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "crucial",
-                    "somewhat",
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "pdbj---protein-data-bank-japan",
-          "label": "PDBj - Protein Data Bank Japan",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "protein-structure"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
                     ""
                ],
                "VersioningSupport": [
@@ -3916,509 +4354,8 @@
                "PhiHippa": [
                     "no"
                ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "1000-functional-connectomes-project",
-          "label": "1000 Functional Connectomes Project",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "imaging"
-               ],
-               "DomainType": [
-                    "neuroscience"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "significant-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
+               "undefined": [
                     "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "arrayexpress",
-          "label": "ArrayExpress",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "gene-expression"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "yes"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "yes,-any",
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "dna-databank-of-japan-(ddbj)",
-          "label": "DNA DataBank of Japan (DDBJ)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "structural-biology"
-               ],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "yes"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "database-of-genomic-variants-archive-(dgva)",
-          "label": "Database of Genomic Variants Archive (DGVa)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "sequence"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "mouse-genome-informatics-(mgi)",
-          "label": "Mouse Genome Informatics (MGI)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "genotype-phenotype"
-               ],
-               "DomainType": [
-                    "mouse-genetics"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "zebrafish-information-network-(zfin)",
-          "label": "Zebrafish Information Network (ZFIN)",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "zebrafish-genetics"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "yes"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "yes"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "niddk-central-repository",
-          "label": "NIDDK Central Repository",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "diabetes,-digestive-and-kidney-diseases"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "significant-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "yes"
-               ],
-               "Published": [
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "uniprotkb",
-          "label": "UniProtKB",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "protein"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "yes"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ]
-          }
-     },
-     {
-          "code": "mirbase",
-          "label": "miRBase",
-          "url": "www.google.com",
-          "attributes": {
-               "DataType": [
-                    "sequence"
-               ],
-               "DomainType": [
-                    "multiple"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih",
-                    "yes,-by-another-nih-source",
-                    "-yes,-by-an-niddk-source",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "Application": [
-                    "no"
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "no"
                ],
                "PIDQuestion": [
                     "no",

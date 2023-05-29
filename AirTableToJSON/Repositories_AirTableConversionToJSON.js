@@ -12,7 +12,7 @@ const fileName = `${resourcesFolder}/repositories.json`
  
 // Set up Airtable API credentials
 const baseId = 'app8GwPKlzcZUj3lo';
-const tableName = 'tblZcO1YqPXGfX6YH';
+const tableName = 'tblaJilQIzivkkeiF';
 const pat = process.argv[2];
 
 // Set up Airtable API endpoint URL
