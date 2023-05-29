@@ -112,12 +112,6 @@
       "inputType": "MULTI",
       "options": [
          {
-            "code": "multiple",
-            "label": "Multiple",
-            "icon": "",
-            "color": ""
-         },
-         {
             "code": "addiction-and-hiv",
             "label": "Addiction and HIV",
             "icon": "",
@@ -211,7 +205,7 @@
    },
    {
       "code": "HumanSubjectInvolved",
-      "label": "Human Subjects Data Supported?",
+      "label": "Human Subjects?",
       "question": "Are human subjects involved?",
       "description": "will you be sharing data collected from humans",
       "inputType": "MULTI",
@@ -274,7 +268,7 @@
    },
    {
       "code": "CitationImportance",
-      "label": "Data Citation Important?",
+      "label": "Data Citation Important to you?",
       "question": "How important is data citation to you?",
       "description": "Citing a dataset like you would any other publication ensures that you receive credit if the dataset is reused, but not all repositories support full data citation",
       "inputType": "MULTI",
@@ -301,26 +295,26 @@
    },
    {
       "code": "FundingSource",
-      "label": "Funding Source",
+      "label": "Funder",
       "question": "Is the dataset funded, at least in part, by the NIH?",
       "description": "Some repositories have restrictions on eligible funding sources",
       "inputType": "MULTI",
       "options": [
          {
-            "code": "non-nih",
-            "label": "Non NIH",
+            "code": "non-nih-source",
+            "label": "Non NIH source",
             "icon": "CheckCircle",
             "color": "SUCCESS"
          },
          {
-            "code": "yes,-by-another-nih-source",
-            "label": "yes, by another NIH source",
+            "code": "another-nih-institute",
+            "label": "Another NIH Institute",
             "icon": "Error",
             "color": "WARNING"
          },
          {
-            "code": "yes,-by-an-niddk-source",
-            "label": "yes, by an NIDDK source",
+            "code": "niddk",
+            "label": "NIDDK",
             "icon": "Error",
             "color": "WARNING"
          }
@@ -328,20 +322,20 @@
    },
    {
       "code": "Published",
-      "label": "Requires Published Article?",
+      "label": "Repository Supports...",
       "question": "Will the dataset support any published academic work?",
       "description": "Will your data be published in conjunction with a research paper?",
       "inputType": "MULTI",
       "options": [
          {
-            "code": "yes",
-            "label": "yes",
+            "code": "published-work",
+            "label": "Published work",
             "icon": "School",
             "color": "SUCCESS"
          },
          {
-            "code": "no",
-            "label": "no",
+            "code": "unpublished-work",
+            "label": "Unpublished work",
             "icon": "Close",
             "color": "INFO"
          }
@@ -371,136 +365,6 @@
             "label": "Yes, DOI only",
             "icon": "",
             "color": "SUCCESS"
-         }
-      ]
-   },
-   {
-      "code": "Cost",
-      "label": "Cost Involved?",
-      "description": "Does depositing data involve costs to the depositor?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "no",
-            "label": "no",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         },
-         {
-            "code": "sometimes",
-            "label": "sometimes",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "yes",
-            "label": "yes",
-            "icon": "Error",
-            "color": "WARNING"
-         }
-      ]
-   },
-   {
-      "code": "SizeLimits",
-      "label": "Data Size Limits?",
-      "description": "Are you willing to consider repositories with size limits?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "no",
-            "label": "no",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         },
-         {
-            "code": "yes",
-            "label": "yes",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "contact",
-            "label": "contact",
-            "icon": "Error",
-            "color": "WARNING"
-         }
-      ]
-   },
-   {
-      "code": "Restrictions",
-      "label": "Data Access Restrictions",
-      "description": "Does the repository provide access to the data with minimal or no restrictions?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "-",
-            "label": " ",
-            "icon": "",
-            "color": " "
-         },
-         {
-            "code": "no-restrictions",
-            "label": "no restrictions",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         },
-         {
-            "code": "minimal-restrictions",
-            "label": "minimal restrictions",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "significant-restrictions",
-            "label": "significant restrictions",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "significant-but-not-justified-restrictions",
-            "label": "significant but not justified restrictions",
-            "icon": "Error",
-            "color": "WARNING"
-         }
-      ]
-   },
-   {
-      "code": "Application",
-      "label": "Application Required?",
-      "description": "Are you willing to consider repositories where an application is required to access the data?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "yes",
-            "label": "yes",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "no",
-            "label": "no",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         }
-      ]
-   },
-   {
-      "code": "ContactPerson",
-      "label": "Contact Person Required?",
-      "description": "Do you need to have a person to contact?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "yes",
-            "label": "yes",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         },
-         {
-            "code": "no",
-            "label": "no",
-            "icon": "Cancel",
-            "color": "WARNING"
          }
       ]
    }
