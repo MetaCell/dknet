@@ -1,4 +1,4 @@
-import React  from "react"
+import React from "react"
 
 //components
 import Box from '@mui/material/Box'
@@ -14,6 +14,8 @@ import RadioGroupWidget from "./widgets/RadioWidget";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import { useFilterContext } from "../context/Context";
+import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
+
 
 const {
   grey700,
@@ -42,17 +44,24 @@ const CustomRadioGroup = ({ data }) => {
           color: grey700
         }}
       >
-        <Stack direction="row" alignItems='center'>
+        <Stack direction="row" alignItems='center' justifyContent="space-between">
           <Typography component='h4'>
             {data.label}
           </Typography>
-          <Tooltip title={data.description}>
-            <IconButton>
-              <HelpOutlineIcon sx={{
-                color: grey400,
+          <Stack direction="row">
+            <IconButton sx={{ p: '2px' }}>
+              <CleaningServicesOutlinedIcon sx={{
+                color: '#98A2B3'
               }} />
             </IconButton>
-          </Tooltip>
+            <Tooltip title={data.description}>
+              <IconButton sx={{ p: '2px' }}>
+                <HelpOutlineIcon sx={{
+                  color: grey400,
+                }} />
+              </IconButton>
+            </Tooltip>
+          </Stack>
         </Stack>
       </FormLabel>
       <FormControl>
