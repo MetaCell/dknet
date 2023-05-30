@@ -43,7 +43,7 @@ const RepositoryCard = (props) => {
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
-    <Card sx={{ position: 'relative', maxWidth: 789, marginBottom: '1rem' }} className={isBestMatch && "successCard"}>
+    <Card sx={{ position: 'relative', marginBottom: '1rem' }} className={isBestMatch && "successCard"}>
       {
         isBestMatch &&
           <Box pr={3} position='absolute' right={0} top='-3px'>
@@ -60,7 +60,7 @@ const RepositoryCard = (props) => {
                 underline='hover'
                 variant="subtitle1" color="grey.800"
               >
-                {repository.label} - Score: {repository.pctMatch}% ({repository.score} points)
+                {repository.label} - Score: {repository.pctMatch}%
               </CardTitleLink>
             </Tooltip>
           </Box>

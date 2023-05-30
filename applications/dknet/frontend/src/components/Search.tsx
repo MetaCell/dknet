@@ -1,9 +1,10 @@
-import React, { useEffect }  from "react";
+import React, { useEffect } from "react";
 
 //components
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
 
 //icons
 import { useFilterContext } from "../context/Context";
@@ -21,7 +22,7 @@ const Search = () => {
       }
     })
   }
-  
+
   return (
     <Paper
       component="form"
@@ -29,6 +30,7 @@ const Search = () => {
         p: '8px', display: 'flex', alignItems: 'center', border: '1px solid #EAECF0',
         boxShadow: '0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03)',
         borderRadius: '12px',
+        minWidth: '640px'
       }}
     >
       <CustomAutoComplete
@@ -39,7 +41,6 @@ const Search = () => {
         placeholder={context.allFilters[0].label}
         noOptionsText={"No match"}
       />
-
       <Divider sx={{ height: 40, mr: 1, ml: 1 }} orientation="vertical" />
       <CustomAutoComplete
         options={context.allFilters[1].options}
