@@ -60,7 +60,7 @@ const RepositoryCard = (props) => {
                 underline='hover'
                 variant="subtitle1" color="grey.800"
               >
-                {repository.label} - Score: {repository.pctMatch}% ({repository.score} points)
+                {repository.label} - Score: {repository.pctMatch}%
               </CardTitleLink>
             </Tooltip>
           </Box>
