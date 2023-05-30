@@ -2,43 +2,13 @@
    {
       "code": "DataType",
       "label": "Data Type",
-      "question": "What type(s) of data will you be sharing?",
+      "question": " What is your primary data type?  If more than one, select “Multiple”.",
       "description": "Are your data primarily of one data type, e.g., imaging, or have you collected multiple primary data types, e.g., correlated imaging and physiology.  ",
       "inputType": "MULTI",
       "options": [
          {
-            "code": "multiple-data-types",
-            "label": "Multiple data types",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "bioactivity-screens",
-            "label": "Bioactivity screens",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "clinical-trial",
-            "label": "Clinical trial",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "crystallography",
-            "label": "Crystallography",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "electron-microscopy",
-            "label": "Electron microscopy",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "gene-expression",
-            "label": "Gene expression",
+            "code": "genotype-phenotype",
+            "label": "Genotype-Phenotype",
             "icon": "",
             "color": ""
          },
@@ -49,14 +19,8 @@
             "color": ""
          },
          {
-            "code": "genotype-phenotype",
-            "label": "Genotype-Phenotype",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "imaging",
-            "label": "Imaging",
+            "code": "gene-expression",
+            "label": "Gene expression",
             "icon": "",
             "color": ""
          },
@@ -67,8 +31,50 @@
             "color": ""
          },
          {
-            "code": "kinetics",
-            "label": "Kinetics",
+            "code": "nmr-spectroscopy",
+            "label": "NMR spectroscopy",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "crystallography",
+            "label": "Crystallography",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "clinical-trial",
+            "label": "Clinical trial",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "sequence",
+            "label": "Sequence",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "protein-structure",
+            "label": "Protein structure",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "electron-microscopy",
+            "label": "Electron microscopy",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "cytometry",
+            "label": "Cytometry",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "proteomic",
+            "label": "Proteomic",
             "icon": "",
             "color": ""
          },
@@ -85,20 +91,8 @@
             "color": ""
          },
          {
-            "code": "protein-structure",
-            "label": "Protein structure",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "proteomic",
-            "label": "Proteomic",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "sequence",
-            "label": "Sequence",
+            "code": "multiple-data-types",
+            "label": "Multiple data types",
             "icon": "",
             "color": ""
          }
@@ -107,7 +101,7 @@
    {
       "code": "DomainType",
       "label": "Domain",
-      "question": "Which domain(s) does the data belong to?",
+      "question": " Do your data come from any of the following scientific domains?  If not, leave blank. ",
       "description": "Select the primary domain of your data;  if your domain is not on the list, select other.",
       "inputType": "MULTI",
       "options": [
@@ -207,7 +201,7 @@
       "code": "HumanSubjectInvolved",
       "label": "Human Subjects?",
       "question": "Are human subjects involved?",
-      "description": "will you be sharing data collected from humans",
+      "description": "Will you be sharing data collected from humans?",
       "inputType": "MULTI",
       "options": [
          {
@@ -227,7 +221,7 @@
    {
       "code": "PhiHippa",
       "label": "PHI/HIPPA compliance?",
-      "question": "Will the dataset handling have to comply with HIPAA?",
+      "question": "Does the dataset contain sensitive data (e.g.PHI), and have to comply with HIPAA?",
       "description": "HIPAA= Health Information Portability and Accountability Act.  A US regulation governing the sharing of protected health information.  Other countries have other governing regulations.",
       "inputType": "MULTI",
       "options": [
@@ -254,13 +248,13 @@
       "options": [
          {
             "code": "yes",
-            "label": "yes",
+            "label": "Yes",
             "icon": "Sync",
             "color": "SUCCESS"
          },
          {
             "code": "no",
-            "label": "no",
+            "label": "No",
             "icon": "SyncDisabled",
             "color": "WARNING"
          }
