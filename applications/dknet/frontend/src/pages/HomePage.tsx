@@ -21,11 +21,13 @@ const HomePage = () => {
   const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
 
   return (
-    <Container>
-      {
-        isFiltersEmpty ? <LaunchPage /> : <RepositoriesList />
-      }
-    </Container>
+    <Box sx={{ background: isFiltersEmpty? '': '#fff' }}>
+      <Container>
+        {
+          isFiltersEmpty ? <LaunchPage /> : <RepositoriesList />
+        }
+      </Container>
+    </Box>
   )
 }
 const HomePageWithLayout = withLayout(MainLayout)(HomePage);

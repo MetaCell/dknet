@@ -27,7 +27,7 @@ const Header = () => {
 
   const redirectToFeedback = () => {
     window.open(
-      'https://docs.google.com/forms/d/1STDRw2utI994HViAmTTjvKQvr7PDf_7KGNXRbdZwLGM/edit?ts=646dd444',
+      'https://docs.google.com/forms/d/e/1FAIpQLSf1aD1Skpp4kV8w3cadMjdRdll3es9h3tj6b6jO8h0s1P9-iA/viewform',
       '_blank'
     )
   }

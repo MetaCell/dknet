@@ -2,43 +2,13 @@
    {
       "code": "DataType",
       "label": "Data Type",
-      "question": "What type(s) of data will you be sharing?",
+      "question": " What is your primary data type?  If more than one, select “Multiple”.",
       "description": "Are your data primarily of one data type, e.g., imaging, or have you collected multiple primary data types, e.g., correlated imaging and physiology.  ",
       "inputType": "MULTI",
       "options": [
          {
-            "code": "multiple-data-types",
-            "label": "Multiple data types",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "bioactivity-screens",
-            "label": "Bioactivity screens",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "clinical-trial",
-            "label": "Clinical trial",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "crystallography",
-            "label": "Crystallography",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "electron-microscopy",
-            "label": "Electron microscopy",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "gene-expression",
-            "label": "Gene expression",
+            "code": "genotype-phenotype",
+            "label": "Genotype-Phenotype",
             "icon": "",
             "color": ""
          },
@@ -49,14 +19,8 @@
             "color": ""
          },
          {
-            "code": "genotype-phenotype",
-            "label": "Genotype-Phenotype",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "imaging",
-            "label": "Imaging",
+            "code": "gene-expression",
+            "label": "Gene expression",
             "icon": "",
             "color": ""
          },
@@ -67,8 +31,50 @@
             "color": ""
          },
          {
-            "code": "kinetics",
-            "label": "Kinetics",
+            "code": "nmr-spectroscopy",
+            "label": "NMR spectroscopy",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "crystallography",
+            "label": "Crystallography",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "clinical-trial",
+            "label": "Clinical trial",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "sequence",
+            "label": "Sequence",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "protein-structure",
+            "label": "Protein structure",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "electron-microscopy",
+            "label": "Electron microscopy",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "cytometry",
+            "label": "Cytometry",
+            "icon": "",
+            "color": ""
+         },
+         {
+            "code": "proteomic",
+            "label": "Proteomic",
             "icon": "",
             "color": ""
          },
@@ -85,20 +91,8 @@
             "color": ""
          },
          {
-            "code": "protein-structure",
-            "label": "Protein structure",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "proteomic",
-            "label": "Proteomic",
-            "icon": "",
-            "color": ""
-         },
-         {
-            "code": "sequence",
-            "label": "Sequence",
+            "code": "multiple-data-types",
+            "label": "Multiple data types",
             "icon": "",
             "color": ""
          }
@@ -107,16 +101,10 @@
    {
       "code": "DomainType",
       "label": "Domain",
-      "question": "Which domain(s) does the data belong to?",
+      "question": " Do your data come from any of the following scientific domains?  If not, leave blank. ",
       "description": "Select the primary domain of your data;  if your domain is not on the list, select other.",
       "inputType": "MULTI",
       "options": [
-         {
-            "code": "multiple",
-            "label": "Multiple",
-            "icon": "",
-            "color": ""
-         },
          {
             "code": "addiction-and-hiv",
             "label": "Addiction and HIV",
@@ -211,9 +199,9 @@
    },
    {
       "code": "HumanSubjectInvolved",
-      "label": "Human Subjects Data Supported?",
+      "label": "Human Subjects?",
       "question": "Are human subjects involved?",
-      "description": "will you be sharing data collected from humans",
+      "description": "Will you be sharing data collected from humans?",
       "inputType": "MULTI",
       "options": [
          {
@@ -233,7 +221,7 @@
    {
       "code": "PhiHippa",
       "label": "PHI/HIPPA compliance?",
-      "question": "Will the dataset handling have to comply with HIPAA?",
+      "question": "Does the dataset contain sensitive data (e.g.PHI), and have to comply with HIPAA?",
       "description": "HIPAA= Health Information Portability and Accountability Act.  A US regulation governing the sharing of protected health information.  Other countries have other governing regulations.",
       "inputType": "MULTI",
       "options": [
@@ -260,13 +248,13 @@
       "options": [
          {
             "code": "yes",
-            "label": "yes",
+            "label": "Yes",
             "icon": "Sync",
             "color": "SUCCESS"
          },
          {
             "code": "no",
-            "label": "no",
+            "label": "No",
             "icon": "SyncDisabled",
             "color": "WARNING"
          }
@@ -274,7 +262,7 @@
    },
    {
       "code": "CitationImportance",
-      "label": "Data Citation Important?",
+      "label": "Data Citation Important to you?",
       "question": "How important is data citation to you?",
       "description": "Citing a dataset like you would any other publication ensures that you receive credit if the dataset is reused, but not all repositories support full data citation",
       "inputType": "MULTI",
@@ -301,26 +289,26 @@
    },
    {
       "code": "FundingSource",
-      "label": "Funding Source",
+      "label": "Funder",
       "question": "Is the dataset funded, at least in part, by the NIH?",
       "description": "Some repositories have restrictions on eligible funding sources",
       "inputType": "MULTI",
       "options": [
          {
-            "code": "non-nih",
-            "label": "Non NIH",
+            "code": "non-nih-source",
+            "label": "Non NIH source",
             "icon": "CheckCircle",
             "color": "SUCCESS"
          },
          {
-            "code": "yes,-by-another-nih-source",
-            "label": "yes, by another NIH source",
+            "code": "another-nih-institute",
+            "label": "Another NIH Institute",
             "icon": "Error",
             "color": "WARNING"
          },
          {
-            "code": "yes,-by-an-niddk-source",
-            "label": "yes, by an NIDDK source",
+            "code": "niddk",
+            "label": "NIDDK",
             "icon": "Error",
             "color": "WARNING"
          }
@@ -328,20 +316,20 @@
    },
    {
       "code": "Published",
-      "label": "Requires Published Article?",
+      "label": "Repository Supports...",
       "question": "Will the dataset support any published academic work?",
       "description": "Will your data be published in conjunction with a research paper?",
       "inputType": "MULTI",
       "options": [
          {
-            "code": "yes",
-            "label": "yes",
+            "code": "published-work",
+            "label": "Published work",
             "icon": "School",
             "color": "SUCCESS"
          },
          {
-            "code": "no",
-            "label": "no",
+            "code": "unpublished-work",
+            "label": "Unpublished work",
             "icon": "Close",
             "color": "INFO"
          }
@@ -371,136 +359,6 @@
             "label": "Yes, DOI only",
             "icon": "",
             "color": "SUCCESS"
-         }
-      ]
-   },
-   {
-      "code": "Cost",
-      "label": "Cost Involved?",
-      "description": "Does depositing data involve costs to the depositor?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "no",
-            "label": "no",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         },
-         {
-            "code": "sometimes",
-            "label": "sometimes",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "yes",
-            "label": "yes",
-            "icon": "Error",
-            "color": "WARNING"
-         }
-      ]
-   },
-   {
-      "code": "SizeLimits",
-      "label": "Data Size Limits?",
-      "description": "Are you willing to consider repositories with size limits?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "no",
-            "label": "no",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         },
-         {
-            "code": "yes",
-            "label": "yes",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "contact",
-            "label": "contact",
-            "icon": "Error",
-            "color": "WARNING"
-         }
-      ]
-   },
-   {
-      "code": "Restrictions",
-      "label": "Data Access Restrictions",
-      "description": "Does the repository provide access to the data with minimal or no restrictions?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "-",
-            "label": " ",
-            "icon": "",
-            "color": " "
-         },
-         {
-            "code": "no-restrictions",
-            "label": "no restrictions",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         },
-         {
-            "code": "minimal-restrictions",
-            "label": "minimal restrictions",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "significant-restrictions",
-            "label": "significant restrictions",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "significant-but-not-justified-restrictions",
-            "label": "significant but not justified restrictions",
-            "icon": "Error",
-            "color": "WARNING"
-         }
-      ]
-   },
-   {
-      "code": "Application",
-      "label": "Application Required?",
-      "description": "Are you willing to consider repositories where an application is required to access the data?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "yes",
-            "label": "yes",
-            "icon": "Error",
-            "color": "WARNING"
-         },
-         {
-            "code": "no",
-            "label": "no",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         }
-      ]
-   },
-   {
-      "code": "ContactPerson",
-      "label": "Contact Person Required?",
-      "description": "Do you need to have a person to contact?",
-      "inputType": "MULTI",
-      "options": [
-         {
-            "code": "yes",
-            "label": "yes",
-            "icon": "CheckCircle",
-            "color": "SUCCESS"
-         },
-         {
-            "code": "no",
-            "label": "no",
-            "icon": "Cancel",
-            "color": "WARNING"
          }
       ]
    }
