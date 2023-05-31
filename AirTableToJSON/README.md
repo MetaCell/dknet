@@ -15,7 +15,7 @@ The JSON output has the following fields...
 |   code  | The repository field to filter on |
 |   label | The string to use |
 |   question  | The question to use in the filtering assistant |
-|   inputType | The type of input (e.g. Single, Multi-select, Boolean) |
+|   inputType | The type of input (e.g. Single, Multi-select, Boolean, Read only) |
 |   options   | The possible answers |
 |   |   code: The value to search for |
 |   |   label: The string to use for the answer |

@@ -93,8 +93,8 @@ request.get({ url: url, headers: headers }, function (error, response, body)
         'description': fields['Help text'], // check if this is tooltip or description
         'inputType':
             fields['InputType'],
-            //'enum': ["SINGLE","MULTI","BOOLEAN"],
-            //'enumNames': ["Single select","Multi select","Boolean"],
+            //'enum': ["SINGLE","MULTI","BOOLEAN","READONLY"],
+            //'enumNames': ["Single select","Multi select","Boolean", "Read only"],
         'options': answers
     };
 });

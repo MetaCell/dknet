@@ -202,7 +202,7 @@
       "label": "Human Subjects?",
       "question": "Are human subjects involved?",
       "description": "Will you be sharing data collected from humans?",
-      "inputType": "MULTI",
+      "inputType": "READONLY",
       "options": [
          {
             "code": "yes",
