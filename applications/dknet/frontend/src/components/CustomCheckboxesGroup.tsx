@@ -19,8 +19,18 @@ const {
   grey700,
   grey400
 } = vars;
-
 const CustomCheckboxesGroup = ({ data }) => {
+  const { context, setContext } = useFilterContext()
+
+  const onClearFilter = () => {
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [data.code]: undefined
+      }
+    })
+  }
 
   return (
     <Box>
@@ -42,7 +52,7 @@ const CustomCheckboxesGroup = ({ data }) => {
                 }} />
               </IconButton>
             </Tooltip>
-            <IconButton sx={{ p: '2px' }}>
+            <IconButton sx={{ p: '2px' }} onClick={onClearFilter}>
               <CleaningServicesOutlinedIcon sx={{
                 color: '#98A2B3'
               }} />

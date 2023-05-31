@@ -14,7 +14,7 @@ import { resetFilters } from "../utils/helpers";
 
 
 const Filters = () => {
-  const { context, setContext, scoreRepositories } = useFilterContext()
+  const { context, setContext } = useFilterContext()
 
   const filters = context.allFilters.slice(2)
 
@@ -30,8 +30,7 @@ const Filters = () => {
   const onClearFilters = () => {
     setContext({
       ...context,
-      filterValues: resetFilters(),
-      allRepositories: scoreRepositories()
+      filterValues: resetFilters()
     })
   }
 
