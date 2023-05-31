@@ -79,8 +79,6 @@ request.get({ url: url, headers: headers }, function (error, response, body)
         const icon = InputIconsArray[index] || '';
         const colors = InputColorsArray[index] || '';
         const weighting = Number(InputWeightsArray[index]) || 1;
-
-        //const weighting = 1 // ToDo: get the weighting from Airtable
         answers.push({
           'code': code,
           'label': inputOption,
