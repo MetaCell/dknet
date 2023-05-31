@@ -438,5 +438,34 @@
             "weighting": 1
          }
       ]
+   },
+   {
+      "code": "Cost",
+      "label": "Cost Involved?",
+      "description": "Does depositing data involve costs to the depositor?",
+      "inputType": "READONLY",
+      "options": [
+         {
+            "code": "no",
+            "label": "no",
+            "icon": "CheckCircle",
+            "color": "SUCCESS",
+            "weighting": 1
+         },
+         {
+            "code": "sometimes",
+            "label": "sometimes",
+            "icon": "Error",
+            "color": "WARNING",
+            "weighting": 1
+         },
+         {
+            "code": "yes",
+            "label": "yes",
+            "icon": "Error",
+            "color": "WARNING",
+            "weighting": 1
+         }
+      ]
    }
 ]
