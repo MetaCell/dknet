@@ -17,14 +17,16 @@ export interface IFilterOptions {
   code: string,
   label: string,
   icon: string,
-  color: string
+  color: string,
+  weighting?: number
 }
 
 export interface IFilter {
   code: string,
   label: string,
   inputType: FilterType,
-  options: IFilterOptions[]
+  options: IFilterOptions[],
+  weighting?: number
 }
 
 export interface IFilterContext {

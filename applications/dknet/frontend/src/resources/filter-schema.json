@@ -38,6 +38,12 @@
                         "Read only"
                     ]
                 },
+                "weighting": {
+                    "type": "number",
+                    "title": "Weighting",
+                    "minimum": 0,
+                    "default": 1
+                },
                 "options": {
                     "type": "array",
                     "items": {
@@ -64,7 +70,13 @@
                                     "Success",
                                     "Warning"
                                 ]
-                            }
+                            },
+                            "weighting": {
+                                "type": "number",
+                                "title": "Weighting",
+                                "minimum": 0,
+                                "default": 1
+                            }            
                         },
                         "required": [
                             "code",

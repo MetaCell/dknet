@@ -9,9 +9,11 @@ export const FilterContext = createContext(null)
 
 const mapFilter = (filter: IFilter): IFilter => ({
   ...filter,
+  weighting: filter?.weighting || 1,
   options: filter.options.map((option) => ({
     ...option,
-    color: option.color?.toLowerCase() || 'info'
+    color: option.color?.toLowerCase() || 'info',
+    weighting: option?.weighting || 1,
   }))
 })
 
@@ -37,30 +39,36 @@ export const FilterProvider = ({ children }) => {
   const setContext = (newContext) => _setContext(_sortRepositories(scoreRepositories(newContext)))
 
   const scoreRepositories = (newContext: IFilterContext): IFilterContext => {
-    const filterValues = Object.entries(newContext.filterValues).filter(([key, value]) => value !== undefined || (Array.isArray(value) && value.length===0))
+    const filterValues = { ...newContext.filterValues }
+    Object.entries(filterValues).forEach(([key, value]) => {
+      if(value === undefined || (Array.isArray(value) && value.length===0)) {
+        delete filterValues[key]
+      }
+    })
+    const usedFilters = newContext.allFilters.filter(f => Object.keys(filterValues).includes(f.code))
     newContext.allRepositories = newContext.allRepositories.map((r) => ({
       ...r,
       score: 0
     }))
     // start scoring the repositories
-    filterValues.forEach(([key, value]) => {
+    usedFilters.forEach(filter => {
+      const value = filterValues[filter.code]
       const filterValue = Array.isArray(value) ? value : [value]
       newContext.allRepositories.forEach((repository) => {
-        const repositoryFilterValue = repository.attributes[key]
-        filterValue.forEach((fv) => {
+        const repositoryFilterValue = repository.attributes[filter.code]
+
+        const filterScore = filterValue.reduce((score, fv) => {
           // every repository attribute value that matches a chosen filter option counts for 1 point
-          const score = repositoryFilterValue.includes(fv.code) ? 1 : 0
-          repository.score += score
-        })
+          return score + (repositoryFilterValue.includes(fv.code) ? fv.weighting : 0)
+        }, 0)
+        repository.score += filterScore * filter.weighting
       })
     })
-    const maxPossibleScore = filterValues.reduce((currentValue, fv) => {
-      // compute max possible score from filtervalues
-      const numberOfPointsPerOptions = 1 // each option is 1 point
-      if(Array.isArray(fv[1])) {
-        return currentValue + fv[1].length * numberOfPointsPerOptions // length of array * number of points per option
-      }
-      return currentValue + 1 * numberOfPointsPerOptions // numer of points * 1 option
+    // compute max possible score from filtervalues
+    const maxPossibleScore = usedFilters.reduce((c, filter) => {
+      const value = filterValues[filter.code]
+      const filterValue = Array.isArray(value) ? value : [value]
+      return c + filter.weighting * filterValue.reduce((c2, filterOption) => c2 + filterOption.weighting, 0)
     }, 0)
 
     // compute the % match by dividing the score by the max possible score
