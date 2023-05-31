@@ -104,6 +104,7 @@
       "question": " Do your data come from any of the following scientific domains?  If not, leave blank. ",
       "description": "Select the primary domain of your data;  if your domain is not on the list, select other.",
       "inputType": "MULTI",
+      "weighting": 2,
       "options": [
          {
             "code": "addiction-and-hiv",

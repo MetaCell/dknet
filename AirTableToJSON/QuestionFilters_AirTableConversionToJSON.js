@@ -77,11 +77,13 @@ request.get({ url: url, headers: headers }, function (error, response, body)
         const code = inputOption.toLowerCase().replace(/\s+/g, '-');
         const icon = InputIconsArray[index] || '';
         const colors = InputColorsArray[index] || '';
+        const weighting = 1 // ToDo: get the weighting from Airtable
         answers.push({
           'code': code,
           'label': inputOption,
           'icon': icon.replace(/\s+/g, ''),
           'color': colors,
+          'weighting': weighting
         });
       });
       };
@@ -95,6 +97,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
             fields['InputType'],
             //'enum': ["SINGLE","MULTI","BOOLEAN","READONLY"],
             //'enumNames': ["Single select","Multi select","Boolean", "Read only"],
+        'weighting': 1, // ToDo: get the weighting from Airtable
         'options': answers
     };
 });
