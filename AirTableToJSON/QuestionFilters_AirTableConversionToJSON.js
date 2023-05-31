@@ -70,6 +70,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
     let inputOptionsArray = fields['InputOptions'] ? fields['InputOptions'].split(';'):[];
     let InputIconsArray = fields['InputIcons'] ? fields['InputIcons'].split(';'):[];
     let InputColorsArray = fields['InputColors'] ? fields['InputColors'].split(';'):[];
+    let InputWeightsArray = fields['InputWeights'] ? fields['InputWeights'].split(';'):[];
     let answers = [];
     if (inputOptionsArray.length > 0){
       inputOptionsArray.forEach(function(inputOption,index)
@@ -77,7 +78,9 @@ request.get({ url: url, headers: headers }, function (error, response, body)
         const code = inputOption.toLowerCase().replace(/\s+/g, '-');
         const icon = InputIconsArray[index] || '';
         const colors = InputColorsArray[index] || '';
-        const weighting = 1 // ToDo: get the weighting from Airtable
+        const weighting = Number(InputWeightsArray[index]) || 1;
+
+        //const weighting = 1 // ToDo: get the weighting from Airtable
         answers.push({
           'code': code,
           'label': inputOption,
@@ -97,7 +100,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
             fields['InputType'],
             //'enum': ["SINGLE","MULTI","BOOLEAN","READONLY"],
             //'enumNames': ["Single select","Multi select","Boolean", "Read only"],
-        'weighting': 1, // ToDo: get the weighting from Airtable
+        'weighting': fields['Weighting'], // This is the weighting for the filter as a whole
         'options': answers
     };
 });

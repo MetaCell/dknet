@@ -5,96 +5,112 @@
       "question": " What is your primary data type?  If more than one, select “Multiple”.",
       "description": "Are your data primarily of one data type, e.g., imaging, or have you collected multiple primary data types, e.g., correlated imaging and physiology.  ",
       "inputType": "MULTI",
+      "weighting": "10",
       "options": [
          {
             "code": "genotype-phenotype",
             "label": "Genotype-Phenotype",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "genomic",
             "label": "Genomic",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "gene-expression",
             "label": "Gene expression",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "interaction/pathways",
             "label": "Interaction/pathways",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "nmr-spectroscopy",
             "label": "NMR spectroscopy",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "crystallography",
             "label": "Crystallography",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "clinical-trial",
             "label": "Clinical trial",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "sequence",
             "label": "Sequence",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "protein-structure",
             "label": "Protein structure",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "electron-microscopy",
             "label": "Electron microscopy",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "cytometry",
             "label": "Cytometry",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "proteomic",
             "label": "Proteomic",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "neuron-reconstruction",
             "label": "Neuron reconstruction",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "physiological",
             "label": "Physiological",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "multiple-data-types",
             "label": "Multiple data types",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          }
       ]
    },
@@ -104,97 +120,112 @@
       "question": " Do your data come from any of the following scientific domains?  If not, leave blank. ",
       "description": "Select the primary domain of your data;  if your domain is not on the list, select other.",
       "inputType": "MULTI",
-      "weighting": 2,
+      "weighting": "10",
       "options": [
          {
             "code": "addiction-and-hiv",
             "label": "Addiction and HIV",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "cancer",
             "label": "Cancer",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "chemistry,-chemical-biology-and-biochemistry",
             "label": "Chemistry, chemical biology and biochemistry",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "diabetes,-digestive-and-kidney-diseases",
             "label": "Diabetes, Digestive and Kidney Diseases",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "enzymology",
             "label": "Enzymology",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "fly-genetics",
             "label": "Fly genetics",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "immunology",
             "label": "Immunology",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "influenza",
             "label": "Influenza",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "metabolomics",
             "label": "Metabolomics",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "microbiome",
             "label": "Microbiome",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "mouse-genetics",
             "label": "Mouse genetics",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "neuroscience",
             "label": "Neuroscience",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "protein",
             "label": "Protein",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "structural-biology",
             "label": "Structural biology",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          },
          {
             "code": "zebrafish-genetics",
             "label": "Zebrafish genetics",
             "icon": "",
-            "color": ""
+            "color": "",
+            "weighting": 1
          }
       ]
    },
@@ -203,19 +234,22 @@
       "label": "Human Subjects?",
       "question": "Are human subjects involved?",
       "description": "Will you be sharing data collected from humans?",
-      "inputType": "READONLY",
+      "inputType": "MULTI",
+      "weighting": "5",
       "options": [
          {
             "code": "yes",
             "label": "Yes",
             "icon": "Group",
-            "color": "SUCCESS"
+            "color": "SUCCESS",
+            "weighting": 1
          },
          {
             "code": "no",
             "label": "No",
             "icon": "GroupOff",
-            "color": "INFO"
+            "color": "INFO",
+            "weighting": 1
          }
       ]
    },
@@ -225,18 +259,21 @@
       "question": "Does the dataset contain sensitive data (e.g.PHI), and have to comply with HIPAA?",
       "description": "HIPAA= Health Information Portability and Accountability Act.  A US regulation governing the sharing of protected health information.  Other countries have other governing regulations.",
       "inputType": "MULTI",
+      "weighting": "1",
       "options": [
          {
             "code": "yes",
             "label": "Yes",
             "icon": "HealthandSafety",
-            "color": "SUCCESS"
+            "color": "SUCCESS",
+            "weighting": 1
          },
          {
             "code": "no",
             "label": "No",
             "icon": "RemoveModerator",
-            "color": "INFO"
+            "color": "INFO",
+            "weighting": 1
          }
       ]
    },
@@ -246,18 +283,21 @@
       "question": "Will the data be updated frequently, i.e., they are part of an ongoing study that will uploaded in batches?",
       "description": "Do you anticipate publishing multiple versions of a given data set or will you deposit the data at the study end?",
       "inputType": "MULTI",
+      "weighting": "1",
       "options": [
          {
             "code": "yes",
             "label": "Yes",
             "icon": "Sync",
-            "color": "SUCCESS"
+            "color": "SUCCESS",
+            "weighting": 1
          },
          {
             "code": "no",
             "label": "No",
             "icon": "SyncDisabled",
-            "color": "WARNING"
+            "color": "WARNING",
+            "weighting": 1
          }
       ]
    },
@@ -267,24 +307,28 @@
       "question": "How important is data citation to you?",
       "description": "Citing a dataset like you would any other publication ensures that you receive credit if the dataset is reused, but not all repositories support full data citation",
       "inputType": "MULTI",
+      "weighting": "1",
       "options": [
          {
             "code": "not-at-all",
             "label": "Not at all",
             "icon": "HdrStrong",
-            "color": "WARNING"
+            "color": "WARNING",
+            "weighting": 1
          },
          {
             "code": "somewhat",
             "label": "Somewhat",
             "icon": "JoinRight",
-            "color": "INFO"
+            "color": "INFO",
+            "weighting": 1
          },
          {
             "code": "crucial",
             "label": "Crucial",
             "icon": "HdrWeak",
-            "color": "SUCCESS"
+            "color": "SUCCESS",
+            "weighting": 1
          }
       ]
    },
@@ -294,24 +338,28 @@
       "question": "Is the dataset funded, at least in part, by the NIH?",
       "description": "Some repositories have restrictions on eligible funding sources",
       "inputType": "MULTI",
+      "weighting": "1",
       "options": [
          {
             "code": "non-nih-source",
             "label": "Non NIH source",
             "icon": "CheckCircle",
-            "color": "SUCCESS"
+            "color": "SUCCESS",
+            "weighting": 1
          },
          {
             "code": "another-nih-institute",
             "label": "Another NIH Institute",
             "icon": "Error",
-            "color": "WARNING"
+            "color": "WARNING",
+            "weighting": 1
          },
          {
             "code": "niddk",
             "label": "NIDDK",
             "icon": "Error",
-            "color": "WARNING"
+            "color": "WARNING",
+            "weighting": 1
          }
       ]
    },
@@ -321,18 +369,21 @@
       "question": "Will the dataset support any published academic work?",
       "description": "Will your data be published in conjunction with a research paper?",
       "inputType": "MULTI",
+      "weighting": "1",
       "options": [
          {
             "code": "published-work",
             "label": "Published work",
             "icon": "School",
-            "color": "SUCCESS"
+            "color": "SUCCESS",
+            "weighting": 1
          },
          {
             "code": "unpublished-work",
             "label": "Unpublished work",
             "icon": "Close",
-            "color": "INFO"
+            "color": "INFO",
+            "weighting": 1
          }
       ]
    },
@@ -342,24 +393,49 @@
       "question": "Will you need a PID for the published dataset?",
       "description": "Some funders and journals (NIH included) require that your dataset be assigned a persistent identifier (PID).  Some specifically require a DOI.",
       "inputType": "MULTI",
+      "weighting": "1",
       "options": [
          {
             "code": "no",
             "label": "No",
             "icon": "",
-            "color": "WARNING"
+            "color": "WARNING",
+            "weighting": 1
          },
          {
             "code": "yes,-any",
             "label": "Yes, any",
             "icon": "",
-            "color": "SUCCESS"
+            "color": "SUCCESS",
+            "weighting": 1
          },
          {
             "code": "yes,-doi-only",
             "label": "Yes, DOI only",
             "icon": "",
-            "color": "SUCCESS"
+            "color": "SUCCESS",
+            "weighting": 1
+         }
+      ]
+   },
+   {
+      "code": "ContactPerson",
+      "label": "Contact Person Available",
+      "inputType": "READONLY",
+      "options": [
+         {
+            "code": "yes",
+            "label": "yes",
+            "icon": "CheckCircle",
+            "color": "SUCCESS",
+            "weighting": 1
+         },
+         {
+            "code": "no",
+            "label": "no",
+            "icon": "Cancel",
+            "color": "WARNING",
+            "weighting": 1
          }
       ]
    }
