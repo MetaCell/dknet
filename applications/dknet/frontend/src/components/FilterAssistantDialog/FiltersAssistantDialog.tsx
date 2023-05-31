@@ -23,24 +23,11 @@ const Transition = React.forwardRef(function Transition(
 export default function FiltersAssistantDialog({ open, setOpen }) {
   const [tabValue, setTabValue] = useState(0);
   const [progress, setProgress] = useState(0);
-  const { context, setContext } = useFilterContext()
-  const [filters, setFilters] = useState<any>([])
+  const { context } = useFilterContext()
   const [height, setHeight] = useState([]);
   const [translateValue, setTranslateValue] = useState(0);
 
-  const questionsTabs = filters.reduce((filtered, option) => {
-    if (option?.question) {
-      filtered.push(option);
-    }
-    return filtered;
-  }, []);
-
-
-  useEffect(() => {
-    // TODO: apply context.filterValues on the allFilters and create the filters
-    const filters = context.allFilters //
-    setFilters(filters)
-  }, [context])
+  const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
   const handleClose = () => {
     setOpen(false);
