@@ -30,8 +30,7 @@ const Filters = () => {
   const onClearFilters = () => {
     setContext({
       ...context,
-      filterValues: resetFilters(),
-      allRepositories: scoreRepositories()
+      filterValues: resetFilters()
     })
   }
 
