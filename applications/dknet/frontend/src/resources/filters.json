@@ -29,6 +29,13 @@
             "weighting": 1
          },
          {
+            "code": "imaging",
+            "label": "Imaging",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
             "code": "interaction/pathways",
             "label": "Interaction/pathways",
             "icon": "",
