@@ -5,7 +5,7 @@
           "url": "https://scicrunch.org/resolver/SCR_004434",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "imaging"
                ],
                "DomainType": [
                     "neuroscience"
@@ -713,7 +713,7 @@
           "url": "https://scicrunch.org/resolver/SCR_003207",
           "attributes": {
                "DataType": [
-                    "electron-microscopy"
+                    "microscopy"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -973,64 +973,6 @@
           }
      },
      {
-          "code": "niddk-information-network-(dknet)",
-          "label": "NIDDK Information Network (dkNET)",
-          "url": "https://scicrunch.org/resolver/SCR_001606",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "diabetes,-digestive-and-kidney-diseases"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih-source",
-                    "another-nih-institute",
-                    "-niddk",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    "somewhat",
-                    "crucial",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "published-work",
-                    "unpublished-work"
-               ],
-               "PIDQuestion": [
-                    "yes,-doi-only",
-                    "yes,-any",
-                    "no",
-                    ""
-               ],
-               "ContactPerson": [
-                    "yes"
-               ]
-          }
-     },
-     {
           "code": "database-of-interacting-proteins-(dip)",
           "label": "Database of Interacting Proteins (DIP)",
           "url": "https://scicrunch.org/resolver/SCR_003167",
@@ -1243,60 +1185,6 @@
                "PIDQuestion": [
                     "yes,-doi-only",
                     "yes,-any",
-                    "no",
-                    ""
-               ],
-               "ContactPerson": [
-                    "yes"
-               ]
-          }
-     },
-     {
-          "code": "1000-functional-connectomes-project",
-          "label": "1000 Functional Connectomes Project",
-          "url": "https://scicrunch.org/resolver/SCR_005361",
-          "attributes": {
-               "DataType": [
-                    "imaging"
-               ],
-               "DomainType": [
-                    "neuroscience"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih-source",
-                    "another-nih-institute",
-                    "-niddk",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "crucial",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "significant-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "yes"
-               ],
-               "Published": [
-                    "published-work",
-                    "unpublished-work"
-               ],
-               "PIDQuestion": [
                     "no",
                     ""
                ],
@@ -1520,7 +1408,7 @@
           "url": "https://scicrunch.org/resolver/SCR_006542",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "clinical-trial"
                ],
                "DomainType": [
                     "diabetes,-digestive-and-kidney-diseases"
@@ -1551,7 +1439,7 @@
                     ""
                ],
                "PhiHippa": [
-                    "no"
+                    "yes"
                ],
                "Published": [
                     "published-work",
@@ -1782,7 +1670,7 @@
           "url": "https://scicrunch.org/resolver/SCR_003510",
           "attributes": {
                "DataType": [
-                    "imaging"
+                    "microscopy"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -1998,7 +1886,7 @@
           "url": "https://scicrunch.org/resolver/SCR_006549",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "genotype-phenotype"
                ],
                "DomainType": [
                     "fly-genetics"
@@ -2590,7 +2478,7 @@
           "url": "https://scicrunch.org/resolver/SCR_005031",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "imaging"
                ],
                "DomainType": [
                     "neuroscience"
@@ -3345,7 +3233,7 @@
           "url": "https://scicrunch.org/resolver/SCR_017421",
           "attributes": {
                "DataType": [
-                    "imaging"
+                    "microscopy"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -3452,7 +3340,7 @@
           "url": "https://scicrunch.org/resolver/SCR_004312",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "protein-structure"
                ],
                "DomainType": [
                     "structural-biology"
@@ -3720,7 +3608,7 @@
           "url": "https://scicrunch.org/resolver/SCR_006506",
           "attributes": {
                "DataType": [
-                    "electron-microscopy"
+                    "microscopy"
                ],
                "DomainType": [],
                "SizeLimits": [

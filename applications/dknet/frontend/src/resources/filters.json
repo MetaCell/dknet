@@ -85,6 +85,13 @@
             "weighting": 1
          },
          {
+            "code": "microscopy",
+            "label": "Microscopy",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
             "code": "cytometry",
             "label": "Cytometry",
             "icon": "",
