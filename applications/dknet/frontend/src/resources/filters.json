@@ -244,6 +244,51 @@
       ]
    },
    {
+      "code": "SpeciesSpecific",
+      "label": "Species Specific Data",
+      "question": "Does your data come from a particular species?",
+      "description": "Which species are used in your data set?",
+      "inputType": "MULTI",
+      "weighting": "10",
+      "options": [
+         {
+            "code": "human",
+            "label": "Human",
+            "icon": "Person",
+            "color": "INFO",
+            "weighting": 1
+         },
+         {
+            "code": "mouse",
+            "label": "Mouse",
+            "icon": "Pets",
+            "color": "INFO",
+            "weighting": 1
+         },
+         {
+            "code": "fly",
+            "label": "Fly",
+            "icon": "BugReport",
+            "color": "INFO",
+            "weighting": 1
+         },
+         {
+            "code": "zebrafish",
+            "label": "Zebrafish",
+            "icon": "SetMeal",
+            "color": "INFO",
+            "weighting": 1
+         },
+         {
+            "code": "no",
+            "label": "No",
+            "icon": "CheckCircle",
+            "color": "SUCCESS",
+            "weighting": 1
+         }
+      ]
+   },
+   {
       "code": "HumanSubjectInvolved",
       "label": "Human Subjects?",
       "question": "Are human subjects involved?",
