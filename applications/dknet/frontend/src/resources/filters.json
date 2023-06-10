@@ -249,7 +249,7 @@
       "question": "Does your data come from a particular species?",
       "description": "Which species are used in your data set?",
       "inputType": "MULTI",
-      "weighting": "10",
+      "weighting": "8",
       "options": [
          {
             "code": "human",
@@ -284,30 +284,6 @@
             "label": "No",
             "icon": "CheckCircle",
             "color": "SUCCESS",
-            "weighting": 1
-         }
-      ]
-   },
-   {
-      "code": "HumanSubjectInvolved",
-      "label": "Human Subjects?",
-      "question": "Are human subjects involved?",
-      "description": "Will you be sharing data collected from humans?",
-      "inputType": "MULTI",
-      "weighting": "5",
-      "options": [
-         {
-            "code": "yes",
-            "label": "Yes",
-            "icon": "Group",
-            "color": "SUCCESS",
-            "weighting": 1
-         },
-         {
-            "code": "no",
-            "label": "No",
-            "icon": "GroupOff",
-            "color": "INFO",
             "weighting": 1
          }
       ]
