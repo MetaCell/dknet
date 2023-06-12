@@ -2,7 +2,7 @@
      {
           "code": "nimh-data-archive",
           "label": "NIMH Data Archive",
-          "url": "https://scicrunch.org/resolver/SCR_004434",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004434/resolver",
           "attributes": {
                "DataType": [
                     "imaging"
@@ -54,14 +54,14 @@
                     "no"
                ],
                "SpeciesSpecific": [
-                    "no"
+                    "human"
                ]
           }
      },
      {
           "code": "strenda-",
           "label": "STRENDA ",
-          "url": "https://scicrunch.org/resolver/SCR_017422",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017422/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -121,7 +121,7 @@
      {
           "code": "european-genome-phenome-archive",
           "label": "European Genome phenome Archive",
-          "url": "https://scicrunch.org/resolver/SCR_004944",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004944/resolver",
           "attributes": {
                "DataType": [
                     "genotype-phenotype"
@@ -176,7 +176,7 @@
      {
           "code": "cambridge-crystallographic-data-centre-(ccdc)",
           "label": "Cambridge Crystallographic Data Centre (CCDC)",
-          "url": "https://scicrunch.org/resolver/SCR_014707",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014707/resolver",
           "attributes": {
                "DataType": [
                     "crystallography"
@@ -235,7 +235,7 @@
      {
           "code": "intact",
           "label": "IntAct",
-          "url": "https://scicrunch.org/resolver/SCR_006944",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006944/resolver",
           "attributes": {
                "DataType": [
                     "interaction/pathways"
@@ -290,7 +290,7 @@
      {
           "code": "cancer-nanotechnology-laboratory-(cananolab)",
           "label": "Cancer Nanotechnology Laboratory (caNanoLab)",
-          "url": "https://scicrunch.org/resolver/SCR_013717",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013717/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -347,7 +347,7 @@
      {
           "code": "peptideatlas",
           "label": "PeptideAtlas",
-          "url": "https://scicrunch.org/resolver/SCR_006783",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006783/resolver",
           "attributes": {
                "DataType": [
                     "proteomic"
@@ -404,7 +404,7 @@
      {
           "code": "physionet",
           "label": "PhysioNet",
-          "url": "https://scicrunch.org/resolver/SCR_007345",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_007345/resolver",
           "attributes": {
                "DataType": [
                     "physiological"
@@ -463,7 +463,7 @@
      {
           "code": "coherent-x-ray-imaging-data-bank-(cxidb)",
           "label": "Coherent X-Ray Imaging Data Bank (CXIDB)",
-          "url": "https://scicrunch.org/resolver/SCR_014722",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014722/resolver",
           "attributes": {
                "DataType": [
                     "imaging"
@@ -524,7 +524,7 @@
      {
           "code": "universal-protein-resource",
           "label": "Universal Protein Resource",
-          "url": "https://scicrunch.org/resolver/SCR_002380",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002380/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -582,7 +582,7 @@
      {
           "code": "protein-circular-dichroism-data-bank-(pcddb)",
           "label": "Protein Circular Dichroism Data Bank (PCDDB)",
-          "url": "https://scicrunch.org/resolver/SCR_017428",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017428/resolver",
           "attributes": {
                "DataType": [
                     "protein-structure"
@@ -637,7 +637,7 @@
      {
           "code": "ncbi-assembly-archive-viewer",
           "label": "NCBI Assembly Archive Viewer",
-          "url": "https://scicrunch.org/resolver/SCR_012917",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012917/resolver",
           "attributes": {
                "DataType": [
                     "genomic"
@@ -692,7 +692,7 @@
      {
           "code": "mendeley-data",
           "label": "Mendeley Data",
-          "url": "https://scicrunch.org/resolver/SCR_015671",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_015671/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -751,7 +751,7 @@
      {
           "code": "emdataresource.org",
           "label": "EMDataResource.org",
-          "url": "https://scicrunch.org/resolver/SCR_003207",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003207/resolver",
           "attributes": {
                "DataType": [
                     "microscopy"
@@ -807,7 +807,7 @@
      {
           "code": "network-data-exchange-(ndex)",
           "label": "Network Data Exchange (NDEx)",
-          "url": "https://scicrunch.org/resolver/SCR_003943",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003943/resolver",
           "attributes": {
                "DataType": [
                     "interaction/pathways"
@@ -862,7 +862,7 @@
      {
           "code": "european-nucleotide-archive-(ena)",
           "label": "European Nucleotide Archive (ENA)",
-          "url": "https://scicrunch.org/resolver/SCR_006515",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006515/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -917,7 +917,7 @@
      {
           "code": "proteomexchange",
           "label": "ProteomeXchange",
-          "url": "https://scicrunch.org/resolver/SCR_004055",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004055/resolver",
           "attributes": {
                "DataType": [
                     "proteomic"
@@ -973,7 +973,7 @@
      {
           "code": "kinetic-models-of-biological-systems-(kimosys)",
           "label": "Kinetic Models of Biological Systems (KiMoSys)",
-          "url": "https://scicrunch.org/resolver/SCR_017423",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017423/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -1031,7 +1031,7 @@
      {
           "code": "database-of-interacting-proteins-(dip)",
           "label": "Database of Interacting Proteins (DIP)",
-          "url": "https://scicrunch.org/resolver/SCR_003167",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003167/resolver",
           "attributes": {
                "DataType": [
                     "protein-structure"
@@ -1088,7 +1088,7 @@
      {
           "code": "pdbj---protein-data-bank-japan",
           "label": "PDBj - Protein Data Bank Japan",
-          "url": "https://scicrunch.org/resolver/SCR_008912",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_008912/resolver",
           "attributes": {
                "DataType": [
                     "protein-structure"
@@ -1145,7 +1145,7 @@
      {
           "code": "pubchem-substance",
           "label": "PubChem Substance",
-          "url": "https://scicrunch.org/resolver/SCR_004742",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004742/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -1203,7 +1203,7 @@
      {
           "code": "national-addiction-and-hiv-data-archive-program-(nahdap)",
           "label": "National Addiction and HIV Data Archive Program (NAHDAP)",
-          "url": "https://scicrunch.org/resolver/SCR_000636",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_000636/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -1264,7 +1264,7 @@
      {
           "code": "dna-databank-of-japan-(ddbj)",
           "label": "DNA DataBank of Japan (DDBJ)",
-          "url": "https://scicrunch.org/resolver/SCR_002359",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002359/resolver",
           "attributes": {
                "DataType": [
                     "protein-structure"
@@ -1317,7 +1317,7 @@
      {
           "code": "database-of-genomic-variants-archive-(dgva)",
           "label": "Database of Genomic Variants Archive (DGVa)",
-          "url": "https://scicrunch.org/resolver/SCR_004896",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004896/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -1372,7 +1372,7 @@
      {
           "code": "arrayexpress",
           "label": "ArrayExpress",
-          "url": "https://scicrunch.org/resolver/SCR_002964",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002964/resolver",
           "attributes": {
                "DataType": [
                     "gene-expression"
@@ -1428,7 +1428,7 @@
      {
           "code": "mouse-genome-informatics-(mgi)",
           "label": "Mouse Genome Informatics (MGI)",
-          "url": "https://scicrunch.org/resolver/SCR_006460",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006460/resolver",
           "attributes": {
                "DataType": [
                     "genotype-phenotype"
@@ -1485,7 +1485,7 @@
      {
           "code": "niddk-central-repository",
           "label": "NIDDK Central Repository",
-          "url": "https://scicrunch.org/resolver/SCR_006542",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006542/resolver",
           "attributes": {
                "DataType": [
                     "clinical-trial"
@@ -1544,7 +1544,7 @@
      {
           "code": "zebrafish-information-network-(zfin)",
           "label": "Zebrafish Information Network (ZFIN)",
-          "url": "https://scicrunch.org/resolver/SCR_002560",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002560/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -1599,7 +1599,7 @@
      {
           "code": "mirbase",
           "label": "miRBase",
-          "url": "https://scicrunch.org/resolver/SCR_003152",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003152/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -1654,7 +1654,7 @@
      {
           "code": "uniprotkb",
           "label": "UniProtKB",
-          "url": "https://scicrunch.org/resolver/SCR_004426",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004426/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -1710,7 +1710,7 @@
      {
           "code": "flowrepository",
           "label": "FLOWRepository",
-          "url": "https://scicrunch.org/resolver/SCR_013779",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013779/resolver",
           "attributes": {
                "DataType": [
                     "cytometry"
@@ -1766,7 +1766,7 @@
      {
           "code": "cell-image-library-(cil)",
           "label": "Cell Image Library (CIL)",
-          "url": "https://scicrunch.org/resolver/SCR_003510",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003510/resolver",
           "attributes": {
                "DataType": [
                     "microscopy"
@@ -1825,7 +1825,7 @@
      {
           "code": "clinicaltrials.gov",
           "label": "ClinicalTrials.gov",
-          "url": "https://scicrunch.org/resolver/SCR_002309",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002309/resolver",
           "attributes": {
                "DataType": [
                     "clinical-trial"
@@ -1882,7 +1882,7 @@
      {
           "code": "chembl",
           "label": "ChEMBL",
-          "url": "https://scicrunch.org/resolver/SCR_014042",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014042/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -1939,7 +1939,7 @@
      {
           "code": "japanese-genotype-phenotype-archive-(jga)",
           "label": "Japanese Genotype-phenotype Archive (JGA)",
-          "url": "https://scicrunch.org/resolver/SCR_003118",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003118/resolver",
           "attributes": {
                "DataType": [
                     "genotype-phenotype"
@@ -1994,7 +1994,7 @@
      {
           "code": "flybase",
           "label": "FlyBase",
-          "url": "https://scicrunch.org/resolver/SCR_006549",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006549/resolver",
           "attributes": {
                "DataType": [
                     "genotype-phenotype"
@@ -2051,7 +2051,7 @@
      {
           "code": "structural-biology-grid",
           "label": "Structural Biology Grid",
-          "url": "https://scicrunch.org/resolver/SCR_003511",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003511/resolver",
           "attributes": {
                "DataType": [
                     "protein-structure"
@@ -2110,7 +2110,7 @@
      {
           "code": "neuromorpho.org",
           "label": "NeuroMorpho.Org",
-          "url": "https://scicrunch.org/resolver/SCR_002145",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002145/resolver",
           "attributes": {
                "DataType": [
                     "neuron-reconstruction"
@@ -2167,7 +2167,7 @@
      {
           "code": "the-immunology-database-and-analysis-portal-(immport)",
           "label": "The Immunology Database and Analysis Portal (ImmPort)",
-          "url": "https://scicrunch.org/resolver/SCR_012804",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012804/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -2224,7 +2224,7 @@
      {
           "code": "worldwide-protein-data-bank-(wwpdb)",
           "label": "Worldwide Protein Data Bank (wwPDB)",
-          "url": "https://scicrunch.org/resolver/SCR_006555",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006555/resolver",
           "attributes": {
                "DataType": [
                     "protein-structure"
@@ -2281,7 +2281,7 @@
      {
           "code": "figshareplus",
           "label": "FigsharePlus",
-          "url": "https://scicrunch.org/resolver/SCR_021762",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_021762/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -2338,7 +2338,7 @@
      {
           "code": "zenodo",
           "label": "ZENODO",
-          "url": "https://scicrunch.org/resolver/SCR_004129",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004129/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -2397,7 +2397,7 @@
      {
           "code": "gene-expression-omnibus-(geo)",
           "label": "Gene Expression Omnibus (GEO)",
-          "url": "https://scicrunch.org/resolver/SCR_005012",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005012/resolver",
           "attributes": {
                "DataType": [
                     "gene-expression"
@@ -2453,7 +2453,7 @@
      {
           "code": "ncbi-database-of-genotypes-and-phenotypes",
           "label": "NCBI database of Genotypes and Phenotypes",
-          "url": "https://scicrunch.org/resolver/SCR_002709",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002709/resolver",
           "attributes": {
                "DataType": [
                     "genotype-phenotype"
@@ -2508,7 +2508,7 @@
      {
           "code": "openneuro",
           "label": "OpenNeuro",
-          "url": "https://scicrunch.org/resolver/SCR_005031",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005031/resolver",
           "attributes": {
                "DataType": [
                     "imaging"
@@ -2569,7 +2569,7 @@
      {
           "code": "european-variation-archive-(eva)",
           "label": "European Variation Archive (EVA)",
-          "url": "https://scicrunch.org/resolver/SCR_017425",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017425/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -2624,7 +2624,7 @@
      {
           "code": "biological-magnetic-resonance-data-bank-(bmrb)",
           "label": "Biological Magnetic Resonance Data Bank (BMRB)",
-          "url": "https://scicrunch.org/resolver/SCR_002296",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002296/resolver",
           "attributes": {
                "DataType": [
                     "nmr-spectroscopy"
@@ -2681,7 +2681,7 @@
      {
           "code": "analysis,-visualization,-and-informatics-lab-space-(anvil)",
           "label": "Analysis, Visualization, and Informatics Lab-space (AnVIL)",
-          "url": "https://scicrunch.org/resolver/SCR_017469",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017469/resolver",
           "attributes": {
                "DataType": [
                     "genomic"
@@ -2738,7 +2738,7 @@
      {
           "code": "metabolomics-workbench-(metwb)",
           "label": "Metabolomics Workbench (MetWB)",
-          "url": "https://scicrunch.org/resolver/SCR_013794",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013794/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -2795,7 +2795,7 @@
      {
           "code": "dataverse-network-project",
           "label": "Dataverse Network Project",
-          "url": "https://scicrunch.org/resolver/SCR_001997",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_001997/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -2854,7 +2854,7 @@
      {
           "code": "accelerating-medicines-partnership-type-2-diabetes-knowledge-portal-(amp-t2d)",
           "label": "Accelerating Medicines Partnership Type 2 Diabetes Knowledge Portal (AMP-T2D)",
-          "url": "https://scicrunch.org/resolver/SCR_003743",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003743/resolver",
           "attributes": {
                "DataType": [
                     "genotype-phenotype"
@@ -2911,7 +2911,7 @@
      {
           "code": "influenza-research-database-(ird)",
           "label": "Influenza Research Database (IRD)",
-          "url": "https://scicrunch.org/resolver/SCR_006641",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006641/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -2968,7 +2968,7 @@
      {
           "code": "genbank",
           "label": "GenBank",
-          "url": "https://scicrunch.org/resolver/SCR_002760",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002760/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -3022,7 +3022,7 @@
      {
           "code": "research-collaboratory-for-structural-bioinformatics-protein-data-bank-(rcsb-pdb)",
           "label": "Research Collaboratory for Structural Bioinformatics Protein Data Bank (RCSB PDB)",
-          "url": "https://scicrunch.org/resolver/SCR_012820",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012820/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -3079,7 +3079,7 @@
      {
           "code": "mgnify",
           "label": "MGnify",
-          "url": "https://scicrunch.org/resolver/SCR_016429",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_016429/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -3136,7 +3136,7 @@
      {
           "code": "mass-spectrometry-interactive-virtual-environment-(massive)",
           "label": "Mass spectrometry Interactive Virtual Environment (MassIVE)",
-          "url": "https://scicrunch.org/resolver/SCR_013665",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013665/resolver",
           "attributes": {
                "DataType": [
                     "proteomic"
@@ -3193,7 +3193,7 @@
      {
           "code": "inorganic-crystal-structure-database-(icsd)",
           "label": "Inorganic Crystal Structure Database (ICSD)",
-          "url": "https://scicrunch.org/resolver/SCR_017429",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017429/resolver",
           "attributes": {
                "DataType": [
                     "crystallography"
@@ -3249,7 +3249,7 @@
      {
           "code": "crystallography-open-database-(cod)",
           "label": "Crystallography Open Database (COD)",
-          "url": "https://scicrunch.org/resolver/SCR_005874",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005874/resolver",
           "attributes": {
                "DataType": [
                     "crystallography"
@@ -3305,7 +3305,7 @@
      {
           "code": "image-data-resource-(idr)",
           "label": "Image Data Resource (IDR)",
-          "url": "https://scicrunch.org/resolver/SCR_017421",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017421/resolver",
           "attributes": {
                "DataType": [
                     "microscopy"
@@ -3361,7 +3361,7 @@
      {
           "code": "sicas-medical-image-repository",
           "label": "SICAS Medical Image Repository",
-          "url": "https://scicrunch.org/resolver/SCR_017420",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017420/resolver",
           "attributes": {
                "DataType": [
                     "imaging"
@@ -3418,7 +3418,7 @@
      {
           "code": "pdbe---protein-data-bank-in-europe",
           "label": "PDBe - Protein Data Bank in Europe",
-          "url": "https://scicrunch.org/resolver/SCR_004312",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004312/resolver",
           "attributes": {
                "DataType": [
                     "protein-structure"
@@ -3475,7 +3475,7 @@
      {
           "code": "figshare",
           "label": "FigShare",
-          "url": "https://scicrunch.org/resolver/SCR_004328",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004328/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -3534,7 +3534,7 @@
      {
           "code": "global-proteome-machine-database-(gpm-db)",
           "label": "Global Proteome Machine Database (GPM DB)",
-          "url": "https://scicrunch.org/resolver/SCR_006617",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006617/resolver",
           "attributes": {
                "DataType": [
                     "proteomic"
@@ -3589,7 +3589,7 @@
      {
           "code": "metabolights",
           "label": "MetaboLights",
-          "url": "https://scicrunch.org/resolver/SCR_014663",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014663/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -3646,7 +3646,7 @@
      {
           "code": "ncbi-sequence-read-archive-(sra)",
           "label": "NCBI Sequence Read Archive (SRA)",
-          "url": "https://scicrunch.org/resolver/SCR_004891",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004891/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -3701,7 +3701,7 @@
      {
           "code": "electron-microscopy-data-bank-at-pdbe-(msd-ebi)",
           "label": "Electron Microscopy Data Bank at PDBe (MSD-EBI)",
-          "url": "https://scicrunch.org/resolver/SCR_006506",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006506/resolver",
           "attributes": {
                "DataType": [
                     "microscopy"
@@ -3756,7 +3756,7 @@
      {
           "code": "dbsnp",
           "label": "dbSNP",
-          "url": "https://scicrunch.org/resolver/SCR_002338",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002338/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -3810,7 +3810,7 @@
      {
           "code": "pubchem-bioassay",
           "label": "PubChem BioAssay",
-          "url": "https://scicrunch.org/resolver/SCR_010734",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_010734/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -3869,7 +3869,7 @@
      {
           "code": "open-science-framework",
           "label": "Open Science Framework",
-          "url": "https://scicrunch.org/resolver/SCR_003238",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003238/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -3925,7 +3925,7 @@
      {
           "code": "proteomics-identifications-(pride)",
           "label": "Proteomics Identifications (PRIDE)",
-          "url": "https://scicrunch.org/resolver/SCR_003411",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003411/resolver",
           "attributes": {
                "DataType": [
                     "proteomic"
@@ -3981,7 +3981,7 @@
      {
           "code": "dryad-digital-repository",
           "label": "Dryad Digital Repository",
-          "url": "https://scicrunch.org/resolver/SCR_005910",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005910/resolver",
           "attributes": {
                "DataType": [
                     "multiple-data-types"
@@ -4038,7 +4038,7 @@
      {
           "code": "dbvar",
           "label": "dbVar",
-          "url": "https://scicrunch.org/resolver/SCR_003219",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003219/resolver",
           "attributes": {
                "DataType": [
                     "sequence"
@@ -4092,7 +4092,7 @@
      {
           "code": "cancer-imaging-archive-(tcia)",
           "label": "Cancer Imaging Archive (TCIA)",
-          "url": "https://scicrunch.org/resolver/SCR_008927",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_008927/resolver",
           "attributes": {
                "DataType": [
                     "imaging"
@@ -4152,7 +4152,7 @@
      {
           "code": "biological-general-repository-for-interaction-datasets-(biogrid)",
           "label": "Biological General Repository for Interaction Datasets (BioGRID)",
-          "url": "https://scicrunch.org/resolver/SCR_007393",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_007393/resolver",
           "attributes": {
                "DataType": [
                     "interaction/pathways"

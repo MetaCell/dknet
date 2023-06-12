@@ -246,7 +246,7 @@
    {
       "code": "SpeciesSpecific",
       "label": "Species Specific Data",
-      "question": "Does your data come from a particular species?",
+      "question": "Does your data come from one of these species?",
       "description": "Which species are used in your data set?",
       "inputType": "MULTI",
       "weighting": "8",
