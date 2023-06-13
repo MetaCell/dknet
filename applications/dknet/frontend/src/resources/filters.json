@@ -78,13 +78,6 @@
             "weighting": 1
          },
          {
-            "code": "electron-microscopy",
-            "label": "Electron microscopy",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
             "code": "microscopy",
             "label": "Microscopy",
             "icon": "",
@@ -280,8 +273,8 @@
             "weighting": 1
          },
          {
-            "code": "no",
-            "label": "No",
+            "code": "other",
+            "label": "Other",
             "icon": "CheckCircle",
             "color": "SUCCESS",
             "weighting": 1
