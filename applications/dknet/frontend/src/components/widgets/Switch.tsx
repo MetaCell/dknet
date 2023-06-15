@@ -10,6 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import CustomFormControlLabel from "./CustomFormControlLabel";
+import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
 
 const IOSSwitch = styled((props: SwitchProps) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -68,7 +69,7 @@ const SwitchWidget = ({ data }: any) => {
 
   const onSwitchChange = (e: any) => {
     let newValue = null
-    if(e.target.checked) {
+    if (e.target.checked) {
       newValue = filter.options[0]
     } else {
       newValue = filter.options[1]
@@ -87,18 +88,25 @@ const SwitchWidget = ({ data }: any) => {
       control={<IOSSwitch
         onChange={onSwitchChange}
         sx={{ m: 1 }}
-        checked={context?.filterValues[data.code]?.code === filter?.options[0]?.code}/>}
-      label={<Stack direction="row" alignItems='center'>
+        checked={context?.filterValues[data.code]?.code === filter?.options[0]?.code} />}
+      label={<Stack direction="row" alignItems='center' justifyContent="space-between">
         <Typography>
           {data.label}
         </Typography>
-        <Tooltip title={data.description}>
-          <IconButton>
-            <HelpOutlineIcon sx={{
-              color: '#98A2B3',
+        <Stack direction="row">
+          <Tooltip title={data.description}>
+            <IconButton sx={{ p: '2px' }}>
+              <HelpOutlineIcon sx={{
+                color: '#98A2B3',
+              }} />
+            </IconButton>
+          </Tooltip>
+          <IconButton sx={{ p: '2px' }}>
+            <CleaningServicesOutlinedIcon sx={{
+              color: '#98A2B3'
             }}/>
           </IconButton>
-        </Tooltip>
+        </Stack>
       </Stack>}
       value={undefined}
     />

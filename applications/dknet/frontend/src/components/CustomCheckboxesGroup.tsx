@@ -11,6 +11,7 @@ import FormLabel from '@mui/material/FormLabel'
 import Tooltip from "@mui/material/Tooltip"
 import IconButton from "@mui/material/IconButton"
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
+import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
 
 import { vars } from "../theme/variables";
 
@@ -18,8 +19,18 @@ const {
   grey700,
   grey400
 } = vars;
-
 const CustomCheckboxesGroup = ({ data }) => {
+  const { context, setContext } = useFilterContext()
+
+  const onClearFilter = () => {
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [data.code]: undefined
+      }
+    })
+  }
 
   return (
     <Box>
@@ -29,17 +40,24 @@ const CustomCheckboxesGroup = ({ data }) => {
           color: grey700
         }}
       >
-        <Stack direction="row" alignItems='center'>
+        <Stack direction="row" alignItems='center' justifyContent="space-between">
           <Typography component='h4'>
             {data.label}
           </Typography>
-          <Tooltip title={data.description}>
-            <IconButton>
-              <HelpOutlineIcon sx={{
-                color: grey400,
+          <Stack direction="row">
+            <Tooltip title={data.description}>
+              <IconButton sx={{ p: '2px' }}>
+                <HelpOutlineIcon sx={{
+                  color: grey400,
+                }} />
+              </IconButton>
+            </Tooltip>
+            <IconButton sx={{ p: '2px' }} onClick={onClearFilter}>
+              <CleaningServicesOutlinedIcon sx={{
+                color: '#98A2B3'
               }} />
             </IconButton>
-          </Tooltip>
+          </Stack>
         </Stack>
       </FormLabel>
       <FormGroup>
