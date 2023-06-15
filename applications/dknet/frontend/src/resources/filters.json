@@ -393,22 +393,22 @@
    },
    {
       "code": "Published",
-      "label": "Repository Supports...",
+      "label": "Data supports a published article?",
       "question": "Will the dataset support any published academic work?",
       "description": "Will your data be published in conjunction with a research paper?",
       "inputType": "MULTI",
       "weighting": "1",
       "options": [
          {
-            "code": "published-work",
-            "label": "Published work",
+            "code": "published-article",
+            "label": "Published article",
             "icon": "School",
             "color": "SUCCESS",
-            "weighting": 1
+            "weighting": 0.25
          },
          {
-            "code": "unpublished-work",
-            "label": "Unpublished work",
+            "code": "no",
+            "label": "No",
             "icon": "Close",
             "color": "INFO",
             "weighting": 1

@@ -41,8 +41,8 @@
                     "yes"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -102,7 +102,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -158,8 +158,8 @@
                     "yes"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -216,7 +216,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -272,8 +272,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -329,8 +329,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -386,8 +386,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -443,8 +443,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -504,8 +504,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -563,8 +563,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-any",
@@ -619,8 +619,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -674,8 +674,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -731,8 +731,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -790,7 +790,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
@@ -844,8 +844,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -899,8 +899,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -956,7 +956,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
@@ -1013,8 +1013,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -1070,8 +1070,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -1127,8 +1127,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -1185,8 +1185,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -1244,8 +1244,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -1299,8 +1299,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -1354,8 +1354,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -1409,8 +1409,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-any",
@@ -1466,8 +1466,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-any",
@@ -1524,8 +1524,8 @@
                     "yes"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -1582,7 +1582,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
@@ -1636,8 +1636,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -1693,7 +1693,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
@@ -1747,8 +1747,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-any",
@@ -1805,8 +1805,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -1863,8 +1863,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-any",
@@ -1921,8 +1921,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -1976,8 +1976,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2032,8 +2032,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-any",
@@ -2090,8 +2090,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -2149,8 +2149,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2206,8 +2206,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2263,8 +2263,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2318,8 +2318,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -2377,8 +2377,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -2435,8 +2435,8 @@
                     "yes"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2490,8 +2490,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2549,8 +2549,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -2606,8 +2606,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2663,8 +2663,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2720,8 +2720,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2777,8 +2777,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2834,8 +2834,8 @@
                     "yes"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -2893,8 +2893,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -2950,8 +2950,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3004,8 +3004,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3061,8 +3061,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3118,8 +3118,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3175,8 +3175,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3232,7 +3232,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
@@ -3288,7 +3288,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
@@ -3342,7 +3342,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -3398,8 +3398,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -3457,8 +3457,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3514,8 +3514,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -3571,8 +3571,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3628,8 +3628,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3683,8 +3683,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3738,8 +3738,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3792,8 +3792,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3850,8 +3850,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-any",
@@ -3907,8 +3907,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -3964,7 +3964,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
@@ -4019,7 +4019,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -4074,8 +4074,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "no",
@@ -4132,8 +4132,8 @@
                     "no"
                ],
                "Published": [
-                    "published-work",
-                    "unpublished-work"
+                    "published-article",
+                    "no"
                ],
                "PIDQuestion": [
                     "yes,-doi-only",
@@ -4145,7 +4145,7 @@
                     "no"
                ],
                "SpeciesSpecific": [
-                    "other"
+                    "human"
                ]
           }
      },
@@ -4189,7 +4189,7 @@
                     "no"
                ],
                "Published": [
-                    "published-work"
+                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
