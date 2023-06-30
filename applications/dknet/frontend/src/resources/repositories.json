@@ -64,7 +64,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017422/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "enzymology"
@@ -293,7 +294,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013717/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "cancer"
@@ -527,7 +529,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002380/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -695,7 +698,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_015671/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -915,6 +919,68 @@
           }
      },
      {
+          "code": "stimulating-peripheral-activity-to-relieve-conditions-(sparc)",
+          "label": "Stimulating Peripheral Activity to Relieve Conditions (SPARC)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017041/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "peripheral-nervous-system"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "other"
+               ]
+          }
+     },
+     {
           "code": "proteomexchange",
           "label": "ProteomeXchange",
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004055/resolver",
@@ -976,7 +1042,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017423/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -1148,7 +1215,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004742/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -1206,7 +1274,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_000636/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "addiction-and-hiv"
@@ -1547,7 +1616,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002560/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "zebrafish-genetics"
@@ -1638,62 +1708,6 @@
                "Published": [
                     "published-article",
                     "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "SpeciesSpecific": [
-                    "other"
-               ]
-          }
-     },
-     {
-          "code": "uniprotkb",
-          "label": "UniProtKB",
-          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004426/resolver",
-          "attributes": {
-               "DataType": [
-                    "multiple-data-types"
-               ],
-               "DomainType": [
-                    "protein"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih-source",
-                    "another-nih-institute",
-                    "-niddk",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "published-article"
                ],
                "PIDQuestion": [
                     "no",
@@ -1885,7 +1899,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014042/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "drug-discovery"
@@ -2170,7 +2185,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012804/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "immunology"
@@ -2284,7 +2300,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_021762/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -2341,7 +2358,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004129/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -2679,69 +2697,13 @@
           }
      },
      {
-          "code": "analysis,-visualization,-and-informatics-lab-space-(anvil)",
-          "label": "Analysis, Visualization, and Informatics Lab-space (AnVIL)",
-          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017469/resolver",
-          "attributes": {
-               "DataType": [
-                    "genomic"
-               ],
-               "DomainType": [
-                    "structural-biology"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih-source",
-                    "another-nih-institute",
-                    "-niddk",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "significant-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "published-article",
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "SpeciesSpecific": [
-                    "other"
-               ]
-          }
-     },
-     {
           "code": "metabolomics-workbench-(metwb)",
           "label": "Metabolomics Workbench (MetWB)",
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013794/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "metabolomics"
@@ -2798,7 +2760,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_001997/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -2914,7 +2877,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006641/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "influenza"
@@ -2962,6 +2926,63 @@
                ],
                "SpeciesSpecific": [
                     "other"
+               ]
+          }
+     },
+     {
+          "code": "vivli",
+          "label": "Vivli",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_018080/resolver",
+          "attributes": {
+               "DataType": [
+                    "clinical-trial"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [],
+               "Cost": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human"
                ]
           }
      },
@@ -3025,7 +3046,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012820/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -3478,7 +3500,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004328/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -3592,7 +3615,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014663/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "metabolomics"
@@ -3813,7 +3837,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_010734/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -3872,7 +3897,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003238/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -3984,7 +4010,8 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005910/resolver",
           "attributes": {
                "DataType": [
-                    "multiple-data-types"
+                    "multiple-data-types",
+                    "other"
                ],
                "DomainType": [],
                "SizeLimits": [
