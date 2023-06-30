@@ -254,7 +254,7 @@
       "code": "SpeciesSpecific",
       "label": "Species Specific Data",
       "question": "Does your data come from one of these species?",
-      "description": "Which species are used in your data set?",
+      "description": "Does your data come from one of these species?",
       "inputType": "MULTI",
       "weighting": "8",
       "options": [
@@ -299,7 +299,7 @@
       "code": "PhiHippa",
       "label": "PHI/HIPPA compliance?",
       "question": "Does the dataset contain sensitive data (e.g.PHI), and have to comply with HIPAA?",
-      "description": "HIPAA= Health Information Portability and Accountability Act.  A US regulation governing the sharing of protected health information.  Other countries have other governing regulations.",
+      "description": "Does the data set contain sensitive information (e.g., PHI) and will the repository have to be HIPAA compliant (Health Information Portability and Accountability Act. A US regulation governing the sharing of protected health information)",
       "inputType": "MULTI",
       "weighting": "1",
       "options": [
