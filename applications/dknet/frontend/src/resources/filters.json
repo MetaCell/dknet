@@ -118,6 +118,13 @@
             "icon": "",
             "color": "",
             "weighting": 1
+         },
+         {
+            "code": "other",
+            "label": "Other",
+            "icon": "",
+            "color": "",
+            "weighting": 1
          }
       ]
    },
@@ -216,6 +223,13 @@
          {
             "code": "protein",
             "label": "Protein",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "peripheral-nervous-system",
+            "label": "Peripheral nervous system",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -447,21 +461,29 @@
       ]
    },
    {
-      "code": "ContactPerson",
-      "label": "Contact Person Available",
+      "code": "SizeLimits",
+      "label": "Data Size Limits",
+      "description": "Are you willing to consider repositories with size limits?",
       "inputType": "READONLY",
       "options": [
          {
-            "code": "yes",
-            "label": "yes",
+            "code": "no",
+            "label": "no",
             "icon": "CheckCircle",
             "color": "SUCCESS",
             "weighting": 1
          },
          {
-            "code": "no",
-            "label": "no",
-            "icon": "Cancel",
+            "code": "yes",
+            "label": "yes",
+            "icon": "Error",
+            "color": "WARNING",
+            "weighting": 1
+         },
+         {
+            "code": "contact",
+            "label": "contact",
+            "icon": "Error",
             "color": "WARNING",
             "weighting": 1
          }
