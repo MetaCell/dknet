@@ -59,11 +59,11 @@ request.get({ url: url, headers: headers }, function (error, response, body)
   const records = data.records;
 
   // Map the records array to a new array of objects with only the fields data
+  console.log(records)
   repositories = data.records.map(function (record) 
   {
     const fields = record.fields;
     // Build metadata with the code, label, icon, and colour
-
     // Name of Repo
     let codename = '';
     let labelname = '';
@@ -119,6 +119,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
       'attributes': prefixAttributes
     };
   });
+
   // Write the data to a JSON file
   fs.writeFile(fileName, JSON.stringify(repositories, null, 5), function (err) {
   if (err) {

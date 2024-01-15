@@ -115,6 +115,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -170,6 +174,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -229,6 +237,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -284,6 +296,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -342,6 +358,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -399,6 +419,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -458,6 +482,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -519,6 +547,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -578,6 +610,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -633,6 +669,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -688,6 +728,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -748,6 +792,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -804,6 +852,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -859,6 +911,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -914,6 +970,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -976,6 +1036,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -988,9 +1052,7 @@
                "DataType": [
                     "proteomic"
                ],
-               "DomainType": [
-                    "structural-biology"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
@@ -1032,6 +1094,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1091,6 +1157,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1148,6 +1218,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1205,6 +1279,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1264,6 +1342,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1326,59 +1408,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
-                    "other"
-               ]
-          }
-     },
-     {
-          "code": "dna-databank-of-japan-(ddbj)",
-          "label": "DNA DataBank of Japan (DDBJ)",
-          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002359/resolver",
-          "attributes": {
-               "DataType": [
-                    "protein-structure"
-               ],
-               "DomainType": [],
-               "SizeLimits": [
-                    "yes"
-               ],
-               "FundingSource": [
-                    "non-nih-source",
-                    "another-nih-institute",
-                    "-niddk",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [],
-               "Cost": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "published-article",
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1434,6 +1467,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1490,6 +1527,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1560,7 +1601,8 @@
                     "clinical-trial"
                ],
                "DomainType": [
-                    "diabetes,-digestive-and-kidney-diseases"
+                    "diabetes,-digestive-and-kidney-diseases",
+                    "diabetes,-digestive-diseases,-kidney-diseases,-obesity,-liver-diseases,-urologic-diseases,-endocrine-diseases,-nutrition,-blood-diseases"
                ],
                "SizeLimits": [
                     "no"
@@ -1590,7 +1632,7 @@
                     ""
                ],
                "PhiHippa": [
-                    "yes"
+                    "no"
                ],
                "Published": [
                     "published-article",
@@ -1717,6 +1759,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1773,6 +1819,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1832,6 +1882,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -1947,6 +2001,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2002,6 +2060,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2118,6 +2180,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2175,8 +2241,27 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
+          }
+     },
+     {
+          "code": "synapse",
+          "label": "Synapse",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006307/resolver",
+          "attributes": {
+               "undefined": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "Restrictions": []
           }
      },
      {
@@ -2233,6 +2318,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2290,6 +2379,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2348,6 +2441,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2408,6 +2505,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2450,7 +2551,7 @@
                     ""
                ],
                "PhiHippa": [
-                    "yes"
+                    "no"
                ],
                "Published": [
                     "published-article",
@@ -2464,13 +2565,17 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
      },
      {
-          "code": "ncbi-database-of-genotypes-and-phenotypes",
-          "label": "NCBI database of Genotypes and Phenotypes",
+          "code": "dbgap-(ncbi-database-of-genotypes-and-phenotypes)",
+          "label": "dbGaP (NCBI database of Genotypes and Phenotypes)",
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002709/resolver",
           "attributes": {
                "DataType": [
@@ -2519,6 +2624,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2580,6 +2689,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2635,6 +2748,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2692,6 +2809,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2750,6 +2871,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2810,6 +2935,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -2925,6 +3054,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3036,6 +3169,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3094,6 +3231,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3151,6 +3292,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3208,6 +3353,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3264,6 +3413,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3320,6 +3473,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3376,6 +3533,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3433,6 +3594,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3490,6 +3655,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3550,6 +3719,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3605,6 +3778,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3663,6 +3840,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3718,6 +3899,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3773,6 +3958,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3887,6 +4076,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -3944,6 +4137,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -4000,6 +4197,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -4058,6 +4259,10 @@
                     "yes"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }
@@ -4172,7 +4377,11 @@
                     "no"
                ],
                "SpeciesSpecific": [
-                    "human"
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
                ]
           }
      },
@@ -4226,6 +4435,10 @@
                     "no"
                ],
                "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
                     "other"
                ]
           }

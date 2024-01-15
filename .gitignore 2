@@ -1,0 +1,9 @@
+.idea
+.vscode
+**/__pycache__
+**/*.pyc
+**/*.egg-info
+cloud-harness
+deployment
+**/node_modules
+skaffold.yaml
