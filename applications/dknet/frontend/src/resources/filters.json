@@ -8,8 +8,36 @@
       "weighting": "10",
       "options": [
          {
-            "code": "genotype-phenotype",
-            "label": "Genotype-Phenotype",
+            "code": "bioactivity",
+            "label": "Bioactivity",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "clinical-trial",
+            "label": "Clinical trial",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "crystallography",
+            "label": "Crystallography",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "cytometry",
+            "label": "Cytometry",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "gene-expression",
+            "label": "Gene expression",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -22,8 +50,8 @@
             "weighting": 1
          },
          {
-            "code": "gene-expression",
-            "label": "Gene expression",
+            "code": "genotype-phenotype",
+            "label": "Genotype-Phenotype",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -43,36 +71,8 @@
             "weighting": 1
          },
          {
-            "code": "nmr-spectroscopy",
-            "label": "NMR spectroscopy",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "crystallography",
-            "label": "Crystallography",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "clinical-trial",
-            "label": "Clinical trial",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "sequence",
-            "label": "Sequence",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "protein-structure",
-            "label": "Protein structure",
+            "code": "kinetics",
+            "label": "Kinetics",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -85,15 +85,8 @@
             "weighting": 1
          },
          {
-            "code": "cytometry",
-            "label": "Cytometry",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "proteomic",
-            "label": "Proteomic",
+            "code": "nanotechnology",
+            "label": "Nanotechnology",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -106,8 +99,43 @@
             "weighting": 1
          },
          {
+            "code": "nmr-spectroscopy",
+            "label": "NMR spectroscopy",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
             "code": "physiological",
             "label": "Physiological",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "protein-structure",
+            "label": "Protein structure",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "proteomic",
+            "label": "Proteomic",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "nanotechnology",
+            "label": "Nanotechnology",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "sequence",
+            "label": "Sequence",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -144,8 +172,22 @@
             "weighting": 1
          },
          {
+            "code": "blood-diseases",
+            "label": "Blood diseases",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
             "code": "cancer",
             "label": "Cancer",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "clinical",
+            "label": "Clinical",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -160,6 +202,20 @@
          {
             "code": "diabetes,-digestive-and-kidney-diseases",
             "label": "Diabetes, Digestive and Kidney Diseases",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "drug-discovery",
+            "label": "Drug discovery",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "endocrine-diseases",
+            "label": "Endocrine diseases",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -193,6 +249,13 @@
             "weighting": 1
          },
          {
+            "code": "liver-diseases",
+            "label": "Liver diseases",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
             "code": "metabolomics",
             "label": "Metabolomics",
             "icon": "",
@@ -221,8 +284,22 @@
             "weighting": 1
          },
          {
-            "code": "protein",
-            "label": "Protein",
+            "code": "nutrition",
+            "label": "Nutrition",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "structural-biology",
+            "label": "Structural biology",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "obesity",
+            "label": "Obesity",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -235,8 +312,8 @@
             "weighting": 1
          },
          {
-            "code": "structural-biology",
-            "label": "Structural biology",
+            "code": "urologic-diseases",
+            "label": "Urologic diseases",
             "icon": "",
             "color": "",
             "weighting": 1
