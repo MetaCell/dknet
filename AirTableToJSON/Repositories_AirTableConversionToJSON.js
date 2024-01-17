@@ -12,7 +12,8 @@ const fileName = `${resourcesFolder}/repositories.json`
  
 // Set up Airtable API credentials
 const baseId = 'app8GwPKlzcZUj3lo';
-const tableName = 'tblaJilQIzivkkeiF';
+const tableName = 'tblaJilQIzivkkeiF'; //This is the table editable by dkNET
+//const tableName = 'tbl6zb7sPWSHFT3wr'; //This is the test table
 const pat = process.argv[2];
 
 // Set up Airtable API endpoint URL
@@ -68,6 +69,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
     let codename = '';
     let labelname = '';
     if (typeof fields['resourceName'] === 'string'){
+      console.log(fields['resourceName'])
       codename = fields['resourceName'].toLowerCase().replace(/\s+/g, '-');
       labelname = fields['resourceName'];
     } else if (Array.isArray(fields['resourceName'])){
@@ -110,7 +112,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
             FilterCode=fields[`${prefix}_FilterCode`]        
             prefixAttributes[FilterCode] = prefixAttributesList;
     }
-
+    console.log(codename)
     // Return fields
     return {
       'code': codename,
