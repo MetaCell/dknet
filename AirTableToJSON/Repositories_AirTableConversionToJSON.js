@@ -112,7 +112,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
             FilterCode=fields[`${prefix}_FilterCode`]        
             prefixAttributes[FilterCode] = prefixAttributesList;
     }
-    console.log(codename)
+    
     // Return fields
     return {
       'code': codename,

@@ -806,7 +806,7 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003207/resolver",
           "attributes": {
                "DataType": [
-                    "microscopy"
+                    "imaging-other"
                ],
                "DomainType": [
                     "chemistry,-chemical-biology-and-biochemistry"
@@ -1601,7 +1601,7 @@
                     "clinical-trial"
                ],
                "DomainType": [
-                    "diabetes,-digestive-diseases,-kidney-diseases;obesity;liver-diseases;urologic-diseases;endocrine-diseases;nutrition;blood-diseases"
+                    "niddk-relevant-disease-domain"
                ],
                "SizeLimits": [
                     "no"
@@ -1631,7 +1631,7 @@
                     ""
                ],
                "PhiHippa": [
-                    "no"
+                    "yes"
                ],
                "Published": [
                     "published-article",
@@ -1832,7 +1832,7 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003510/resolver",
           "attributes": {
                "DataType": [
-                    "microscopy"
+                    "imaging-microscopy"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -1897,9 +1897,7 @@
                "DataType": [
                     "clinical-trial"
                ],
-               "DomainType": [
-                    "clinical"
-               ],
+               "DomainType": [],
                "SizeLimits": [
                     "no"
                ],
@@ -2668,11 +2666,7 @@
                     "no"
                ],
                "SpeciesSpecific": [
-                    "human",
-                    "mouse",
-                    "fly",
-                    "zebrafish",
-                    "other"
+                    "human"
                ]
           }
      },
@@ -3531,7 +3525,7 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017421/resolver",
           "attributes": {
                "DataType": [
-                    "microscopy"
+                    "imaging-microscopy"
                ],
                "DomainType": [],
                "SizeLimits": [
@@ -3957,7 +3951,7 @@
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006506/resolver",
           "attributes": {
                "DataType": [
-                    "microscopy"
+                    "imaging-microscopy"
                ],
                "DomainType": [],
                "SizeLimits": [
