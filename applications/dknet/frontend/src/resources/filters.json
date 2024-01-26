@@ -64,6 +64,20 @@
             "weighting": 1
          },
          {
+            "code": "imaging-microscopy",
+            "label": "Imaging Microscopy",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
+            "code": "imaging-other",
+            "label": "Imaging Other",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
             "code": "interaction/pathways",
             "label": "Interaction/pathways",
             "icon": "",
@@ -73,13 +87,6 @@
          {
             "code": "kinetics",
             "label": "Kinetics",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "microscopy",
-            "label": "Microscopy",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -172,13 +179,6 @@
             "weighting": 1
          },
          {
-            "code": "blood-diseases",
-            "label": "Blood diseases",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
             "code": "cancer",
             "label": "Cancer",
             "icon": "",
@@ -200,22 +200,8 @@
             "weighting": 1
          },
          {
-            "code": "diabetes,-digestive-and-kidney-diseases",
-            "label": "Diabetes, Digestive and Kidney Diseases",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
             "code": "drug-discovery",
             "label": "Drug discovery",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "endocrine-diseases",
-            "label": "Endocrine diseases",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -244,13 +230,6 @@
          {
             "code": "influenza",
             "label": "Influenza",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "liver-diseases",
-            "label": "Liver diseases",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -291,13 +270,6 @@
             "weighting": 1
          },
          {
-            "code": "nutrition",
-            "label": "Nutrition",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
             "code": "structural-biology",
             "label": "Structural biology",
             "icon": "",
@@ -305,22 +277,8 @@
             "weighting": 1
          },
          {
-            "code": "obesity",
-            "label": "Obesity",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
             "code": "peripheral-nervous-system",
             "label": "Peripheral nervous system",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "urologic-diseases",
-            "label": "Urologic diseases",
             "icon": "",
             "color": "",
             "weighting": 1

@@ -59,6 +59,61 @@
           }
      },
      {
+          "code": "accelerating-medicines-partnership-common-metabolic-diseases-knowledge-portal-(amp-cmd)-",
+          "label": "Accelerating Medicines Partnership Common Metabolic Diseases Knowledge Portal (AMP-CMD) ",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_020937/resolver",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [
+                    "niddk-relevant-disease-domain"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
           "code": "strenda-",
           "label": "STRENDA ",
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017422/resolver",
@@ -2990,7 +3045,7 @@
                     "genotype-phenotype"
                ],
                "DomainType": [
-                    "diabetes,-digestive-and-kidney-diseases"
+                    "niddk-relevant-disease-domain"
                ],
                "SizeLimits": [
                     "no"
