@@ -186,13 +186,6 @@
             "weighting": 1
          },
          {
-            "code": "clinical",
-            "label": "Clinical",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
             "code": "chemistry,-chemical-biology-and-biochemistry",
             "label": "Chemistry, chemical biology and biochemistry",
             "icon": "",
