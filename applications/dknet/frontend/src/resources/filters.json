@@ -256,6 +256,13 @@
             "weighting": 1
          },
          {
+            "code": "neuroscience-peripheral-nervous-system",
+            "label": "Neuroscience peripheral nervous system",
+            "icon": "",
+            "color": "",
+            "weighting": 1
+         },
+         {
             "code": "niddk-relevant-disease-domain",
             "label": "NIDDK relevant disease domain",
             "icon": "",
@@ -265,13 +272,6 @@
          {
             "code": "structural-biology",
             "label": "Structural biology",
-            "icon": "",
-            "color": "",
-            "weighting": 1
-         },
-         {
-            "code": "peripheral-nervous-system",
-            "label": "Peripheral nervous system",
             "icon": "",
             "color": "",
             "weighting": 1
@@ -332,7 +332,7 @@
    },
    {
       "code": "PhiHippa",
-      "label": "PHI/HIPPA compliance?",
+      "label": "Controlled Access?",
       "question": "Does the dataset require controlled access (e.g. sensitive human data)?",
       "description": "Does the data set contain sensitive information (e.g., PHI) and will the repository have to be HIPAA compliant (Health Information Portability and Accountability Act. A US regulation governing the sharing of protected health information)",
       "inputType": "MULTI",
