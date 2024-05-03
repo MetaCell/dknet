@@ -1282,67 +1282,6 @@
           }
      },
      {
-          "code": "pdbj---protein-data-bank-japan",
-          "label": "PDBj - Protein Data Bank Japan",
-          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_008912/resolver",
-          "attributes": {
-               "DataType": [
-                    "protein-structure"
-               ],
-               "DomainType": [
-                    "chemistry,-chemical-biology-and-biochemistry"
-               ],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih-source",
-                    "another-nih-institute",
-                    "-niddk",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "published-article",
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "SpeciesSpecific": [
-                    "human",
-                    "mouse",
-                    "fly",
-                    "zebrafish",
-                    "other"
-               ]
-          }
-     },
-     {
           "code": "pubchem-substance",
           "label": "PubChem Substance",
           "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004742/resolver",
@@ -2029,65 +1968,6 @@
                ],
                "Restrictions": [
                     "no-restrictions"
-               ],
-               "Cost": [
-                    "no"
-               ],
-               "HumanSubjectInvolved": [
-                    "yes",
-                    "no",
-                    ""
-               ],
-               "PhiHippa": [
-                    "no"
-               ],
-               "Published": [
-                    "published-article",
-                    "no"
-               ],
-               "PIDQuestion": [
-                    "no",
-                    ""
-               ],
-               "ContactPerson": [
-                    "no"
-               ],
-               "SpeciesSpecific": [
-                    "human",
-                    "mouse",
-                    "fly",
-                    "zebrafish",
-                    "other"
-               ]
-          }
-     },
-     {
-          "code": "japanese-genotype-phenotype-archive-(jga)",
-          "label": "Japanese Genotype-phenotype Archive (JGA)",
-          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003118/resolver",
-          "attributes": {
-               "DataType": [
-                    "genotype-phenotype"
-               ],
-               "DomainType": [],
-               "SizeLimits": [
-                    "no"
-               ],
-               "FundingSource": [
-                    "non-nih-source",
-                    "another-nih-institute",
-                    "-niddk",
-                    "-"
-               ],
-               "CitationImportance": [
-                    "not-at-all",
-                    ""
-               ],
-               "VersioningSupport": [
-                    "no"
-               ],
-               "Restrictions": [
-                    "minimal-restrictions"
                ],
                "Cost": [
                     "no"
