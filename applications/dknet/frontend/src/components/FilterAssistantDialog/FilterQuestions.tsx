@@ -16,10 +16,10 @@ import { FeaturedIcon, FeaturedIconChecked } from '../../assets/icons';
 import { FormControlLabel, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
-import { vars } from '../../theme/variables.js'
+import { vars } from '../../theme/variables'
 import { useFilterContext } from "../../context/Context";
 
-const DUMMY = ['Cancer Imaging Archive (TCIA) - Score: 50%', 'Cancer Imaging Archive (TCIA) - Score: 50%', 'Cancer Nanotechnology Laboratory (caNanoLab) - Score: 50%', 'ChEMBL - Score: 50%', 'Coherent X-Ray Imaging Data Bank (CXIDB) - Score: 50%', 'Dataverse Network Project - Score: 50%', 'Dryad Digital Repository - Score: 50%', 'FigShare - Score: 50%', 'Influenza Research Database (IRD) - Score: 50%']
+const DUMMY = ['Cancer Imaging Archive (TCIA) - Score: 50%', 'Cancer Nanotechnology Laboratory (caNanoLab) - Score: 50%', 'ChEMBL - Score: 50%', 'Coherent X-Ray Imaging Data Bank (CXIDB) - Score: 50%', 'Dataverse Network Project - Score: 50%', 'Dryad Digital Repository - Score: 50%', 'FigShare - Score: 50%', 'Influenza Research Database (IRD) - Score: 50%']
 
 const {
   grey200,
@@ -28,7 +28,13 @@ const {
   grey500,
   cardChipBgColor,
   grey700,
-  grey800
+  grey800,
+  success700,
+  white,
+  success50,
+  primary200,
+  checkboxBorderColor,
+  cardBgColor
 } = vars;
 
 export const Item = styled(Box)(({ theme }) => ({
@@ -328,7 +334,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           marginRight={!showPreview ? '-25rem' : 0} 
           sx={{ 
             transition: 'all ease-in-out .3s',
-            background: '#FFF', width: '25rem', borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
+            background: white, width: '25rem', borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
             '&:after': {
               content: "''",
               background: 'linear-gradient(180deg, rgba(249, 250, 251, 0.00) 0%, #F9FAFB 100%)',
@@ -350,8 +356,6 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           <List disablePadding sx={{
             gap: 1,
             px: 2,
-            // overflow: 'auto',
-            // maxHeight: 'calc(100% - 6.625rem)',
             display: 'flex',
             flexDirection: 'column',
             '& .MuiListItemButton-root': {
@@ -374,7 +378,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
               '& .MuiListItemText-primary': {
                 fontSize: '0.875rem',
                 lineHeight: '142.857%',
-                color: '#344054',
+                color: grey700,
               },
 
               '& .MuiListItemText-secondary': {
@@ -382,12 +386,12 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                 lineHeight: '150%',
                 padding: '0.125rem 0.5rem',
                 whiteSpace: 'nowrap',
-                color: '#027A48',
+                color: success700,
                 marginTop: '-0.5rem',
                 marginRight: '-0.5rem',
                 fontWeight: 500,
                 borderRadius: '0rem 0rem 0.25rem 0.25rem',
-                background: '#ECFDF3',
+                background: success50,
                 mixBlendMode: 'multiply',
               }
             }
@@ -395,10 +399,10 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
             {DUMMY.map((el, index) => (
               <ListItem disablePadding key={el}>
                 <ListItemButton sx={{
-                  border: `0.0625rem solid ${index === 0 ? '#83DCB2' : '#D0D5DD'}`,
-                  background: index === 0 ? '#F8FDFA' : '#FFF',
+                  border: `0.0625rem solid ${index === 0 ? primary200 : checkboxBorderColor}`,
+                  background: index === 0 ? cardBgColor : white,
                   '&:hover': {
-                    background: index === 0 ? '#F8FDFA' : '#FFF',
+                    background: index === 0 ? cardBgColor : white,
                   },
                 }}>
                   <ListItemText primary={el} secondary={index === 0 ? "Best Match" : null} />

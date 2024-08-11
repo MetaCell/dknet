@@ -11,6 +11,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import FilterQuestions from "./FilterQuestions";
 import { PreviewIcon } from "../../assets/icons";
 import { Box, Divider } from "@mui/material";
+import { vars } from "../../theme/variables";
+
+const {
+  grey200,
+  grey50
+} = vars;
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -102,7 +108,7 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       }}
     >
       <DialogTitle sx={{
-        borderBottom: '0.0625rem solid #EAECF0',
+        borderBottom: `0.0625rem solid ${grey200}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'
@@ -123,14 +129,14 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
           <Divider sx={{
             width: '0.0625rem',
             height: '2rem',
-            background: '#EAECF0',
+            background: grey200,
           }} />
-          <IconButton className={showPreview ? 'active' : ''} onClick={() => setShowPreview(!showPreview)}>
+          <IconButton className={`outlined ${showPreview ? 'active' : ''}`} onClick={() => setShowPreview(!showPreview)}>
             <PreviewIcon />
           </IconButton>
         </Box>
       </DialogTitle>
-      <DialogContent sx={{ backgroundColor: "#F9FAFB", height: 'calc(100vh - 3.60rem)' }}>
+      <DialogContent sx={{ backgroundColor: grey50, height: 'calc(100vh - 3.60rem)' }}>
         <FilterQuestions
           showPreview={showPreview}
           setHeight={setHeight}
