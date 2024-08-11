@@ -8,26 +8,24 @@ const {
   grey600, grey700, grey800, grey900,
   grey50,
   primary600, primary700, primary25, primary200,
-  primary50,
-  error700, error500, error600, error25,
+  error600, error25,
   warning25, warning700, warning500,
   success50, success700, success500,
   checkboxBorderColor,
-  checkboxBgChecked,
-  cardBorderColor,
-  cardBgColor,
   cardChipBgColor,
   warning50,
   warning300,
   dialogBoxShadow,
-  primary500
+  primary500,
+  iconButtonFocusShadow,
+  iconButtonHoverShadow
 } = vars;
 
 const theme = createTheme({
   palette: {
     mode: 'light',
     background: {
-      default: '#fff'
+      default: white
     },
     text: {
     },
@@ -110,22 +108,29 @@ const theme = createTheme({
     }
   },
   components: {
+    MuiTouchRipple: {
+      styleOverrides: {
+        root: {
+          display: 'none'
+        }
+      }
+    },
     MuiCssBaseline: {
       styleOverrides: `
       ::-webkit-scrollbar {
-        width: 8px;
+        width: 0.5rem;
       }
       ::-webkit-scrollbar-track {
         background: transparent;
       }
       ::-webkit-scrollbar-thumb {
         background: ${grey200};
-        border-radius: 8px;
+        border-radius: 0.5rem;
       }
       .disclaimerBox {
         backgroundColor: ${warning25};
-        border-radius: 12px;
-        border: 1px solid ${warning300};
+        border-radius: 0.75rem;
+        border: 0.0625rem solid ${warning300};
       }
       .dialogSendBtn {
         &.MuiButtonBase-root{
@@ -199,12 +204,12 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           background: white,
-          border: `1px solid ${checkboxBorderColor}`,
+          border: `0.0625rem solid ${checkboxBorderColor}`,
           borderRadius: '0.75rem',
           boxShadow: 'none',
           '&.successCard': {
             background: primary25,
-            border:`1px solid ${primary200}`,
+            border:`0.0625rem solid ${primary200}`,
           },
           '&:hover': {
             boxShadow: dialogBoxShadow
@@ -235,7 +240,7 @@ const theme = createTheme({
             },
           },
           '& .MuiOutlinedInput-input': {
-            padding: '8px 12px',
+            padding: '0.5rem 0.75rem',
             fontWeight: 500,
             fontSize: '0.875rem',
             color: grey500
@@ -280,25 +285,25 @@ const theme = createTheme({
         },
         contained: {
           background: primary500,
-          border: `1px solid ${primary600}`,
-          boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
+          border: `0.0625rem solid ${primary600}`,
+          boxShadow: '0rem 0.0625rem 0.125rem rgba(16, 24, 40, 0.05)',
           color: white,
           '&:hover': {
             background: primary600,
             color: white,
-            boxShadow: '0 1px 2px rgba(16, 24, 40, 0.05)',
+            boxShadow: '0 0.0625rem 0.125rem rgba(16, 24, 40, 0.05)',
           }
         },
         outlined: {
           background: white,
           color: grey700,
           fontWeight: 600,
-          border: `1px solid ${grey200}`,
-          boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
+          border: `0.0625rem solid ${grey200}`,
+          boxShadow: '0rem 0.0625rem 0.125rem rgba(16, 24, 40, 0.05)',
           '&:hover': {
             background: grey50,
-            border: `1px solid ${checkboxBorderColor}`,
-            boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
+            border: `0.0625rem solid ${checkboxBorderColor}`,
+            boxShadow: '0rem 0.0625rem 0.125rem rgba(16, 24, 40, 0.05)',
           }
         }
       }
@@ -306,7 +311,7 @@ const theme = createTheme({
     MuiChip: {
       styleOverrides: {
         root: {
-          padding: '2px 8px',
+          padding: '0.125rem 0.5rem',
           background: cardChipBgColor,
           borderRadius: '1rem',
           height: 'auto',
@@ -319,7 +324,7 @@ const theme = createTheme({
           '& .MuiSvgIcon-root': {
             width: '0.75rem',
             height: '0.75rem',
-            marginRight: '5px',
+            marginRight: '0.3125rem',
             marginLeft: 0
           },
           '&.MuiChip-colorWarning': {
@@ -342,7 +347,7 @@ const theme = createTheme({
           },
           '&.cardBadge': {
             background: success50,
-            borderRadius: '0px 0px 4px 4px',
+            borderRadius: '0rem 0rem 0.25rem 0.25rem',
             '& .MuiChip-label':{
               color: success700
             },
@@ -352,6 +357,30 @@ const theme = createTheme({
     },
     MuiIconButton: {
       styleOverrides: {
+        root: {
+          borderRadius: '0.5rem',
+          padding: '0.5rem',
+          border: `0.0625rem solid ${grey200}`,
+          background: white,
+
+          '&:hover': {
+            boxShadow: iconButtonHoverShadow,
+            borderColor: checkboxBorderColor,
+            background: grey50,
+          },
+
+          '&:focus': {
+            background: white,
+            borderColor: checkboxBorderColor,
+            boxShadow: iconButtonFocusShadow
+          },
+
+          '&.active': {
+            background: white,
+            borderColor: checkboxBorderColor,
+            boxShadow: iconButtonFocusShadow
+          },
+        },
         colorPrimary: {
         }
       }
@@ -394,10 +423,10 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiChip-root': {
-            borderRadius: '6px',
+            borderRadius: '0.375rem',
             background: white,
-            border: '1px solid #D0D5DD',
-            padding: '2px 4px 2px 9px',
+            border: '0.0625rem solid #D0D5DD',
+            padding: '0.125rem 0.25rem 0.125rem 0.5625rem',
             '& .MuiChip-label': {
               color: grey700,
               fontSize: '0.857rem',
@@ -411,18 +440,18 @@ const theme = createTheme({
         },
         listbox: {
           '& .MuiAutocomplete-option': {
-            margin: '4px 6px',
+            margin: '0.25rem 0.375rem',
             padding: 0,
             fontSize: '0.875rem',
             fontWeight: 500,
             color: grey900,
             '&.Mui-focused': {
               backgroundColor: grey50,
-              borderRadius: '6px'
+              borderRadius: '0.375rem'
             },
             '& .MuiSvgIcon-root': {
               color: checkboxBorderColor,
-              borderRadius: '4px'
+              borderRadius: '0.25rem'
             },
 
           }
@@ -435,6 +464,7 @@ const theme = createTheme({
         },
         paper: {
           height: 'calc(100vh - 4rem)',
+          maxWidth: '90rem',
           maxHeight: 'calc(100vh - 4rem)'
         },
       }
@@ -474,7 +504,7 @@ const theme = createTheme({
           '& .MuiIconButton-root':{
             '&:hover':{
               backgroundColor: grey50,
-              borderRadius: '4px'
+              borderRadius: '0.25rem'
             }
           },
           '& .MuiSvgIcon-root': {
@@ -484,15 +514,15 @@ const theme = createTheme({
             marginTop: '1rem',
             marginBottom: '1rem',
             borderColor: grey200,
-            borderWidth: '1px'
+            borderWidth: '0.0625rem'
           }
         },
         paper: {
-          border: `1px solid ${grey200}`,
+          border: `0.0625rem solid ${grey200}`,
           boxShadow: dialogBoxShadow,
           borderRadius: 'unset',
-          padding: '22px',
-          maxWidth: '400px',
+          padding: '1.375rem',
+          maxWidth: '25rem',
           maxHeight: 'none',
           height: '100%'
         },
@@ -521,7 +551,7 @@ const theme = createTheme({
       styleOverrides:{
         root: {
           flexGrow: 1,
-          fontSize: '14px',
+          fontSize: '0.875rem',
           fontWeight: '400',
           color: grey500,
         }

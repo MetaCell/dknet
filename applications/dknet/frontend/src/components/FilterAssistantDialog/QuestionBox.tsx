@@ -15,8 +15,7 @@ const QuestionBox = (props: any) => {
       marginBottom: 2,
       boxShadow: '0px 10px 40px -10px #EAECF0, 0px 0px 1px rgba(0, 0, 0, 0.25)'
     }}>
-      <Grid
-        container
+      <Box
         gap={1.5}
         display="grid"
         gridTemplateColumns={gridTemplateColumns}
@@ -24,7 +23,7 @@ const QuestionBox = (props: any) => {
         {
           props.children
         }
-      </Grid>
+      </Box>
     </Box>
   )
 }

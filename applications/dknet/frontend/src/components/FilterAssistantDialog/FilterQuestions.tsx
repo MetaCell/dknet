@@ -13,11 +13,13 @@ import { styled } from "@mui/material/styles";
 import Radio from '@mui/material/Radio';
 import Tooltip from '@mui/material/Tooltip';
 import { FeaturedIcon, FeaturedIconChecked } from '../../assets/icons';
-import { FormControlLabel } from "@mui/material";
+import { FormControlLabel, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
 import { vars } from '../../theme/variables.js'
 import { useFilterContext } from "../../context/Context";
+
+const DUMMY = ['Cancer Imaging Archive (TCIA) - Score: 50%', 'Cancer Imaging Archive (TCIA) - Score: 50%', 'Cancer Nanotechnology Laboratory (caNanoLab) - Score: 50%', 'ChEMBL - Score: 50%', 'Coherent X-Ray Imaging Data Bank (CXIDB) - Score: 50%', 'Dataverse Network Project - Score: 50%', 'Dryad Digital Repository - Score: 50%', 'FigShare - Score: 50%', 'Influenza Research Database (IRD) - Score: 50%']
 
 const {
   grey200,
@@ -45,7 +47,7 @@ export const Item = styled(Box)(({ theme }) => ({
     color: theme.palette.grey[700],
     marginLeft: '0.75rem',
     display: 'inline-block',
-    width: '8.625rem',
+    maxWidth: '7rem',
     whiteSpace: 'nowrap',
     overflow: 'hidden !important',
     textOverflow: 'ellipsis',
@@ -100,7 +102,7 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, open, setHeight, setTranslateValue, height, translateValue, closeDialog }) {
+export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, open, setHeight, setTranslateValue, height, translateValue, closeDialog, showPreview }) {
 
   const ref = useRef(null);
 
@@ -220,8 +222,8 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   };
 
   return (
-    <Grid sx={{ height: '100%' }} container>
-      <Grid item xs={0} md={3} sx={{ height: '100%' }} display='flex' flexDirection='column' justifyContent='space-between'>
+    <Box sx={{ height: '100%' }} display='flex'>
+      <Box sx={{ height: '100%', width: '20rem' }} display='flex' flexDirection='column' justifyContent='space-between'>
         <Box sx={classes.leftBlock} px={2} py={3}>
           <Typography sx={{
             pl: 1,
@@ -261,9 +263,9 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           </Box>
           <ProgressBar progress={progress} />
         </Box>
-      </Grid>
-      <Grid item xs={0} md={9} sx={{ borderLeft: `0.0625rem solid ${grey200}`, height: '100%' }}>
-        <Box ref={ref} sx={{ height: '100%', transition: 'transform ease-in-out .4s', transform: `translateY(-${translateValue}px)` }} px={5}>
+      </Box>
+      <Box sx={{ width: 'calc(100% - 20rem)', borderLeft: `0.0625rem solid ${grey200}`, height: '100%', display: 'flex' }}>
+        <Box ref={ref} sx={{ height: '100%', width: 1, transition: 'transform ease-in-out .4s', transform: `translateY(-${translateValue}px)` }}>
           {questionsTabs.map((question, index) => {
             const isActive = value === index;
             const nextStep = value + 1 === index;
@@ -271,7 +273,8 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
             return (
               <>
                 <Box sx={stepClass}
-                  key={index} py={5} px={5}
+                  m='auto'
+                  key={index} py={5} px={3} maxWidth='40rem'
                 >
                   <Typography sx={{
                     fontWeight: 400,
@@ -320,7 +323,91 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
             )
           })}
         </Box>
-      </Grid>
-    </Grid>
+        <Box 
+          flexShrink={0}
+          marginRight={!showPreview ? '-25rem' : 0} 
+          sx={{ 
+            transition: 'all ease-in-out .3s',
+            background: '#FFF', width: '25rem', borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
+            '&:after': {
+              content: "''",
+              background: 'linear-gradient(180deg, rgba(249, 250, 251, 0.00) 0%, #F9FAFB 100%)',
+              height: '7.75rem',
+              zIndex: 1,
+              width: '100%',
+              display: 'block',
+              position: 'sticky',
+              bottom: 0,
+              left: 0,
+              pointerEvents: 'none',
+            } 
+          }}
+        >
+          <Box pt={4} px={3} pb={2}>
+            <Typography variant="h4">Preview of results</Typography>
+            <Typography sx={{ mt: 2 }} variant="subtitle2">36 repositories matching your criteria so far</Typography>
+          </Box>
+          <List disablePadding sx={{
+            gap: 1,
+            px: 2,
+            // overflow: 'auto',
+            // maxHeight: 'calc(100% - 6.625rem)',
+            display: 'flex',
+            flexDirection: 'column',
+            '& .MuiListItemButton-root': {
+              borderRadius: '0.375rem',
+              alignItems: 'flex-start',
+              minHeight: '3.625rem',
+              p: 1,
+
+              '&:hover': {
+                boxShadow: '0rem 1.25rem 1.5rem -0.25rem rgba(16, 24, 40, 0.08), 0rem 0.5rem 0.5rem -0.25rem rgba(16, 24, 40, 0.03)'
+              },
+
+              '& .MuiListItemText-root': {
+                margin: 0,
+                display: 'flex',
+                gap: '0.25rem',
+                alignItems: 'flex-start'
+              },
+
+              '& .MuiListItemText-primary': {
+                fontSize: '0.875rem',
+                lineHeight: '142.857%',
+                color: '#344054',
+              },
+
+              '& .MuiListItemText-secondary': {
+                fontSize: '0.75rem',
+                lineHeight: '150%',
+                padding: '0.125rem 0.5rem',
+                whiteSpace: 'nowrap',
+                color: '#027A48',
+                marginTop: '-0.5rem',
+                marginRight: '-0.5rem',
+                fontWeight: 500,
+                borderRadius: '0rem 0rem 0.25rem 0.25rem',
+                background: '#ECFDF3',
+                mixBlendMode: 'multiply',
+              }
+            }
+          }}>
+            {DUMMY.map((el, index) => (
+              <ListItem disablePadding key={el}>
+                <ListItemButton sx={{
+                  border: `0.0625rem solid ${index === 0 ? '#83DCB2' : '#D0D5DD'}`,
+                  background: index === 0 ? '#F8FDFA' : '#FFF',
+                  '&:hover': {
+                    background: index === 0 ? '#F8FDFA' : '#FFF',
+                  },
+                }}>
+                  <ListItemText primary={el} secondary={index === 0 ? "Best Match" : null} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Box>
+    </Box>
   );
 }
