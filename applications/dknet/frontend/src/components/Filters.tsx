@@ -11,6 +11,41 @@ import CustomRadioGroup from "./CustomRadioGroup";
 import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 import { Button } from "@mui/material"
 import { resetFilters } from "../utils/helpers";
+import CustomTreeView from "./CustomTreeView";
+
+const DUMMY_TREE_DATA = [
+  {
+    itemId: "grid",
+    label: "Data Grid",
+    children: [
+      { itemId: "grid-community", label: "@mui/x-data-grid" },
+      { itemId: "grid-pro", label: "@mui/x-data-grid-pro" },
+      { itemId: "grid-premium", label: "@mui/x-data-grid-premium" },
+    ],
+  },
+  {
+    itemId: "pickers",
+    label: "Date and Time Pickers",
+    children: [
+      { itemId: "pickers-community", label: "@mui/x-date-pickers" },
+      { itemId: "pickers-pro", label: "@mui/x-date-pickers-pro" },
+    ],
+  },
+  {
+    itemId: "charts",
+    label: "Charts",
+    children: [
+      { itemId: "charts-community", label: "@mui/x-charts" },
+    ],
+  },
+  {
+    itemId: "tree-view",
+    label: "Tree View",
+    children: [
+      { itemId: "tree-view-community", label: "@mui/x-tree-view" },
+    ],
+  },
+];
 
 
 const Filters = () => {
@@ -22,7 +57,7 @@ const Filters = () => {
     .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
 
   const radioFilters = filters
-    .filter((filter) => filter.inputType === "SINGLE" && filter.label !== undefined)
+    .filter((filter) => filter.inputType === "BOOLEAN" && filter.label !== undefined)
 
   const checkboxFilters = filters
     .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)
@@ -40,18 +75,22 @@ const Filters = () => {
       borderRadius: '12px',
       padding: 3
     }}>
-      <Stack spacing={2}>
-        <Box display='flex' justifyContent='space-between'>
-          <Typography variant='h5' lineHeight='unset'>Filter Results</Typography>
-          <Button variant='text' sx={{ fontWeight: 600, color: '#088E75', minHeight: 'unset'  }} onClick={onClearFilters}>Clear Filters</Button>
-        </Box>
-        <Box>
-          <FormGroup>
-            {
-              switchFilters.map((row, index) => <SwitchWidget key={index} data={row} />)
-            }
-          </FormGroup>
-        </Box>
+      <Box display='flex' justifyContent='space-between'>
+        <Typography variant='h5' lineHeight='unset'>Filter Results</Typography>
+        <Button variant='text' sx={{ fontWeight: 600, color: '#088E75', minHeight: 'unset' }} onClick={onClearFilters}>Clear Filters</Button>
+      </Box>
+      <Box display='flex' flexDirection='column' gap={3} mt={1}>
+        <FormGroup>
+          {
+            switchFilters.map((row, index) => <SwitchWidget key={index} data={row} />)
+          }
+        </FormGroup>
+
+        <CustomTreeView data={{
+          label: 'Data Citation Important to you?',
+          description: 'Data Citation Important to you?'
+        }} treeData={DUMMY_TREE_DATA} />
+
         {
           checkboxFilters?.map((row, index) => <CustomCheckboxesGroup data={row} key={index} />)
         }
@@ -59,8 +98,7 @@ const Filters = () => {
         {
           radioFilters?.map((row, index) => <CustomRadioGroup data={row} key={index} />)
         }
-
-      </Stack>
+      </Box>
     </Box>
   );
 };

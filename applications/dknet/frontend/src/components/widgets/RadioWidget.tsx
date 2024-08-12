@@ -5,8 +5,8 @@ import CustomFormControlLabel from "./CustomFormControlLabel";
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: '50%',
-  width: 16,
-  height: 16,
+  width: 20,
+  height: 20,
   boxShadow:'inset 0 0 0 1px #98A2B3, inset 0 -1px 0 #98A2B3',
   backgroundColor: '#fff',
   backgroundImage:
@@ -33,8 +33,8 @@ const BpCheckedIcon = styled(BpIcon)({
   boxShadow:'inset 0 0 0 1px #0BA47D, inset 0 -1px 0 #0BA47D',
   '&:before': {
     display: 'block',
-    width: 16,
-    height: 16,
+    width: 20,
+    height: 20,
     backgroundImage: 'radial-gradient(#0BA47D,#0BA47D 28%,transparent 32%)',
     content: '""',
   },

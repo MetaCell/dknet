@@ -6,7 +6,7 @@ import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import CustomFormControlLabel from "./CustomFormControlLabel";
 import { useFilterContext } from "../../context/Context";
-import { vars } from '../../theme/variables.js'
+import { vars } from '../../theme/variables'
 
 const {
   checkboxBorderColor,
