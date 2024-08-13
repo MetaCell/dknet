@@ -235,3 +235,10 @@ export const LaunchPageIcon = (props: SvgIconProps) => (
     </defs>
   </SvgIcon>
 )
+
+
+export const TopIcon = (props: SvgIconProps) => (
+  <SvgIcon width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M4.16675 7.50033L5.34175 8.67533L9.16675 4.85866V18.3337H10.8334V4.85866L14.6584 8.68366L15.8334 7.50033L10.0001 1.66699L4.16675 7.50033Z" fill="white"/>
+  </SvgIcon>
+)

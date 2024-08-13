@@ -3,6 +3,7 @@
       "code": "DataType",
       "label": "Data Type",
       "question": " What is your primary data type?  If more than one, select “Multiple”.",
+      "resultText": "Data type",
       "description": "Are your data primarily of one data type, e.g., imaging, or have you collected multiple primary data types, e.g., correlated imaging and physiology.  ",
       "inputType": "MULTI",
       "weighting": "10",
@@ -167,6 +168,7 @@
       "code": "DomainType",
       "label": "Domain",
       "question": " Do your data come from any of the following scientific domains?  If not, leave blank. ",
+      "resultText": "Scientific domains",
       "description": "Select the primary domain of your data;  if your domain is not on the list, select other.",
       "inputType": "MULTI",
       "weighting": "10",
@@ -289,6 +291,7 @@
       "code": "SpeciesSpecific",
       "label": "Species Specific Data",
       "question": "Does your data come from one of these species?",
+      "resultText": "Species",
       "description": "Does your data come from one of these species?",
       "inputType": "MULTI",
       "weighting": "8",
@@ -334,8 +337,9 @@
       "code": "PhiHippa",
       "label": "Controlled Access?",
       "question": "Does the dataset require controlled access (e.g. sensitive human data)?",
+      "resultText": "Controlled access",
       "description": "Does the data set contain sensitive information (e.g., PHI) and will the repository have to be HIPAA compliant (Health Information Portability and Accountability Act. A US regulation governing the sharing of protected health information)",
-      "inputType": "MULTI",
+      "inputType": "BOOLEAN",
       "weighting": "1",
       "options": [
          {
@@ -358,8 +362,9 @@
       "code": "VersioningSupport",
       "label": "Versioning Supported?",
       "question": "Will the data be updated frequently, i.e., they are part of an ongoing study that will uploaded in batches?",
+      "resultText": "Are data updated frequently?",
       "description": "Do you anticipate publishing multiple versions of a given data set or will you deposit the data at the study end?",
-      "inputType": "MULTI",
+      "inputType": "BOOLEAN",
       "weighting": "1",
       "options": [
          {
@@ -382,8 +387,9 @@
       "code": "CitationImportance",
       "label": "Data Citation Important to you?",
       "question": "How important is data citation to you?",
+      "resultText": "Data citation",
       "description": "Citing a dataset like you would any other publication ensures that you receive credit if the dataset is reused, but not all repositories support full data citation",
-      "inputType": "MULTI",
+      "inputType": "HIERARCHY",
       "weighting": "1",
       "options": [
          {
@@ -413,6 +419,7 @@
       "code": "FundingSource",
       "label": "Funder",
       "question": "Is the dataset funded, at least in part, by the NIH?",
+      "resultText": "Funding source",
       "description": "Some repositories have restrictions on eligible funding sources",
       "inputType": "MULTI",
       "weighting": "1",
@@ -444,8 +451,9 @@
       "code": "Published",
       "label": "Data supports a published article?",
       "question": "Will the dataset support any published academic work?",
+      "resultText": "Published academic work",
       "description": "Will your data be published in conjunction with a research paper?",
-      "inputType": "MULTI",
+      "inputType": "BOOLEAN",
       "weighting": "1",
       "options": [
          {
@@ -468,6 +476,7 @@
       "code": "PIDQuestion",
       "label": "PID Supported?",
       "question": "Will you need a PID for the published dataset?",
+      "resultText": "PID required",
       "description": "Some funders and journals (NIH included) require that your dataset be assigned a persistent identifier (PID).  Some specifically require a DOI.",
       "inputType": "MULTI",
       "weighting": "1",
