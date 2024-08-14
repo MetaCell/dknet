@@ -8,16 +8,20 @@ import { vars } from "../theme/variables";
 const { grey700, grey400, grey200 } = vars;
 
 interface Item {
-  itemId: string;
-  label: string;
+  code: string,
+  label: string,
+  icon?: string,
+  color?: string,
+  weighting?: 1
 }
 
 interface NestedListViewProps {
   data: {
     label: string;
-    description?: string;
+    question?: string;
+    options: Item[];
   };
-  listData: Item[];
+  
 }
 
 const formLabelStyles = {
@@ -29,6 +33,7 @@ const iconButtonStyles = {
 };
 
 const listStyles = {
+  marginLeft: '-0.625rem',
   '& .MuiFormControlLabel-root': {
     alignItems: 'flex-start',
   },
@@ -55,23 +60,23 @@ const listStyles = {
 };
 
 const NestedListItem: FC<{ item: Item; depth: number }> = memo(({ item, depth }) => (
-  <ListItem disablePadding sx={{ pl: depth * 2 }}>
+  <ListItem disablePadding sx={{ pl: depth * 2.5 }}>
     <Box
       sx={{
         display: "flex",
         alignItems: "center",
-        borderLeft: depth > 0 ? `0.0625rem solid ${grey200}` : "none",
-        pl: depth > 0 ? "0.625rem" : "0",
+        borderLeft: `0.0625rem solid ${depth > 0 ? grey200 : 'transparent'}`,
+        pl: "0.625rem",
       }}
     >
-      <CustomizedRadios data={{ label: item.label }} />
+      <CustomizedRadios data={{ label: item.label, code: item.code }} />
     </Box>
   </ListItem>
 ));
 
 NestedListItem.displayName = 'NestedListItem';
 
-const NestedListView: FC<NestedListViewProps> = ({ data, listData }) => (
+const NestedListView: FC<NestedListViewProps> = ({ data }) => (
   <Box display='flex' flexDirection='column' gap={1}>
     <FormLabel component="legend" sx={formLabelStyles}>
       <Stack direction="row" alignItems='center' justifyContent="space-between">
@@ -80,7 +85,7 @@ const NestedListView: FC<NestedListViewProps> = ({ data, listData }) => (
           <IconButton sx={iconButtonStyles}>
             <CleaningServicesOutlinedIcon sx={{ color: grey400 }} />
           </IconButton>
-          <Tooltip title={data.description}>
+          <Tooltip title={data.question}>
             <IconButton sx={iconButtonStyles}>
               <HelpOutlineIcon sx={{ color: grey400 }} />
             </IconButton>
@@ -90,8 +95,8 @@ const NestedListView: FC<NestedListViewProps> = ({ data, listData }) => (
     </FormLabel>
 
     <List disablePadding sx={listStyles}>
-      {listData?.map((item, index) => (
-        <NestedListItem key={item.itemId} item={item} depth={index} />
+      {data?.options?.map((item, index) => (
+        <NestedListItem key={item.code} item={item} depth={index} />
       ))}
     </List>
   </Box>

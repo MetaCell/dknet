@@ -11,7 +11,6 @@ import CustomRadioGroup from "./CustomRadioGroup";
 import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 import { Button } from "@mui/material"
 import { resetFilters } from "../utils/helpers";
-import CustomTreeView from "./CustomTreeView";
 import NestedListView from "./NestedListView"
 
 const DUMMY_TREE_DATA = [
@@ -48,6 +47,9 @@ const Filters = () => {
   const checkboxFilters = filters
     .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)
 
+  const hierarchicalFilters = filters
+    .filter((filter) => filter.inputType === "HIERARCHY" && filter.label !== undefined)
+
   const onClearFilters = () => {
     setContext({
       ...context,
@@ -71,16 +73,9 @@ const Filters = () => {
             switchFilters.map((row, index) => <SwitchWidget key={index} data={row} />)
           }
         </FormGroup>
-
-        <NestedListView data={{
-          label: 'Data Citation Important to you?',
-          description: 'Data Citation Important to you?'
-        }} listData={DUMMY_TREE_DATA} />
-
-        <CustomTreeView data={{
-          label: 'Data Citation Important to you?',
-          description: 'Data Citation Important to you?'
-        }} treeData={DUMMY_TREE_DATA} />
+        {
+          hierarchicalFilters?.map((row, index) => <NestedListView data={row} key={index} />)
+        }
 
         {
           checkboxFilters?.map((row, index) => <CustomCheckboxesGroup data={row} key={index} />)
