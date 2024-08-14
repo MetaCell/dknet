@@ -12,38 +12,24 @@ import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 import { Button } from "@mui/material"
 import { resetFilters } from "../utils/helpers";
 import CustomTreeView from "./CustomTreeView";
+import NestedListView from "./NestedListView"
 
 const DUMMY_TREE_DATA = [
   {
     itemId: "grid",
     label: "Data Grid",
-    children: [
-      { itemId: "grid-community", label: "@mui/x-data-grid" },
-      { itemId: "grid-pro", label: "@mui/x-data-grid-pro" },
-      { itemId: "grid-premium", label: "@mui/x-data-grid-premium" },
-    ],
   },
   {
     itemId: "pickers",
     label: "Date and Time Pickers",
-    children: [
-      { itemId: "pickers-community", label: "@mui/x-date-pickers" },
-      { itemId: "pickers-pro", label: "@mui/x-date-pickers-pro" },
-    ],
   },
   {
     itemId: "charts",
     label: "Charts",
-    children: [
-      { itemId: "charts-community", label: "@mui/x-charts" },
-    ],
   },
   {
     itemId: "tree-view",
     label: "Tree View",
-    children: [
-      { itemId: "tree-view-community", label: "@mui/x-tree-view" },
-    ],
   },
 ];
 
@@ -85,6 +71,11 @@ const Filters = () => {
             switchFilters.map((row, index) => <SwitchWidget key={index} data={row} />)
           }
         </FormGroup>
+
+        <NestedListView data={{
+          label: 'Data Citation Important to you?',
+          description: 'Data Citation Important to you?'
+        }} listData={DUMMY_TREE_DATA} />
 
         <CustomTreeView data={{
           label: 'Data Citation Important to you?',
