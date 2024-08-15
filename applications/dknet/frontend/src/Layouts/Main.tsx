@@ -22,7 +22,8 @@ const MainLayout = ({ children }) => {
       backgroundRepeat: 'np-repeat',
       backgroundSize: 'cover',
       minHeight: '100vh',
-      overflow: 'auto'
+      overflow: 'auto',
+      backgroundAttachment: 'fixed',
     }}>
       <Container>
         <Header />

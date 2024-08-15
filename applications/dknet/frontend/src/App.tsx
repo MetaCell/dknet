@@ -22,7 +22,6 @@ const App = () => {
               xs: "auto",
             },
           }}
-          height="100vh"
           display="flex"
           overflow="auto"
           >
