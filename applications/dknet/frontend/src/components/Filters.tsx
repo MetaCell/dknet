@@ -22,7 +22,7 @@ const Filters = () => {
     .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
 
   const radioFilters = filters
-    .filter((filter) => filter.inputType === "SINGLE" && filter.label !== undefined)
+    .filter((filter) => filter.inputType === "BOOLEAN" && filter.label !== undefined)
 
   const checkboxFilters = filters
     .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)

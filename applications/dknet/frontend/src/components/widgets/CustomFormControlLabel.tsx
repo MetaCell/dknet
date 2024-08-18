@@ -3,7 +3,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 const CustomFormControlLabel = ({ value, control, label }) => {
   return (
-    <FormControlLabel value={value} control={control} label={label} />
+    <FormControlLabel sx={{ marginRight: 0, '& .MuiFormControlLabel-label': { flex: 1 } }} value={value} control={control} label={label} />
   );
 }
 
