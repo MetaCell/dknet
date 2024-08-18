@@ -79,15 +79,17 @@ const RepositoryCard = (props) => {
                 }
                 return (
                   <Grid key={filter.code} item md={6}>
-                    <Box display="flex" justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
+                    <Box display="flex" alignItems="center" height={1} gap={1} justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
                       <Typography variant="body2" color="grey.600">{filter.label}</Typography>
-                      {
-                        attributeValues.map((attribute: any) =>
-                          filter.options.map((option: any) => (option.code === attribute &&
-                            <Chip key={option.code} label={option.label} color={option.color} icon={option.icon && getMuiIcon(option.icon)} />
-                          ))
-                        )
-                      }
+                      <Box display="flex" gap={1} alignItems='center'>
+                        {
+                          attributeValues.map((attribute: any) =>
+                            filter.options.map((option: any) => (option.code === attribute &&
+                              <Chip key={option.code} label={option.label} color={option.color} icon={option.icon && getMuiIcon(option.icon)} />
+                            ))
+                          )
+                        }
+                      </Box>
                     </Box>
                   </Grid>
                 )
