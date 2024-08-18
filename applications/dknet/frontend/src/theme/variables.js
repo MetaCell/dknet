@@ -11,6 +11,7 @@ export const vars = {
   grey900: '#101828',
   grey50:'#F9FAFB',
 
+  primary800: '#05796B',
   primary500: '#10B881',
   primary600: '#0BA47D',
   primary700: '#088E75',

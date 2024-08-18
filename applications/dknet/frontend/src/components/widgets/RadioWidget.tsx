@@ -15,8 +15,12 @@ const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: '50%',
   width: 20,
   height: 20,
-  boxShadow:`inset 0 0 0 0.0625rem ${checkboxBorderColor}, inset 0 -1px 0 ${checkboxBorderColor}`,
-  backgroundColor: white,
+  boxShadow:'inset 0 0 0 1px #98A2B3, inset 0 -1px 0 #98A2B3',
+  backgroundColor: '#fff',
+  backgroundImage:
+    theme.palette.mode === 'dark'
+      ? 'linear-gradient(180deg,hsla(0,0%,100%,.05),hsla(0,0%,100%,0))'
+      : 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))',
   '.Mui-focusVisible &': {
     outline: `0.125rem auto ${primary50}`,
     outlineOffset: 2,
@@ -39,7 +43,7 @@ const BpCheckedIcon = styled(BpIcon)({
     display: 'block',
     width: 20,
     height: 20,
-    backgroundImage: `radial-gradient(${primary600},${primary600} 28%,transparent 32%)`,
+    backgroundImage: 'radial-gradient(#0BA47D,#0BA47D 28%,transparent 32%)',
     content: '""',
   },
   'input:hover ~ &': {

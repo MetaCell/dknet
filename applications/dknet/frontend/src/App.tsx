@@ -8,6 +8,7 @@ import { FilterProvider } from './context/Context'
 import Box from '@mui/material/Box'
 import { CssBaseline } from "@mui/material"
 import HomePage from './pages/HomePage'
+import ScrollToTop from './components/ScrollTop'
 
 const App = () => {
 
@@ -21,15 +22,16 @@ const App = () => {
               xs: "auto",
             },
           }}
-          height="100vh"
           display="flex"
-          overflow="auto" >
+          overflow="auto"
+          >
             <Box flex={1} display="flex" flexDirection="column" id='main-container'>
               <Routes>
                 <Route path="/" element={<HomePage />} />
               </Routes>
             </Box>
           </Box>
+          <ScrollToTop/>
         </FilterProvider>
       </ThemeProvider>
     </BrowserRouter>

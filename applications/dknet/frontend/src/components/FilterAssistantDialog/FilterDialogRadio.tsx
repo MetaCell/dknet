@@ -5,7 +5,7 @@ import Radio from '@mui/material/Radio';
 import { FormControlLabel } from "@mui/material";
 import { useFilterContext } from "../../context/Context";
 import Icon from '@mui/material/Icon';
-import { vars } from '../../theme/variables.js';
+import { vars } from '../../theme/variables';
 
 const {
   white,

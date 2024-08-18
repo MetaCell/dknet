@@ -11,6 +11,26 @@ import CustomRadioGroup from "./CustomRadioGroup";
 import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 import { Button } from "@mui/material"
 import { resetFilters } from "../utils/helpers";
+import NestedListView from "./NestedListView"
+
+const DUMMY_TREE_DATA = [
+  {
+    itemId: "grid",
+    label: "Data Grid",
+  },
+  {
+    itemId: "pickers",
+    label: "Date and Time Pickers",
+  },
+  {
+    itemId: "charts",
+    label: "Charts",
+  },
+  {
+    itemId: "tree-view",
+    label: "Tree View",
+  },
+];
 
 
 const Filters = () => {
@@ -27,6 +47,9 @@ const Filters = () => {
   const checkboxFilters = filters
     .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)
 
+  const hierarchicalFilters = filters
+    .filter((filter) => filter.inputType === "HIERARCHY" && filter.label !== undefined)
+
   const onClearFilters = () => {
     setContext({
       ...context,
@@ -40,18 +63,20 @@ const Filters = () => {
       borderRadius: '12px',
       padding: 3
     }}>
-      <Stack spacing={2}>
-        <Box display='flex' justifyContent='space-between'>
-          <Typography variant='h5' lineHeight='unset'>Filter Results</Typography>
-          <Button variant='text' sx={{ fontWeight: 600, color: '#088E75', minHeight: 'unset'  }} onClick={onClearFilters}>Clear Filters</Button>
-        </Box>
-        <Box>
-          <FormGroup>
-            {
-              switchFilters.map((row, index) => <SwitchWidget key={index} data={row} />)
-            }
-          </FormGroup>
-        </Box>
+      <Box display='flex' justifyContent='space-between'>
+        <Typography variant='h5' lineHeight='unset'>Filter Results</Typography>
+        <Button variant='text' sx={{ fontWeight: 600, color: '#088E75', minHeight: 'unset' }} onClick={onClearFilters}>Clear Filters</Button>
+      </Box>
+      <Box display='flex' flexDirection='column' gap={3} mt={1}>
+        <FormGroup>
+          {
+            switchFilters.map((row, index) => <SwitchWidget key={index} data={row} />)
+          }
+        </FormGroup>
+        {
+          hierarchicalFilters?.map((row, index) => <NestedListView data={row} key={index} />)
+        }
+
         {
           checkboxFilters?.map((row, index) => <CustomCheckboxesGroup data={row} key={index} />)
         }
@@ -59,8 +84,7 @@ const Filters = () => {
         {
           radioFilters?.map((row, index) => <CustomRadioGroup data={row} key={index} />)
         }
-
-      </Stack>
+      </Box>
     </Box>
   );
 };

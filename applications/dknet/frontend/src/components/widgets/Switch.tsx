@@ -87,7 +87,6 @@ const SwitchWidget = ({ data }: any) => {
     <CustomFormControlLabel
       control={<IOSSwitch
         onChange={onSwitchChange}
-        sx={{ m: 1 }}
         checked={context?.filterValues[data.code]?.code === filter?.options[0]?.code} />}
       label={<Stack direction="row" alignItems='center' justifyContent="space-between">
         <Typography>

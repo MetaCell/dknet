@@ -18,7 +18,10 @@ const {
   dialogBoxShadow,
   primary500,
   iconButtonFocusShadow,
-  iconButtonHoverShadow
+  iconButtonHoverShadow,
+  primary800,
+  primary50,
+  checkboxBgChecked
 } = vars;
 
 const theme = createTheme({
@@ -159,12 +162,44 @@ const theme = createTheme({
           color: ${error600};
         }
       }
+
+      .MuiSimpleTreeView-root .MuiTreeItem-content .MuiTreeItem-label {
+        line-height: 1
+      }
+
+      .MuiSimpleTreeView-root .MuiTreeItem-root + .MuiTreeItem-root {
+        margin-top: 0.5rem
+      }
+
+      .MuiSimpleTreeView-root .MuiTreeItem-content {
+        border-radius: 0;
+        padding: 0
+      }
+
+      .MuiSimpleTreeView-root .MuiTreeItem-content .MuiTreeItem-iconContainer {
+        display: none
+      }
+
+      .MuiSimpleTreeView-root .MuiTreeItem-content.Mui-selected,
+      .MuiSimpleTreeView-root .MuiTreeItem-content.Mui-selected.Mui-focused,
+      .MuiSimpleTreeView-root .MuiTreeItem-content.Mui-selected:hover,
+      .MuiSimpleTreeView-root .MuiTreeItem-content:hover {
+        background: transparent
+      }
+
+      .MuiSimpleTreeView-root .MuiTreeItem-root .MuiTreeItem-groupTransition {
+        border-left: 0.0625rem solid ${grey200};
+        margin-left: 0.625rem;
+        padding-left: 1.125rem;
+        margin-top: 0.5rem;
+      }
       `
     },
     
     MuiCheckbox: {
       styleOverrides: {
         root: {
+          padding: 0,
           '&.Mui-checked': {
             '& + p': {
               color: '#05796B'
@@ -217,6 +252,15 @@ const theme = createTheme({
         }
       }
     },
+
+    MuiRadio: {
+      styleOverrides: {
+        root: {
+          padding: 0
+        }
+      }
+    },
+    
     MuiCardContent: {
       styleOverrides: {
         root: {
@@ -294,6 +338,22 @@ const theme = createTheme({
             boxShadow: '0 0.0625rem 0.125rem rgba(16, 24, 40, 0.05)',
           }
         },
+        containedSecondary: {
+          background: primary50,
+          border: `0.0625rem solid ${primary50}`,
+          color: primary700,
+          boxShadow: 'none',
+          '&:hover': {
+            background: checkboxBgChecked,
+            boxShadow: 'none',
+            color: primary800,
+          },
+          '&:focus': {
+            background: primary50,
+            color: primary700,
+            boxShadow: '0rem 0rem 0rem 0.25rem #AAE7C7, 0rem 0.0625rem 0.125rem 0rem #1018280D',
+          }
+        },
         outlined: {
           background: white,
           color: grey700,
@@ -358,33 +418,37 @@ const theme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          borderRadius: '0.5rem',
-          padding: '0.5rem',
-          border: `0.0625rem solid ${grey200}`,
-          background: white,
-
-          '&:hover': {
-            boxShadow: iconButtonHoverShadow,
-            borderColor: checkboxBorderColor,
-            background: grey50,
-          },
-
-          '&:focus': {
+          '&.outlined': {
+            borderRadius: '0.5rem',
+            padding: '0.5rem',
+            border: `0.0625rem solid ${grey200}`,
             background: white,
-            borderColor: checkboxBorderColor,
-            boxShadow: iconButtonFocusShadow
+  
+            '&:hover': {
+              boxShadow: iconButtonHoverShadow,
+              borderColor: checkboxBorderColor,
+              background: grey50,
+            },
+  
+            '&:focus': {
+              background: white,
+              borderColor: checkboxBorderColor,
+              boxShadow: iconButtonFocusShadow
+            },
+  
+            '&.active': {
+              background: white,
+              borderColor: checkboxBorderColor,
+              boxShadow: iconButtonFocusShadow
+            },
           },
-
-          '&.active': {
-            background: white,
-            borderColor: checkboxBorderColor,
-            boxShadow: iconButtonFocusShadow
-          },
+          
         },
         colorPrimary: {
         }
       }
     },
+
     MuiSvgIcon: {
       styleOverrides: {
         fontSizeSmall: {
@@ -486,7 +550,7 @@ const theme = createTheme({
     MuiSwitch: {
       styleOverrides: {
         root: {
-
+          margin: 0
         }
       }
     },
@@ -547,13 +611,31 @@ const theme = createTheme({
         }
       }
     },
+    MuiFormGroup: {
+      styleOverrides: {
+        root: {
+          gap: '0.5rem'
+        }
+      }
+    },
     MuiFormControlLabel:{
       styleOverrides:{
+        label: {
+          lineHeight: 1,
+          flex: 1
+        },
         root: {
           flexGrow: 1,
+          gap: '0.5rem',
           fontSize: '0.875rem',
           fontWeight: '400',
           color: grey500,
+          lineHeight: 1,
+          margin: 0,
+
+          '& .MuiTypography-root': {
+            lineHeight: 1,
+          }
         }
       }
     },

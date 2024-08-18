@@ -37,7 +37,7 @@ const CustomRadioGroup = ({ data }) => {
   }
 
   return (
-    <Box>
+    <Box display='flex' flexDirection='column' gap={1}>
       <FormLabel
         component="legend"
         sx={{

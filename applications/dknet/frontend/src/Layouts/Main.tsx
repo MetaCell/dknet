@@ -22,7 +22,8 @@ const MainLayout = ({ children }) => {
       backgroundRepeat: 'np-repeat',
       backgroundSize: 'cover',
       minHeight: '100vh',
-      overflow: 'auto'
+      overflow: 'auto',
+      backgroundAttachment: 'fixed',
     }}>
       <Container>
         <Header />
@@ -35,9 +36,9 @@ const MainLayout = ({ children }) => {
             <Search/>
           </Grid>
           <Grid item xs={12} sm={8}>
-            <Box display='flex' alignItems='center' justifyContent='center' width={1}>
-              <Typography variant='subtitle2' mr={1}>Need help setting up filters? </Typography>
-              <Button variant='text' sx={{ fontWeight: 600, color: '#088E75' }} onClick={viewFilterAssistant}>Try our Filtering Assistant</Button>
+            <Box mt={2} display='flex' alignItems='center' flexDirection='column' gap={1.5} justifyContent='center' width={1}>
+              <Button variant='contained' color='secondary' onClick={viewFilterAssistant}>Edit inputs in Filtering Assistant</Button>
+              <Typography variant='subtitle2' mr={1}>Results was the outcome of Filtering Assistant.</Typography>
             </Box>
           </Grid>
         </Grid>
