@@ -9,6 +9,14 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import FilterQuestions from "./FilterQuestions";
+import { PreviewIcon } from "../../assets/icons";
+import { Box, Divider } from "@mui/material";
+import { vars } from "../../theme/variables";
+
+const {
+  grey200,
+  grey50
+} = vars;
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -26,6 +34,7 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const { context } = useFilterContext()
   const [height, setHeight] = useState([]);
   const [translateValue, setTranslateValue] = useState(0);
+  const [showPreview, setShowPreview] = useState(false);
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
@@ -99,26 +108,37 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       }}
     >
       <DialogTitle sx={{
-        borderBottom: '0.0625rem solid #EAECF0',
+        borderBottom: `0.0625rem solid ${grey200}`,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between'
       }}>
         <Typography variant='h2'>
           Filtering Assistant
         </Typography>
-        <IconButton
-          aria-label="close"
-          onClick={handleClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
+        <Box display='flex' alignItems='center' gap={1}>
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <Divider sx={{
+            width: '0.0625rem',
+            height: '2rem',
+            background: grey200,
+          }} />
+          <IconButton className={`outlined ${showPreview ? 'active' : ''}`} onClick={() => setShowPreview(!showPreview)}>
+            <PreviewIcon />
+          </IconButton>
+        </Box>
       </DialogTitle>
-      <DialogContent sx={{ backgroundColor: "#F9FAFB", height: 'calc(100vh - 3.60rem)' }}>
+      <DialogContent sx={{ backgroundColor: grey50, height: 'calc(100vh - 3.60rem)' }}>
         <FilterQuestions
+          showPreview={showPreview}
           setHeight={setHeight}
           open={open}
           questionsTabs={questionsTabs}

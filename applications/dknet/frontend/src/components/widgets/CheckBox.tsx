@@ -41,7 +41,7 @@ const BpIcon = styled('span')(({ theme }) => ({
 }));
 
 const BpCheckedIcon = styled(BpIcon)({
-  backgroundColor: 'transparent',
+  backgroundColor: primary50,
   '&:before': {
     display: 'block',
     width: 16,
@@ -56,7 +56,7 @@ const BpCheckedIcon = styled(BpIcon)({
     content: '""',
   },
   'input:hover ~ &': {
-    backgroundColor: 'transparent',
+    backgroundColor: primary50,
   },
 });
 
