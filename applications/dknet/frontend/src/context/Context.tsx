@@ -1,9 +1,18 @@
 import React, { createContext, useContext, useState } from "react"
 import { ROWS_PER_PAGE } from "../config/constants"
-import filters from '../resources/filters.json'
-import repositories from '../resources/repositories.json'
+import getFilters from './FilterService';
+import getRepositories from './RepositoryService';
 import { IFilter, IFilterContext, IRepository } from './Interfaces'
 import { resetFilters } from "../utils/helpers";
+
+let filters = [];
+let repositories = [];
+
+const getData = async () => {
+  filters = await getFilters();
+  repositories = await getRepositories();
+  return { filters, repositories }
+}
 
 export const FilterContext = createContext(null)
 
@@ -37,6 +46,18 @@ export const FilterProvider = ({ children }) => {
   });
 
   const setContext = (newContext) => _setContext(_sortRepositories(scoreRepositories(newContext)))
+
+  if (filters.length === 0 || repositories.length === 0) {
+    getData().then((data) => {
+      filters = data.filters;
+      repositories = data.repositories;
+      setContext({
+        ...context,
+        allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
+        allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
+      })
+    });
+  }
 
   const scoreRepositories = (newContext: IFilterContext): IFilterContext => {
     const filterValues = { ...newContext.filterValues }

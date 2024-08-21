@@ -2,19 +2,21 @@ const fs = require('fs');
 const { exit } = require('process');
 const request = require('request');
 
-if(process.argv.length !== 3) {
-  console.log(`USAGE: node ${process.argv[1]} <PAT>`);
-  exit(1);
-}
+// if(process.argv.length !== 3) {
+//   console.log(`USAGE: node ${process.argv[1]} <PAT>`);
+//   exit(1);
+// }
 
 const resourcesFolder = '../applications/dknet/frontend/src/resources'
-const fileName = `${resourcesFolder}/repositories.json`
+// const fileName = `${resourcesFolder}/repositories.json`
+const fileName = `repositories.json`
  
 // Set up Airtable API credentials
-const baseId = 'app8GwPKlzcZUj3lo';
-const tableName = 'tblaJilQIzivkkeiF'; //This is the table editable by dkNET
-//const tableName = 'tbl6zb7sPWSHFT3wr'; //This is the test table
-const pat = process.argv[2];
+const baseId = 'appwLXKayeTSQdcyL';
+const tableName = 'tbluLCfLFLZ6sP0y1';
+// const pat = process.argv[2];
+const pat = 'patof2ndlJELB9zEl.76eb0386f6f9e00230a330dcdc6960b846c0f5e7322d66d3912a4f45b7b3d583'
+
 
 // Set up Airtable API endpoint URL
 const url = `https://api.airtable.com/v0/${baseId}/${tableName}`;
@@ -44,10 +46,27 @@ prefixes_list = [
   'SpeciesSpecificData'
 ];
 
+questions_list = [
+  'q1',
+  'q2',
+  'q3',
+  'q4',
+  'q5',
+  'q6',
+  'q7',
+  'q8',
+  'q9',
+  'q10',
+  'q11',
+  'acc (from Questions / Responses)',
+  'HumanSubjectQuestion',
+  'qContact (from Questions / Responses)',
+];
+
 // Make a GET request to the Airtable API for the filters
-request.get({ url: url, headers: headers }, function (error, response, body) 
+request.get({ url: url, headers: headers }, function (error, response, body)
 {
-  if (error) 
+  if (error)
   {
     console.error(error);
     return;
@@ -60,7 +79,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
   const records = data.records;
 
   // Map the records array to a new array of objects with only the fields data
-  repositories = data.records.map(function (record) 
+  repositories = data.records.map(function (record)
   {
     const fields = record.fields;
     // Build metadata with the code, label, icon, and colour
@@ -91,7 +110,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
     let attributes = {};
     // Loop through repo options
     let prefixAttributes = {};
-    for (prefix of prefixes_list) {
+    for (prefix of questions_list) {
             let inputList = [];
             // Make sure it is a string
             if (typeof fields[prefix] === 'string'){
@@ -105,14 +124,16 @@ request.get({ url: url, headers: headers }, function (error, response, body)
             let prefixAttributesList = [];
             if (inputList.length > 0) {
               inputList.forEach(function (option, index) {
-                const code = option.toLowerCase().replace(/\s+/g, '-');
-                prefixAttributesList.push(code)
-              }); 
+                const code = option.trim().toLowerCase().replace(/\s+/g, '-');
+                if (code) {
+                  prefixAttributesList.push(code)
+                }
+              });
             }
-            FilterCode=fields[`${prefix}_FilterCode`]        
-            prefixAttributes[FilterCode] = prefixAttributesList;
+            // FilterCode=fields[`${prefix}`]
+            prefixAttributes[prefix] = prefixAttributesList;
     }
-    
+
     // Return fields
     return {
       'code': codename,
@@ -130,4 +151,3 @@ request.get({ url: url, headers: headers }, function (error, response, body)
   console.log(`Data saved to ${fileName} `)
 });
 });
-

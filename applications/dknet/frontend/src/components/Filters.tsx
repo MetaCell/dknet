@@ -38,8 +38,8 @@ const Filters = () => {
 
   const filters = context.allFilters.slice(2)
 
-  const switchFilters = filters
-    .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
+  // const switchFilters = filters
+  //   .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
 
   const radioFilters = filters
     .filter((filter) => filter.inputType === "BOOLEAN" && filter.label !== undefined)
@@ -68,11 +68,11 @@ const Filters = () => {
         <Button variant='text' sx={{ fontWeight: 600, color: '#088E75', minHeight: 'unset' }} onClick={onClearFilters}>Clear Filters</Button>
       </Box>
       <Box display='flex' flexDirection='column' gap={3} mt={1}>
-        <FormGroup>
+        {/* <FormGroup>
           {
             switchFilters.map((row, index) => <SwitchWidget key={index} data={row} />)
           }
-        </FormGroup>
+        </FormGroup> */}
         {
           hierarchicalFilters?.map((row, index) => <NestedListView data={row} key={index} />)
         }

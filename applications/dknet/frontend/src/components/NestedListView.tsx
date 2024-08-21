@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react";
-import { Box, FormLabel, IconButton, List, ListItem, ListItemText, Stack, Tooltip, Typography } from "@mui/material";
+import { Box, FormLabel, IconButton, List, ListItem, Stack, Tooltip, Typography } from "@mui/material";
 import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CustomizedRadios from "./widgets/RadioWidget";
@@ -59,8 +59,12 @@ const listStyles = {
   },
 };
 
-const NestedListItem: FC<{ item: Item; depth: number }> = memo(({ item, depth }) => (
-  <ListItem disablePadding sx={{ pl: depth * 2.5 }}>
+const NestedListItem: FC<{ item: Item; depth: number; }> = memo(({ item, depth }) => {
+  const changeSelection = (e: string): any => {
+    console.log('changeSelection', e);
+  }
+
+  return (<ListItem disablePadding sx={{ pl: depth * 2.5 }}>
     <Box
       sx={{
         display: "flex",
@@ -71,25 +75,30 @@ const NestedListItem: FC<{ item: Item; depth: number }> = memo(({ item, depth })
     >
       <CustomizedRadios data={{ label: item.label, code: item.code }} />
     </Box>
-  </ListItem>
-));
+  </ListItem>)
+});
 
 NestedListItem.displayName = 'NestedListItem';
 
-const NestedListView: FC<NestedListViewProps> = ({ data }) => (
-  <Box display='flex' flexDirection='column' gap={1}>
+const NestedListView: FC<NestedListViewProps> = ({ data }) => {
+  console.log('NestedListView', data);
+  const changeSelection = (e: string): any => {
+    console.log('changeSelection', e);
+  }
+
+  return (<Box display='flex' flexDirection='column' gap={1}>
     <FormLabel component="legend" sx={formLabelStyles}>
       <Stack direction="row" alignItems='center' justifyContent="space-between">
         <Typography component='h4'>{data.label}</Typography>
         <Stack direction="row">
-          <IconButton sx={iconButtonStyles}>
-            <CleaningServicesOutlinedIcon sx={{ color: grey400 }} />
-          </IconButton>
           <Tooltip title={data.question}>
             <IconButton sx={iconButtonStyles}>
               <HelpOutlineIcon sx={{ color: grey400 }} />
             </IconButton>
           </Tooltip>
+          <IconButton sx={iconButtonStyles}>
+            <CleaningServicesOutlinedIcon sx={{ color: grey400 }} />
+          </IconButton>
         </Stack>
       </Stack>
     </FormLabel>
@@ -99,8 +108,8 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => (
         <NestedListItem key={item.code} item={item} depth={index} />
       ))}
     </List>
-  </Box>
-);
+  </Box>);
+};
 
 NestedListView.displayName = 'NestedListView';
 
