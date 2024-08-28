@@ -27,9 +27,9 @@ const RepositoriesList = () => {
             <SortWidget/>
           </Grid>
           {
-            context.allRepositories && context.allRepositories.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
+            context.results.length > 0 ? context.results.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
               <RepositoryCard key={repository.code} repository={repository} isBestMatch={index === 0}/>
-            </Grid>)
+            </Grid>) : <Typography variant='h5'>No results found matching the filter criterias</Typography>
           }
         </Grid>
       </Grid>

@@ -1,9 +1,12 @@
-import React, { FC, memo } from "react";
+import React, { ChangeEvent, FC, memo } from "react";
 import { Box, FormLabel, IconButton, List, ListItem, Stack, Tooltip, Typography } from "@mui/material";
 import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CustomizedRadios from "./widgets/RadioWidget";
+import RadioGroup from "@mui/material/RadioGroup";
 import { vars } from "../theme/variables";
+import { useFilterContext } from "../context/Context";
+
 
 const { grey700, grey400, grey200 } = vars;
 
@@ -20,6 +23,7 @@ interface NestedListViewProps {
     label: string;
     question?: string;
     options: Item[];
+    code: string;
   };
   
 }
@@ -60,10 +64,6 @@ const listStyles = {
 };
 
 const NestedListItem: FC<{ item: Item; depth: number; }> = memo(({ item, depth }) => {
-  const changeSelection = (e: string): any => {
-    console.log('changeSelection', e);
-  }
-
   return (<ListItem disablePadding sx={{ pl: depth * 2.5 }}>
     <Box
       sx={{
@@ -81,9 +81,27 @@ const NestedListItem: FC<{ item: Item; depth: number; }> = memo(({ item, depth }
 NestedListItem.displayName = 'NestedListItem';
 
 const NestedListView: FC<NestedListViewProps> = ({ data }) => {
-  console.log('NestedListView', data);
-  const changeSelection = (e: string): any => {
-    console.log('changeSelection', e);
+  const { context, setContext } = useFilterContext();
+
+  const onClearFilter = () => {
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [data.code]: undefined
+      }
+    })
+  };
+
+  const changeSelection = (event: ChangeEvent<HTMLInputElement>, value: string): any => {
+    const newValue = data.options.find((item) => item.code === value);
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [data.code]: newValue
+      }
+    })
   }
 
   return (<Box display='flex' flexDirection='column' gap={1}>
@@ -96,7 +114,7 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
               <HelpOutlineIcon sx={{ color: grey400 }} />
             </IconButton>
           </Tooltip>
-          <IconButton sx={iconButtonStyles}>
+          <IconButton sx={iconButtonStyles} onClick={onClearFilter}>
             <CleaningServicesOutlinedIcon sx={{ color: grey400 }} />
           </IconButton>
         </Stack>
@@ -104,9 +122,14 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
     </FormLabel>
 
     <List disablePadding sx={listStyles}>
-      {data?.options?.map((item, index) => (
-        <NestedListItem key={item.code} item={item} depth={index} />
-      ))}
+      <RadioGroup
+        value={context?.filterValues[data.code]?.code}
+        onChange={changeSelection}
+      >
+        {data?.options?.map((item, index) => (
+          <NestedListItem key={item.code} item={item} depth={index} />
+        ))}
+      </RadioGroup>
     </List>
   </Box>);
 };

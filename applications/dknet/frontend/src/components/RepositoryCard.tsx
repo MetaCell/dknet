@@ -13,6 +13,7 @@ import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 //icons
 import * as MUIcon from "@mui/icons-material"
+import { FilterColor } from "../config/enums";
 
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
@@ -77,15 +78,20 @@ const RepositoryCard = (props) => {
                 if (!attributeValues) {
                   return null
                 }
+                const filtersUsed = context.filterValues[filter.code]
+                  ? (Array.isArray(context.filterValues[filter.code])
+                    ? context.filterValues[filter.code].map(item => item.code)
+                    : [context.filterValues[filter.code].code])
+                  : [];
                 return (
                   <Grid key={filter.code} item md={6}>
                     <Box display="flex" alignItems="center" height={1} gap={1} justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
-                      <Typography variant="body2" color="grey.600">{filter.label}</Typography>
+                      <Typography variant="body2" color="grey.600">{filter.cardText}</Typography>
                       <Box display="flex" gap={1} alignItems='center'>
                         {
                           attributeValues.map((attribute: any) =>
                             filter.options.map((option: any) => (option.code === attribute &&
-                              <Chip key={option.code} label={option.label} color={option.color} icon={option.icon && getMuiIcon(option.icon)} />
+                              <Chip key={option.code} label={option.label} color={filtersUsed.includes(attribute) ? FilterColor.Success : FilterColor.Info} icon={option.icon && getMuiIcon(option.icon)} />
                             ))
                           )
                         }

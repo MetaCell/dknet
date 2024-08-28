@@ -1,13 +1,20 @@
 export enum FilterType {
   Single = 'SINGLE',
   Multiple = 'MULTIPLE',
-  Boolean = 'BOOLEAN'
+  Boolean = 'BOOLEAN',
+  Hierarchy = 'HIERARCHY'
 }
 
 export enum FilterOptionColor {
   Info = 'INFO',
   Success = 'SUCCESS',
   Warning = 'WARNING',
+}
+
+export enum FilterColor {
+  Info = 'info',
+  Success = 'success',
+  Warning = 'warning',
 }
 
 // export enum FilterOptionColorFG {

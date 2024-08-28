@@ -59,6 +59,9 @@ const SortWidget = () => {
     setAnchorEl(null);
   };
 
+  if (context.results.length === 0) {
+    return <></>;
+  }
   return (
     <>
       <Button variant="outlined"

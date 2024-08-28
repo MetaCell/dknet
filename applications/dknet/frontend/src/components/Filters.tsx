@@ -3,35 +3,12 @@ import { useFilterContext } from '../context/Context'
 
 //components
 import Box from '@mui/material/Box'
-import Stack from '@mui/material/Stack'
 import Typography from "@mui/material/Typography"
-import SwitchWidget from "./widgets/Switch"
-import FormGroup from "@mui/material/FormGroup"
 import CustomRadioGroup from "./CustomRadioGroup";
 import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 import { Button } from "@mui/material"
 import { resetFilters } from "../utils/helpers";
 import NestedListView from "./NestedListView"
-
-const DUMMY_TREE_DATA = [
-  {
-    itemId: "grid",
-    label: "Data Grid",
-  },
-  {
-    itemId: "pickers",
-    label: "Date and Time Pickers",
-  },
-  {
-    itemId: "charts",
-    label: "Charts",
-  },
-  {
-    itemId: "tree-view",
-    label: "Tree View",
-  },
-];
-
 
 const Filters = () => {
   const { context, setContext } = useFilterContext()
@@ -53,7 +30,7 @@ const Filters = () => {
   const onClearFilters = () => {
     setContext({
       ...context,
-      filterValues: resetFilters()
+      filterValues: resetFilters(context.filters)
     })
   }
 

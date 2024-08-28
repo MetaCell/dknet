@@ -1,6 +1,5 @@
 import { IFilter } from "../context/Interfaces";
 import { FilterType } from "../config/enums";
-import filters from "../resources/filters.json";
 
 const booleanFilterInitialState = (filter: IFilter) => (
   {
@@ -20,6 +19,12 @@ const multipleFilterInitialState = (filter: IFilter) => (
   }
 )
 
+const hierarchyFilterInitialState = (filter: IFilter) => (
+  {
+    [filter.code]: undefined,
+  }
+)
+
 const filterInitialState = (filter: IFilter) => {
   switch (filter.inputType) {
     case FilterType.Boolean:
@@ -28,11 +33,13 @@ const filterInitialState = (filter: IFilter) => {
       return singleFilterInitialState(filter)
     case FilterType.Multiple:
       return multipleFilterInitialState(filter)
+    case FilterType.Hierarchy:
+      return hierarchyFilterInitialState(filter)
   }
   return singleFilterInitialState(filter)
 }
 
-export const resetFilters = () => {
+export const resetFilters = (filters) => {
   return filters.reduce((a, filter) => {
     return (
       {

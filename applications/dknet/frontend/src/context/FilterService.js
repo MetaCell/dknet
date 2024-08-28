@@ -66,7 +66,8 @@ export default async function getFilters() {
           //'enum': ["SINGLE","MULTI","BOOLEAN","READONLY"],
           //'enumNames': ["Single select","Multi select","Boolean", "Read only"],
           'weighting': fields['Weighting'], // This is the weighting for the filter as a whole
-          'options': answers
+          'options': answers,
+          'cardText': fields['Card Text'],
         };
       });
       return filters;
