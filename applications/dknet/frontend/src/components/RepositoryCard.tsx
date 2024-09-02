@@ -41,6 +41,8 @@ const RepositoryCard = (props) => {
   const { context } = useFilterContext()
   const { isBestMatch, repository } = props;
   const filterLabels = Object.values(repository.attributes)[0] as Array<string>
+  const dataTypeCode = context.allFilters[0].code
+  const dataTypes = context.filterValues[dataTypeCode] ? context.filterValues[dataTypeCode].map(item => item.code) : []
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
@@ -67,7 +69,7 @@ const RepositoryCard = (props) => {
           </Box>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
-              filterLabels.map((row, index) => <Chip key={index} label={row} />)
+              filterLabels.map((row, index) => <Chip key={index} label={row} color={dataTypes.includes(row) ? FilterColor.Success : FilterColor.Info} />)
             }
           </Box>
           <Box mt={2.5} display="flex" width={1}>
