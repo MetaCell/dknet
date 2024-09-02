@@ -62,7 +62,7 @@ const FilterDialogRadio = ({ data, question }: any) => {
             '& .MuiSvgIcon-root': { fill: 'none' }
           }}
         />}
-      label={data?.code}
+      label={data?.label}
     />
   );
 };

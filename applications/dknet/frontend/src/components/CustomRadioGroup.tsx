@@ -49,11 +49,6 @@ const CustomRadioGroup = ({ data }) => {
             {data.label}
           </Typography>
           <Stack direction="row">
-            <IconButton sx={{ p: '2px' }}>
-              <CleaningServicesOutlinedIcon sx={{
-                color: '#98A2B3'
-              }} />
-            </IconButton>
             <Tooltip title={data.description}>
               <IconButton sx={{ p: '2px' }}>
                 <HelpOutlineIcon sx={{
@@ -61,6 +56,11 @@ const CustomRadioGroup = ({ data }) => {
                 }} />
               </IconButton>
             </Tooltip>
+            <IconButton sx={{ p: '2px' }}>
+              <CleaningServicesOutlinedIcon sx={{
+                color: '#98A2B3'
+              }} />
+            </IconButton>
           </Stack>
         </Stack>
       </FormLabel>

@@ -15,7 +15,8 @@
     "noUnusedLocals": false,
     "jsx": "react",
     "types": [],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules"

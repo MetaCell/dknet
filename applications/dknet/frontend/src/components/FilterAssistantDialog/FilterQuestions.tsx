@@ -351,7 +351,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
         >
           <Box pt={4} px={3} pb={2}>
             <Typography variant="h4">Preview of results</Typography>
-            <Typography sx={{ mt: 2 }} variant="subtitle2">36 repositories matching your criteria so far</Typography>
+            <Typography sx={{ mt: 2 }} variant="subtitle2">{context.results.length} repositories matching your criteria so far</Typography>
           </Box>
           <List disablePadding sx={{
             gap: 1,
@@ -396,7 +396,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
               }
             }
           }}>
-            {DUMMY.map((el, index) => (
+            {context.results.map((el, index) => (
               <ListItem disablePadding key={el}>
                 <ListItemButton sx={{
                   border: `0.0625rem solid ${index === 0 ? primary200 : checkboxBorderColor}`,
@@ -405,7 +405,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                     background: index === 0 ? cardBgColor : white,
                   },
                 }}>
-                  <ListItemText primary={el} secondary={index === 0 ? "Best Match" : null} />
+                  <ListItemText primary={el.label + ' ' + el.pctMatch + '%'} secondary={index === 0 ? "Best Match" : null} />
                 </ListItemButton>
               </ListItem>
             ))}

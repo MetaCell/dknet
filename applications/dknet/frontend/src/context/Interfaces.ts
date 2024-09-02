@@ -37,5 +37,7 @@ export interface IFilterContext {
     [key: string]: IFilterOptions | IFilterOptions[]
   },
   allFilters: IFilter[],
-  allRepositories: IRepository[]
+  allRepositories: IRepository[],
+  results: IRepository[],
+  filters: any[],
 }

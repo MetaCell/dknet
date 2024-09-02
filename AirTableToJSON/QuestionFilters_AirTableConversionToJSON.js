@@ -26,18 +26,20 @@ const fs = require('fs');
 const { exit } = require('process');
 const request = require('request');
 
-if(process.argv.length !== 3) {
-  console.log(`USAGE: node ${process.argv[1]} <PAT>`);
-  exit(1);
-}
+// if(process.argv.length !== 3) {
+//   console.log(`USAGE: node ${process.argv[1]} <PAT>`);
+//   exit(1);
+// }
 
 const resourcesFolder = '../applications/dknet/frontend/src/resources'
-const fileName = `${resourcesFolder}/filters.json`
+// const fileName = `${resourcesFolder}/filters.json`
+const fileName = `filters.json`
 
 // Set up Airtable API credentials
-const baseId = 'app8GwPKlzcZUj3lo';
-const tableName = 'tblsgKKi5vQSBV5kW';
-const pat = process.argv[2];
+const baseId = 'appwLXKayeTSQdcyL';
+const tableName = 'tblCnjmhIzfP9sLtd';
+const pat = 'patof2ndlJELB9zEl.76eb0386f6f9e00230a330dcdc6960b846c0f5e7322d66d3912a4f45b7b3d583'
+// const pat = process.argv[2];
 
 // Set up Airtable API endpoint URL
 const url = `https://api.airtable.com/v0/${baseId}/${tableName}?sortField=FilterOrder&sortDirection=asc`;
@@ -93,6 +95,7 @@ request.get({ url: url, headers: headers }, function (error, response, body)
     'code': fields['Code (Filter Name)'],
         'label': fields['Label (Filter Name)'],
         'question': fields['User question'],
+        'resultText': fields['Result text'],
         'description': fields['Help text'], // check if this is tooltip or description
         'inputType':
             fields['InputType'],

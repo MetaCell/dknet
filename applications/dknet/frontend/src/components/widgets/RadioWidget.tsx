@@ -7,8 +7,7 @@ import { vars } from '../../theme/variables.js'
 const {
   checkboxBorderColor,
   primary50,
-  primary600,
-  white
+  primary600
 } = vars;
 
 const BpIcon = styled('span')(({ theme }) => ({

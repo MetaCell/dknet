@@ -5,26 +5,23 @@ import { useFilterContext } from '../context/Context'
 import withLayout from "../useLayout";
 import Box from '@mui/material/Box';
 import MainLayout from "../Layouts/Main";
-import Grid from "@mui/material/Grid";
-import Filters from "../components/Filters";
 import Container from "@mui/material/Container";
-import SortWidget from '../components/widgets/Sort';
-import RepositoryCard from '../components/RepositoryCard';
-import Typography from "@mui/material/Typography";
-import Stack from '@mui/material/Stack';
 import RepositoriesList from "./RepositoriesList";
 import LaunchPage from "./LaunchPage";
+import LinearProgress from '@mui/material/LinearProgress';
+
 
 
 const HomePage = () => {
   const { context, setContext } = useFilterContext();
   const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
+  const { allRepositories, allFilters } = context;
 
   return (
     <Box sx={{ background: isFiltersEmpty? '': '#fff' }}>
       <Container>
         {
-          isFiltersEmpty ? <LaunchPage /> : <RepositoriesList />
+          ( allRepositories.length === 0 && allFilters.length === 0 ? <LinearProgress color='secondary' /> : (isFiltersEmpty ? <LaunchPage /> : <RepositoriesList />))
         }
       </Container>
     </Box>

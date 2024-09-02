@@ -1,9 +1,19 @@
 import React, { createContext, useContext, useState } from "react"
 import { ROWS_PER_PAGE } from "../config/constants"
-import filters from '../resources/filters.json'
-import repositories from '../resources/repositories.json'
+import getFilters from './FilterService';
+import getRepositories from './RepositoryService';
 import { IFilter, IFilterContext, IRepository } from './Interfaces'
 import { resetFilters } from "../utils/helpers";
+import { FilterType } from "../config/enums";
+
+let filters = [];
+let repositories = [];
+
+const getData = async () => {
+  filters = await getFilters();
+  repositories = await getRepositories();
+  return { filters, repositories }
+}
 
 export const FilterContext = createContext(null)
 
@@ -30,23 +40,80 @@ export const FilterProvider = ({ children }) => {
   const [context, _setContext] = useState<IFilterContext>({
     pageNumber: 0,
     rowsPerPage: ROWS_PER_PAGE,
-    filterValues: resetFilters(),
+    filterValues: resetFilters(filters),
     sortBy: "score",
     allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
-    allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
+    allRepositories: repositories.map((repository) => mapRepository(repository as IRepository)),
+    results: [],
+    filters: filters,
   });
 
-  const setContext = (newContext) => _setContext(_sortRepositories(scoreRepositories(newContext)))
+  const setContext = (newContext) => _setContext(_sortRepositories(scoreRepositories(filterRepositories(newContext))))
 
-  const scoreRepositories = (newContext: IFilterContext): IFilterContext => {
+  if (filters.length === 0 || repositories.length === 0) {
+    getData().then((data) => {
+      filters = data.filters;
+      repositories = data.repositories;
+      setContext({
+        ...context,
+        filters: filters,
+        allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
+        allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
+      })
+    });
+  }
+
+  const filterRepositories = (newContext: IFilterContext): IFilterContext => {
+    const results = [];
     const filterValues = { ...newContext.filterValues }
     Object.entries(filterValues).forEach(([key, value]) => {
       if(value === undefined || (Array.isArray(value) && value.length===0)) {
         delete filterValues[key]
       }
     })
+    const usedFilters = newContext.allFilters.filter(f => Object.keys(filterValues).includes(f.code));
+    // start filtering the repositories
+    newContext.allRepositories.forEach((repository) => {
+      let match = true;
+      usedFilters.forEach(filter => {
+        const value = filterValues[filter.code]
+        const filterValue = Array.isArray(value) ? value : [value]
+        const repositoryFilterValue = repository.attributes[filter.code]
+        if (filter.inputType === FilterType.Hierarchy) {
+          let filterValueIndex = -1;
+          let repositoryFilterValueIndex = -1;
+          filter.options.forEach((option, index) => {
+            if (filterValue[0].code === option.code) {
+              filterValueIndex = index;
+            }
+            if (repositoryFilterValue.includes(option.code) && (repositoryFilterValueIndex === -1 || index > repositoryFilterValueIndex)) {
+              repositoryFilterValueIndex = index;
+            }
+          });
+          if (filterValueIndex === -1 || repositoryFilterValueIndex === -1 || filterValueIndex > repositoryFilterValueIndex) {
+            match = false;
+          }
+        } else {
+          if (!filterValue.some((fv) => repositoryFilterValue.includes(fv.code))) {
+            match = false
+          }
+        }
+      })
+      if (match) {
+        results.push(repository)
+      }
+    });
+    return {
+      ...newContext,
+      filterValues: filterValues,
+      results: results
+    }
+  }
+
+  const scoreRepositories = (newContext: IFilterContext): IFilterContext => {
+    const filterValues = { ...newContext.filterValues }
     const usedFilters = newContext.allFilters.filter(f => Object.keys(filterValues).includes(f.code))
-    newContext.allRepositories = newContext.allRepositories.map((r) => ({
+    newContext.results = newContext.results.map((r) => ({
       ...r,
       score: 0
     }))
@@ -54,7 +121,7 @@ export const FilterProvider = ({ children }) => {
     usedFilters.forEach(filter => {
       const value = filterValues[filter.code]
       const filterValue = Array.isArray(value) ? value : [value]
-      newContext.allRepositories.forEach((repository) => {
+      newContext.results.forEach((repository) => {
         const repositoryFilterValue = repository.attributes[filter.code]
 
         const filterScore = filterValue.reduce((score, fv) => {
@@ -72,7 +139,7 @@ export const FilterProvider = ({ children }) => {
     }, 0)
 
     // compute the % match by dividing the score by the max possible score
-    newContext.allRepositories = newContext.allRepositories.map((r) => ({
+    newContext.results = newContext.results.map((r) => ({
       ...r,
       pctMatch: Math.round((r.score / maxPossibleScore * 100))
     }))
@@ -80,19 +147,19 @@ export const FilterProvider = ({ children }) => {
   }
 
   const _sortRepositories = (newContext: IFilterContext): IFilterContext => {
-    let allRepositories = newContext.allRepositories
+    let results = newContext.results
     if(newContext.sortBy === 'Alphabetical (A-Z)'){
-      allRepositories = newContext.allRepositories.sort((a, b) => a.label.localeCompare(b.label));
+      results = newContext.results.sort((a, b) => a.label.localeCompare(b.label));
     }
     else if(newContext.sortBy === 'Alphabetical (Z-A)'){
-      allRepositories = newContext.allRepositories.sort((a, b) => a.label.localeCompare(b.label)).reverse();
+      results = newContext.results.sort((a, b) => a.label.localeCompare(b.label)).reverse();
     }
     else {
-      allRepositories = newContext.allRepositories.sort((a, b) => b.score - a.score || a.label.localeCompare(b.label)) //repositories.map((repository) => mapRepository(repository as IRepository))
+      results = newContext.results.sort((a, b) => b.score - a.score || a.label.localeCompare(b.label)) //repositories.map((repository) => mapRepository(repository as IRepository))
     }
     return {
       ...newContext,
-      allRepositories: allRepositories
+      results: results
     }
   }
 
