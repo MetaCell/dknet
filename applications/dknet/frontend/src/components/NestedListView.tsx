@@ -123,7 +123,7 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
 
     <List disablePadding sx={listStyles}>
       <RadioGroup
-        value={context?.filterValues[data.code]?.code}
+        value={context?.filterValues[data.code]?.code || ""}
         onChange={changeSelection}
       >
         {data?.options?.map((item, index) => (
