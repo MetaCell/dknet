@@ -88,8 +88,8 @@ const RepositoryCard = (props) => {
                 return (
                   <Grid key={filter.code} item md={6}>
                     <Box display="flex" alignItems="center" height={1} gap={1} justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
-                      <Typography variant="body2" color="grey.600">{filter.cardText}</Typography>
-                      <Box display="flex" gap={1} alignItems='center'>
+                      <Typography variant="body2" color="grey.600">{filter.label}</Typography>
+                      <Box display="flex" gap={1} alignItems='center' flexWrap='wrap'>
                         {
                           attributeValues.map((attribute: any) =>
                             filter.options.map((option: any) => (option.code === attribute &&
