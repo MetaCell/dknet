@@ -36,6 +36,16 @@ const CustomRadioGroup = ({ data }) => {
     })
   }
 
+  const onClearFilter = () => {
+    setContext({
+      ...context,
+      filterValues: {
+        ...context.filterValues,
+        [data.code]: undefined
+      }
+    })
+  }
+
   return (
     <Box display='flex' flexDirection='column' gap={1}>
       <FormLabel
@@ -56,7 +66,7 @@ const CustomRadioGroup = ({ data }) => {
                 }} />
               </IconButton>
             </Tooltip>
-            <IconButton sx={{ p: '2px' }}>
+            <IconButton sx={{ p: '2px' }} onClick={onClearFilter}>
               <CleaningServicesOutlinedIcon sx={{
                 color: '#98A2B3'
               }} />

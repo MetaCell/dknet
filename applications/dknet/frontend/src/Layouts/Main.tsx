@@ -12,7 +12,7 @@ import { useFilterContext } from "../context/Context";
 
 const MainLayout = ({ children }) => {
   const [open, setOpen] = React.useState(false);
-  const { context, setContext } = useFilterContext();
+  const { context } = useFilterContext();
   const { allRepositories, allFilters } = context;
 
   const viewFilterAssistant = () => {

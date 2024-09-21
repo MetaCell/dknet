@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 //components
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
 
 //icons
 import { useFilterContext } from "../context/Context";

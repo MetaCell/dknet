@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useFilterContext } from '../context/Context'
 
 //components
@@ -13,7 +13,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 
 
 const HomePage = () => {
-  const { context, setContext } = useFilterContext();
+  const { context } = useFilterContext();
   const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
   const { allRepositories, allFilters } = context;
 

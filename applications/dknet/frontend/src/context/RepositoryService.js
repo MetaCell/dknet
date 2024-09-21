@@ -1,7 +1,7 @@
 // Description: This file is used to get the repositories from Airtable and save them to a JSON file.
 import axios from 'axios';
 
-export default async function getRepositories() {
+export default async function getRepositories(filters) {
   // Set up Airtable API credentials
   const baseId = 'appwLXKayeTSQdcyL';
   const tableName = 'tbluLCfLFLZ6sP0y1';
@@ -19,22 +19,10 @@ export default async function getRepositories() {
   // Define an empty array for repositories
   let repositories = [];
 
-  const questions_list = [
-    'q1',
-    'q2',
-    'q3',
-    'q4',
-    'q5',
-    'q6',
-    'q7',
-    'q8',
-    'q9',
-    'q10',
-    'q11',
-    'acc (from Questions / Responses)',
-    'HumanSubjectQuestion',
-    'qContact (from Questions / Responses)',
-  ];
+  // extract questionList from the filters
+
+
+  const questionList = filters.map(item => item.code)
 
   // Make a GET request to the Airtable API for the filters
   repositories = await axios.request({ url: url, method: 'get', headers: headers }).catch((error) =>
@@ -75,11 +63,9 @@ export default async function getRepositories() {
         }
 
         // Create attribute to hold all attributes for all prefixes
-        //const prefixAttributes = {};
-        let attributes = {};
         // Loop through repo options
         let prefixAttributes = {};
-        for (const prefix of questions_list) {
+        for (const prefix of questionList) {
           let inputList = [];
           // Make sure it is a string
           if (typeof fields[prefix] === 'string'){
@@ -92,7 +78,7 @@ export default async function getRepositories() {
           //Now add to the array
           let prefixAttributesList = [];
           if (inputList.length > 0) {
-            inputList.forEach((option, _index) => {
+            inputList.forEach((option) => {
               const code = option.trim().toLowerCase().replace(/\s+/g, '-');
               if (code) {
                 prefixAttributesList.push(code)
