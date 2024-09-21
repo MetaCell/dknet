@@ -2,7 +2,8 @@ export enum FilterType {
   Single = 'SINGLE',
   Multiple = 'MULTIPLE',
   Boolean = 'BOOLEAN',
-  Hierarchy = 'HIERARCHY'
+  Hierarchy = 'HIERARCHY',
+  ScoreBool = 'SCORE_BOOL',
 }
 
 export enum FilterOptionColor {

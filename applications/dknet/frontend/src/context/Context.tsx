@@ -11,7 +11,7 @@ let repositories = [];
 
 const getData = async () => {
   filters = await getFilters();
-  repositories = await getRepositories();
+  repositories = await getRepositories(filters);
   return { filters, repositories }
 }
 
@@ -147,7 +147,10 @@ export const FilterProvider = ({ children }) => {
   }
 
   const _sortRepositories = (newContext: IFilterContext): IFilterContext => {
-    let results = newContext.results
+    let results = newContext.results;
+    const sortFilters = newContext.allFilters.filter(f => f.inputType === FilterType.ScoreBool);
+    // extend all sort functions to iterate all score filters and priorities all the results which value is the first option of the filter
+
     if(newContext.sortBy === 'Alphabetical (A-Z)'){
       results = newContext.results.sort((a, b) => a.label.localeCompare(b.label));
     }
@@ -156,7 +159,13 @@ export const FilterProvider = ({ children }) => {
     }
     else {
       results = newContext.results.sort((a, b) => b.score - a.score || a.label.localeCompare(b.label)) //repositories.map((repository) => mapRepository(repository as IRepository))
+      sortFilters.forEach((filter) => {
+        const priorityValue = filter.options[0].code;
+        const tempResults = results.sort((a, b) => b.score - a.score || a.attributes[filter.code].includes(priorityValue) ? (b.attributes[filter.code].includes(priorityValue) ? 0 : -1) : (b.attributes[filter.code].includes(priorityValue) ? 1 : 0));
+        results = tempResults;
+      });
     }
+
     return {
       ...newContext,
       results: results

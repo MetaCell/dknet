@@ -51,11 +51,11 @@ const Filters = () => {
           }
         </FormGroup> */}
         {
-          hierarchicalFilters?.map((row, index) => <NestedListView data={row} key={index} />)
+          checkboxFilters?.map((row, index) => <CustomCheckboxesGroup data={row} key={index} />)
         }
 
         {
-          checkboxFilters?.map((row, index) => <CustomCheckboxesGroup data={row} key={index} />)
+          hierarchicalFilters?.map((row, index) => <NestedListView data={row} key={index} />)
         }
 
         {

@@ -1,25 +1,19 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
-import Grid from "@mui/material/Grid";
+import React, { useEffect, useLayoutEffect, useRef } from "react"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import RadioGroup from '@mui/material/RadioGroup';
 import Typography from '@mui/material/Typography';
-import Button from "@mui/material/Button";
 import ProgressBar from "../widgets/ProgressBar";
 import QuestionBox from "./QuestionBox";
 import CheckBoxWidget from "../widgets/CheckBox";
 import { styled } from "@mui/material/styles";
-import Radio from '@mui/material/Radio';
 import Tooltip from '@mui/material/Tooltip';
-import { FeaturedIcon, FeaturedIconChecked } from '../../assets/icons';
-import { FormControlLabel, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
 import { vars } from '../../theme/variables'
 import { useFilterContext } from "../../context/Context";
-
-const DUMMY = ['Cancer Imaging Archive (TCIA) - Score: 50%', 'Cancer Nanotechnology Laboratory (caNanoLab) - Score: 50%', 'ChEMBL - Score: 50%', 'Coherent X-Ray Imaging Data Bank (CXIDB) - Score: 50%', 'Dataverse Network Project - Score: 50%', 'Dryad Digital Repository - Score: 50%', 'FigShare - Score: 50%', 'Influenza Research Database (IRD) - Score: 50%']
 
 const {
   grey200,
@@ -89,6 +83,7 @@ interface TabPanelProps {
   value: number;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
 
@@ -115,7 +110,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   useLayoutEffect(() => {
     const questionDOMHeightArr = Array.from(ref?.current?.childNodes).map((el: any) => el.clientHeight);
     setHeight(questionDOMHeightArr)
-  }, [open]);
+  }, [open, setHeight]);
 
   useEffect(() => {
     const keyDownHandler = (event: any) => {
@@ -152,7 +147,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
     onClickPrev()
   }
 
-  const { context, setContext } = useFilterContext()
+  const { context } = useFilterContext()
 
   const setCheckedStateMultipleOptions = (question, data) => context?.filterValues[question.code]?.filter((selectedValue) => selectedValue?.code === data?.code).length > 0 ? 'checked-state' : ''
 

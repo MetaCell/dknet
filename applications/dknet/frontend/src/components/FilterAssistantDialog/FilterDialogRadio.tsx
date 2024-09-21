@@ -19,7 +19,8 @@ const FilterDialogRadio = ({ data, question }: any) => {
   const selectedData = context.filterValues[question?.code] || {}
   const iconName = data?.icon?.split(' ').join('_').toLowerCase() || ""
 
-  const onChangeCheckbox = (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const onChangeCheckbox = (_e) => {
     setContext({
       ...context,
       filterValues: {
