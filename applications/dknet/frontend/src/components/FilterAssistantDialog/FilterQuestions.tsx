@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
+import React, { useEffect, useLayoutEffect, useRef } from "react"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -106,7 +106,6 @@ function TabPanel(props: TabPanelProps) {
 export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, open, setHeight, setTranslateValue, height, translateValue, closeDialog, showPreview }) {
 
   const ref = useRef(null);
-  const [updateUI, setUpdateUI] = useState(false);
 
   useLayoutEffect(() => {
     const questionDOMHeightArr = Array.from(ref?.current?.childNodes).map((el: any) => el.clientHeight);
@@ -153,7 +152,6 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   const setCheckedStateMultipleOptions = (question, data) => context?.filterValues[question.code]?.filter((selectedValue) => selectedValue?.code === data?.code).length > 0 ? 'checked-state' : '';
 
   const setCheckedStateSingleOption = (e, question, data) => {
-    const target = e.target;
     if (context?.filterValues[question.code]?.code === undefined || context?.filterValues[question.code]?.code !== data?.code) {
       setContext({
         ...context,
@@ -162,7 +160,6 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           [question.code]: data
         }
       });
-      setUpdateUI(!updateUI);
     } else if(context?.filterValues[question.code]?.code === data?.code) {
       const newData = context.filterValues;
       delete newData[question.code];
@@ -172,7 +169,6 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           ...newData
         }
       });
-      setUpdateUI(!updateUI);
     }
   }
 

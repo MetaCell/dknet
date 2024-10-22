@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useFilterContext } from '../../context/Context'
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
