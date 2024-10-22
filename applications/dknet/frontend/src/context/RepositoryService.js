@@ -45,7 +45,6 @@ export default async function getRepositories(filters) {
         let codename = '';
         let labelname = '';
         if (typeof fields['resourceName'] === 'string'){
-          console.log(fields['resourceName'])
           codename = fields['resourceName'].toLowerCase().replace(/\s+/g, '-');
           labelname = fields['resourceName'];
         } else if (Array.isArray(fields['resourceName'])){

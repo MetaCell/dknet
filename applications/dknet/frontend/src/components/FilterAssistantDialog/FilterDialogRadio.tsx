@@ -15,20 +15,9 @@ const {
 } = vars
 
 const FilterDialogRadio = ({ data, question }: any) => {
-  const { context, setContext } = useFilterContext()
+  const { context } = useFilterContext()
   const selectedData = context.filterValues[question?.code] || {}
   const iconName = data?.icon?.split(' ').join('_').toLowerCase() || ""
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const onChangeCheckbox = (_e) => {
-    setContext({
-      ...context,
-      filterValues: {
-        ...context.filterValues,
-        [question.code]: data
-      }
-    })
-  }
 
   return (
     <FormControlLabel
@@ -47,7 +36,6 @@ const FilterDialogRadio = ({ data, question }: any) => {
       control={
         <Radio
           checked={selectedData.code === data.code}
-          onChange={onChangeCheckbox}
           icon={<Icon sx={{ color: grey700, fontSize: '0.75rem' }}>{iconName}</Icon>}
           checkedIcon={<Icon sx={{ fontSize: '0.75rem' }}>{iconName}</Icon>}
           sx={{

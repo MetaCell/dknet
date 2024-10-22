@@ -34,7 +34,7 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const { context } = useFilterContext()
   const [height, setHeight] = useState([]);
   const [translateValue, setTranslateValue] = useState(0);
-  const [showPreview, setShowPreview] = useState(false);
+  const [showPreview, setShowPreview] = useState(true);
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
