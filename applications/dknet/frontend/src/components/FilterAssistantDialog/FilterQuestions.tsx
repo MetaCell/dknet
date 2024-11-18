@@ -147,11 +147,30 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
     onClickPrev()
   }
 
-  const { context } = useFilterContext()
+  const { context, setContext } = useFilterContext()
 
-  const setCheckedStateMultipleOptions = (question, data) => context?.filterValues[question.code]?.filter((selectedValue) => selectedValue?.code === data?.code).length > 0 ? 'checked-state' : ''
+  const setCheckedStateMultipleOptions = (question, data) => context?.filterValues[question.code]?.filter((selectedValue) => selectedValue?.code === data?.code).length > 0 ? 'checked-state' : '';
 
-  const setCheckedStateSingleOption = (question, data) => context?.filterValues[question.code]?.code === data?.code ? 'checked-state' : ''
+  const setCheckedStateSingleOption = (e, question, data) => {
+    if (context?.filterValues[question.code]?.code === undefined || context?.filterValues[question.code]?.code !== data?.code) {
+      setContext({
+        ...context,
+        filterValues: {
+          ...context.filterValues,
+          [question.code]: data
+        }
+      });
+    } else if(context?.filterValues[question.code]?.code === data?.code) {
+      const newData = context.filterValues;
+      delete newData[question.code];
+      setContext({
+        ...context,
+        filterValues: {
+          ...newData
+        }
+      });
+    }
+  }
 
   const classes = {
     active: {
@@ -282,7 +301,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                     fontSize: '1.25rem',
                     lineHeight: '150%',
                     color: grey800
-                  }}>{question?.question}</Typography>
+                  }}>{question?.questionTitle}</Typography>
                   <QuestionBox inputType={question?.inputType}>
                     {
                       // Add className='checked-state' in <Item is checkbox is selected
@@ -306,12 +325,16 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                             gridTemplateColumns: question?.options.length == 2 ? 'repeat(2, auto)' : question?.options.length == 4 ? 'repeat(4,  auto)' : 'repeat(3, auto)'
                           }}
                           aria-labelledby="demo-radio-buttons-group-label"
-                          defaultValue="female"
+                          defaultValue=""
                           name="radio-buttons-group"
+                          value={context?.filterValues[question?.code]?.code}
                         >
                           {question?.options.map((data) =>
                             // Add className='checked-state' in <Item is checkbox is selected
-                            <Item key={data?.code} className={setCheckedStateSingleOption(question, data)}>
+                            <Item key={data?.code} className={context?.filterValues[question.code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
+                              e.preventDefault();
+                              setCheckedStateSingleOption(e, question, data)
+                            }} >
                               <FilterDialogRadio data={data} filter={data} question={question} />
                             </Item>
                           )}
@@ -326,8 +349,8 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
         </Box>
         <Box 
           flexShrink={0}
-          marginRight={!showPreview ? '-25rem' : 0} 
-          sx={{ 
+          marginRight={!showPreview ? '-25rem' : 0}
+          sx={{
             transition: 'all ease-in-out .3s',
             background: white, width: '25rem', borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
             '&:after': {
@@ -341,7 +364,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
               bottom: 0,
               left: 0,
               pointerEvents: 'none',
-            } 
+            }
           }}
         >
           <Box pt={4} px={3} pb={2}>

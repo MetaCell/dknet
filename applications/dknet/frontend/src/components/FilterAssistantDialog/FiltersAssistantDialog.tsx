@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useFilterContext } from '../../context/Context'
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -34,7 +34,7 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const { context } = useFilterContext()
   const [height, setHeight] = useState([]);
   const [translateValue, setTranslateValue] = useState(0);
-  const [showPreview, setShowPreview] = useState(false);
+  const [showPreview, setShowPreview] = useState(true);
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
