@@ -92,6 +92,7 @@ const RepositoryCard = (props) => {
             </Tooltip>
           </Box>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
+            <Typography sx={{ fontSize: '0.875rem !important', fontWeight: 500, marginRight: '1rem' }} color="grey.600">{context.filters[0].label}</Typography>
             {
               filterLabels.map((row, index) => <Chip sx={{ fontSize: '20rem !important', padding: '0.5rem', border: '0.0625rem solid #83DCB2' }} key={index} label={row} color={'success'} />)
             }
