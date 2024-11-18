@@ -302,6 +302,13 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                     lineHeight: '150%',
                     color: grey800
                   }}>{question?.questionTitle}</Typography>
+                  <Typography sx={{
+                    paddingTop: '0.5rem',
+                    fontWeight: 200,
+                    fontSize: '1rem',
+                    lineHeight: '120%',
+                    color: grey800
+                  }}>{question?.questionSubtitle}</Typography>
                   <QuestionBox inputType={question?.inputType}>
                     {
                       // Add className='checked-state' in <Item is checkbox is selected

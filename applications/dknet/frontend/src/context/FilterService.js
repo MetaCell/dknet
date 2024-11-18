@@ -60,6 +60,7 @@ export default async function getFilters() {
           'label': fields['Label (Filter Name)'],
           'question': fields['User question'],
           'questionTitle': fields['Question title'],
+          'questionSubtitle': fields['Question subtitle'],
           'resultText': fields['Result text'],
           'description': fields['Help text'], // check if this is tooltip or description
           'inputType':
