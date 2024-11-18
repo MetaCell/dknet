@@ -44,6 +44,14 @@ export const FilterProvider = ({ children }) => {
     sortBy: "score",
     allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
     allRepositories: repositories.map((repository) => mapRepository(repository as IRepository)),
+    allGeneralistRepositories: repositories.filter((repository) => {
+      const generalistFilter = filters.find((filter) => filter.inputType === FilterType.ScoreBool);
+      const priorityValue = generalistFilter.options[1].code;
+      if (repository.attributes[generalistFilter.code].includes(priorityValue)) {
+        return true;
+      }
+      return false;
+    }).map((repository) => mapRepository(repository as IRepository)),
     results: [],
     filters: filters,
   });
@@ -58,7 +66,15 @@ export const FilterProvider = ({ children }) => {
         ...context,
         filters: filters,
         allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
-        allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
+        allRepositories: repositories.map((repository) => mapRepository(repository as IRepository)),
+        allGeneralistRepositories: repositories.filter((repository) => {
+          const generalistFilter = filters.find((filter) => filter.inputType === FilterType.ScoreBool);
+          const priorityValue = generalistFilter.options[1].code;
+          if (repository.attributes[generalistFilter.code].includes(priorityValue)) {
+            return true;
+          }
+          return false;
+        }).map((repository) => mapRepository(repository as IRepository)),
       })
     });
   }
@@ -178,7 +194,7 @@ export const FilterProvider = ({ children }) => {
       sortBy: sortValue
     })
   }
- 
+
   return (
     <FilterContext.Provider value={{ context, setContext, scoreRepositories, sortRepositories }}>
       {children}
