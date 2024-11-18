@@ -15,6 +15,30 @@ import Grid from "@mui/material/Grid";
 import * as MUIcon from "@mui/icons-material"
 import { FilterColor } from "../config/enums";
 
+import { vars } from '../theme/variables';
+const {
+  primaryFont, white,
+  grey200,
+  grey400, grey500,
+  grey600, grey700, grey800, grey900,
+  grey50,
+  primary600, primary700, primary25, primary200,
+  error600, error25,
+  warning25, warning700, warning500,
+  success50, success700, success500,
+  checkboxBorderColor,
+  cardChipBgColor,
+  warning50,
+  warning300,
+  dialogBoxShadow,
+  primary500,
+  iconButtonFocusShadow,
+  iconButtonHoverShadow,
+  primary800,
+  primary50,
+  checkboxBgChecked
+} = vars;
+
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
     padding: 0
@@ -69,7 +93,7 @@ const RepositoryCard = (props) => {
           </Box>
           <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
             {
-              filterLabels.map((row, index) => <Chip key={index} label={row} color={dataTypes.includes(row) ? FilterColor.Success : FilterColor.Info} />)
+              filterLabels.map((row, index) => <Chip sx={{ fontSize: '20rem !important', padding: '0.5rem', border: '0.0625rem solid #83DCB2' }} key={index} label={row} color={'success'} />)
             }
           </Box>
           <Box mt={2.5} display="flex" width={1}>
