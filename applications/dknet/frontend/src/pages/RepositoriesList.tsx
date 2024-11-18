@@ -28,7 +28,7 @@ const RepositoriesList = () => {
           </Grid>
           {
             context.results.length > 0 ? context.results.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
-              <RepositoryCard key={repository.code} repository={repository} isBestMatch={index === 0}/>
+              <RepositoryCard key={repository.code} repository={repository} isBestMatch={index === 0 || repository.pctMatch === context.results[0].pctMatch}/>
             </Grid>) : <Typography variant='h5'>No results found matching the filter criterias</Typography>
           }
         </Grid>
