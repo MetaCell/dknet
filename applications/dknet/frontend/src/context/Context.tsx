@@ -163,8 +163,15 @@ export const FilterProvider = ({ children }) => {
   }
 
   const _sortRepositories = (newContext: IFilterContext): IFilterContext => {
-    let results = newContext.results;
     const sortFilters = newContext.allFilters.filter(f => f.inputType === FilterType.ScoreBool);
+    const genericFilter = sortFilters[0];
+    let results = newContext.results.map((repo: IRepository): IRepository  => ({
+      ...repo,
+      score: repo.attributes[genericFilter.code].includes(genericFilter.options[0].code) ? repo.score : 0,
+      pctMatch: repo.attributes[genericFilter.code].includes(genericFilter.options[0].code) ? repo.pctMatch : undefined,
+    }));
+    newContext.results = results;
+
     // extend all sort functions to iterate all score filters and priorities all the results which value is the first option of the filter
 
     if(newContext.sortBy === 'Alphabetical (A-Z)'){
