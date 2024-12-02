@@ -1,6 +1,6 @@
 export enum FilterType {
   Single = 'SINGLE',
-  Multiple = 'MULTIPLE',
+  Multiple = 'MULTI',
   Boolean = 'BOOLEAN',
   Hierarchy = 'HIERARCHY',
   ScoreBool = 'SCORE_BOOL',

@@ -83,6 +83,13 @@ export default async function getRepositories(filters) {
                 prefixAttributesList.push(code)
               }
             });
+          } else {
+            const index = questionList.indexOf(prefix);
+            if (index > -1) {
+              filters[index].options.forEach((option) => {
+                prefixAttributesList.push(option.code);
+              });
+            }
           }
           // FilterCode=fields[`${prefix}`]
           prefixAttributes[prefix] = prefixAttributesList;
