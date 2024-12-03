@@ -44,6 +44,14 @@ export const FilterProvider = ({ children }) => {
     sortBy: "score",
     allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
     allRepositories: repositories.map((repository) => mapRepository(repository as IRepository)),
+    allGeneralistRepositories: repositories.filter((repository) => {
+      const generalistFilter = filters.find((filter) => filter.inputType === FilterType.ScoreBool);
+      const priorityValue = generalistFilter.options[1].code;
+      if (repository.attributes[generalistFilter.code].includes(priorityValue)) {
+        return true;
+      }
+      return false;
+    }).map((repository) => mapRepository(repository as IRepository)),
     results: [],
     filters: filters,
   });
@@ -58,7 +66,15 @@ export const FilterProvider = ({ children }) => {
         ...context,
         filters: filters,
         allFilters: filters.map((filter) => mapFilter(filter as IFilter)),
-        allRepositories: repositories.map((repository) => mapRepository(repository as IRepository))
+        allRepositories: repositories.map((repository) => mapRepository(repository as IRepository)),
+        allGeneralistRepositories: repositories.filter((repository) => {
+          const generalistFilter = filters.find((filter) => filter.inputType === FilterType.ScoreBool);
+          const priorityValue = generalistFilter.options[1].code;
+          if (repository.attributes[generalistFilter.code].includes(priorityValue)) {
+            return true;
+          }
+          return false;
+        }).map((repository) => mapRepository(repository as IRepository)),
       })
     });
   }
@@ -147,8 +163,15 @@ export const FilterProvider = ({ children }) => {
   }
 
   const _sortRepositories = (newContext: IFilterContext): IFilterContext => {
-    let results = newContext.results;
     const sortFilters = newContext.allFilters.filter(f => f.inputType === FilterType.ScoreBool);
+    const genericFilter = sortFilters[0];
+    let results = newContext.results.map((repo: IRepository): IRepository  => ({
+      ...repo,
+      score: repo.attributes[genericFilter.code].includes(genericFilter.options[0].code) ? repo.score : 0,
+      pctMatch: repo.attributes[genericFilter.code].includes(genericFilter.options[0].code) ? repo.pctMatch : undefined,
+    }));
+    newContext.results = results;
+
     // extend all sort functions to iterate all score filters and priorities all the results which value is the first option of the filter
 
     if(newContext.sortBy === 'Alphabetical (A-Z)'){
@@ -178,7 +201,7 @@ export const FilterProvider = ({ children }) => {
       sortBy: sortValue
     })
   }
- 
+
   return (
     <FilterContext.Provider value={{ context, setContext, scoreRepositories, sortRepositories }}>
       {children}

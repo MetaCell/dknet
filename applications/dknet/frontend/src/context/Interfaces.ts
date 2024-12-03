@@ -38,6 +38,7 @@ export interface IFilterContext {
   },
   allFilters: IFilter[],
   allRepositories: IRepository[],
+  allGeneralistRepositories: IRepository[],
   results: IRepository[],
   filters: any[],
 }

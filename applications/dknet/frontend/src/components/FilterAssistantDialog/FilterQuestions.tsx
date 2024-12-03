@@ -302,6 +302,13 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                     lineHeight: '150%',
                     color: grey800
                   }}>{question?.questionTitle}</Typography>
+                  <Typography sx={{
+                    paddingTop: '0.5rem',
+                    fontWeight: 200,
+                    fontSize: '1rem',
+                    lineHeight: '120%',
+                    color: grey800
+                  }}>{question?.questionSubtitle}</Typography>
                   <QuestionBox inputType={question?.inputType}>
                     {
                       // Add className='checked-state' in <Item is checkbox is selected
@@ -416,14 +423,22 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           }}>
             {context.results.map((el, index) => (
               <ListItem disablePadding key={el}>
-                <ListItemButton sx={{
-                  border: `0.0625rem solid ${index === 0 ? primary200 : checkboxBorderColor}`,
-                  background: index === 0 ? cardBgColor : white,
-                  '&:hover': {
-                    background: index === 0 ? cardBgColor : white,
-                  },
-                }}>
-                  <ListItemText primary={el.label + ' ' + el.pctMatch + '%'} secondary={index === 0 ? "Best Match" : null} />
+                <ListItemButton sx={ (index === 0 || el.pctMatch === context.results[0].pctMatch) && !isNaN(el.pctMatch) ?
+                  {
+                    border: `0.0625rem solid ${primary200}`,
+                    background: cardBgColor,
+                    '&:hover': {
+                      background: cardBgColor,
+                    },
+                  }
+                  : {
+                    border: `0.0625rem solid ${checkboxBorderColor}`,
+                    background: white,
+                    '&:hover': {
+                      background: white,
+                    },
+                  }}>
+                  <ListItemText primary={!isNaN(el.pctMatch) ? `${el.label} ${el.pctMatch}%` : `${el.label}`} secondary={(index === 0 || el.pctMatch === context.results[0].pctMatch) && !isNaN(el.pctMatch) ? "Best Match" : null} />
                 </ListItemButton>
               </ListItem>
             ))}
