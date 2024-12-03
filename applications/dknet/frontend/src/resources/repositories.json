@@ -1,0 +1,4419 @@
+[
+     {
+          "code": "nimh-data-archive",
+          "label": "NIMH Data Archive",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004434/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging"
+               ],
+               "DomainType": [
+                    "neuroscience"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "accelerating-medicines-partnership-common-metabolic-diseases-knowledge-portal-(amp-cmd)-",
+          "label": "Accelerating Medicines Partnership Common Metabolic Diseases Knowledge Portal (AMP-CMD) ",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_020937/resolver",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [
+                    "niddk-relevant-disease-domain"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "strenda-",
+          "label": "STRENDA ",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017422/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "enzymology"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "european-genome-phenome-archive",
+          "label": "European Genome phenome Archive",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004944/resolver",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "cambridge-crystallographic-data-centre-(ccdc)",
+          "label": "Cambridge Crystallographic Data Centre (CCDC)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014707/resolver",
+          "attributes": {
+               "DataType": [
+                    "crystallography"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "intact",
+          "label": "IntAct",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006944/resolver",
+          "attributes": {
+               "DataType": [
+                    "interaction/pathways"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "cancer-nanotechnology-laboratory-(cananolab)",
+          "label": "Cancer Nanotechnology Laboratory (caNanoLab)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013717/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "cancer"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "peptideatlas",
+          "label": "PeptideAtlas",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006783/resolver",
+          "attributes": {
+               "DataType": [
+                    "proteomic"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "physionet",
+          "label": "PhysioNet",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_007345/resolver",
+          "attributes": {
+               "DataType": [
+                    "physiological"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "coherent-x-ray-imaging-data-bank-(cxidb)",
+          "label": "Coherent X-Ray Imaging Data Bank (CXIDB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014722/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "universal-protein-resource",
+          "label": "Universal Protein Resource",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002380/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "protein-circular-dichroism-data-bank-(pcddb)",
+          "label": "Protein Circular Dichroism Data Bank (PCDDB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017428/resolver",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "ncbi-assembly-archive-viewer",
+          "label": "NCBI Assembly Archive Viewer",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012917/resolver",
+          "attributes": {
+               "DataType": [
+                    "genomic"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "mendeley-data",
+          "label": "Mendeley Data",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_015671/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "emdataresource.org",
+          "label": "EMDataResource.org",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003207/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging-other"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "network-data-exchange-(ndex)",
+          "label": "Network Data Exchange (NDEx)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003943/resolver",
+          "attributes": {
+               "DataType": [
+                    "interaction/pathways"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "contact"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "european-nucleotide-archive-(ena)",
+          "label": "European Nucleotide Archive (ENA)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006515/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "stimulating-peripheral-activity-to-relieve-conditions-(sparc)",
+          "label": "Stimulating Peripheral Activity to Relieve Conditions (SPARC)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017041/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "neuroscience-peripheral-nervous-system"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "proteomexchange",
+          "label": "ProteomeXchange",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004055/resolver",
+          "attributes": {
+               "DataType": [
+                    "proteomic"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "kinetic-models-of-biological-systems-(kimosys)",
+          "label": "Kinetic Models of Biological Systems (KiMoSys)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017423/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "database-of-interacting-proteins-(dip)",
+          "label": "Database of Interacting Proteins (DIP)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003167/resolver",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "pubchem-substance",
+          "label": "PubChem Substance",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004742/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "national-addiction-and-hiv-data-archive-program-(nahdap)",
+          "label": "National Addiction and HIV Data Archive Program (NAHDAP)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_000636/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "addiction-and-hiv"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "database-of-genomic-variants-archive-(dgva)",
+          "label": "Database of Genomic Variants Archive (DGVa)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004896/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "arrayexpress",
+          "label": "ArrayExpress",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002964/resolver",
+          "attributes": {
+               "DataType": [
+                    "gene-expression"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "mouse-genome-informatics-(mgi)",
+          "label": "Mouse Genome Informatics (MGI)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006460/resolver",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [
+                    "mouse-genetics"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "mouse"
+               ]
+          }
+     },
+     {
+          "code": "niddk-central-repository",
+          "label": "NIDDK Central Repository",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006542/resolver",
+          "attributes": {
+               "DataType": [
+                    "clinical-trial"
+               ],
+               "DomainType": [
+                    "niddk-relevant-disease-domain"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "zebrafish-information-network-(zfin)",
+          "label": "Zebrafish Information Network (ZFIN)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002560/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "zebrafish-genetics"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "zebrafish"
+               ]
+          }
+     },
+     {
+          "code": "mirbase",
+          "label": "miRBase",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003152/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "flowrepository",
+          "label": "FLOWRepository",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013779/resolver",
+          "attributes": {
+               "DataType": [
+                    "cytometry"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "cell-image-library-(cil)",
+          "label": "Cell Image Library (CIL)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003510/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging-microscopy"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "contact"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "clinicaltrials.gov",
+          "label": "ClinicalTrials.gov",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002309/resolver",
+          "attributes": {
+               "DataType": [
+                    "clinical-trial"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "chembl",
+          "label": "ChEMBL",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014042/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "drug-discovery"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "flybase",
+          "label": "FlyBase",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006549/resolver",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [
+                    "fly-genetics"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "fly"
+               ]
+          }
+     },
+     {
+          "code": "structural-biology-grid",
+          "label": "Structural Biology Grid",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003511/resolver",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "neuromorpho.org",
+          "label": "NeuroMorpho.Org",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002145/resolver",
+          "attributes": {
+               "DataType": [
+                    "neuron-reconstruction"
+               ],
+               "DomainType": [
+                    "neuroscience"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "synapse",
+          "label": "Synapse",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006307/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [],
+               "Cost": [
+                    "sometimes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "the-immunology-database-and-analysis-portal-(immport)",
+          "label": "The Immunology Database and Analysis Portal (ImmPort)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012804/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "immunology"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "worldwide-protein-data-bank-(wwpdb)",
+          "label": "Worldwide Protein Data Bank (wwPDB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006555/resolver",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "figshareplus",
+          "label": "FigsharePlus",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_021762/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "significant-but-not-justified-restrictions"
+               ],
+               "Cost": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "zenodo",
+          "label": "ZENODO",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004129/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "gene-expression-omnibus-(geo)",
+          "label": "Gene Expression Omnibus (GEO)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005012/resolver",
+          "attributes": {
+               "DataType": [
+                    "gene-expression"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "dbgap-(ncbi-database-of-genotypes-and-phenotypes)",
+          "label": "dbGaP (NCBI database of Genotypes and Phenotypes)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002709/resolver",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "openneuro",
+          "label": "OpenNeuro",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005031/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging"
+               ],
+               "DomainType": [
+                    "neuroscience"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "european-variation-archive-(eva)",
+          "label": "European Variation Archive (EVA)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017425/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "biological-magnetic-resonance-data-bank-(bmrb)",
+          "label": "Biological Magnetic Resonance Data Bank (BMRB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002296/resolver",
+          "attributes": {
+               "DataType": [
+                    "nmr-spectroscopy"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "metabolomics-workbench-(metwb)",
+          "label": "Metabolomics Workbench (MetWB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013794/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "metabolomics"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "dataverse-network-project",
+          "label": "Dataverse Network Project",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_001997/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "accelerating-medicines-partnership-type-2-diabetes-knowledge-portal-(amp-t2d)",
+          "label": "Accelerating Medicines Partnership Type 2 Diabetes Knowledge Portal (AMP-T2D)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003743/resolver",
+          "attributes": {
+               "DataType": [
+                    "genotype-phenotype"
+               ],
+               "DomainType": [
+                    "niddk-relevant-disease-domain"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "influenza-research-database-(ird)",
+          "label": "Influenza Research Database (IRD)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006641/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "influenza"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "vivli",
+          "label": "Vivli",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_018080/resolver",
+          "attributes": {
+               "DataType": [
+                    "clinical-trial"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [],
+               "Cost": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "yes"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "genbank",
+          "label": "GenBank",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002760/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "research-collaboratory-for-structural-bioinformatics-protein-data-bank-(rcsb-pdb)",
+          "label": "Research Collaboratory for Structural Bioinformatics Protein Data Bank (RCSB PDB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012820/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "mgnify",
+          "label": "MGnify",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_016429/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [
+                    "microbiome"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "mass-spectrometry-interactive-virtual-environment-(massive)",
+          "label": "Mass spectrometry Interactive Virtual Environment (MassIVE)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013665/resolver",
+          "attributes": {
+               "DataType": [
+                    "proteomic"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "inorganic-crystal-structure-database-(icsd)",
+          "label": "Inorganic Crystal Structure Database (ICSD)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017429/resolver",
+          "attributes": {
+               "DataType": [
+                    "crystallography"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "crystallography-open-database-(cod)",
+          "label": "Crystallography Open Database (COD)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005874/resolver",
+          "attributes": {
+               "DataType": [
+                    "crystallography"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "image-data-resource-(idr)",
+          "label": "Image Data Resource (IDR)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017421/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging-microscopy"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "sicas-medical-image-repository",
+          "label": "SICAS Medical Image Repository",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017420/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "yes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "pdbe---protein-data-bank-in-europe",
+          "label": "PDBe - Protein Data Bank in Europe",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004312/resolver",
+          "attributes": {
+               "DataType": [
+                    "protein-structure"
+               ],
+               "DomainType": [
+                    "structural-biology"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "figshare",
+          "label": "FigShare",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004328/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "global-proteome-machine-database-(gpm-db)",
+          "label": "Global Proteome Machine Database (GPM DB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006617/resolver",
+          "attributes": {
+               "DataType": [
+                    "proteomic"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "significant-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "metabolights",
+          "label": "MetaboLights",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014663/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "metabolomics"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "ncbi-sequence-read-archive-(sra)",
+          "label": "NCBI Sequence Read Archive (SRA)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004891/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "electron-microscopy-data-bank-at-pdbe-(msd-ebi)",
+          "label": "Electron Microscopy Data Bank at PDBe (MSD-EBI)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006506/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging-microscopy"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "dbsnp",
+          "label": "dbSNP",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002338/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "pubchem-bioassay",
+          "label": "PubChem BioAssay",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_010734/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "open-science-framework",
+          "label": "Open Science Framework",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003238/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "proteomics-identifications-(pride)",
+          "label": "Proteomics Identifications (PRIDE)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003411/resolver",
+          "attributes": {
+               "DataType": [
+                    "proteomic"
+               ],
+               "DomainType": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "dryad-digital-repository",
+          "label": "Dryad Digital Repository",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005910/resolver",
+          "attributes": {
+               "DataType": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "yes"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "dbvar",
+          "label": "dbVar",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003219/resolver",
+          "attributes": {
+               "DataType": [
+                    "sequence"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "yes"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human"
+               ]
+          }
+     },
+     {
+          "code": "cancer-imaging-archive-(tcia)",
+          "label": "Cancer Imaging Archive (TCIA)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_008927/resolver",
+          "attributes": {
+               "DataType": [
+                    "imaging"
+               ],
+               "DomainType": [
+                    "cancer"
+               ],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "yes"
+               ],
+               "Restrictions": [
+                    "minimal-restrictions"
+               ],
+               "Cost": [
+                    "sometimes"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article",
+                    "no"
+               ],
+               "PIDQuestion": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     },
+     {
+          "code": "biological-general-repository-for-interaction-datasets-(biogrid)",
+          "label": "Biological General Repository for Interaction Datasets (BioGRID)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_007393/resolver",
+          "attributes": {
+               "DataType": [
+                    "interaction/pathways"
+               ],
+               "DomainType": [],
+               "SizeLimits": [
+                    "no"
+               ],
+               "FundingSource": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "-niddk",
+                    "-"
+               ],
+               "CitationImportance": [
+                    "not-at-all",
+                    ""
+               ],
+               "VersioningSupport": [
+                    "no"
+               ],
+               "Restrictions": [
+                    "no-restrictions"
+               ],
+               "Cost": [
+                    "no"
+               ],
+               "HumanSubjectInvolved": [
+                    "yes",
+                    "no",
+                    ""
+               ],
+               "PhiHippa": [
+                    "no"
+               ],
+               "Published": [
+                    "published-article"
+               ],
+               "PIDQuestion": [
+                    "no",
+                    ""
+               ],
+               "ContactPerson": [
+                    "no"
+               ],
+               "SpeciesSpecific": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ]
+          }
+     }
+]

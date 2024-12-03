@@ -1,0 +1,4065 @@
+[
+     {
+          "code": "european-genome-phenome-archive",
+          "label": "European Genome phenome Archive",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004944/resolver",
+          "attributes": {
+               "q1": [
+                    "genotype-phenotype"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "yes"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "significant-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "nimh-data-archive",
+          "label": "NIMH Data Archive",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004434/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging"
+               ],
+               "q2": [
+                    "neuroscience"
+               ],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "yes"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "significant-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "proteomexchange",
+          "label": "ProteomeXchange",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004055/resolver",
+          "attributes": {
+               "q1": [
+                    "proteomic"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "zebrafish-information-network-(zfin)",
+          "label": "Zebrafish Information Network (ZFIN)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002560/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "zebrafish-genetics"
+               ],
+               "q3": [
+                    "zebrafish"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "cancer-nanotechnology-laboratory-(cananolab)",
+          "label": "Cancer Nanotechnology Laboratory (caNanoLab)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013717/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "cancer"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "mirbase",
+          "label": "miRBase",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003152/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "ncbi-sequence-read-archive-(sra)",
+          "label": "NCBI Sequence Read Archive (SRA)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004891/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "dbsnp",
+          "label": "dbSNP",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002338/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "peptideatlas",
+          "label": "PeptideAtlas",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006783/resolver",
+          "attributes": {
+               "q1": [
+                    "proteomic"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "mgnify",
+          "label": "MGnify",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_016429/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [
+                    "microbiome"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "accelerating-medicines-partnership-type-2-diabetes-knowledge-portal-(amp-t2d)",
+          "label": "Accelerating Medicines Partnership Type 2 Diabetes Knowledge Portal (AMP-T2D)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003743/resolver",
+          "attributes": {
+               "q1": [
+                    "genotype-phenotype"
+               ],
+               "q2": [
+                    "niddk-relevant-disease-domain"
+               ],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "dataverse-network-project",
+          "label": "Dataverse Network Project",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_001997/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "yes"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "sometimes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "electron-microscopy-data-bank-at-pdbe-(msd-ebi)",
+          "label": "Electron Microscopy Data Bank at PDBe (MSD-EBI)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006506/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging-microscopy"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "pubchem-bioassay",
+          "label": "PubChem BioAssay",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_010734/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "worldwide-protein-data-bank-(wwpdb)",
+          "label": "Worldwide Protein Data Bank (wwPDB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006555/resolver",
+          "attributes": {
+               "q1": [
+                    "protein-structure"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "pubchem-substance",
+          "label": "PubChem Substance",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004742/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "dryad-digital-repository",
+          "label": "Dryad Digital Repository",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005910/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "sometimes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "dbvar",
+          "label": "dbVar",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003219/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "flowrepository",
+          "label": "FLOWRepository",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013779/resolver",
+          "attributes": {
+               "q1": [
+                    "cytometry"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "accelerating-medicines-partnership-common-metabolic-diseases-knowledge-portal-(amp-cmd)-",
+          "label": "Accelerating Medicines Partnership Common Metabolic Diseases Knowledge Portal (AMP-CMD) ",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_020937/resolver",
+          "attributes": {
+               "q1": [
+                    "genotype-phenotype"
+               ],
+               "q2": [
+                    "niddk-relevant-disease-domain"
+               ],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "zenodo",
+          "label": "ZENODO",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004129/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "sometimes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "sicas-medical-image-repository",
+          "label": "SICAS Medical Image Repository",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017420/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "yes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "pdbe---protein-data-bank-in-europe",
+          "label": "PDBe - Protein Data Bank in Europe",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004312/resolver",
+          "attributes": {
+               "q1": [
+                    "protein-structure"
+               ],
+               "q2": [
+                    "structural-biology"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "national-addiction-and-hiv-data-archive-program-(nahdap)",
+          "label": "National Addiction and HIV Data Archive Program (NAHDAP)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_000636/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "addiction-and-hiv"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "emdataresource.org",
+          "label": "EMDataResource.org",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003207/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging-other"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "metabolights",
+          "label": "MetaboLights",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014663/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "metabolomics"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "european-nucleotide-archive-(ena)",
+          "label": "European Nucleotide Archive (ENA)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006515/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "inorganic-crystal-structure-database-(icsd)",
+          "label": "Inorganic Crystal Structure Database (ICSD)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017429/resolver",
+          "attributes": {
+               "q1": [
+                    "crystallography"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "significant-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "mass-spectrometry-interactive-virtual-environment-(massive)",
+          "label": "Mass spectrometry Interactive Virtual Environment (MassIVE)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013665/resolver",
+          "attributes": {
+               "q1": [
+                    "proteomic"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "neuromorpho.org",
+          "label": "NeuroMorpho.Org",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002145/resolver",
+          "attributes": {
+               "q1": [
+                    "neuron-reconstruction"
+               ],
+               "q2": [
+                    "neuroscience"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "database-of-genomic-variants-archive-(dgva)",
+          "label": "Database of Genomic Variants Archive (DGVa)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004896/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "kinetic-models-of-biological-systems-(kimosys)",
+          "label": "Kinetic Models of Biological Systems (KiMoSys)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017423/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "chembl",
+          "label": "ChEMBL",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014042/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "drug-discovery"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "biological-magnetic-resonance-data-bank-(bmrb)",
+          "label": "Biological Magnetic Resonance Data Bank (BMRB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002296/resolver",
+          "attributes": {
+               "q1": [
+                    "nmr-spectroscopy"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "arrayexpress",
+          "label": "ArrayExpress",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002964/resolver",
+          "attributes": {
+               "q1": [
+                    "gene-expression"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "metabolomics-workbench-(metwb)",
+          "label": "Metabolomics Workbench (MetWB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_013794/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "metabolomics"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "network-data-exchange-(ndex)",
+          "label": "Network Data Exchange (NDEx)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003943/resolver",
+          "attributes": {
+               "q1": [
+                    "interaction/pathways"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "contact"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "cancer-imaging-archive-(tcia)",
+          "label": "Cancer Imaging Archive (TCIA)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_008927/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging"
+               ],
+               "q2": [
+                    "cancer"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "sometimes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "the-immunology-database-and-analysis-portal-(immport)",
+          "label": "The Immunology Database and Analysis Portal (ImmPort)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012804/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "immunology"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "clinicaltrials.gov",
+          "label": "ClinicalTrials.gov",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002309/resolver",
+          "attributes": {
+               "q1": [
+                    "clinical-trial"
+               ],
+               "q2": [],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "universal-protein-resource",
+          "label": "Universal Protein Resource",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002380/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "gene-expression-omnibus-(geo)",
+          "label": "Gene Expression Omnibus (GEO)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005012/resolver",
+          "attributes": {
+               "q1": [
+                    "gene-expression"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "physionet",
+          "label": "PhysioNet",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_007345/resolver",
+          "attributes": {
+               "q1": [
+                    "physiological"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "sometimes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "global-proteome-machine-database-(gpm-db)",
+          "label": "Global Proteome Machine Database (GPM DB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006617/resolver",
+          "attributes": {
+               "q1": [
+                    "proteomic"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "significant-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "biological-general-repository-for-interaction-datasets-(biogrid)",
+          "label": "Biological General Repository for Interaction Datasets (BioGRID)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_007393/resolver",
+          "attributes": {
+               "q1": [
+                    "interaction/pathways"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "vivli",
+          "label": "Vivli",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_018080/resolver",
+          "attributes": {
+               "q1": [
+                    "clinical-trial"
+               ],
+               "q2": [],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "yes"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "yes"
+               ],
+               "acc (from Questions / Responses)": [],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "intact",
+          "label": "IntAct",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006944/resolver",
+          "attributes": {
+               "q1": [
+                    "interaction/pathways"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "figshare",
+          "label": "FigShare",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_004328/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "dbgap-(ncbi-database-of-genotypes-and-phenotypes)",
+          "label": "dbGaP (NCBI database of Genotypes and Phenotypes)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002709/resolver",
+          "attributes": {
+               "q1": [
+                    "genotype-phenotype"
+               ],
+               "q2": [],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "strenda-",
+          "label": "STRENDA ",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017422/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "enzymology"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "european-variation-archive-(eva)",
+          "label": "European Variation Archive (EVA)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017425/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "proteomics-identifications-(pride)",
+          "label": "Proteomics Identifications (PRIDE)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003411/resolver",
+          "attributes": {
+               "q1": [
+                    "proteomic"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "crystallography-open-database-(cod)",
+          "label": "Crystallography Open Database (COD)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005874/resolver",
+          "attributes": {
+               "q1": [
+                    "crystallography"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "openneuro",
+          "label": "OpenNeuro",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_005031/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging"
+               ],
+               "q2": [
+                    "neuroscience"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "mendeley-data",
+          "label": "Mendeley Data",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_015671/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "image-data-resource-(idr)",
+          "label": "Image Data Resource (IDR)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017421/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging-microscopy"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "database-of-interacting-proteins-(dip)",
+          "label": "Database of Interacting Proteins (DIP)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003167/resolver",
+          "attributes": {
+               "q1": [
+                    "protein-structure"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "coherent-x-ray-imaging-data-bank-(cxidb)",
+          "label": "Coherent X-Ray Imaging Data Bank (CXIDB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014722/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "protein-circular-dichroism-data-bank-(pcddb)",
+          "label": "Protein Circular Dichroism Data Bank (PCDDB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017428/resolver",
+          "attributes": {
+               "q1": [
+                    "protein-structure"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "influenza-research-database-(ird)",
+          "label": "Influenza Research Database (IRD)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006641/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "influenza"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "niddk-central-repository",
+          "label": "NIDDK Central Repository",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006542/resolver",
+          "attributes": {
+               "q1": [
+                    "clinical-trial"
+               ],
+               "q2": [
+                    "niddk-relevant-disease-domain"
+               ],
+               "q3": [
+                    "human"
+               ],
+               "q4": [
+                    "yes"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "significant-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "cell-image-library-(cil)",
+          "label": "Cell Image Library (CIL)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003510/resolver",
+          "attributes": {
+               "q1": [
+                    "imaging-microscopy"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "contact"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "ncbi-assembly-archive-viewer",
+          "label": "NCBI Assembly Archive Viewer",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012917/resolver",
+          "attributes": {
+               "q1": [
+                    "genomic"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "mouse-genome-informatics-(mgi)",
+          "label": "Mouse Genome Informatics (MGI)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006460/resolver",
+          "attributes": {
+               "q1": [
+                    "genotype-phenotype"
+               ],
+               "q2": [
+                    "mouse-genetics"
+               ],
+               "q3": [
+                    "mouse"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "genbank",
+          "label": "GenBank",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_002760/resolver",
+          "attributes": {
+               "q1": [
+                    "sequence"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "flybase",
+          "label": "FlyBase",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006549/resolver",
+          "attributes": {
+               "q1": [
+                    "genotype-phenotype"
+               ],
+               "q2": [
+                    "fly-genetics"
+               ],
+               "q3": [
+                    "fly"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "stimulating-peripheral-activity-to-relieve-conditions-(sparc)",
+          "label": "Stimulating Peripheral Activity to Relieve Conditions (SPARC)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_017041/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "neuroscience-peripheral-nervous-system"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "sometimes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "cambridge-crystallographic-data-centre-(ccdc)",
+          "label": "Cambridge Crystallographic Data Centre (CCDC)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_014707/resolver",
+          "attributes": {
+               "q1": [
+                    "crystallography"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry,"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "no"
+               ],
+               "q6": [
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "figshareplus",
+          "label": "FigsharePlus",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_021762/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "yes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "significant-but-not-justified-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "open-science-framework",
+          "label": "Open Science Framework",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003238/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "no"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     },
+     {
+          "code": "structural-biology-grid",
+          "label": "Structural Biology Grid",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_003511/resolver",
+          "attributes": {
+               "q1": [
+                    "protein-structure"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "yes,-doi-only",
+                    "yes,-any",
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "yes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "minimal-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "research-collaboratory-for-structural-bioinformatics-protein-data-bank-(rcsb-pdb)",
+          "label": "Research Collaboratory for Structural Bioinformatics Protein Data Bank (RCSB PDB)",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_012820/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [
+                    "chemistry,-chemical-biology-and-biochemistry"
+               ],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "no"
+               ],
+               "q11": [
+                    "yes"
+               ],
+               "acc (from Questions / Responses)": [
+                    "no-restrictions"
+               ],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "no"
+               ]
+          }
+     },
+     {
+          "code": "synapse",
+          "label": "Synapse",
+          "url": "https://dknet.org/data/record/nlx_144509-1/SCR_006307/resolver",
+          "attributes": {
+               "q1": [
+                    "multiple-data-types",
+                    "other"
+               ],
+               "q2": [],
+               "q3": [
+                    "human",
+                    "mouse",
+                    "fly",
+                    "zebrafish",
+                    "other"
+               ],
+               "q4": [
+                    "no"
+               ],
+               "q5": [
+                    "yes"
+               ],
+               "q6": [
+                    "crucial",
+                    "somewhat",
+                    "not-at-all"
+               ],
+               "q7": [
+                    "non-nih-source",
+                    "another-nih-institute",
+                    "niddk"
+               ],
+               "q8": [
+                    "published"
+               ],
+               "q9": [
+                    "no"
+               ],
+               "q10": [
+                    "yes"
+               ],
+               "q11": [
+                    "sometimes"
+               ],
+               "acc (from Questions / Responses)": [],
+               "HumanSubjectQuestion": [
+                    "yes",
+                    "no"
+               ],
+               "qContact (from Questions / Responses)": [
+                    "yes"
+               ]
+          }
+     }
+]
