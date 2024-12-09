@@ -40,7 +40,7 @@ const Header = () => {
             <Box sx={{  display: 'flex',  mr: 1 }}>
               <LogoIcon fontSize="large" />
               <Typography variant="h6" component="div" ml={1.25}>
-                Dknet
+                dkNET
               </Typography>
             </Box>
 
