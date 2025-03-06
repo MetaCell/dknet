@@ -29,6 +29,7 @@ const CustomRadioGroup = ({ data }) => {
     const newValue = filter.options.find(row => row.code === e.target.value)
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: newValue
@@ -39,6 +40,7 @@ const CustomRadioGroup = ({ data }) => {
   const onClearFilter = () => {
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: undefined
@@ -81,7 +83,7 @@ const CustomRadioGroup = ({ data }) => {
           aria-labelledby="demo-customized-radios"
           name="customized-radios"
         >
-          {data.options.map((option, index) => <RadioGroupWidget key={index} data={option} />)}
+          {data.options.map((option, index) => <RadioGroupWidget key={"customRadioGroup_" + index} data={option} />)}
         </RadioGroup>
       </FormControl>
     </Box>

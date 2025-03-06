@@ -1,23 +1,27 @@
 import React  from 'react'
 
 //components
+import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-
+import Button from "@mui/material/Button";
 import { LaunchPageIcon } from "../assets/icons";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import FiltersAssistantDialog from "../components/FilterAssistantDialog/FiltersAssistantDialog";
+import { useFilterContext } from '../context/Context';
+import { vars } from "../theme/variables";
+
+const {
+  grey200,
+  grey700,
+  white
+} = vars;
 
 const LaunchPage = () => {
   const [open, setOpen] = React.useState(false);
-
-  const viewFilterAssistant = () => {
-    setOpen(true);
-  }
+  const { context, setContext } = useFilterContext();
 
   return (
-    <Grid container spacing={8} justifyContent='center'>
+    <Grid container spacing={6} justifyContent='center'>
       <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'>
         <LaunchPageIcon style={{
           height: 'auto',
@@ -26,19 +30,23 @@ const LaunchPage = () => {
       </Grid>
       <Grid item  md={6} display='flex' justifyContent='center' alignItems='center'>
         <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
-          <Typography color='grey.800' variant='h5' mb={2}>Need help setting up filters?</Typography>
-          <Typography fontWeight='normal' fontSize='1rem' variant='subtitle1' textAlign='center' mb={2}>Go through filters one by one guided by our Filtering Assistant and find the best repository matching as many filters as possible.</Typography>
+          <Typography color='grey.800' variant='h5' mb={2}>Want to browse all data instead?</Typography>
+          <Typography fontWeight='normal' fontSize='1rem' variant='subtitle1' textAlign='center' mb={2}>If you’re unsure of what exactly you’re looking for, browse all data instead without having any filters applied.</Typography>
           <Button
             variant='contained'
             style={{
-              backgroundColor: '#D1F2DF',
-              color: '#088E75',
-              border: 0,
+              backgroundColor: white,
+              borderColor: grey200,
+              color: grey700,
+              border: '1px solid',
               fontWeight: 600
             }}
-            onClick={viewFilterAssistant}
+            onClick={() => setContext({
+              ...context,
+              showAll: true
+            })}
           >
-            Try our Filtering Assistant
+            Browse Data
           </Button>
         </Box>
       </Grid>

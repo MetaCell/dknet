@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 //components
-import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
@@ -42,10 +41,10 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
           textOverflow: "ellipsis"
         },
         '& .MuiOutlinedInput-root': {
-          paddingRight: '40px !important',
+          paddingRight: '10px !important',
         },
         '& .MuiAutocomplete-endAdornment': {
-          right: '0 !important'
+          left: '100% !important'
         }
       }}
       value={value}
@@ -57,7 +56,7 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
       noOptionsText={<Typography variant="caption">{noOptionsText}</Typography>}
       renderTags={(value, getTagProps) =>
         value.map((option, index) => (
-          <Tooltip key={index} title={option.label}>
+          <Tooltip key={"tooltip_" + index} title={option.label}>
             <Chip label={option.label} {...getTagProps({ index })} />
           </Tooltip>
         ))

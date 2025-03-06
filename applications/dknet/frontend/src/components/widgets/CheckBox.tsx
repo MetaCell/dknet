@@ -14,7 +14,7 @@ const {
   primary600
 } = vars;
 
-const BpIcon = styled('span')(({ theme }) => ({
+const BpIcon = styled('span')(() => ({
   borderRadius: 6,
   width: 20,
   height: 20,
@@ -89,6 +89,7 @@ const CheckBoxWidget = ({ data, filter }: any) => {
     }
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [filter.code]: newValue.length !== 0 ? newValue : undefined

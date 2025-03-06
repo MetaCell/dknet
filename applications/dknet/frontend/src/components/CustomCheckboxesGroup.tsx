@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { useFilterContext } from "../context/Context"
 
 //components
@@ -25,6 +25,7 @@ const CustomCheckboxesGroup = ({ data }) => {
   const onClearFilter = () => {
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: undefined
@@ -64,7 +65,7 @@ const CustomCheckboxesGroup = ({ data }) => {
         {
           data.options.map((row, index) =>
             <CheckBoxWidget
-              key={index}
+              key={"checkbox_"+index}
               data={row}
               filter={data}
             />)

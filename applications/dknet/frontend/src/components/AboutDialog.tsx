@@ -42,12 +42,12 @@ const AboutDialog = ({ open, onClose }) => {
       <Box>
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="subtitle2" color="grey.700">Version</Typography>
-          <Typography variant="body2" color="grey.600">0.1.0</Typography>
+          <Typography variant="body2" color="grey.600">1.0.0</Typography>
         </Stack>
         <Divider />
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="subtitle2" color="grey.700">Release Date</Typography>
-          <Typography variant="body2" color="grey.600">03-12-2024</Typography>
+          <Typography variant="body2" color="grey.600">06-03-2025</Typography>
         </Stack>
         <Divider />
         <Stack direction="row" justifyContent="space-between" alignItems="center">
