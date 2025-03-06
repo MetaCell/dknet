@@ -5,10 +5,8 @@ import Header from "../components/Header";
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { Box, Grid, Typography } from "@mui/material";
-import Search from "../components/Search";
 import FiltersAssistantDialog from "../components/FilterAssistantDialog/FiltersAssistantDialog";
 import { useFilterContext } from "../context/Context";
-
 
 const MainLayout = ({ children }) => {
   const [open, setOpen] = React.useState(false);
@@ -39,11 +37,11 @@ const MainLayout = ({ children }) => {
             ( allRepositories.length === 0 && allFilters.length === 0 ? <></> : (
               <>
                 <Grid item xs={12} display="flex" justifyContent="center">
-                  <Search />
-                </Grid><Grid item xs={12} sm={8}>
+                  <Button variant='contained' onClick={viewFilterAssistant} sx={{ width: '14vw', height: '5vh' }}>Click Here To Get Started</Button>
+                </Grid>
+                <Grid item xs={12} sm={8}>
                   <Box mt={2} display='flex' alignItems='center' flexDirection='column' gap={1.5} justifyContent='center' width={1}>
-                    <Button variant='contained' color='secondary' onClick={viewFilterAssistant}>Edit inputs in Filtering Assistant</Button>
-                    <Typography variant='subtitle2' mr={1}>Results was the outcome of Filtering Assistant.</Typography>
+                    <Typography variant='subtitle2' mr={1}>You will be asked a series of questions based on your data requirements and priorities</Typography>
                   </Box>
                 </Grid>
               </>

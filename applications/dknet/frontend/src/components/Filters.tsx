@@ -9,6 +9,7 @@ import CustomCheckboxesGroup from "./CustomCheckboxesGroup";
 import { Button } from "@mui/material"
 import { resetFilters } from "../utils/helpers";
 import NestedListView from "./NestedListView"
+import FilterSearch from "./FilterSearch";
 
 const Filters = () => {
   const { context, setContext } = useFilterContext()
@@ -30,6 +31,7 @@ const Filters = () => {
   const onClearFilters = () => {
     setContext({
       ...context,
+      showAll: false,
       filterValues: resetFilters(context.filters)
     })
   }
@@ -45,6 +47,7 @@ const Filters = () => {
         <Button variant='text' sx={{ fontWeight: 600, color: '#088E75', minHeight: 'unset' }} onClick={onClearFilters}>Clear Filters</Button>
       </Box>
       <Box display='flex' flexDirection='column' gap={3} mt={1}>
+        <FilterSearch />
         {/* <FormGroup>
           {
             switchFilters.map((row, index) => <SwitchWidget key={index} data={row} />)

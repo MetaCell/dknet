@@ -48,6 +48,7 @@ const SortWidget = () => {
     setSelectedValue(event.target.value);
     setContext({
       ...context,
+      showAll: false,
       sortBy: event.target.value
     })
   };
@@ -71,6 +72,7 @@ const SortWidget = () => {
         startIcon={<FilterListIcon/>}
         endIcon={<ArrowDropDownIcon/>}
         onClick={handleClick}
+        sx={{ width: '10rem' }}
       >
         Sort By
       </Button>

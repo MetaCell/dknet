@@ -86,6 +86,7 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
   const onClearFilter = () => {
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: undefined
@@ -97,6 +98,7 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
     const newValue = data.options.find((item) => item.code === value);
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: newValue
@@ -127,7 +129,7 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
         onChange={changeSelection}
       >
         {data?.options?.map((item, index) => (
-          <NestedListItem key={item.code} item={item} depth={index} />
+          <NestedListItem key={"nestedListItem_" + index} item={item} depth={index} />
         ))}
       </RadioGroup>
     </List>

@@ -7,7 +7,7 @@ import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
+import Button from '@mui/material/Button';
 import FilterQuestions from "./FilterQuestions";
 import { PreviewIcon } from "../../assets/icons";
 import { Box, Divider } from "@mui/material";
@@ -117,15 +117,31 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
           Filtering Assistant
         </Typography>
         <Box display='flex' alignItems='center' gap={1}>
-          <IconButton
+          <Button
+            variant='outlined'
             aria-label="close"
             onClick={handleClose}
             sx={{
-              color: (theme) => theme.palette.grey[500],
+              color: (theme) => theme.palette.grey[700],
             }}
           >
-            <CloseIcon />
-          </IconButton>
+            Cancel
+          </Button>
+          {(context.results.length > 0 && !context.showAll) ?
+            (<Button
+              variant='contained'
+              aria-label="close"
+              onClick={() => {
+                handleClose();
+                document.getElementById('result_0').scrollIntoView({ behavior: 'smooth' });
+              }}
+              sx={{
+                color: (theme) => theme.palette.grey[200],
+              }}
+            >
+              Go To Results ({context.results.length})
+            </Button>) : <></>
+          }
           <Divider sx={{
             width: '0.0625rem',
             height: '2rem',

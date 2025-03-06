@@ -14,6 +14,7 @@ import Grid from "@mui/material/Grid";
 //icons
 import * as MUIcon from "@mui/icons-material"
 import { FilterColor, FilterType } from "../config/enums";
+import { get } from "http";
 
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
@@ -41,10 +42,13 @@ const RepositoryCard = (props) => {
   const { context } = useFilterContext()
   const { isBestMatch, repository } = props;
   const filterLabels = Object.values(repository.attributes)[0] as Array<string>
+  const getClass = () => {
+    return isBestMatch ? "successCard" : ""
+  }
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
-    <Card sx={{ position: 'relative', marginBottom: '1rem' }} className={isBestMatch && "successCard"}>
+    <Card id={"result_" + props.resultIndex} sx={{ position: 'relative', marginBottom: '1rem' }} className={getClass()}>
       {
         isBestMatch &&
           <Box pr={3} position='absolute' right={0} top='-3px'>
@@ -73,7 +77,7 @@ const RepositoryCard = (props) => {
           </Box>
           <Box mt={2.5} display="flex" width={1}>
             <Grid container columnSpacing={3}>
-              {context.allFilters.slice(1).filter((filter: any) => filter.label).map((filter: any) => {
+              {context.allFilters.slice(1).filter((filter: any) => filter.label).map((filter: any, index: any) => {
 
                 const attributeValues = repository.attributes[filter.code]
                 if (!attributeValues) {
@@ -85,7 +89,7 @@ const RepositoryCard = (props) => {
                     : [context.filterValues[filter.code].code])
                   : [];
                 return (
-                  <Grid key={filter.code} item md={6}>
+                  <Grid key={"grid_" + index} item md={6}>
                     <Box display="flex" alignItems="center" height={1} gap={1} justifyContent="space-between" pt={1} pb={1} borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
                       <Typography variant="body2" color="grey.600">{filter.cardText}</Typography>
                       <Box display="flex" gap={1} alignItems='center' flexWrap='wrap'>
@@ -93,8 +97,8 @@ const RepositoryCard = (props) => {
                           attributeValues.length === filter.options.length && filter.inputType === FilterType.Multiple
                             ? (<Chip label='All' color={FilterColor.Success} />)
                             : attributeValues.map((attribute: any) =>
-                              filter.options.map((option: any) => (option.code === attribute &&
-                                <Chip key={option.code} label={option.label} color={filtersUsed.includes(attribute) ? FilterColor.Success : FilterColor.Info} icon={option.icon && getMuiIcon(option.icon)} />
+                              filter.options.map((option: any, index: any) => (option.code === attribute &&
+                                <Chip key={"chip_" + index} label={option.label} color={filtersUsed.includes(attribute) ? FilterColor.Success : FilterColor.Info} />
                               ))
                             )
                         }
