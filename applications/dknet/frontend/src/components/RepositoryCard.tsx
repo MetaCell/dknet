@@ -12,9 +12,7 @@ import Tooltip from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 //icons
-import * as MUIcon from "@mui/icons-material"
 import { FilterColor, FilterType } from "../config/enums";
-import { get } from "http";
 
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
@@ -29,14 +27,6 @@ const CardTitleLink = styled(Link)(() => ({
   WebkitBoxOrient: 'vertical',
   textOverflow: 'ellipsis',
 }));
-
-const getMuiIcon = (icon) => {
-  if (!icon) {
-    return null
-  }
-  const Icon = icon && MUIcon[icon]
-  return (Icon && <Icon />)
-}
 
 const RepositoryCard = (props) => {
   const { context } = useFilterContext()
