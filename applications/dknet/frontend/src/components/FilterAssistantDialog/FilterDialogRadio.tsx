@@ -21,7 +21,6 @@ const FilterDialogRadio = ({ data, question }: any) => {
 
   return (
     <FormControlLabel
-      key={data?.code}
       labelPlacement="bottom"
       name={question?.code}
       value={data?.code}

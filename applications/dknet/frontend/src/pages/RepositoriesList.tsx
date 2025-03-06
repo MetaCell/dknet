@@ -22,7 +22,7 @@ const RepositoriesList = () => {
     if (showGeneralist) {
       setShowGeneralist(false);
     }
-  }, [context.filterValues, context.results]);
+  }, [context.filterValues, context.results, showGeneralist]);
 
   return (
     <Grid container spacing={4} sx={{
@@ -34,12 +34,15 @@ const RepositoriesList = () => {
       <Grid md={8} item>
         <Grid spacing={2}>
           <Grid item display='flex' justifyContent='flex-end' mb={2}>
+            <Grid container direction={'row'} justifyContent='space-between' alignItems='center'>
+              <Typography variant='h4'>Showing {context.results.length} results</Typography>
+            </Grid>
             <SortWidget/>
           </Grid>
           {
             context.results.length > 0
               ? context.results.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
-                <RepositoryCard key={repository.code} repository={repository} isBestMatch={index === 0 || repository.pctMatch === context.results[0].pctMatch}/>
+                <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={index === 0 || repository.pctMatch === context.results[0].pctMatch}/>
               </Grid>)
               : <>
                 <Typography sx={{ textAlign: 'center', marginTop: '1.5rem' }} variant='h2'>No results found matching the filters criteria.</Typography>

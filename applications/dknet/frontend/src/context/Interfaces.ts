@@ -41,4 +41,5 @@ export interface IFilterContext {
   allGeneralistRepositories: IRepository[],
   results: IRepository[],
   filters: any[],
+  showAll: boolean
 }

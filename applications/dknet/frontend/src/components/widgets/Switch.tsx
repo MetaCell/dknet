@@ -76,6 +76,7 @@ const SwitchWidget = ({ data }: any) => {
     }
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: newValue

@@ -148,6 +148,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   }
 
   const { context, setContext } = useFilterContext()
+  const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
 
   const setCheckedStateMultipleOptions = (question, data) => context?.filterValues[question.code]?.filter((selectedValue) => selectedValue?.code === data?.code).length > 0 ? 'checked-state' : '';
 
@@ -155,6 +156,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
     if (context?.filterValues[question.code]?.code === undefined || context?.filterValues[question.code]?.code !== data?.code) {
       setContext({
         ...context,
+        showAll: false,
         filterValues: {
           ...context.filterValues,
           [question.code]: data
@@ -165,6 +167,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
       delete newData[question.code];
       setContext({
         ...context,
+        showAll: false,
         filterValues: {
           ...newData
         }
@@ -291,7 +294,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
             const nextStep = value + 1 === index;
             const stepClass = isActive ? classes.active : classes.next;
             return (
-              <>
+              <React.Fragment key={index}>
                 <Box sx={stepClass}
                   m='auto'
                   key={index} py={5} px={3} maxWidth='40rem'
@@ -336,9 +339,9 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                           name="radio-buttons-group"
                           value={context?.filterValues[question?.code]?.code}
                         >
-                          {question?.options.map((data) =>
+                          {question?.options.map((data, index) =>
                             // Add className='checked-state' in <Item is checkbox is selected
-                            <Item key={data?.code} className={context?.filterValues[question.code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
+                            <Item key={"itemKey_" + index} className={context?.filterValues[question.code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
                               e.preventDefault();
                               setCheckedStateSingleOption(e, question, data)
                             }} >
@@ -350,7 +353,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                   </QuestionBox>
                   {!nextStep && <DialogStepFooter handlePrev={handlePrev} index={index} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />}
                 </Box>
-              </>
+              </React.Fragment>
             )
           })}
         </Box>
@@ -376,7 +379,10 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
         >
           <Box pt={4} px={3} pb={2}>
             <Typography variant="h4">Preview of results</Typography>
-            <Typography sx={{ mt: 2 }} variant="subtitle2">{context.results.length} repositories matching your criteria so far</Typography>
+            {(isFiltersEmpty)
+              ? <Typography sx={{ mt: 2 }} variant="subtitle2">Please select at least one filter to see the results</Typography>
+              : <Typography sx={{ mt: 2 }} variant="subtitle2">{context.results.length} repositories matching your criteria so far</Typography>
+            }
           </Box>
           <List disablePadding sx={{
             gap: 1,
@@ -421,7 +427,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
               }
             }
           }}>
-            {context.results.map((el, index) => (
+            {!isFiltersEmpty ? context.results.map((el, index) => (
               <ListItem disablePadding key={el}>
                 <ListItemButton sx={ (index === 0 || el.pctMatch === context.results[0].pctMatch) && !isNaN(el.pctMatch) ?
                   {
@@ -437,11 +443,15 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                     '&:hover': {
                       background: white,
                     },
-                  }}>
+                  }}
+                onClick={() => {
+                  closeDialog();
+                  document.getElementById('result_' + index).scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <ListItemText primary={!isNaN(el.pctMatch) ? `${el.label} ${el.pctMatch}%` : `${el.label}`} secondary={(index === 0 || el.pctMatch === context.results[0].pctMatch) && !isNaN(el.pctMatch) ? "Best Match" : null} />
                 </ListItemButton>
               </ListItem>
-            ))}
+            )) : <></>}
           </List>
         </Box>
       </Box>

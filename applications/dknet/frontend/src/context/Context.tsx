@@ -54,6 +54,7 @@ export const FilterProvider = ({ children }) => {
     }).map((repository) => mapRepository(repository as IRepository)),
     results: [],
     filters: filters,
+    showAll: false,
   });
 
   const setContext = (newContext) => _setContext(_sortRepositories(scoreRepositories(filterRepositories(newContext))))
@@ -91,6 +92,9 @@ export const FilterProvider = ({ children }) => {
     // start filtering the repositories
     newContext.allRepositories.forEach((repository) => {
       let match = true;
+      if (usedFilters.length === 0) {
+        match = false;
+      }
       usedFilters.forEach(filter => {
         const value = filterValues[filter.code]
         const filterValue = Array.isArray(value) ? value : [value]
@@ -115,7 +119,7 @@ export const FilterProvider = ({ children }) => {
           }
         }
       })
-      if (match) {
+      if (match || newContext.showAll) {
         results.push(repository)
       }
     });

@@ -15,13 +15,13 @@ import LinearProgress from '@mui/material/LinearProgress';
 const HomePage = () => {
   const { context } = useFilterContext();
   const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
-  const { allRepositories, allFilters } = context;
+  const { allRepositories, allFilters, showAll } = context;
 
   return (
     <Box sx={{ background: isFiltersEmpty? '': '#fff' }}>
       <Container>
         {
-          ( allRepositories.length === 0 && allFilters.length === 0 ? <LinearProgress color='secondary' /> : (isFiltersEmpty ? <LaunchPage /> : <RepositoriesList />))
+          ( allRepositories.length === 0 && allFilters.length === 0 ? <LinearProgress color='secondary' /> : ((isFiltersEmpty && !showAll) ? <LaunchPage /> : <RepositoriesList />))
         }
       </Container>
     </Box>
