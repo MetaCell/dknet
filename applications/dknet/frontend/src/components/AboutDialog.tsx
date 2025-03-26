@@ -38,7 +38,7 @@ const AboutDialog = ({ open, onClose }) => {
       <Box>
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="subtitle2" color="grey.700">Version</Typography>
-          <Typography variant="body2" color="grey.600">1.0.0</Typography>
+          <Typography variant="body2" color="grey.600">1.0.1</Typography>
         </Stack>
         <Divider />
         <Stack direction="row" justifyContent="space-between">
