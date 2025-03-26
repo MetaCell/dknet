@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import AboutDialog from "./AboutDialog";
 
 //icons
-import { LogoIcon } from '../assets/icons';
+import dknetlogo from '../assets/dknetlogo.png';
 
 
 
@@ -38,15 +38,15 @@ const Header = () => {
         <Toolbar disableGutters>
           <Box sx={{ display: 'flex',  justifyContent: 'space-between' }} width={1}>
             <Box sx={{  display: 'flex',  mr: 1 }}>
-              <LogoIcon fontSize="large" />
+              <img src={dknetlogo} alt="dknet logo" style={{ height: '40px', width: '40px' }} />
               <Typography variant="h6" component="div" ml={1.25}>
-                Dknet
+                dkNET
               </Typography>
             </Box>
 
             <Box sx={{  display: 'flex' }}>
               <Button variant="text" onClick={redirectToFeedback}>Send us feedback</Button>
-              <Button variant="outlined" onClick={handleOpen}>About Dknet Repo</Button>
+              <Button variant="outlined" onClick={handleOpen}>About dkNET Repo</Button>
               <AboutDialog open={openAboutDialog} onClose={handleClose}/>
             </Box>
 
