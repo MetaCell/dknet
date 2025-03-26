@@ -29,20 +29,16 @@ const AboutDialog = ({ open, onClose }) => {
           <CloseIcon fontSize="medium" />
         </IconButton>
         <Stack alignItems="center" spacing={1.5}>
-          <Typography variant="subtitle1" color="grey.900">About Dknet Repo</Typography>
+          <Typography variant="subtitle1" color="grey.900">About dkNET Repo</Typography>
           <Typography variant="body2" sx={{ textAlign: "center" }} color="grey.600">
-            This website has been created in order to help researchers to select a data repository, according to NIH`&apos;` upcoming 2023 policies.
+            This website has been created in order to help researchers to select a data repository, according to the 2023 NIH Data Management and Sharing (DMS) policy.
           </Typography>
         </Stack>
-      </Box>
-      <Box p={2} className="disclaimerBox" mb={3}>
-        <Typography variant="subtitle2" color="warning.700">Disclaimer</Typography>
-        <Typography variant="body2" color="warning.700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</Typography>
       </Box>
       <Box>
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="subtitle2" color="grey.700">Version</Typography>
-          <Typography variant="body2" color="grey.600">1.0.0</Typography>
+          <Typography variant="body2" color="grey.600">1.0.1</Typography>
         </Stack>
         <Divider />
         <Stack direction="row" justifyContent="space-between">
@@ -50,15 +46,8 @@ const AboutDialog = ({ open, onClose }) => {
           <Typography variant="body2" color="grey.600">06-03-2025</Typography>
         </Stack>
         <Divider />
-        <Stack direction="row" justifyContent="space-between" alignItems="center">
-          <Typography variant="subtitle2" color="grey.700">DKNET team</Typography>
-          <Button
-            variant="text"
-            className="dialogSendBtn"
-            onClick={() => { window.location.href = 'mailto:info@dknet.org' }}
-          >
-            Send Email
-          </Button>
+        <Stack direction="row" justifyContent="space-between" alignItems="center" style={{ marginTop: '1rem' }}>
+          <Typography variant="subtitle2" color="grey.700">dkNET team</Typography>
         </Stack>
         <Stack mt={2}>
           <Typography variant="subtitle2" color="grey.700">Maryann E. Martone</Typography>
@@ -79,8 +68,28 @@ const AboutDialog = ({ open, onClose }) => {
           <Typography variant="subtitle2" color="grey.700">Jeffrey S. Grethe</Typography>
           <Typography variant="body2" color="grey.500"> University of California, San Diego</Typography>
         </Stack>
+        <Divider />
+        <Stack>
+          <Typography variant="subtitle2" color="grey.700">Ko-Wei Lin</Typography>
+          <Typography variant="body2" color="grey.500"> University of California, San Diego</Typography>
+        </Stack>
+        <Divider />
+        <Stack>
+          <Typography variant="subtitle2" color="grey.700">Edyta Vieth</Typography>
+          <Typography variant="body2" color="grey.500"> University of California, San Diego</Typography>
+        </Stack>
+        <Divider />
+        <Stack>
+          <Typography variant="subtitle2" color="grey.700">Marcus Leiwe</Typography>
+          <Typography variant="body2" color="grey.500"> MetaCell LTD </Typography>
+        </Stack>
+        <Divider />
+        <Stack>
+          <Typography variant="subtitle2" color="grey.700">Dario Del Piano</Typography>
+          <Typography variant="body2" color="grey.500"> MetaCell LTD </Typography>
+        </Stack>
       </Box>
-      <Box mt={12} display="flex" justifyContent="center" alignItems="center">
+      <Box mt={9} display="flex" justifyContent="center" alignItems="center">
         <Typography variant="body2" mr={1} color="grey.600">Powered by</Typography>
         <MetacellLogoIcon sx={{ '&.MuiSvgIcon-root': {
           width: 'auto'
