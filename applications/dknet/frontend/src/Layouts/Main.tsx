@@ -41,7 +41,7 @@ const MainLayout = ({ children }) => {
                 </Grid>
                 <Grid item xs={12} sm={8}>
                   <Box mt={2} display='flex' alignItems='center' flexDirection='column' gap={1.5} justifyContent='center' width={1}>
-                    <Typography variant='subtitle2' mr={1}>You will be asked a series of questions based on your data requirements and priorities</Typography>
+                    <Typography variant='subtitle2' mr={1}>Repositories, like journals, have a variety of requirements and features. We will start by asking you some questions about your data and your requirements so that we can match you to the best repository for your needs.</Typography>
                   </Box>
                 </Grid>
               </>
