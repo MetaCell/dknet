@@ -47,7 +47,7 @@ const AboutDialog = ({ open, onClose }) => {
         </Stack>
         <Divider />
         <Stack direction="row" justifyContent="space-between" alignItems="center" style={{ marginTop: '1rem' }}>
-          <Typography variant="subtitle2" color="grey.700">DKNET team</Typography>
+          <Typography variant="subtitle2" color="grey.700">dkNET team</Typography>
         </Stack>
         <Stack mt={2}>
           <Typography variant="subtitle2" color="grey.700">Maryann E. Martone</Typography>
