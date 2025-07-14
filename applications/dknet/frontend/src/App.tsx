@@ -13,7 +13,7 @@ import ScrollToTop from './components/ScrollTop'
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/dknet">
       <ThemeProvider theme={theme}>
         <FilterProvider>
           <CssBaseline />

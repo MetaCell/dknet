@@ -2,7 +2,7 @@
   "name": "dknet",
   "version": "1.0.1",
   "private": true,
-  "homepage": "https://metacell.github.io/dknet",
+  "homepage": "https://metacell.github.io/dknet/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
