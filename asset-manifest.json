@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/dknet/static/js/main.b75c0f28.js",
+    "main.js": "/dknet/static/js/main.0bb458cd.js",
     "static/media/dknetlogo.png": "/dknet/static/media/dknetlogo.0059ede6fe1a9324ef08.png",
     "index.html": "/dknet/index.html",
-    "main.b75c0f28.js.map": "/dknet/static/js/main.b75c0f28.js.map"
+    "main.0bb458cd.js.map": "/dknet/static/js/main.0bb458cd.js.map"
   },
   "entrypoints": [
-    "static/js/main.b75c0f28.js"
+    "static/js/main.0bb458cd.js"
   ]
 }
