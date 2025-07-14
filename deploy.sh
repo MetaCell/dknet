@@ -14,7 +14,7 @@ yarn install
 echo "🔨 Building the project..."
 yarn build
 
-# Deploy to GitHub Pages
+# Deploy to GitHub Pages using gh-pages with correct source directory
 echo "🌐 Deploying to GitHub Pages..."
 yarn deploy
 
