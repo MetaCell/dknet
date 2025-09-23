@@ -13,7 +13,7 @@ import ScrollToTop from './components/ScrollTop'
 const App = () => {
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
+    <BrowserRouter basename="/">
       <ThemeProvider theme={theme}>
         <FilterProvider>
           <CssBaseline />
