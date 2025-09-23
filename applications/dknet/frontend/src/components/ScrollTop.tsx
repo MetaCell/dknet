@@ -1,4 +1,4 @@
-import { Box, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import React from "react";
 import { TopIcon } from "../assets/icons";
 import { vars } from "../theme/variables";
