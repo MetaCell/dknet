@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react"
+import React, { useEffect } from "react"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -103,21 +103,14 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, open, setHeight, setTranslateValue, height, translateValue, closeDialog, showPreview }) {
-
-  const ref = useRef(null);
-
-  useLayoutEffect(() => {
-    const questionDOMHeightArr = Array.from(ref?.current?.childNodes).map((el: any) => el.clientHeight);
-    setHeight(questionDOMHeightArr)
-  }, [open, setHeight]);
+export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, closeDialog, showPreview }) {
 
   useEffect(() => {
     const keyDownHandler = (event: any) => {
       if (event.key === 'Enter') {
         event.preventDefault();
         if (questionsTabs.length - 1 !== value) {
-          handleNext(value);
+          handleNext();
         }
       }
     };
@@ -128,22 +121,12 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   });
 
 
-  const handleNext = (index: number) => {
-
-    setTranslateValue((prev: number) => {
-      return prev + height[index]
-    })
-
+  const handleNext = () => {
     onClickNext()
   }
 
 
-  const handlePrev = (index: number) => {
-
-    setTranslateValue((prev: number) => {
-      return prev - height[index - 1]
-    })
-
+  const handlePrev = () => {
     onClickPrev()
   }
 
@@ -176,17 +159,6 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   }
 
   const classes = {
-    active: {
-      opacity: 1
-    },
-
-    next: {
-      opacity: 0.4,
-      pointerEvents: 'none'
-    },
-
-    hide: {},
-
     leftBlock: {
       height: '100%',
       display: 'flex',
@@ -288,74 +260,68 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
         </Box>
       </Box>
       <Box sx={{ width: 'calc(100% - 20rem)', borderLeft: `0.0625rem solid ${grey200}`, height: '100%', display: 'flex' }}>
-        <Box ref={ref} sx={{ height: '100%', width: 1, transition: 'transform ease-in-out .4s', transform: `translateY(-${translateValue}px)` }}>
-          {questionsTabs.map((question, index) => {
-            const isActive = value === index;
-            const nextStep = value + 1 === index;
-            const stepClass = isActive ? classes.active : classes.next;
-            return (
-              <React.Fragment key={index}>
-                <Box sx={stepClass}
-                  m='auto'
-                  key={index} py={5} px={3} maxWidth='40rem'
-                >
-                  <Typography sx={{
-                    fontWeight: 400,
-                    fontSize: '1.25rem',
-                    lineHeight: '150%',
-                    color: grey800
-                  }}>{question?.questionTitle}</Typography>
-                  <Typography sx={{
-                    paddingTop: '0.5rem',
-                    fontWeight: 200,
-                    fontSize: '1rem',
-                    lineHeight: '120%',
-                    color: grey800
-                  }}>{question?.questionSubtitle}</Typography>
-                  <QuestionBox inputType={question?.inputType}>
-                    {
-                      // Add className='checked-state' in <Item is checkbox is selected
-                      question?.inputType === 'MULTI' ? question?.options.map((data) => {
-                        return (
-                          <Tooltip title={data.label} key={data?.label}>
-                            <Item className={setCheckedStateMultipleOptions(question, data)}>
-                              <CheckBoxWidget
-                                data={data}
-                                filter={question}
-                              />
-                            </Item>
-                          </Tooltip>
-                        )
-                      }) :
-                        <RadioGroup
-                          sx={{
-                            width: '100%',
-                            display: 'grid',
-                            gap: 1.5,
-                            gridTemplateColumns: question?.options.length == 2 ? 'repeat(2, auto)' : question?.options.length == 4 ? 'repeat(4,  auto)' : 'repeat(3, auto)'
-                          }}
-                          aria-labelledby="demo-radio-buttons-group-label"
-                          defaultValue=""
-                          name="radio-buttons-group"
-                          value={context?.filterValues[question?.code]?.code}
-                        >
-                          {question?.options.map((data, index) =>
-                            // Add className='checked-state' in <Item is checkbox is selected
-                            <Item key={"itemKey_" + index} className={context?.filterValues[question.code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
-                              e.preventDefault();
-                              setCheckedStateSingleOption(e, question, data)
-                            }} >
-                              <FilterDialogRadio data={data} filter={data} question={question} />
-                            </Item>
-                          )}
-                        </RadioGroup>
-                    }
-                  </QuestionBox>
-                  {!nextStep && <DialogStepFooter handlePrev={handlePrev} index={index} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />}
-                </Box>
-              </React.Fragment>
-            )
-          })}
+        <Box sx={{ height: '100%', width: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {questionsTabs[value] && (
+            <Box
+              m='auto'
+              py={5} px={3} maxWidth='40rem'
+              sx={{ width: '100%' }}
+            >
+              <Typography sx={{
+                fontWeight: 400,
+                fontSize: '1.25rem',
+                lineHeight: '150%',
+                color: grey800
+              }}>{questionsTabs[value]?.questionTitle}</Typography>
+              <Typography sx={{
+                paddingTop: '0.5rem',
+                fontWeight: 200,
+                fontSize: '1rem',
+                lineHeight: '120%',
+                color: grey800
+              }}>{questionsTabs[value]?.questionSubtitle}</Typography>
+              <QuestionBox inputType={questionsTabs[value]?.inputType}>
+                {
+                  // Add className='checked-state' in <Item is checkbox is selected
+                  questionsTabs[value]?.inputType === 'MULTI' ? questionsTabs[value]?.options.map((data) => {
+                    return (
+                      <Tooltip title={data.label} key={data?.label}>
+                        <Item className={setCheckedStateMultipleOptions(questionsTabs[value], data)}>
+                          <CheckBoxWidget
+                            data={data}
+                            filter={questionsTabs[value]}
+                          />
+                        </Item>
+                      </Tooltip>
+                    )
+                  }) :
+                    <RadioGroup
+                      sx={{
+                        width: '100%',
+                        display: 'grid',
+                        gap: 1.5,
+                        gridTemplateColumns: questionsTabs[value]?.options.length == 2 ? 'repeat(2, auto)' : questionsTabs[value]?.options.length == 4 ? 'repeat(4,  auto)' : 'repeat(3, auto)'
+                      }}
+                      aria-labelledby="demo-radio-buttons-group-label"
+                      defaultValue=""
+                      name="radio-buttons-group"
+                      value={context?.filterValues[questionsTabs[value]?.code]?.code}
+                    >
+                      {questionsTabs[value]?.options.map((data, index) =>
+                        // Add className='checked-state' in <Item is checkbox is selected
+                        <Item key={"itemKey_" + index} className={context?.filterValues[questionsTabs[value].code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
+                          e.preventDefault();
+                          setCheckedStateSingleOption(e, questionsTabs[value], data)
+                        }} >
+                          <FilterDialogRadio data={data} filter={data} question={questionsTabs[value]} />
+                        </Item>
+                      )}
+                    </RadioGroup>
+                }
+              </QuestionBox>
+              <DialogStepFooter handlePrev={handlePrev} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />
+            </Box>
+          )}
         </Box>
         <Box 
           flexShrink={0}
