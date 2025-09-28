@@ -14,6 +14,7 @@ import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
 import { vars } from '../../theme/variables'
 import { useFilterContext } from "../../context/Context";
+import { useResponsive } from '../../hooks/useResponsive';
 
 const {
   grey200,
@@ -104,6 +105,55 @@ function TabPanel(props: TabPanelProps) {
 }
 
 export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, closeDialog, showPreview }) {
+  const { screenSize } = useResponsive();
+  
+  // Responsive configurations
+  const getResponsiveConfig = () => {
+    switch (screenSize) {
+      case 'mobile':
+        return {
+          sidebarWidth: '18rem',
+          showPreviewByDefault: false,
+          previewWidth: '22rem',
+          questionMaxWidth: '35rem',
+          gridCols: { 2: 'repeat(2, 1fr)', 3: 'repeat(2, 1fr)', 4: 'repeat(2, 1fr)' }
+        };
+      case 'tablet':
+        return {
+          sidebarWidth: '19rem',
+          showPreviewByDefault: true,
+          previewWidth: '24rem',
+          questionMaxWidth: '38rem',
+          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(2, 1fr)' }
+        };
+      case 'laptop':
+        return {
+          sidebarWidth: '20rem',
+          showPreviewByDefault: true,
+          previewWidth: '25rem',
+          questionMaxWidth: '40rem',
+          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+        };
+      case 'desktop':
+        return {
+          sidebarWidth: '22rem',
+          showPreviewByDefault: true,
+          previewWidth: '28rem',
+          questionMaxWidth: '45rem',
+          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+        };
+      default:
+        return {
+          sidebarWidth: '20rem',
+          showPreviewByDefault: true,
+          previewWidth: '25rem',
+          questionMaxWidth: '40rem',
+          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+        };
+    }
+  };
+  
+  const config = getResponsiveConfig();
 
   useEffect(() => {
     const keyDownHandler = (event: any) => {
@@ -218,7 +268,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
 
   return (
     <Box sx={{ height: '100%' }} display='flex'>
-      <Box sx={{ height: '100%', width: '20rem' }} display='flex' flexDirection='column' justifyContent='space-between'>
+      <Box sx={{ height: '100%', width: config.sidebarWidth }} display='flex' flexDirection='column' justifyContent='space-between'>
         <Box sx={classes.leftBlock} px={2} py={3}>
           <Typography sx={{
             pl: 1,
@@ -259,12 +309,12 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           <ProgressBar progress={progress} />
         </Box>
       </Box>
-      <Box sx={{ width: 'calc(100% - 20rem)', borderLeft: `0.0625rem solid ${grey200}`, height: '100%', display: 'flex' }}>
+      <Box sx={{ width: `calc(100% - ${config.sidebarWidth})`, borderLeft: `0.0625rem solid ${grey200}`, height: '100%', display: 'flex' }}>
         <Box sx={{ height: '100%', width: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {questionsTabs[value] && (
             <Box
               m='auto'
-              py={5} px={3} maxWidth='40rem'
+              py={5} px={3} maxWidth={config.questionMaxWidth}
               sx={{ width: '100%' }}
             >
               <Typography sx={{
@@ -300,7 +350,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                         width: '100%',
                         display: 'grid',
                         gap: 1.5,
-                        gridTemplateColumns: questionsTabs[value]?.options.length == 2 ? 'repeat(2, auto)' : questionsTabs[value]?.options.length == 4 ? 'repeat(4,  auto)' : 'repeat(3, auto)'
+                        gridTemplateColumns: questionsTabs[value]?.options.length == 2 ? config.gridCols[2] : questionsTabs[value]?.options.length == 4 ? config.gridCols[4] : config.gridCols[3]
                       }}
                       aria-labelledby="demo-radio-buttons-group-label"
                       defaultValue=""
@@ -325,10 +375,10 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
         </Box>
         <Box 
           flexShrink={0}
-          marginRight={!showPreview ? '-25rem' : 0}
+          marginRight={!showPreview ? `-${config.previewWidth}` : 0}
           sx={{
             transition: 'all ease-in-out .3s',
-            background: white, width: '25rem', borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
+            background: white, width: config.previewWidth, borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
             '&:after': {
               content: "''",
               background: 'linear-gradient(180deg, rgba(249, 250, 251, 0.00) 0%, #F9FAFB 100%)',

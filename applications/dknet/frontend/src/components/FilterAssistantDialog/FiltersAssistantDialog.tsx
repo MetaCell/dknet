@@ -12,6 +12,7 @@ import FilterQuestions from "./FilterQuestions";
 import { PreviewIcon } from "../../assets/icons";
 import { Box, Divider } from "@mui/material";
 import { vars } from "../../theme/variables";
+import { useResponsive } from '../../hooks/useResponsive';
 
 const {
   grey200,
@@ -32,7 +33,12 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const [tabValue, setTabValue] = useState(0);
   const [progress, setProgress] = useState(0);
   const { context } = useFilterContext()
-  const [showPreview, setShowPreview] = useState(true);
+  const { screenSize } = useResponsive();
+  
+  // Set initial preview state based on screen size
+  const [showPreview, setShowPreview] = useState(() => {
+    return screenSize !== 'mobile';
+  });
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
@@ -76,12 +82,13 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       TransitionComponent={Transition}
       keepMounted
       aria-describedby="alert-dialog-slide-description"
-      maxWidth='lg'
+      maxWidth={screenSize === 'desktop' ? 'xl' : 'lg'}
       fullWidth={true}
       sx={{
         "& .MuiPaper-root": {
-          height: '100%',
-          borderRadius: '0.75rem'
+          height: screenSize === 'mobile' ? '95%' : '100%',
+          borderRadius: screenSize === 'mobile' ? '0.5rem' : '0.75rem',
+          margin: screenSize === 'mobile' ? 1 : 3
         }
       }}
     >

@@ -10,6 +10,7 @@ import RepositoryCard from '../components/RepositoryCard';
 import Typography from "@mui/material/Typography";
 import Stack from '@mui/material/Stack';
 import { vars } from '../theme/variables';
+import { useResponsive } from '../hooks/useResponsive';
 
 const { success500 } = vars;
 
@@ -17,6 +18,25 @@ const { success500 } = vars;
 const RepositoriesList = () => {
   const [showGeneralist, setShowGeneralist] = useState(false);
   const { context } = useFilterContext();
+  const { screenSize } = useResponsive();
+  
+  // Responsive grid sizes
+  const getGridSizes = () => {
+    switch (screenSize) {
+      case 'mobile':
+        return { main: 12, filters: 12 };
+      case 'tablet':
+        return { main: 12, filters: 12 };
+      case 'laptop':
+        return { main: 8, filters: 4 };
+      case 'desktop':
+        return { main: 8, filters: 4 };
+      default:
+        return { main: 8, filters: 4 };
+    }
+  };
+  
+  const gridSizes = getGridSizes();
 
   useEffect(() => {
     if (showGeneralist) {
@@ -25,13 +45,13 @@ const RepositoriesList = () => {
   }, [context.filterValues, context.results, showGeneralist]);
 
   return (
-    <Grid container spacing={4} sx={{
+    <Grid container spacing={screenSize === 'mobile' ? 2 : 4} sx={{
       background: '#FFFFFF',
       minHeight: '60%',
       borderRadius: '24px 24px 0px 0px',
       border: '1px solid #fff'
     }}>
-      <Grid md={8} item>
+      <Grid xs={12} md={gridSizes.main} item>
         <Grid spacing={2}>
           <Grid item display='flex' justifyContent='flex-end' mb={2}>
             <Grid container direction={'row'} justifyContent='space-between' alignItems='center'>
@@ -70,20 +90,22 @@ const RepositoriesList = () => {
           }
         </Grid>
       </Grid>
-      <Grid md={4} item>
+      <Grid xs={12} md={gridSizes.filters} item>
         <Stack spacing={2}>
           <Filters />
-          <Box sx={{
-            background: '#FCFCFD',
-            borderRadius: '12px',
-            padding: 3
-          }}>
-            <Stack spacing={2}>
-              <Typography variant='h5'>Want to learn more on how we show you results?</Typography>
-              <Typography variant='h4'>Discover the rules and algorithms that show you results that you see.</Typography>
-              <Typography variant='h5'>Learn more</Typography>
-            </Stack>
-          </Box>
+          {(screenSize === 'laptop' || screenSize === 'desktop') && (
+            <Box sx={{
+              background: '#FCFCFD',
+              borderRadius: '12px',
+              padding: 3
+            }}>
+              <Stack spacing={2}>
+                <Typography variant='h5'>Want to learn more on how we show you results?</Typography>
+                <Typography variant='h4'>Discover the rules and algorithms that show you results that you see.</Typography>
+                <Typography variant='h5'>Learn more</Typography>
+              </Stack>
+            </Box>
+          )}
         </Stack>
       </Grid>
     </Grid>

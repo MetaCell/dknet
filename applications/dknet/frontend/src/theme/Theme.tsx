@@ -25,6 +25,15 @@ const {
 } = vars;
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,    // Mobile/tablet
+      md: 1024,   // Tablet/small laptop
+      lg: 1280,   // Laptop
+      xl: 1920,   // Desktop
+    },
+  },
   palette: {
     mode: 'light',
     background: {
@@ -67,12 +76,21 @@ const theme = createTheme({
     subtitle1: {
       fontSize: '1.25rem',
       color: grey500,
-      fontWeight: 600
+      fontWeight: 600,
+      '@media (max-width:768px)': {
+        fontSize: '1rem',
+      }
     },
     h1:{
       fontWeight: 600,
       fontSize: "2.25rem",
-      color: grey800
+      color: grey800,
+      '@media (max-width:1024px)': {
+        fontSize: '2rem',
+      },
+      '@media (max-width:768px)': {
+        fontSize: '1.75rem',
+      }
     },
     h2:{
       fontWeight: 600,
