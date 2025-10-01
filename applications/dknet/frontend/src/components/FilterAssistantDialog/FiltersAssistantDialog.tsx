@@ -16,7 +16,7 @@ import { useResponsive } from '../../hooks/useResponsive';
 
 const {
   grey200,
-  grey50
+  grey100
 } = vars;
 
 const Transition = React.forwardRef(function Transition(
@@ -85,18 +85,13 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       maxWidth={screenSize === 'desktop' ? 'xl' : 'lg'}
       fullWidth={true}
     >
-      <DialogTitle sx={{
-        borderBottom: `0.0625rem solid ${grey200}`,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between'
-      }}>
+      <DialogTitle>
         <Typography variant='h2'>
-          Filtering Assistant
+          Guided Query
         </Typography>
         <Box display='flex' alignItems='center' gap={1}>
           <Button
-            variant='outlined'
+            variant='text'
             aria-label="close"
             onClick={handleClose}
             sx={{
@@ -105,32 +100,24 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
           >
             Cancel
           </Button>
-          {(context.results.length > 0 && !context.showAll) ?
-            (<Button
-              variant='contained'
-              aria-label="close"
-              onClick={() => {
-                handleClose();
-                document.getElementById('result_0').scrollIntoView({ behavior: 'smooth' });
-              }}
-              sx={{
-                color: (theme) => theme.palette.grey[200],
-              }}
-            >
-              Go To Results ({context.results.length})
-            </Button>) : <></>
-          }
-          <Divider sx={{
-            width: '0.0625rem',
-            height: '2rem',
-            background: grey200,
-          }} />
+          <Button
+            variant='outlined'
+            aria-label="close"
+            onClick={() => {
+              handleClose();
+              document.getElementById('result_0').scrollIntoView({ behavior: 'smooth' });
+            }}
+            disabled={context.results.length === 0 && !context.showAll}
+          >
+            Go To Results ({context.results.length})
+          </Button>
+          <Divider orientation="vertical" sx={{ height: '2rem', background: grey200 }} />
           <IconButton className={`outlined ${showPreview ? 'active' : ''}`} onClick={() => setShowPreview(!showPreview)}>
             <PreviewIcon />
           </IconButton>
         </Box>
       </DialogTitle>
-      <DialogContent sx={{ backgroundColor: grey50, height: 'calc(100vh - 3.60rem)' }}>
+      <DialogContent sx={{ backgroundColor: grey100 }}>
         <FilterQuestions
           showPreview={showPreview}
           questionsTabs={questionsTabs}

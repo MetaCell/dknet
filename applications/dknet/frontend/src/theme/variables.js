@@ -2,8 +2,10 @@ export const vars = {
   primaryFont: "Figtree, sans-serif",
   white: '#FFFFFF',
 
+  grey100: '#F2F4F7',
   grey200: '#EAECF0',
   grey400: '#98A2B3',
+  grey300: '#D0D5DD',
   grey500: '#667085',
   grey600: '#475467',
   grey700: '#344054',

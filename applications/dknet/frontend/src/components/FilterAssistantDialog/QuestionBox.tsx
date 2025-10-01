@@ -8,15 +8,14 @@ const QuestionBox = (props: any) => {
   return (
     <Box sx={{
       background: '#FFF',
-      borderRadius: 6,
-      padding: 2,
-      marginTop: 2,
-      marginBottom: 2,
+      borderRadius: '1.5rem',
+      pl: 2,
+      pr: 4,
+      py: 2,
       boxShadow: '0px 10px 40px -10px #EAECF0, 0px 0px 1px rgba(0, 0, 0, 0.25)',
-      width: 'calc(100% + 25px)',
-      maxHeight: '42rem',
-      overflowY: 'auto',
-      marginLeft: '-0.5rem'
+      width: '100%',
+      flex: 1,
+      overflow: 'auto',
     }}>
       <Box
         gap={1.5}

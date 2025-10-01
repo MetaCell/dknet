@@ -9,7 +9,7 @@ import QuestionBox from "./QuestionBox";
 import CheckBoxWidget from "../widgets/CheckBox";
 import { styled } from "@mui/material/styles";
 import Tooltip from '@mui/material/Tooltip';
-import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { Button, List, ListItem, ListItemButton, ListItemText, Grid, Stack } from "@mui/material";
 import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
 import { vars } from '../../theme/variables'
@@ -29,7 +29,8 @@ const {
   success50,
   primary200,
   checkboxBorderColor,
-  cardBgColor
+  cardBgColor,
+  grey600
 } = vars;
 
 export const Item = styled(Box)(({ theme }) => ({
@@ -116,7 +117,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           showPreviewByDefault: true,
           previewWidth: '24rem',
           questionMaxWidth: '38rem',
-          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(2, 1fr)' }
+          gridCols: { 2: 'repeat(2, 1fr)', 3: 'repeat(2, 1fr)', 4: 'repeat(2, 1fr)' }
         };
       case 'laptop':
         return {
@@ -124,7 +125,15 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           showPreviewByDefault: true,
           previewWidth: '25rem',
           questionMaxWidth: '40rem',
-          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+          gridCols: { 2: 'repeat(2, 1fr)', 3: 'repeat(3, 1fr)', 4: 'repeat(2, 1fr)' }
+        };
+      case 'smallDesktop':
+        return {
+          sidebarWidth: '21rem',
+          showPreviewByDefault: true,
+          previewWidth: '26rem',
+          questionMaxWidth: '42rem',
+          gridCols: { 2: 'repeat(2, 1fr)', 3: 'repeat(3, 1fr)', 4: 'repeat(4, 1fr)' }
         };
       case 'desktop':
         return {
@@ -132,7 +141,15 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           showPreviewByDefault: true,
           previewWidth: '28rem',
           questionMaxWidth: '45rem',
-          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+          gridCols: { 2: 'repeat(2, 1fr)', 3: 'repeat(3, 1fr)', 4: 'repeat(4, 1fr)' }
+        };
+      case 'tooSmall':
+        return {
+          sidebarWidth: '18rem',
+          showPreviewByDefault: false,
+          previewWidth: '20rem',
+          questionMaxWidth: '30rem',
+          gridCols: { 2: 'repeat(1, 1fr)', 3: 'repeat(1, 1fr)', 4: 'repeat(1, 1fr)' }
         };
       default:
         return {
@@ -140,7 +157,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           showPreviewByDefault: true,
           previewWidth: '25rem',
           questionMaxWidth: '40rem',
-          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+          gridCols: { 2: 'repeat(2, 1fr)', 3: 'repeat(3, 1fr)', 4: 'repeat(4, 1fr)' }
         };
     }
   };
@@ -204,7 +221,8 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
     leftBlock: {
       height: '100%',
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      p: '0 0.75rem 1.5rem 0.75rem'
     },
 
     tabs: {
@@ -234,7 +252,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           left: '-0.5rem',
           top: 0,
           position: 'absolute',
-          background: cardChipBgColor,
+          background: '#fff',
           borderRadius: '0.375rem',
           transition: 'all ease-in-out 1s'
         },
@@ -252,7 +270,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
       },
       "& .MuiTabs-indicator": {
         left: 0,
-        width: '0.0625rem',
+        width: '0.125rem',
       },
 
     }
@@ -261,12 +279,16 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   return (
     <Box sx={{ height: '100%' }} display='flex'>
       <Box sx={{ height: '100%', width: config.sidebarWidth }} display='flex' flexDirection='column' justifyContent='space-between'>
-        <Box sx={classes.leftBlock} px={2} py={3}>
-          <Typography sx={{
-            pl: 1,
-            pt: 1,
-            pb: 2
-          }} variant='h4'>Questions</Typography>
+        <Box sx={classes.leftBlock}>
+          <Box sx={{
+            p: '1.25rem 0 0.75rem 0.5rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+            <Typography variant='h4'>Questions</Typography>
+            <Button variant="outlined">Reset</Button>
+          </Box>
           <Box
             sx={classes.tabs}
           >
@@ -301,83 +323,133 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           <ProgressBar progress={progress} />
         </Box>
       </Box>
-      <Box sx={{ width: `calc(100% - ${config.sidebarWidth})`, borderLeft: `0.0625rem solid ${grey200}`, height: '100%', display: 'flex' }}>
-        <Box sx={{ height: '100%', width: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Box sx={{
+        width: `calc(100% - ${config.sidebarWidth})`,
+        borderLeft: `0.0625rem solid ${grey200}`,
+        height: '100%',
+        display: 'flex',
+        overflow: 'hidden'
+      }}>
+        <Box sx={{
+          width: showPreview ? `calc(100% - ${config.previewWidth})` : '100%',
+          transition: 'width ease-in-out .3s',
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden'
+        }}>
           {questionsTabs[value] && (
-            <Box
-              m='auto'
-              py={5} px={3} maxWidth={config.questionMaxWidth}
-              sx={{ width: '100%' }}
-            >
-              <Typography sx={{
-                fontWeight: 400,
-                fontSize: '1.25rem',
-                lineHeight: '150%',
-                color: grey800
-              }}>{questionsTabs[value]?.questionTitle}</Typography>
-              <Typography sx={{
-                paddingTop: '0.5rem',
-                fontWeight: 200,
-                fontSize: '1rem',
-                lineHeight: '120%',
-                color: grey800
-              }}>{questionsTabs[value]?.questionSubtitle}</Typography>
-              <QuestionBox inputType={questionsTabs[value]?.inputType}>
-                {
-                  // Add className='checked-state' in <Item is checkbox is selected
-                  questionsTabs[value]?.inputType === 'MULTI' ? questionsTabs[value]?.options.map((data) => {
-                    return (
-                      <Tooltip title={data.label} key={data?.label}>
-                        <Item className={setCheckedStateMultipleOptions(questionsTabs[value], data)}>
-                          <CheckBoxWidget
-                            data={data}
-                            filter={questionsTabs[value]}
-                          />
-                        </Item>
-                      </Tooltip>
-                    )
-                  }) :
-                    <RadioGroup
-                      sx={{
-                        width: '100%',
-                        display: 'grid',
-                        gap: 1.5,
-                        gridTemplateColumns: questionsTabs[value]?.options.length == 2 ? config.gridCols[2] : questionsTabs[value]?.options.length == 4 ? config.gridCols[4] : config.gridCols[3]
-                      }}
-                      aria-labelledby="demo-radio-buttons-group-label"
-                      defaultValue=""
-                      name="radio-buttons-group"
-                      value={context?.filterValues[questionsTabs[value]?.code]?.code}
-                    >
-                      {questionsTabs[value]?.options.map((data, index) =>
-                        // Add className='checked-state' in <Item is checkbox is selected
-                        <Item key={"itemKey_" + index} className={context?.filterValues[questionsTabs[value].code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
-                          e.preventDefault();
-                          setCheckedStateSingleOption(e, questionsTabs[value], data)
-                        }} >
-                          <FilterDialogRadio data={data} filter={data} question={questionsTabs[value]} />
-                        </Item>
-                      )}
-                    </RadioGroup>
-                }
-              </QuestionBox>
-              <DialogStepFooter handlePrev={handlePrev} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />
-            </Box>
+            <>
+              {/* Fixed Header with Title and Subtitle */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  padding: '1.5rem 1.5rem 0 1.5rem',
+                  flexShrink: 0,
+                }}
+              >
+                <Stack maxWidth={config.questionMaxWidth} sx={{ width: '100%', textAlign: 'center' }} spacing={1}>
+                  <Typography textAlign="left" variant="h3">{questionsTabs[value]?.questionTitle}</Typography>
+                  <Typography textAlign="left" variant="h5" color={grey600}>{questionsTabs[value]?.questionSubtitle}</Typography>
+                </Stack>
+              </Box>
+
+              {/* Scrollable QuestionBox Content */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  padding: '1.5rem',
+                  flexGrow: 1,
+                  overflow: 'hidden',
+                }}
+              >
+                <Box
+                  maxWidth={config.questionMaxWidth}
+                  sx={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <QuestionBox inputType={questionsTabs[value]?.inputType}>
+                    {
+                      // Add className='checked-state' in <Item is checkbox is selected
+                      questionsTabs[value]?.inputType === 'MULTI' ? questionsTabs[value]?.options.map((data) => {
+                        return (
+                          <Tooltip title={data.label} key={data?.label}>
+                            <Item className={setCheckedStateMultipleOptions(questionsTabs[value], data)}>
+                              <CheckBoxWidget
+                                data={data}
+                                filter={questionsTabs[value]}
+                              />
+                            </Item>
+                          </Tooltip>
+                        )
+                      }) :
+                        <RadioGroup
+                          sx={{
+                            width: '100%',
+                            display: 'grid !important',
+                            gap: 1.5,
+                            gridTemplateColumns: questionsTabs[value]?.options.length == 2 ? config.gridCols[2] : questionsTabs[value]?.options.length == 4 ? config.gridCols[4] : config.gridCols[3]
+                          }}
+                          aria-labelledby="demo-radio-buttons-group-label"
+                          defaultValue=""
+                          name="radio-buttons-group"
+                          value={context?.filterValues[questionsTabs[value]?.code]?.code}
+                        >
+                          {questionsTabs[value]?.options.map((data, index) =>
+                            // Add className='checked-state' in <Item is checkbox is selected
+                            <Item key={"itemKey_" + index} className={context?.filterValues[questionsTabs[value].code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
+                              e.preventDefault();
+                              setCheckedStateSingleOption(e, questionsTabs[value], data)
+                            }} >
+                              <FilterDialogRadio data={data} filter={data} question={questionsTabs[value]} />
+                            </Item>
+                          )}
+                        </RadioGroup>
+                    }
+                  </QuestionBox>
+                </Box>
+              </Box>
+
+              {/* Fixed Footer */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  padding: '0 1.5rem 1.5rem 1.5rem',
+                  flexShrink: 0,
+                }}
+              >
+                <Box maxWidth={config.questionMaxWidth} sx={{ width: '100%' }}>
+                  <DialogStepFooter handlePrev={handlePrev} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />
+                </Box>
+              </Box>
+            </>
           )}
         </Box>
         <Box
-          flexShrink={0}
-          marginRight={!showPreview ? `-${config.previewWidth}` : 0}
           sx={{
             transition: 'all ease-in-out .3s',
-            background: white, width: config.previewWidth, borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
+            width: showPreview ? config.previewWidth : '0',
+            minWidth: showPreview ? config.previewWidth : '0',
+            maxWidth: showPreview ? config.previewWidth : '0',
+            opacity: showPreview ? 1 : 0,
+            background: white,
+            borderLeft: showPreview ? `0.0625rem solid ${grey200}` : 'none',
+            position: 'relative',
+            overflow: showPreview ? 'auto' : 'hidden',
+            height: '100%',
             '&:after': {
               content: "''",
               background: 'linear-gradient(180deg, rgba(249, 250, 251, 0.00) 0%, #F9FAFB 100%)',
               height: '7.75rem',
               zIndex: 1,
               width: '100%',
-              display: 'block',
+              display: showPreview ? 'block' : 'none',
               position: 'sticky',
               bottom: 0,
               left: 0,
