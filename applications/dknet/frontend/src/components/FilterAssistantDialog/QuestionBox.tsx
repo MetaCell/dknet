@@ -1,30 +1,30 @@
 import React from "react";
 
-//components
 import Box from '@mui/material/Box';
 
 const QuestionBox = (props: any) => {
-  const gridTemplateColumns = props.inputType === 'MULTI' ? (props.children.length == 2 ? 'repeat(2,auto)' : props.children.length == 4 ? 'repeat(4, auto)' : 'repeat(3, auto)') : 'auto';
   return (
     <Box sx={{
       background: '#FFF',
       borderRadius: '1.5rem',
-      pl: 2,
-      pr: 4,
-      py: 2,
+      p: 2,
       boxShadow: '0px 10px 40px -10px #EAECF0, 0px 0px 1px rgba(0, 0, 0, 0.25)',
       width: '100%',
       flex: 1,
       overflow: 'auto',
+      height: '100%',
+      maxWidth: props.maxWidth || '100%',
+      display: 'flex',
+      flexDirection: 'column',
     }}>
-      <Box
-        gap={1.5}
-        display="grid"
-        gridTemplateColumns={gridTemplateColumns}
-      >
-        {
-          props.children
-        }
+      <Box sx={{
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+        gap: 1.5
+      }}>
+        {props.children}
       </Box>
     </Box>
   )

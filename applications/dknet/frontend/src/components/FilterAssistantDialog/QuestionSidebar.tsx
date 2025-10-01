@@ -4,6 +4,8 @@ import ProgressBar from '../widgets/ProgressBar';
 import { vars } from '../../theme/variables';
 import { QuestionTab, ResponsiveConfig } from './types';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { useFilterContext } from '../../context/Context';
+import { resetFilters } from '../../utils/helpers';
 const { grey500, grey700 } = vars;
 
 const classes = {
@@ -82,13 +84,23 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
   config,
   filterValues
 }) => {
+  const { context, setContext } = useFilterContext();
+
+  // Handler for resetting all filters
+  const handleResetFilters = () => {
+    setContext({
+      ...context,
+      showAll: false,
+      filterValues: resetFilters(context.allFilters)
+    });
+  };
 
   // Helper function to check if a question has any selected filters
   const hasSelectedFilters = (question: QuestionTab): boolean => {
     const selectedValue = filterValues[question.code];
 
-    // For single select questions HIERARCHY, check if there's a selected value with a code
-    if (question.inputType === 'HIERARCHY') {
+    // For single select questions (SINGLE, BOOLEAN, HIERARCHY), check if there's a selected value with a code
+    if (question.inputType === 'SINGLE' || question.inputType === 'BOOLEAN' || question.inputType === 'HIERARCHY') {
       return selectedValue && selectedValue.code;
     }
 
@@ -111,7 +123,7 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
           justifyContent: 'space-between',
         }}>
           <Typography variant='h4'>Questions</Typography>
-          <Button variant="outlined">Reset</Button>
+          <Button variant="outlined" onClick={handleResetFilters}>Reset</Button>
         </Box>
         <Box sx={classes.tabs}>
           <Tabs

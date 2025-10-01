@@ -41,7 +41,6 @@ export const Item: React.FC<{ children: React.ReactNode; className?: string; onC
           color: 'grey.700',
           marginLeft: '0.75rem',
           display: 'inline-block',
-          maxWidth: '7rem',
           whiteSpace: 'nowrap',
           overflow: 'hidden !important',
           textOverflow: 'ellipsis',
@@ -118,17 +117,18 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
         overflow: 'hidden',
         transition: 'width 0.3s ease-in-out',
       }}>
-        <QuestionContent
-          currentQuestion={currentQuestion}
-          config={config}
-          value={value}
-          questionsTabs={questionsTabs}
-          filterValues={filterValues}
-          onOptionClick={handleOptionSelect}
-          onNext={handleNextStep}
-          onPrev={handlePreviousStep}
-          closeDialog={closeDialog}
-        />
+        <Box sx={{ width: '100%', height: '100%' }}>
+          <QuestionContent
+            currentQuestion={currentQuestion}
+            config={config}
+            value={value}
+            questionsTabs={questionsTabs}
+            onOptionClick={handleOptionSelect}
+            onNext={handleNextStep}
+            onPrev={handlePreviousStep}
+            closeDialog={closeDialog}
+          />
+        </Box>
       </Box>
 
       <PreviewPanel

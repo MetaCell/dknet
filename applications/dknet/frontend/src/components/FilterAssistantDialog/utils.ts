@@ -1,4 +1,3 @@
-import { CSS_CLASSES } from './constants';
 import { QuestionTab } from './types';
 
 /**
@@ -21,8 +20,8 @@ export const getMultipleSelectionCheckedState = (
   const isSelected = selectedValues.filter(
     (selectedValue: any) => selectedValue?.code === data?.code
   ).length > 0;
-  
-  return isSelected ? CSS_CLASSES.CHECKED_STATE : '';
+
+  return isSelected ? 'checked-state' : '';
 };
 
 /**
@@ -34,7 +33,7 @@ export const getSingleSelectionCheckedState = (
   filterValues: any
 ): string => {
   return filterValues[question.code]?.code === data?.code 
-    ? CSS_CLASSES.CHECKED_STATE 
+    ? 'checked-state' 
     : '';
 };
 

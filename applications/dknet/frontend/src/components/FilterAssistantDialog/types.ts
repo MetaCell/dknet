@@ -28,11 +28,6 @@ export interface ResponsiveConfig {
   showPreviewByDefault: boolean;
   previewWidth: string;
   questionMaxWidth: string;
-  gridCols: {
-    2: string;
-    3: string;
-    4: string;
-  };
 }
 
 export interface ResultItem {
