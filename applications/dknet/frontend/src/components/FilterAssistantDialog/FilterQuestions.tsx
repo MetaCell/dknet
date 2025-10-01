@@ -9,7 +9,7 @@ import { useResponsiveConfig } from './hooks/useResponsiveConfig';
 import { FilterQuestionsProps } from './types';
 import { vars } from '../../theme/variables';
 
-const { grey200, primary25, primary600 } = vars;
+const { grey200, primary25, primary600, grey100, grey300 } = vars;
 
 export const Item: React.FC<{ children: React.ReactNode; className?: string; onClick?: (e: React.MouseEvent) => void }> = ({
   children,
@@ -99,7 +99,7 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
   const currentQuestion = questionsTabs[value];
 
   return (
-    <Box sx={{ height: '100%', display: 'flex' }}>
+    <Box sx={{ height: '100%', display: 'flex', backgroundColor: grey100 }}>
       <QuestionSidebar
         questionsTabs={questionsTabs}
         value={value}
@@ -111,7 +111,7 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 
       <Box sx={{
         width: showPreview ? `calc(100% - ${config.sidebarWidth} - ${config.previewWidth})` : `calc(100% - ${config.sidebarWidth})`,
-        borderLeft: `0.0625rem solid ${grey200}`,
+        borderLeft: `0.0625rem solid ${grey300}`,
         height: '100%',
         display: 'flex',
         overflow: 'hidden',

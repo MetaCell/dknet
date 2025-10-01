@@ -3,6 +3,7 @@ import { Box, Typography, Stack, Tooltip, Slide } from '@mui/material';
 import QuestionBox from './QuestionBox';
 import CheckBoxWidget from '../widgets/CheckBox';
 import DialogStepFooter from './DialogStepFooter';
+import ExpandableText from '../ExpandableText';
 import { vars } from '../../theme/variables';
 import { QuestionTab, ResponsiveConfig } from './types';
 import { INPUT_TYPES } from './constants';
@@ -124,13 +125,14 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
           ...(shouldExpandHeight && { flex: 1, height: '100%' }),
         }}
       >
-        {currentQuestion?.options.map((data) => (
+        {currentQuestion?.options.map((data, index) => (
           <Tooltip title={data.label} key={data?.label}>
             <Box sx={{
               ...getItemSx(getCheckedStateForMultiple(currentQuestion, data) === 'checked-state'),
               ...(shouldExpandHeight && { height: '100%' }),
               display: 'flex',
               alignItems: 'center',
+              marginBottom: index === currentQuestion?.options.length - 1 ? 1.5 : 0,
             }}>
               <CheckBoxWidget
                 data={data}
@@ -167,7 +169,8 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'flex-start',
-              textAlign: 'center'
+              textAlign: 'center',
+              marginBottom: index === currentQuestion?.options.length - 1 ? 1.5 : 0,
             }}
             onClick={(e) => handleOptionClick(e, data)}
           >
@@ -229,9 +232,12 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
               <Typography textAlign="left" variant="h3">
                 {currentQuestion.questionTitle}
               </Typography>
-              <Typography textAlign="left" variant="h5" color={grey600}>
-                {currentQuestion.questionSubtitle}
-              </Typography>
+              <ExpandableText
+                text={currentQuestion.questionSubtitle}
+                variant="h5"
+                color={grey600}
+                maxLines={3}
+              />
             </Stack>
           </Box>
 
