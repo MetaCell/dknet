@@ -106,18 +106,10 @@ function TabPanel(props: TabPanelProps) {
 
 export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, closeDialog, showPreview }) {
   const { screenSize } = useResponsive();
-  
+
   // Responsive configurations
   const getResponsiveConfig = () => {
     switch (screenSize) {
-      case 'mobile':
-        return {
-          sidebarWidth: '18rem',
-          showPreviewByDefault: false,
-          previewWidth: '22rem',
-          questionMaxWidth: '35rem',
-          gridCols: { 2: 'repeat(2, 1fr)', 3: 'repeat(2, 1fr)', 4: 'repeat(2, 1fr)' }
-        };
       case 'tablet':
         return {
           sidebarWidth: '19rem',
@@ -152,7 +144,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
         };
     }
   };
-  
+
   const config = getResponsiveConfig();
 
   useEffect(() => {
@@ -195,7 +187,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           [question.code]: data
         }
       });
-    } else if(context?.filterValues[question.code]?.code === data?.code) {
+    } else if (context?.filterValues[question.code]?.code === data?.code) {
       const newData = context.filterValues;
       delete newData[question.code];
       setContext({
@@ -373,7 +365,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
             </Box>
           )}
         </Box>
-        <Box 
+        <Box
           flexShrink={0}
           marginRight={!showPreview ? `-${config.previewWidth}` : 0}
           sx={{
@@ -445,7 +437,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           }}>
             {!isFiltersEmpty ? context.results.map((el, index) => (
               <ListItem disablePadding key={el}>
-                <ListItemButton sx={ (index === 0 || el.pctMatch === context.results[0].pctMatch) && !isNaN(el.pctMatch) ?
+                <ListItemButton sx={(index === 0 || el.pctMatch === context.results[0].pctMatch) && !isNaN(el.pctMatch) ?
                   {
                     border: `0.0625rem solid ${primary200}`,
                     background: cardBgColor,
@@ -460,10 +452,10 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
                       background: white,
                     },
                   }}
-                onClick={() => {
-                  closeDialog();
-                  document.getElementById('result_' + index).scrollIntoView({ behavior: 'smooth' });
-                }}>
+                  onClick={() => {
+                    closeDialog();
+                    document.getElementById('result_' + index).scrollIntoView({ behavior: 'smooth' });
+                  }}>
                   <ListItemText primary={!isNaN(el.pctMatch) ? `${el.label} ${el.pctMatch}%` : `${el.label}`} secondary={(index === 0 || el.pctMatch === context.results[0].pctMatch) && !isNaN(el.pctMatch) ? "Best Match" : null} />
                 </ListItemButton>
               </ListItem>
