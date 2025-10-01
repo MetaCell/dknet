@@ -13,6 +13,7 @@ import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 //icons
 import { FilterColor, FilterType } from "../config/enums";
+import { useResponsive } from "../hooks/useResponsive";
 
 const RepoCardContent= styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
@@ -32,20 +33,40 @@ const RepositoryCard = (props) => {
   const { context } = useFilterContext()
   const { isBestMatch, repository } = props;
   const filterLabels = Object.values(repository.attributes)[0] as Array<string>
+  const { screenSize } = useResponsive();
+  
   const getClass = () => {
     return isBestMatch ? "successCard" : ""
   }
+  
+  // Responsive configurations
+  const getCardSpacing = () => {
+    switch (screenSize) {
+      case 'mobile':
+        return { margin: 2, gap: 1.5, marginBottom: '0.75rem' };
+      case 'tablet':
+        return { margin: 2.5, gap: 2, marginBottom: '0.875rem' };
+      case 'laptop':
+        return { margin: 3, gap: 2.5, marginBottom: '1rem' };
+      case 'desktop':
+        return { margin: 3.5, gap: 3, marginBottom: '1.25rem' };
+      default:
+        return { margin: 3, gap: 2.5, marginBottom: '1rem' };
+    }
+  };
+  
+  const spacing = getCardSpacing();
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
-    <Card id={"result_" + props.resultIndex} sx={{ position: 'relative', marginBottom: '1rem' }} className={getClass()}>
+    <Card id={"result_" + props.resultIndex} sx={{ position: 'relative', marginBottom: spacing.marginBottom }} className={getClass()}>
       {
         isBestMatch &&
-          <Box pr={3} position='absolute' right={0} top='-3px'>
+          <Box pr={spacing.margin} position='absolute' right={0} top='-3px'>
             <Chip label="Best Match" className="cardBadge"/>
           </Box>
       }
-      <Box m={3} display="flex" gap={2.5}>
+      <Box m={spacing.margin} display="flex" gap={spacing.gap}>
         <RepoCardContent>
           <Box display="flex" flexWrap='wrap' width={1} overflow='hidden'>
             <Tooltip title={repository.label}>

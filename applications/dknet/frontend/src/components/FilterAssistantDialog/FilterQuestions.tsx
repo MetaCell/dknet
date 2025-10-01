@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react"
+import React, { useEffect } from "react"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -14,6 +14,7 @@ import FilterDialogRadio from "./FilterDialogRadio";
 import DialogStepFooter from "./DialogStepFooter";
 import { vars } from '../../theme/variables'
 import { useFilterContext } from "../../context/Context";
+import { useResponsive } from '../../hooks/useResponsive';
 
 const {
   grey200,
@@ -103,21 +104,63 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, open, setHeight, setTranslateValue, height, translateValue, closeDialog, showPreview }) {
-
-  const ref = useRef(null);
-
-  useLayoutEffect(() => {
-    const questionDOMHeightArr = Array.from(ref?.current?.childNodes).map((el: any) => el.clientHeight);
-    setHeight(questionDOMHeightArr)
-  }, [open, setHeight]);
+export default function FilterQuestions({ questionsTabs, onClickNext, onClickPrev, progress, handleChange, value, closeDialog, showPreview }) {
+  const { screenSize } = useResponsive();
+  
+  // Responsive configurations
+  const getResponsiveConfig = () => {
+    switch (screenSize) {
+      case 'mobile':
+        return {
+          sidebarWidth: '18rem',
+          showPreviewByDefault: false,
+          previewWidth: '22rem',
+          questionMaxWidth: '35rem',
+          gridCols: { 2: 'repeat(2, 1fr)', 3: 'repeat(2, 1fr)', 4: 'repeat(2, 1fr)' }
+        };
+      case 'tablet':
+        return {
+          sidebarWidth: '19rem',
+          showPreviewByDefault: true,
+          previewWidth: '24rem',
+          questionMaxWidth: '38rem',
+          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(2, 1fr)' }
+        };
+      case 'laptop':
+        return {
+          sidebarWidth: '20rem',
+          showPreviewByDefault: true,
+          previewWidth: '25rem',
+          questionMaxWidth: '40rem',
+          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+        };
+      case 'desktop':
+        return {
+          sidebarWidth: '22rem',
+          showPreviewByDefault: true,
+          previewWidth: '28rem',
+          questionMaxWidth: '45rem',
+          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+        };
+      default:
+        return {
+          sidebarWidth: '20rem',
+          showPreviewByDefault: true,
+          previewWidth: '25rem',
+          questionMaxWidth: '40rem',
+          gridCols: { 2: 'repeat(2, auto)', 3: 'repeat(3, auto)', 4: 'repeat(4, auto)' }
+        };
+    }
+  };
+  
+  const config = getResponsiveConfig();
 
   useEffect(() => {
     const keyDownHandler = (event: any) => {
       if (event.key === 'Enter') {
         event.preventDefault();
         if (questionsTabs.length - 1 !== value) {
-          handleNext(value);
+          handleNext();
         }
       }
     };
@@ -128,22 +171,12 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   });
 
 
-  const handleNext = (index: number) => {
-
-    setTranslateValue((prev: number) => {
-      return prev + height[index]
-    })
-
+  const handleNext = () => {
     onClickNext()
   }
 
 
-  const handlePrev = (index: number) => {
-
-    setTranslateValue((prev: number) => {
-      return prev - height[index - 1]
-    })
-
+  const handlePrev = () => {
     onClickPrev()
   }
 
@@ -176,17 +209,6 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
   }
 
   const classes = {
-    active: {
-      opacity: 1
-    },
-
-    next: {
-      opacity: 0.4,
-      pointerEvents: 'none'
-    },
-
-    hide: {},
-
     leftBlock: {
       height: '100%',
       display: 'flex',
@@ -246,7 +268,7 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
 
   return (
     <Box sx={{ height: '100%' }} display='flex'>
-      <Box sx={{ height: '100%', width: '20rem' }} display='flex' flexDirection='column' justifyContent='space-between'>
+      <Box sx={{ height: '100%', width: config.sidebarWidth }} display='flex' flexDirection='column' justifyContent='space-between'>
         <Box sx={classes.leftBlock} px={2} py={3}>
           <Typography sx={{
             pl: 1,
@@ -287,82 +309,76 @@ export default function FilterQuestions({ questionsTabs, onClickNext, onClickPre
           <ProgressBar progress={progress} />
         </Box>
       </Box>
-      <Box sx={{ width: 'calc(100% - 20rem)', borderLeft: `0.0625rem solid ${grey200}`, height: '100%', display: 'flex' }}>
-        <Box ref={ref} sx={{ height: '100%', width: 1, transition: 'transform ease-in-out .4s', transform: `translateY(-${translateValue}px)` }}>
-          {questionsTabs.map((question, index) => {
-            const isActive = value === index;
-            const nextStep = value + 1 === index;
-            const stepClass = isActive ? classes.active : classes.next;
-            return (
-              <React.Fragment key={index}>
-                <Box sx={stepClass}
-                  m='auto'
-                  key={index} py={5} px={3} maxWidth='40rem'
-                >
-                  <Typography sx={{
-                    fontWeight: 400,
-                    fontSize: '1.25rem',
-                    lineHeight: '150%',
-                    color: grey800
-                  }}>{question?.questionTitle}</Typography>
-                  <Typography sx={{
-                    paddingTop: '0.5rem',
-                    fontWeight: 200,
-                    fontSize: '1rem',
-                    lineHeight: '120%',
-                    color: grey800
-                  }}>{question?.questionSubtitle}</Typography>
-                  <QuestionBox inputType={question?.inputType}>
-                    {
-                      // Add className='checked-state' in <Item is checkbox is selected
-                      question?.inputType === 'MULTI' ? question?.options.map((data) => {
-                        return (
-                          <Tooltip title={data.label} key={data?.label}>
-                            <Item className={setCheckedStateMultipleOptions(question, data)}>
-                              <CheckBoxWidget
-                                data={data}
-                                filter={question}
-                              />
-                            </Item>
-                          </Tooltip>
-                        )
-                      }) :
-                        <RadioGroup
-                          sx={{
-                            width: '100%',
-                            display: 'grid',
-                            gap: 1.5,
-                            gridTemplateColumns: question?.options.length == 2 ? 'repeat(2, auto)' : question?.options.length == 4 ? 'repeat(4,  auto)' : 'repeat(3, auto)'
-                          }}
-                          aria-labelledby="demo-radio-buttons-group-label"
-                          defaultValue=""
-                          name="radio-buttons-group"
-                          value={context?.filterValues[question?.code]?.code}
-                        >
-                          {question?.options.map((data, index) =>
-                            // Add className='checked-state' in <Item is checkbox is selected
-                            <Item key={"itemKey_" + index} className={context?.filterValues[question.code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
-                              e.preventDefault();
-                              setCheckedStateSingleOption(e, question, data)
-                            }} >
-                              <FilterDialogRadio data={data} filter={data} question={question} />
-                            </Item>
-                          )}
-                        </RadioGroup>
-                    }
-                  </QuestionBox>
-                  {!nextStep && <DialogStepFooter handlePrev={handlePrev} index={index} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />}
-                </Box>
-              </React.Fragment>
-            )
-          })}
+      <Box sx={{ width: `calc(100% - ${config.sidebarWidth})`, borderLeft: `0.0625rem solid ${grey200}`, height: '100%', display: 'flex' }}>
+        <Box sx={{ height: '100%', width: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {questionsTabs[value] && (
+            <Box
+              m='auto'
+              py={5} px={3} maxWidth={config.questionMaxWidth}
+              sx={{ width: '100%' }}
+            >
+              <Typography sx={{
+                fontWeight: 400,
+                fontSize: '1.25rem',
+                lineHeight: '150%',
+                color: grey800
+              }}>{questionsTabs[value]?.questionTitle}</Typography>
+              <Typography sx={{
+                paddingTop: '0.5rem',
+                fontWeight: 200,
+                fontSize: '1rem',
+                lineHeight: '120%',
+                color: grey800
+              }}>{questionsTabs[value]?.questionSubtitle}</Typography>
+              <QuestionBox inputType={questionsTabs[value]?.inputType}>
+                {
+                  // Add className='checked-state' in <Item is checkbox is selected
+                  questionsTabs[value]?.inputType === 'MULTI' ? questionsTabs[value]?.options.map((data) => {
+                    return (
+                      <Tooltip title={data.label} key={data?.label}>
+                        <Item className={setCheckedStateMultipleOptions(questionsTabs[value], data)}>
+                          <CheckBoxWidget
+                            data={data}
+                            filter={questionsTabs[value]}
+                          />
+                        </Item>
+                      </Tooltip>
+                    )
+                  }) :
+                    <RadioGroup
+                      sx={{
+                        width: '100%',
+                        display: 'grid',
+                        gap: 1.5,
+                        gridTemplateColumns: questionsTabs[value]?.options.length == 2 ? config.gridCols[2] : questionsTabs[value]?.options.length == 4 ? config.gridCols[4] : config.gridCols[3]
+                      }}
+                      aria-labelledby="demo-radio-buttons-group-label"
+                      defaultValue=""
+                      name="radio-buttons-group"
+                      value={context?.filterValues[questionsTabs[value]?.code]?.code}
+                    >
+                      {questionsTabs[value]?.options.map((data, index) =>
+                        // Add className='checked-state' in <Item is checkbox is selected
+                        <Item key={"itemKey_" + index} className={context?.filterValues[questionsTabs[value].code]?.code === data?.code ? `checked-state` : ''} onClick={(e) => {
+                          e.preventDefault();
+                          setCheckedStateSingleOption(e, questionsTabs[value], data)
+                        }} >
+                          <FilterDialogRadio data={data} filter={data} question={questionsTabs[value]} />
+                        </Item>
+                      )}
+                    </RadioGroup>
+                }
+              </QuestionBox>
+              <DialogStepFooter handlePrev={handlePrev} value={value} closeDialog={closeDialog} questionsTabs={questionsTabs} handleNext={handleNext} />
+            </Box>
+          )}
         </Box>
         <Box 
           flexShrink={0}
-          marginRight={!showPreview ? '-25rem' : 0}
+          marginRight={!showPreview ? `-${config.previewWidth}` : 0}
           sx={{
             transition: 'all ease-in-out .3s',
-            background: white, width: '25rem', borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
+            background: white, width: config.previewWidth, borderLeft: `0.0625rem solid ${grey200}`, position: 'relative', overflow: 'auto',
             '&:after': {
               content: "''",
               background: 'linear-gradient(180deg, rgba(249, 250, 251, 0.00) 0%, #F9FAFB 100%)',

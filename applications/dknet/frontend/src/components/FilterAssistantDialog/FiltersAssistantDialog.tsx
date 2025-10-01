@@ -12,6 +12,7 @@ import FilterQuestions from "./FilterQuestions";
 import { PreviewIcon } from "../../assets/icons";
 import { Box, Divider } from "@mui/material";
 import { vars } from "../../theme/variables";
+import { useResponsive } from '../../hooks/useResponsive';
 
 const {
   grey200,
@@ -32,9 +33,12 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const [tabValue, setTabValue] = useState(0);
   const [progress, setProgress] = useState(0);
   const { context } = useFilterContext()
-  const [height, setHeight] = useState([]);
-  const [translateValue, setTranslateValue] = useState(0);
-  const [showPreview, setShowPreview] = useState(true);
+  const { screenSize } = useResponsive();
+  
+  // Set initial preview state based on screen size
+  const [showPreview, setShowPreview] = useState(() => {
+    return screenSize !== 'mobile';
+  });
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
@@ -43,27 +47,8 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   };
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setTabValue((prevValue) => {
-      if (newValue === prevValue + 1) { // when next tab question is clicked on
-        setTranslateValue((prev) => {
-          return prev + height[tabValue]
-        })
-      } else if (newValue === prevValue - 1) { // when previous tab question is clicked on
-        setTranslateValue((prev) => {
-          return prev - height[tabValue - 1]
-        })
-      } else if (newValue > prevValue + 1) { // when other than next question is selected in increasing order
-        const sum = height?.slice(0, newValue)?.reduce((acc, index) => (acc + index), 0);
-        setTranslateValue(sum);
-      } else { // when other than previous question is selected in decreasing order
-        const sum = height?.slice(0, newValue - 1)?.reduce((acc, index) => (acc + index), 0);
-        setTranslateValue((prev) => {
-          return prev - sum
-        })
-      }
-
-      return newValue
-    });
+    setTabValue(newValue);
+    updateProgress(newValue);
   };
 
 
@@ -85,7 +70,6 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   }
 
   const closeDialog = () => {
-    setTranslateValue(0);
     setOpen(false);
     setTabValue(0);
     setProgress(0);
@@ -98,12 +82,13 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       TransitionComponent={Transition}
       keepMounted
       aria-describedby="alert-dialog-slide-description"
-      maxWidth='lg'
+      maxWidth={screenSize === 'desktop' ? 'xl' : 'lg'}
       fullWidth={true}
       sx={{
         "& .MuiPaper-root": {
-          height: '100%',
-          borderRadius: '0.75rem'
+          height: screenSize === 'mobile' ? '95%' : '100%',
+          borderRadius: screenSize === 'mobile' ? '0.5rem' : '0.75rem',
+          margin: screenSize === 'mobile' ? 1 : 3
         }
       }}
     >
@@ -155,17 +140,12 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       <DialogContent sx={{ backgroundColor: grey50, height: 'calc(100vh - 3.60rem)' }}>
         <FilterQuestions
           showPreview={showPreview}
-          setHeight={setHeight}
-          open={open}
           questionsTabs={questionsTabs}
           onClickNext={onClickNext}
           progress={progress}
           handleChange={handleChange}
           onClickPrev={onClickPrev}
           value={tabValue}
-          height={height}
-          setTranslateValue={setTranslateValue}
-          translateValue={translateValue}
           closeDialog={closeDialog}
         />
       </DialogContent>

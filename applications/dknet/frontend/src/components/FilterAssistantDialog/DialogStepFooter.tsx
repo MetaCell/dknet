@@ -3,16 +3,16 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
 
-export default function DialogStepFooter({ handlePrev, index, value, closeDialog, questionsTabs, handleNext }) {
+export default function DialogStepFooter({ handlePrev, value, closeDialog, questionsTabs, handleNext }) {
   return (
     <Box display='flex' alignItems='center'>
-      {value !== 0 && <Button sx={{ mr: 1 }} variant='outlined' onClick={() => handlePrev(index)}>Previous</Button>}
+      {value !== 0 && <Button sx={{ mr: 1 }} variant='outlined' onClick={() => handlePrev()}>Previous</Button>}
       {questionsTabs?.length === value + 1 ? (
         <Button variant='contained' onClick={closeDialog}>Go to results</Button>
       ) : (
         <>
           <Box display='flex' alignItems='center' flexGrow={1}>
-            <Button variant='contained' onClick={() => handleNext(index)}>
+            <Button variant='contained' onClick={() => handleNext()}>
               Next
             </Button>
 
@@ -26,7 +26,7 @@ export default function DialogStepFooter({ handlePrev, index, value, closeDialog
               or press Enter
             </Typography>
           </Box>
-          <Button onClick={() => handleNext(index)}>
+          <Button onClick={() => handleNext()}>
             Skip
           </Button>
         </>
