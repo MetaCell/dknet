@@ -8,6 +8,7 @@ import { useFilterLogic } from '../../hooks/useFilterLogic';
 import { useResponsiveConfig } from '../../hooks/useResponsiveConfig';
 import { FilterQuestionsProps } from '../../utils/types';
 import { vars } from '../../theme/variables';
+import { useSidebarVisibility } from "../../hooks/useSidebarVisibility";
 
 const { grey100, grey300 } = vars;
 
@@ -17,14 +18,13 @@ const styles = {
     display: 'flex',
     backgroundColor: grey100
   },
-  contentWrapper: (showPreview: boolean, config: any) => ({
-    width: showPreview ? `calc(100% - ${config.sidebarWidth} - ${config.previewWidth})` : `calc(100% - ${config.sidebarWidth})`,
+  contentWrapper: {
     borderLeft: `0.0625rem solid ${grey300}`,
     height: '100%',
     display: 'flex',
     overflow: 'hidden',
     transition: 'width 0.3s ease-in-out',
-  }),
+  },
   innerContent: {
     width: '100%',
     height: '100%'
@@ -65,6 +65,7 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 
   const currentQuestion = questionsTabs[value];
 
+
   // Calculate main content width based on sidebar and preview visibility
   const getMainContentWidth = () => {
     const sidebarWidth = showSidebar ? config.sidebarWidth : '0';
@@ -76,16 +77,26 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 
   return (
     <Box sx={styles.container}>
-      <QuestionSidebar
-        questionsTabs={questionsTabs}
-        value={value}
-        handleChange={handleChange}
-        progress={progress}
-        config={config}
-        filterValues={filterValues}
-      />
+      <Box sx={{
+        width: showSidebar ? config.sidebarWidth : '0',
+        minWidth: showSidebar ? config.sidebarWidth : '0',
+        maxWidth: showSidebar ? config.sidebarWidth : '0',
+        overflow: 'hidden',
+        transition: 'all 0.3s ease-in-out',
+        opacity: showSidebar ? 1 : 0,
+        transform: showSidebar ? 'translateX(0)' : 'translateX(-100%)',
+      }}>
+        <QuestionSidebar
+          questionsTabs={questionsTabs}
+          value={value}
+          handleChange={handleChange}
+          progress={progress}
+          config={config}
+          filterValues={filterValues}
+        />
+      </Box>
 
-      <Box sx={styles.contentWrapper(showPreview, config)}>
+      <Box sx={{ ...styles.contentWrapper, width: getMainContentWidth() }}>
         <Box sx={styles.innerContent}>
           <QuestionContent
             currentQuestion={currentQuestion}
