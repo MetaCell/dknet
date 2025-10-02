@@ -1,5 +1,6 @@
 import { IFilter } from "../context/Interfaces";
 import { FilterType } from "../config/enums";
+import { ResultItem } from "./types";
 
 const booleanFilterInitialState = (filter: IFilter) => (
   {
@@ -47,4 +48,8 @@ export const resetFilters = (filters) => {
         ...filterInitialState(filter as IFilter)
       })
   }, {})
+}
+
+export const isTopMatch = (item: ResultItem, index: number, results: ResultItem[]): boolean => {
+  return (index === 0 || item.pctMatch === results[0]?.pctMatch) && !isNaN(item.pctMatch || 0);
 }

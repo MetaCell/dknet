@@ -3,10 +3,10 @@ import { Box } from '@mui/material';
 import QuestionSidebar from './QuestionSidebar';
 import QuestionContent from './QuestionContent';
 import PreviewPanel from './PreviewPanel';
-import { useKeyboardNavigation } from './hooks/useKeyboardNavigation';
-import { useFilterLogic } from './hooks/useFilterLogic';
-import { useResponsiveConfig } from './hooks/useResponsiveConfig';
-import { FilterQuestionsProps } from './types';
+import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation';
+import { useFilterLogic } from '../../hooks/useFilterLogic';
+import { useResponsiveConfig } from '../../hooks/useResponsiveConfig';
+import { FilterQuestionsProps } from '../../utils/types';
 import { vars } from '../../theme/variables';
 
 const { grey100, grey300 } = vars;

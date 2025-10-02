@@ -1,7 +1,8 @@
 import React, { useCallback } from 'react';
 import { Box, Typography, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
 import { vars } from '../../theme/variables';
-import { ResponsiveConfig, ResultItem } from './types';
+import { ResponsiveConfig, ResultItem } from '../../utils/types';
+import { isTopMatch } from '../../utils/helpers';
 
 const {
   grey200,
@@ -118,14 +119,11 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({
   }, [closeDialog]);
 
   const getListItemButtonStyles = useCallback((el: ResultItem, index: number) => {
-    const isTopMatch = (index === 0 || el.pctMatch === results[0]?.pctMatch) && !isNaN(el.pctMatch || 0);
-
-    return isTopMatch ? styles.listItemButton.topMatch : styles.listItemButton.regular;
+    return isTopMatch(el, index, results) ? styles.listItemButton.topMatch : styles.listItemButton.regular;
   }, [results]);
 
   const getSecondaryText = useCallback((el: ResultItem, index: number) => {
-    const isTopMatch = (index === 0 || el.pctMatch === results[0]?.pctMatch) && !isNaN(el.pctMatch || 0);
-    return isTopMatch ? "Best Match" : null;
+    return isTopMatch(el, index, results) ? "Best Match" : null;
   }, [results]);
 
   const getPrimaryText = useCallback((el: ResultItem) => {

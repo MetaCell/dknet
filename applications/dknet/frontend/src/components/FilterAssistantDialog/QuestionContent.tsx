@@ -5,9 +5,9 @@ import CheckBoxWidget from '../widgets/CheckBox';
 import DialogStepFooter from './DialogStepFooter';
 import ExpandableText from '../ExpandableText';
 import { vars } from '../../theme/variables';
-import { QuestionTab, ResponsiveConfig } from './types';
-import { INPUT_TYPES } from './constants';
-import { useFilterLogic } from './hooks/useFilterLogic';
+import { QuestionTab, ResponsiveConfig } from '../../utils/types';
+import { INPUT_TYPES } from '../../utils/constants';
+import { useFilterLogic } from '../../hooks/useFilterLogic';
 
 const { grey200, primary25, primary600 } = vars;
 

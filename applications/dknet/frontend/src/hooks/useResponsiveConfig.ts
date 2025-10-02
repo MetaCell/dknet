@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import { useResponsive } from '../../../hooks/useResponsive';
-import { RESPONSIVE_CONFIGS } from '../constants';
-import { ResponsiveConfig } from '../types';
+import { useResponsive } from './useResponsive';
+import { RESPONSIVE_CONFIGS } from '../utils/constants';
+import { ResponsiveConfig } from '../utils/types';
 
 export const useResponsiveConfig = (): ResponsiveConfig => {
   const { screenSize } = useResponsive();

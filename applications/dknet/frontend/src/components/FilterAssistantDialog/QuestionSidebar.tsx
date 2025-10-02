@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { Box, Typography, Button, Tabs, Tab } from '@mui/material';
 import ProgressBar from '../widgets/ProgressBar';
 import { vars } from '../../theme/variables';
-import { QuestionTab, ResponsiveConfig } from './types';
+import { QuestionTab, ResponsiveConfig } from '../../utils/types';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useFilterContext } from '../../context/Context';
 import { resetFilters } from '../../utils/helpers';
