@@ -234,9 +234,6 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
               </Typography>
               <ExpandableText
                 text={currentQuestion.questionSubtitle}
-                variant="h5"
-                color={grey600}
-                maxLines={3}
               />
             </Stack>
           </Box>
