@@ -20,7 +20,6 @@ export const useResponsive = () => {
   const isDesktop = useMediaQuery(theme.breakpoints.up('xl'));
   // ≥ 1536px → big monitors
 
-
   const getScreenSize = (): ScreenSize => {
     if (isTooSmall) {
       return 'tooSmall';
