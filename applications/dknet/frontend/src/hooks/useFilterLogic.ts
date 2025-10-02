@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import { useFilterContext } from '../../../context/Context';
-import { QuestionTab } from '../types';
+import { useFilterContext } from '../context/Context';
+import { QuestionTab } from '../utils/types';
 
 export const useFilterLogic = () => {
   const { context, setContext } = useFilterContext();

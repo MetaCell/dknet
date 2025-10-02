@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useResponsive } from '../../../hooks/useResponsive';
+import { useResponsive } from './useResponsive';
 
 interface UseSidebarVisibilityProps {
   showPreview: boolean;
