@@ -6,6 +6,7 @@ import PreviewPanel from './PreviewPanel';
 import { useKeyboardNavigation } from './hooks/useKeyboardNavigation';
 import { useFilterLogic } from './hooks/useFilterLogic';
 import { useResponsiveConfig } from './hooks/useResponsiveConfig';
+import { useSidebarVisibility } from './hooks/useSidebarVisibility';
 import { FilterQuestionsProps } from './types';
 import { vars } from '../../theme/variables';
 
@@ -77,6 +78,7 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 }) => {
   const config = useResponsiveConfig();
   const { isFiltersEmpty, handleSingleOptionSelect, filterValues, results } = useFilterLogic();
+  const { showSidebar } = useSidebarVisibility({ showPreview });
 
   const isLastQuestion = questionsTabs.length - 1 === value;
   useKeyboardNavigation({
@@ -98,20 +100,39 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 
   const currentQuestion = questionsTabs[value];
 
+  // Calculate main content width based on sidebar and preview visibility
+  const getMainContentWidth = () => {
+    const sidebarWidth = showSidebar ? config.sidebarWidth : '0';
+    if (showPreview) {
+      return `calc(100% - ${sidebarWidth} - ${config.previewWidth})`;
+    }
+    return `calc(100% - ${sidebarWidth})`;
+  };
+
   return (
     <Box sx={{ height: '100%', display: 'flex', backgroundColor: grey100 }}>
-      <QuestionSidebar
-        questionsTabs={questionsTabs}
-        value={value}
-        handleChange={handleChange}
-        progress={progress}
-        config={config}
-        filterValues={filterValues}
-      />
+      <Box sx={{
+        width: showSidebar ? config.sidebarWidth : '0',
+        minWidth: showSidebar ? config.sidebarWidth : '0',
+        maxWidth: showSidebar ? config.sidebarWidth : '0',
+        overflow: 'hidden',
+        transition: 'all 0.3s ease-in-out',
+        opacity: showSidebar ? 1 : 0,
+        transform: showSidebar ? 'translateX(0)' : 'translateX(-100%)',
+      }}>
+        <QuestionSidebar
+          questionsTabs={questionsTabs}
+          value={value}
+          handleChange={handleChange}
+          progress={progress}
+          config={config}
+          filterValues={filterValues}
+        />
+      </Box>
 
       <Box sx={{
-        width: showPreview ? `calc(100% - ${config.sidebarWidth} - ${config.previewWidth})` : `calc(100% - ${config.sidebarWidth})`,
-        borderLeft: `0.0625rem solid ${grey300}`,
+        width: getMainContentWidth(),
+        borderLeft: showSidebar ? `0.0625rem solid ${grey300}` : 'none',
         height: '100%',
         display: 'flex',
         overflow: 'hidden',
