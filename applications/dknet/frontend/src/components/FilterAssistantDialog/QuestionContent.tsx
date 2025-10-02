@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Stack, Tooltip, Slide } from '@mui/material';
+import { Box, Typography, Stack, Tooltip, Slide, colors } from '@mui/material';
 import QuestionBox from './QuestionBox';
 import CheckBoxWidget from '../widgets/CheckBox';
 import DialogStepFooter from './DialogStepFooter';
@@ -96,6 +96,11 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     marginBottom: isLastItem ? 1.5 : 0,
+
+    '& .MuiTypography-root': {
+      color: vars.grey700,
+      fontWeight: 500,
+    }
   }),
 
   getSingleChoiceContainer: (optionsCount: number) => {
@@ -108,6 +113,11 @@ const styles = {
       gridTemplateRows: shouldExpandHeight ? 'repeat(3, 1fr)' : 'auto',
       gap: 1.5,
       ...(shouldExpandHeight && { flex: 1, height: '100%' }),
+
+      '& .MuiTypography-root': {
+        color: vars.grey700,
+        fontWeight: 500,
+      }
     };
   },
 

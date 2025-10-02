@@ -112,10 +112,8 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({
   results,
   closeDialog
 }) => {
-  const handleResultClick = useCallback((index: number) => {
+  const handleResultClick = useCallback(() => {
     closeDialog();
-    const element = document.getElementById('result_' + index);
-    element?.scrollIntoView({ behavior: 'smooth' });
   }, [closeDialog]);
 
   const getListItemButtonStyles = useCallback((el: ResultItem, index: number) => {
@@ -152,7 +150,7 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({
           <ListItem disablePadding key={`result-${index}`}>
             <ListItemButton
               sx={getListItemButtonStyles(el, index)}
-              onClick={() => handleResultClick(index)}
+              onClick={handleResultClick}
             >
               <ListItemText
                 primary={getPrimaryText(el)}

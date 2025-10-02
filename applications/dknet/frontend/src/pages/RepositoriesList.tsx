@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import Stack from '@mui/material/Stack';
 import { vars } from '../theme/variables';
 import { useResponsive } from '../hooks/useResponsive';
+import { Button } from '@mui/material';
 
 const { success500 } = vars;
 
@@ -44,18 +45,21 @@ const RepositoriesList = () => {
     }
   }, [context.filterValues, context.results, showGeneralist]);
 
+  // Scroll to top when component mounts or when results change
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   return (
-    <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4} sx={{
-      background: '#FFFFFF',
-      minHeight: '60%',
-      borderRadius: '24px 24px 0px 0px',
-      border: '1px solid #fff'
-    }}>
+    <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4}>
       <Grid xs={12} md={gridSizes.main} item>
         <Grid spacing={2}>
           <Grid item display='flex' justifyContent='flex-end' mb={2}>
             <Grid container direction={'row'} justifyContent='space-between' alignItems='center'>
-              <Typography variant='h4'>Showing {context.results.length} results</Typography>
+              <Typography variant='h2'><Typography component="span" variant='h2' color={vars.primary800}>{context.results.length} repositories</Typography> matching your criteria</Typography>
             </Grid>
             <SortWidget />
           </Grid>
@@ -100,10 +104,10 @@ const RepositoriesList = () => {
               borderRadius: '12px',
               padding: 3
             }}>
-              <Stack spacing={2}>
-                <Typography variant='h5'>Want to learn more on how we show you results?</Typography>
-                <Typography variant='h4'>Discover the rules and algorithms that show you results that you see.</Typography>
-                <Typography variant='h5'>Learn more</Typography>
+              <Stack spacing={2} alignItems='flex-start'>
+                <Typography variant='h4' fontWeight={600}>Want to learn more on how we show you results?</Typography>
+                <Typography variant='body2'>Discover the rules and algorithms that show you results that you see.</Typography>
+                <Button variant="text">Learn more</Button>
               </Stack>
             </Box>
           )}

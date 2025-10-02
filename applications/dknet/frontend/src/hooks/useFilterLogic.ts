@@ -29,7 +29,7 @@ export const useFilterLogic = () => {
       
       setContext({
         ...context,
-        showAll: false,
+        showAll: true,
         filterValues: newFilterValues
       });
     }

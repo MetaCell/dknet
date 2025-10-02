@@ -105,7 +105,6 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
             aria-label="close"
             onClick={() => {
               handleClose();
-              document.getElementById('result_0').scrollIntoView({ behavior: 'smooth' });
             }}
             disabled={context.results.length === 0 && !context.showAll}
           >

@@ -76,7 +76,7 @@ function BpCheckbox(props: CheckboxProps) {
   );
 }
 
-const CheckBoxWidget = ({ data, filter }: any) => {
+const CheckBoxWidget = ({ data, filter, sx }: any) => {
   const { context, setContext } = useFilterContext()
   const selectedData = context.filterValues[filter.code] || []
 
@@ -105,9 +105,7 @@ const CheckBoxWidget = ({ data, filter }: any) => {
           value={data.code}
           onChange={onChangeCheckbox}
         />}
-      label={<Typography variant="h4">
-        {data.label}
-      </Typography>}
+      label={data.label}
       value={undefined}
     />
   );

@@ -113,10 +113,12 @@ const theme = createTheme({
     },
     subtitle2: {
       fontSize: '0.875rem',
-      color: grey500
+      color: grey500,
+      fontWeight: 400
     },
     body2: {
       fontSize: '0.875rem',
+      color: grey600,
     },
     body1: {
 
@@ -648,7 +650,8 @@ const theme = createTheme({
       styleOverrides: {
         label: {
           lineHeight: 1,
-          flex: 1
+          flex: 1,
+          fontSize: '0.875rem',
         },
         root: {
           flexGrow: 1,

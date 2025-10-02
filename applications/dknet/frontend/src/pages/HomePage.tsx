@@ -18,13 +18,11 @@ const HomePage = () => {
   const { allRepositories, allFilters, showAll } = context;
 
   return (
-    <Box sx={{ background: isFiltersEmpty? '': '#fff' }}>
-      <Container>
-        {
-          ( allRepositories.length === 0 && allFilters.length === 0 ? <LinearProgress color='secondary' /> : ((isFiltersEmpty && !showAll) ? <LaunchPage /> : <RepositoriesList />))
-        }
-      </Container>
-    </Box>
+    <Container>
+      {
+        (allRepositories.length === 0 && allFilters.length === 0 ? <LinearProgress color='secondary' /> : ((isFiltersEmpty && !showAll) ? <LaunchPage /> : <RepositoriesList />))
+      }
+    </Container>
   )
 }
 const HomePageWithLayout = withLayout(MainLayout)(HomePage);
