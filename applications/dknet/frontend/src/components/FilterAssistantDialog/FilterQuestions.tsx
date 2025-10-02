@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Box } from '@mui/material';
 import QuestionSidebar from './QuestionSidebar';
 import QuestionContent from './QuestionContent';
@@ -9,60 +9,26 @@ import { useResponsiveConfig } from './hooks/useResponsiveConfig';
 import { FilterQuestionsProps } from './types';
 import { vars } from '../../theme/variables';
 
-const { grey200, primary25, primary600, grey100, grey300 } = vars;
+const { grey100, grey300 } = vars;
 
-export const Item: React.FC<{ children: React.ReactNode; className?: string; onClick?: (e: React.MouseEvent) => void }> = ({
-  children,
-  className,
-  onClick
-}) => {
-  const isChecked = className?.includes('checked-state');
-
-  return (
-    <Box
-      onClick={onClick}
-      sx={{
-        display: 'flex',
-        border: `0.0625rem solid ${grey200}`,
-        borderRadius: '0.75rem',
-        width: '100%',
-        cursor: 'pointer',
-        transition: 'all 0.2s ease-in-out',
-        background: isChecked ? primary25 : 'transparent',
-        boxShadow: isChecked ? `0 0 0 0.0625rem ${primary600}` : 'none',
-        '& .MuiFormControlLabel-root': {
-          margin: 0,
-          padding: 2,
-        },
-        '& .MuiCheckbox-root': {
-          padding: 0
-        },
-        '& .MuiTypography-body1': {
-          color: 'grey.700',
-          marginLeft: '0.75rem',
-          display: 'inline-block',
-          whiteSpace: 'nowrap',
-          overflow: 'hidden !important',
-          textOverflow: 'ellipsis',
-          fontWeight: 500,
-          fontSize: '0.875rem',
-        },
-        '& .MuiTypography-body2': {
-          color: 'grey.700',
-          fontWeight: 500,
-          fontSize: '0.875rem',
-          marginTop: '0.5rem'
-        },
-        '&:hover': {
-          border: `0.0625rem solid`,
-          borderColor: 'primary.main',
-          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-        },
-      }}
-    >
-      {children}
-    </Box>
-  );
+const styles = {
+  container: {
+    height: '100%',
+    display: 'flex',
+    backgroundColor: grey100
+  },
+  contentWrapper: (showPreview: boolean, config: any) => ({
+    width: showPreview ? `calc(100% - ${config.sidebarWidth} - ${config.previewWidth})` : `calc(100% - ${config.sidebarWidth})`,
+    borderLeft: `0.0625rem solid ${grey300}`,
+    height: '100%',
+    display: 'flex',
+    overflow: 'hidden',
+    transition: 'width 0.3s ease-in-out',
+  }),
+  innerContent: {
+    width: '100%',
+    height: '100%'
+  },
 };
 
 const FilterQuestions: React.FC<FilterQuestionsProps> = ({
@@ -84,22 +50,22 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
     isLastQuestion
   });
 
-  const handleNextStep = () => {
+  const handleNextStep = useCallback(() => {
     onClickNext();
-  };
+  }, [onClickNext]);
 
-  const handlePreviousStep = () => {
+  const handlePreviousStep = useCallback(() => {
     onClickPrev();
-  };
+  }, [onClickPrev]);
 
-  const handleOptionSelect = (question: any, data: any) => {
+  const handleOptionSelect = useCallback((question: any, data: any) => {
     handleSingleOptionSelect(question, data);
-  };
+  }, [handleSingleOptionSelect]);
 
   const currentQuestion = questionsTabs[value];
 
   return (
-    <Box sx={{ height: '100%', display: 'flex', backgroundColor: grey100 }}>
+    <Box sx={styles.container}>
       <QuestionSidebar
         questionsTabs={questionsTabs}
         value={value}
@@ -109,15 +75,8 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
         filterValues={filterValues}
       />
 
-      <Box sx={{
-        width: showPreview ? `calc(100% - ${config.sidebarWidth} - ${config.previewWidth})` : `calc(100% - ${config.sidebarWidth})`,
-        borderLeft: `0.0625rem solid ${grey300}`,
-        height: '100%',
-        display: 'flex',
-        overflow: 'hidden',
-        transition: 'width 0.3s ease-in-out',
-      }}>
-        <Box sx={{ width: '100%', height: '100%' }}>
+      <Box sx={styles.contentWrapper(showPreview, config)}>
+        <Box sx={styles.innerContent}>
           <QuestionContent
             currentQuestion={currentQuestion}
             config={config}
