@@ -18,7 +18,7 @@ const BpIcon = styled('span')(() => ({
   borderRadius: 6,
   width: 20,
   height: 20,
-  boxShadow:`inset 0 0 0 0.0625rem ${checkboxBorderColor}, inset 0 -1px 0 ${checkboxBorderColor}`,
+  boxShadow: `inset 0 0 0 0.0625rem ${checkboxBorderColor}, inset 0 -1px 0 ${checkboxBorderColor}`,
 
   'input:hover ~ &': {
     backgroundColor: primary50,
@@ -30,7 +30,7 @@ const BpIcon = styled('span')(() => ({
     outlineOffset: 2,
   },
   '.Mui-checked &': {
-    boxShadow:`inset 0 0 0 0.0625rem ${primary600}, inset 0 -0.0625rem 0 ${primary600}`,
+    boxShadow: `inset 0 0 0 0.0625rem ${primary600}, inset 0 -0.0625rem 0 ${primary600}`,
 
   },
 
@@ -105,7 +105,7 @@ const CheckBoxWidget = ({ data, filter }: any) => {
           value={data.code}
           onChange={onChangeCheckbox}
         />}
-      label={<Typography>
+      label={<Typography variant="h4">
         {data.label}
       </Typography>}
       value={undefined}

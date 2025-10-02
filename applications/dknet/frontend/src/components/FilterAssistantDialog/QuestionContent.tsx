@@ -9,68 +9,116 @@ import { QuestionTab, ResponsiveConfig } from './types';
 import { INPUT_TYPES } from './constants';
 import { useFilterLogic } from './hooks/useFilterLogic';
 
-const { grey600, grey200, primary25, primary600 } = vars;
+const { grey200, primary25, primary600 } = vars;
 
-// Item styles as sx prop function
-const getItemSx = (isChecked: boolean) => ({
-  border: `0.0625rem solid ${grey200}`,
-  borderRadius: '0.75rem',
-  cursor: 'pointer',
-  transition: 'all 0.2s ease-in-out',
-  background: isChecked ? primary25 : 'transparent',
-  boxShadow: isChecked ? `0 0 0 0.0625rem ${primary600}` : 'none',
-  width: '100%',
-  minHeight: '3rem',
-
-  '& .MuiFormControlLabel-root': {
-    margin: 0,
+const styles = {
+  getItemSx: (isChecked: boolean) => ({
+    border: `0.0625rem solid ${grey200}`,
+    borderRadius: '0.75rem',
+    cursor: 'pointer',
+    transition: 'all 0.2s ease-in-out',
+    background: isChecked ? primary25 : 'transparent',
+    boxShadow: isChecked ? `0 0 0 0.0625rem ${primary600}` : 'none',
+    width: '100%',
+    minHeight: '3rem',
     padding: 2,
+
+    '&:hover': {
+      border: `0.0625rem solid`,
+      borderColor: 'primary.main',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    },
+  }),
+
+  mainContainer: {
     width: '100%',
     height: '100%',
     display: 'flex',
+    flexDirection: 'column',
+    overflow: 'hidden',
     alignItems: 'center',
-    minHeight: 'inherit',
+    justifyContent: 'center',
+    py: 4,
+    px: 3
   },
-  '& .MuiFormControlLabel-label': {
-    flex: 1,
+
+  slideContainer: {
     display: 'flex',
-    alignItems: 'flex-start',
-    paddingTop: '0.25rem',
-  },
-  '& .MuiCheckbox-root': {
-    padding: 0,
-    alignSelf: 'center',
-  },
-  '& .MuiTypography-root': {
-    color: 'grey.700',
-    fontWeight: 500,
-    fontSize: '0.875rem',
+    flexDirection: 'column',
     flex: 1,
-    whiteSpace: 'normal',
-    wordWrap: 'break-word',
-    lineHeight: 1.4,
+    minHeight: 0
   },
-  '& .MuiTypography-body1': {
-    color: 'grey.700',
-    marginLeft: '0.75rem',
-    display: 'block',
-    whiteSpace: 'normal',
-    wordWrap: 'break-word',
-    fontWeight: 500,
-    fontSize: '0.875rem',
+
+  headerContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexShrink: 0,
+    mb: 2,
   },
-  '& .MuiTypography-body2': {
-    color: 'grey.700',
-    fontWeight: 500,
-    fontSize: '0.875rem',
-    marginTop: '0.5rem'
+
+  headerStack: {
+    width: '100%',
+    textAlign: 'center'
   },
-  '&:hover': {
-    border: `0.0625rem solid`,
-    borderColor: 'primary.main',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+
+  contentContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    flex: 1,
+    minHeight: 0,
   },
-});
+
+  footerContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexShrink: 0,
+    mt: 2,
+    width: '100%',
+  },
+
+  getMultipleChoiceContainer: (optionsCount: number) => {
+    const shouldUseGrid = optionsCount > 3;
+    const shouldExpandHeight = optionsCount <= 3;
+
+    return {
+      display: 'grid',
+      gridTemplateColumns: shouldUseGrid ? 'repeat(2, 1fr)' : '1fr',
+      gridTemplateRows: shouldExpandHeight ? `repeat(3, 1fr)` : 'auto',
+      gap: 1.5,
+      width: '100%',
+      ...(shouldExpandHeight && { flex: 1, height: '100%' }),
+    };
+  },
+
+  getMultipleChoiceItem: (shouldExpandHeight: boolean, isLastItem: boolean) => ({
+    ...(shouldExpandHeight && { height: '100%' }),
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: isLastItem ? 1.5 : 0,
+  }),
+
+  getSingleChoiceContainer: (optionsCount: number) => {
+    const shouldExpandHeight = optionsCount <= 3;
+
+    return {
+      width: '100%',
+      display: 'grid',
+      gridTemplateColumns: '1fr',
+      gridTemplateRows: shouldExpandHeight ? 'repeat(3, 1fr)' : 'auto',
+      gap: 1.5,
+      ...(shouldExpandHeight && { flex: 1, height: '100%' }),
+    };
+  },
+
+  getSingleChoiceItem: (shouldExpandHeight: boolean, isLastItem: boolean) => ({
+    ...(shouldExpandHeight && { height: '100%' }),
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: isLastItem ? 1.5 : 0,
+  }),
+};
 
 interface QuestionContentProps {
   currentQuestion: QuestionTab;
@@ -111,36 +159,26 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
 
   const renderMultipleChoiceOptions = () => {
     const optionsCount = currentQuestion?.options.length || 0;
-    const shouldUseGrid = optionsCount > 3;
     const shouldExpandHeight = optionsCount <= 3;
 
     return (
-      <Box
-        sx={{
-          display: 'grid',
-          gridTemplateColumns: shouldUseGrid ? 'repeat(2, 1fr)' : '1fr',
-          gridTemplateRows: shouldExpandHeight ? `repeat(3, 1fr)` : 'auto',
-          gap: 1.5,
-          width: '100%',
-          ...(shouldExpandHeight && { flex: 1, height: '100%' }),
-        }}
-      >
-        {currentQuestion?.options.map((data, index) => (
-          <Tooltip title={data.label} key={data?.label}>
-            <Box sx={{
-              ...getItemSx(getCheckedStateForMultiple(currentQuestion, data) === 'checked-state'),
-              ...(shouldExpandHeight && { height: '100%' }),
-              display: 'flex',
-              alignItems: 'center',
-              marginBottom: index === currentQuestion?.options.length - 1 ? 1.5 : 0,
-            }}>
-              <CheckBoxWidget
-                data={data}
-                filter={currentQuestion}
-              />
-            </Box>
-          </Tooltip>
-        ))}
+      <Box sx={styles.getMultipleChoiceContainer(optionsCount)}>
+        {currentQuestion?.options.map((data, index) => {
+          const isLastItem = index === currentQuestion?.options.length - 1;
+          return (
+            <Tooltip title={data.label} key={data?.label}>
+              <Box sx={{
+                ...styles.getItemSx(getCheckedStateForMultiple(currentQuestion, data) === 'checked-state'),
+                ...styles.getMultipleChoiceItem(shouldExpandHeight, isLastItem),
+              }}>
+                <CheckBoxWidget
+                  data={data}
+                  filter={currentQuestion}
+                />
+              </Box>
+            </Tooltip>
+          );
+        })}
       </Box>
     );
   };
@@ -150,47 +188,26 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
     const shouldExpandHeight = optionsCount <= 3;
 
     return (
-      <Box
-        sx={{
-          width: '100%',
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gridTemplateRows: shouldExpandHeight ? 'repeat(3, 1fr)' : 'auto',
-          gap: 1.5,
-          ...(shouldExpandHeight && { flex: 1, height: '100%' }),
-        }}
-      >
-        {currentQuestion?.options.map((data, index) => (
-          <Box
-            key={`itemKey_${index}`}
-            sx={{
-              ...getItemSx(getCheckedStateForSingle(currentQuestion, data) === 'checked-state'),
-              ...(shouldExpandHeight && { height: '100%' }),
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'flex-start',
-              textAlign: 'center',
-              marginBottom: index === currentQuestion?.options.length - 1 ? 1.5 : 0,
-            }}
-            onClick={(e) => handleOptionClick(e, data)}
-          >
-            <Typography
-              variant="body1"
+      <Box sx={styles.getSingleChoiceContainer(optionsCount)}>
+        {currentQuestion?.options.map((data, index) => {
+          const isLastItem = index === currentQuestion?.options.length - 1;
+          return (
+            <Box
+              key={`itemKey_${index}`}
               sx={{
-                padding: 2,
-                width: '100%',
-                color: 'grey.700',
-                fontWeight: 500,
-                fontSize: '0.875rem',
-                whiteSpace: 'normal',
-                wordWrap: 'break-word',
-                lineHeight: 1.4,
+                ...styles.getItemSx(getCheckedStateForSingle(currentQuestion, data) === 'checked-state'),
+                ...styles.getSingleChoiceItem(shouldExpandHeight, isLastItem),
               }}
+              onClick={(e) => handleOptionClick(e, data)}
             >
-              {data.label}
-            </Typography>
-          </Box>
-        ))}
+              <Typography
+                variant="h4"
+              >
+                {data.label}
+              </Typography>
+            </Box>
+          );
+        })}
       </Box>
     );
   };
@@ -200,18 +217,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
   }
 
   return (
-    <Box sx={{
-      width: '100%',
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      overflow: 'hidden',
-      alignItems: 'center',
-      justifyContent: 'center',
-      py: 4,
-      px: 3
-    }}>
-
+    <Box sx={styles.mainContainer}>
       <Slide
         key={value}
         direction="up"
@@ -219,16 +225,9 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
         timeout={600}
         appear
       >
-        <Box maxWidth={config.questionMaxWidth} width="100%" sx={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              flexShrink: 0,
-              mb: 2,
-            }}
-          >
-            <Stack sx={{ width: '100%', textAlign: 'center' }} spacing={1}>
+        <Box maxWidth={config.questionMaxWidth} width="100%" sx={styles.slideContainer}>
+          <Box sx={styles.headerContainer}>
+            <Stack sx={styles.headerStack} spacing={1}>
               <Typography textAlign="left" variant="h3">
                 {currentQuestion.questionTitle}
               </Typography>
@@ -238,35 +237,16 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
             </Stack>
           </Box>
 
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              width: '100%',
-              flex: 1,
-              minHeight: 0,
-            }}
-          >
+          <Box sx={styles.contentContainer}>
             <QuestionBox inputType={currentQuestion.inputType}>
               {isMultipleChoice ? renderMultipleChoiceOptions() : renderSingleChoiceOptions()}
             </QuestionBox>
           </Box>
         </Box>
       </Slide>
-
-
-
       {/* Fixed Footer - Always Visible */}
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          flexShrink: 0,
-          mt: 2,
-          width: '100%',
-        }}
-      >
-        <Box maxWidth={config.questionMaxWidth} sx={{ width: '100%' }}>
+      <Box sx={styles.footerContainer}>
+        <Box maxWidth={config.questionMaxWidth} width="100%">
           <DialogStepFooter
             handlePrev={onPrev}
             value={value}
