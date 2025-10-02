@@ -1,14 +1,25 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
+import theme from '../theme/Theme';
 
 export type ScreenSize = 'tooSmall' | 'tablet' | 'laptop' | 'smallDesktop' | 'desktop';
 
 export const useResponsive = () => {
-  // Define breakpoints
-  const isTooSmall = useMediaQuery('(max-width:640px)'); // Too small to use app (phones)
-  const isTablet = useMediaQuery('(min-width:640px) and (max-width:900px)'); // Tablet (large phones + tablets)
-  const isLaptop = useMediaQuery('(min-width:900px) and (max-width:1200px)'); // Laptop (13"-15" laptops)
-  const isSmallDesktop = useMediaQuery('(min-width:1200px) and (max-width:1536px)'); // Small desktop/large laptop (16"+ laptops, smaller monitors)
-  const isDesktop = useMediaQuery('(min-width:1536px)'); // Desktop (large monitors, 4K+)
+  // Define breakpoints based on MUI default theme
+  const isTooSmall = useMediaQuery(theme.breakpoints.down('sm'));
+  // < 600px → too small (phones)
+
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  // 600–899px → tablet
+
+  const isLaptop = useMediaQuery(theme.breakpoints.between('md', 'lg'));
+  // 900–1199px → laptops
+
+  const isSmallDesktop = useMediaQuery(theme.breakpoints.between('lg', 'xl'));
+  // 1200–1535px → small desktops / large laptops
+
+  const isDesktop = useMediaQuery(theme.breakpoints.up('xl'));
+  // ≥ 1536px → big monitors
+
 
   const getScreenSize = (): ScreenSize => {
     if (isTooSmall) {
