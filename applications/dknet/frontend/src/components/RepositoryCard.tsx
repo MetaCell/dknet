@@ -15,7 +15,7 @@ import Grid from "@mui/material/Grid";
 import { FilterColor, FilterType } from "../config/enums";
 import { useResponsive } from "../hooks/useResponsive";
 
-const RepoCardContent= styled(CardContent)(() => ({
+const RepoCardContent = styled(CardContent)(() => ({
   '&.MuiCardContent-root': {
     padding: 0
   }
@@ -34,16 +34,14 @@ const RepositoryCard = (props) => {
   const { isBestMatch, repository } = props;
   const filterLabels = Object.values(repository.attributes)[0] as Array<string>
   const { screenSize } = useResponsive();
-  
+
   const getClass = () => {
     return isBestMatch ? "successCard" : ""
   }
-  
+
   // Responsive configurations
   const getCardSpacing = () => {
     switch (screenSize) {
-      case 'mobile':
-        return { margin: 2, gap: 1.5, marginBottom: '0.75rem' };
       case 'tablet':
         return { margin: 2.5, gap: 2, marginBottom: '0.875rem' };
       case 'laptop':
@@ -54,7 +52,7 @@ const RepositoryCard = (props) => {
         return { margin: 3, gap: 2.5, marginBottom: '1rem' };
     }
   };
-  
+
   const spacing = getCardSpacing();
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
@@ -62,9 +60,9 @@ const RepositoryCard = (props) => {
     <Card id={"result_" + props.resultIndex} sx={{ position: 'relative', marginBottom: spacing.marginBottom }} className={getClass()}>
       {
         isBestMatch &&
-          <Box pr={spacing.margin} position='absolute' right={0} top='-3px'>
-            <Chip label="Best Match" className="cardBadge"/>
-          </Box>
+        <Box pr={spacing.margin} position='absolute' right={0} top='-3px'>
+          <Chip label="Best Match" className="cardBadge" />
+        </Box>
       }
       <Box m={spacing.margin} display="flex" gap={spacing.gap}>
         <RepoCardContent>

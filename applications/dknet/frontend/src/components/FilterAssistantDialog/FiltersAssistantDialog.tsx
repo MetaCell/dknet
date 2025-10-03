@@ -34,10 +34,10 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const [progress, setProgress] = useState(0);
   const { context } = useFilterContext()
   const { screenSize } = useResponsive();
-  
+
   // Set initial preview state based on screen size
   const [showPreview, setShowPreview] = useState(() => {
-    return screenSize !== 'mobile';
+    return screenSize !== 'tooSmall';
   });
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
@@ -53,9 +53,9 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
 
 
   const onClickNext = () => {
-    if ( tabValue !== (questionsTabs.length - 1)) {
-      setTabValue(tabValue+1)
-      updateProgress(tabValue+1)
+    if (tabValue !== (questionsTabs.length - 1)) {
+      setTabValue(tabValue + 1)
+      updateProgress(tabValue + 1)
     }
   }
 
@@ -84,13 +84,6 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
       aria-describedby="alert-dialog-slide-description"
       maxWidth={screenSize === 'desktop' ? 'xl' : 'lg'}
       fullWidth={true}
-      sx={{
-        "& .MuiPaper-root": {
-          height: screenSize === 'mobile' ? '95%' : '100%',
-          borderRadius: screenSize === 'mobile' ? '0.5rem' : '0.75rem',
-          margin: screenSize === 'mobile' ? 1 : 3
-        }
-      }}
     >
       <DialogTitle sx={{
         borderBottom: `0.0625rem solid ${grey200}`,

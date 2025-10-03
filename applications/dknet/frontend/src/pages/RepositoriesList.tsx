@@ -19,11 +19,11 @@ const RepositoriesList = () => {
   const [showGeneralist, setShowGeneralist] = useState(false);
   const { context } = useFilterContext();
   const { screenSize } = useResponsive();
-  
+
   // Responsive grid sizes
   const getGridSizes = () => {
     switch (screenSize) {
-      case 'mobile':
+      case 'tooSmall':
         return { main: 12, filters: 12 };
       case 'tablet':
         return { main: 12, filters: 12 };
@@ -35,7 +35,7 @@ const RepositoriesList = () => {
         return { main: 8, filters: 4 };
     }
   };
-  
+
   const gridSizes = getGridSizes();
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const RepositoriesList = () => {
   }, [context.filterValues, context.results, showGeneralist]);
 
   return (
-    <Grid container spacing={screenSize === 'mobile' ? 2 : 4} sx={{
+    <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4} sx={{
       background: '#FFFFFF',
       minHeight: '60%',
       borderRadius: '24px 24px 0px 0px',
@@ -57,12 +57,12 @@ const RepositoriesList = () => {
             <Grid container direction={'row'} justifyContent='space-between' alignItems='center'>
               <Typography variant='h4'>Showing {context.results.length} results</Typography>
             </Grid>
-            <SortWidget/>
+            <SortWidget />
           </Grid>
           {
             context.results.length > 0
-              ? context.results.map((repository, index) => <Grid item key={index}  xs={12} justifyContent='flex-end'>
-                <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={index === 0 || repository.pctMatch === context.results[0].pctMatch}/>
+              ? context.results.map((repository, index) => <Grid item key={index} xs={12} justifyContent='flex-end'>
+                <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={index === 0 || repository.pctMatch === context.results[0].pctMatch} />
               </Grid>)
               : <>
                 <Typography sx={{ textAlign: 'center', marginTop: '1.5rem' }} variant='h2'>No results found matching the filters criteria.</Typography>
@@ -77,13 +77,14 @@ const RepositoriesList = () => {
                         cursor: 'pointer',
                         marginTop: '0.75rem',
                         marginBottom: '5rem',
-                        color: success500 }}
+                        color: success500
+                      }}
                       variant='h5'>
-                        Try one of our generalist repository
+                      Try one of our generalist repository
                     </Typography>
                   </>
                   : context.allGeneralistRepositories.map((repository, index) => <Grid sx={{ marginTop: '4rem' }} item key={index} xs={12} justifyContent='flex-end'>
-                    <RepositoryCard key={repository.code} repository={repository} isBestMatch={false}/>
+                    <RepositoryCard key={repository.code} repository={repository} isBestMatch={false} />
                   </Grid>)
                 }
               </>

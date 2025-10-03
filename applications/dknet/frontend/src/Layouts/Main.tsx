@@ -14,22 +14,6 @@ const MainLayout = ({ children }) => {
   const { context } = useFilterContext();
   const { allRepositories, allFilters } = context;
   const { screenSize } = useResponsive();
-  
-  // Responsive button styling
-  const getButtonStyles = () => {
-    switch (screenSize) {
-      case 'mobile':
-        return { width: '80%', height: '48px', fontSize: '0.875rem' };
-      case 'tablet':
-        return { width: '60%', height: '52px', fontSize: '1rem' };
-      case 'laptop':
-        return { width: '14vw', height: '5vh', fontSize: '1rem' };
-      case 'desktop':
-        return { width: '12vw', height: '5vh', fontSize: '1.1rem' };
-      default:
-        return { width: '14vw', height: '5vh', fontSize: '1rem' };
-    }
-  };
 
   const viewFilterAssistant = () => {
     setOpen(true);
@@ -38,7 +22,7 @@ const MainLayout = ({ children }) => {
   return (
     <Box sx={{
       backgroundImage: 'url("/gridBg.svg")',
-      backgroundRepeat: 'np-repeat',
+      backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       minHeight: '100vh',
       overflow: 'auto',
@@ -52,14 +36,14 @@ const MainLayout = ({ children }) => {
             <Typography fontWeight='normal' fontSize='1rem' variant='subtitle1'>Explore, filter and find the best repositories for your data and needs.</Typography>
           </Grid>
           {
-            ( allRepositories.length === 0 && allFilters.length === 0 ? <></> : (
+            (allRepositories.length === 0 && allFilters.length === 0 ? <></> : (
               <>
                 <Grid item xs={12} display="flex" justifyContent="center">
-                  <Button variant='contained' onClick={viewFilterAssistant} sx={getButtonStyles()}>Click Here To Get Started</Button>
+                  <Button variant='contained' onClick={viewFilterAssistant} sx={{ width: '16.5rem', height: '3.75rem', fontSize: '1rem' }}>Click Here To Get Started</Button>
                 </Grid>
                 <Grid item xs={12} sm={8}>
                   <Box mt={2} display='flex' alignItems='center' flexDirection='column' gap={1.5} justifyContent='center' width={1}>
-                    <Typography variant='subtitle2' mr={1}>Repositories, like journals, have a variety of requirements and features. We will start by asking you some questions about your data and your requirements so that we can match you to the best repository for your needs.</Typography>
+                    <Typography variant='subtitle2' mr={1}>You will be asked a series of questions based on your data requirements and priorities</Typography>
                   </Box>
                 </Grid>
               </>
