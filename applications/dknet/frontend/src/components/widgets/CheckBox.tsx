@@ -87,13 +87,18 @@ const CheckBoxWidget = ({ data, filter, sx }: any) => {
     } else {
       newValue = selectedData.filter(row => row.code !== e.target.value)
     }
+
+    // Check if this will be the last filter being removed
+    const updatedFilterValues = {
+      ...context.filterValues,
+      [filter.code]: newValue.length !== 0 ? newValue : undefined
+    }
+    const willBeEmpty = Object.values(updatedFilterValues).every(value => value === undefined)
+
     setContext({
       ...context,
-      showAll: false,
-      filterValues: {
-        ...context.filterValues,
-        [filter.code]: newValue.length !== 0 ? newValue : undefined
-      }
+      showAll: willBeEmpty,
+      filterValues: updatedFilterValues
     })
   }
 

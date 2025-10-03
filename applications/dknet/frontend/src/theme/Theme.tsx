@@ -421,7 +421,7 @@ const theme = createTheme({
               color: success700
             },
             '& .MuiSvgIcon-root': {
-              color: success500,
+              color: success50,
             }
           },
           '&.cardBadge': {
@@ -633,9 +633,25 @@ const theme = createTheme({
       styleOverrides: {
       }
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecorationColor: grey800,
+        }
+      }
+    },
     MuiInputBase: {
       styleOverrides: {
         root: {
+          '& .MuiButtonBase-root': {
+            '& .MuiSvgIcon-root': {
+              marginRight: 0,
+              marginLeft: '0.3125rem'
+            }
+          },
+          '&.Mui-focused': {
+            backgroundColor: 'transparent !important',
+          }
         }
       }
     },

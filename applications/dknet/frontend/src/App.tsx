@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage'
 import ScrollToTop from './components/ScrollTop'
 import ResponsiveWrapper from './components/ResponsiveWrapper'
 
+
 const App = () => {
 
   return (
@@ -24,8 +25,8 @@ const App = () => {
                 xs: "auto",
               },
             }}
-            display="flex"
-            overflow="auto"
+              display="flex"
+              overflow="auto"
             >
               <Box flex={1} display="flex" flexDirection="column" id='main-container'>
                 <Routes>
@@ -33,7 +34,7 @@ const App = () => {
                 </Routes>
               </Box>
             </Box>
-            <ScrollToTop/>
+            <ScrollToTop />
           </FilterProvider>
         </ResponsiveWrapper>
       </ThemeProvider>

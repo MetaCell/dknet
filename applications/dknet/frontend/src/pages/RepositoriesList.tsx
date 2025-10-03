@@ -21,24 +21,6 @@ const RepositoriesList = () => {
   const { context } = useFilterContext();
   const { screenSize } = useResponsive();
 
-  // Responsive grid sizes
-  const getGridSizes = () => {
-    switch (screenSize) {
-      case 'tooSmall':
-        return { main: 12, filters: 12 };
-      case 'tablet':
-        return { main: 12, filters: 12 };
-      case 'laptop':
-        return { main: 8, filters: 4 };
-      case 'desktop':
-        return { main: 8, filters: 4 };
-      default:
-        return { main: 8, filters: 4 };
-    }
-  };
-
-  const gridSizes = getGridSizes();
-
   useEffect(() => {
     if (showGeneralist) {
       setShowGeneralist(false);
@@ -55,7 +37,7 @@ const RepositoriesList = () => {
 
   return (
     <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4}>
-      <Grid xs={12} md={gridSizes.main} item>
+      <Grid xs={7} md={7} lg={8} item>
         <Grid spacing={2}>
           <Grid item display='flex' justifyContent='flex-end' mb={2}>
             <Grid container direction={'row'} justifyContent='space-between' alignItems='center'>
@@ -65,9 +47,13 @@ const RepositoriesList = () => {
           </Grid>
           {
             context.results.length > 0
-              ? context.results.map((repository, index) => <Grid item key={index} xs={12} justifyContent='flex-end'>
-                <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={index === 0 || repository.pctMatch === context.results[0].pctMatch} />
-              </Grid>)
+              ? <Stack spacing={2}>
+                {context.results.map((repository, index) =>
+                  <Grid item key={index} xs={12} justifyContent='flex-end'>
+                    <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={repository.pctMatch === context.results[0].pctMatch} />
+                  </Grid>
+                )}
+              </Stack>
               : <>
                 <Typography sx={{ textAlign: 'center', marginTop: '1.5rem' }} variant='h2'>No results found matching the filters criteria.</Typography>
                 {showGeneralist === false
@@ -87,30 +73,32 @@ const RepositoriesList = () => {
                       Try one of our generalist repository
                     </Typography>
                   </>
-                  : context.allGeneralistRepositories.map((repository, index) => <Grid sx={{ marginTop: '4rem' }} item key={index} xs={12} justifyContent='flex-end'>
-                    <RepositoryCard key={repository.code} repository={repository} isBestMatch={false} />
-                  </Grid>)
+                  : <Stack spacing={2}>
+                    {context.allGeneralistRepositories.map((repository, index) =>
+                      <Grid sx={{ marginTop: '4rem' }} item key={index} xs={12} justifyContent='flex-end'>
+                        <RepositoryCard key={repository.code} repository={repository} isBestMatch={false} />
+                      </Grid>
+                    )}
+                  </Stack>
                 }
               </>
           }
         </Grid>
       </Grid>
-      <Grid xs={12} md={gridSizes.filters} item>
+      <Grid xs={5} md={5} lg={4} item>
         <Stack spacing={2}>
           <Filters />
-          {(screenSize === 'laptop' || screenSize === 'desktop') && (
-            <Box sx={{
-              background: '#FCFCFD',
-              borderRadius: '12px',
-              padding: 3
-            }}>
-              <Stack spacing={2} alignItems='flex-start'>
-                <Typography variant='h4' fontWeight={600}>Want to learn more on how we show you results?</Typography>
-                <Typography variant='body2'>Discover the rules and algorithms that show you results that you see.</Typography>
-                <Button variant="text">Learn more</Button>
-              </Stack>
-            </Box>
-          )}
+          <Box sx={{
+            background: vars.grey25,
+            borderRadius: '0.75rem',
+            padding: 2
+          }}>
+            <Stack spacing={2} alignItems='flex-start'>
+              <Typography variant='h4' fontWeight={600}>Want to learn more on how we show you results?</Typography>
+              <Typography variant='body2'>Discover the rules and algorithms that show you results that you see.</Typography>
+              <Button variant="text">Learn more</Button>
+            </Stack>
+          </Box>
         </Stack>
       </Grid>
     </Grid>
