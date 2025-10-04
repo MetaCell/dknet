@@ -2,12 +2,12 @@ import React from 'react'
 import { useFilterContext } from '../context/Context'
 
 //components
-import withLayout from "../useLayout";
 import MainLayout from "../Layouts/Main";
 import Container from "@mui/material/Container";
 import RepositoriesList from "./RepositoriesList";
 import LaunchPage from "./LaunchPage";
-import LinearProgress from '@mui/material/LinearProgress';
+import Box from '@mui/material/Box/Box';
+import { CircularProgress } from '@mui/material';
 
 
 
@@ -17,12 +17,21 @@ const HomePage = () => {
   const { allRepositories, allFilters, showAll } = context;
 
   return (
-    <Container>
-      {
-        (allRepositories.length === 0 && allFilters.length === 0 ? <LinearProgress color='secondary' /> : ((isFiltersEmpty && !showAll) ? <LaunchPage /> : <RepositoriesList />))
-      }
-    </Container>
+    <MainLayout>
+      <Container>
+        {
+          (allRepositories.length === 0 && allFilters.length === 0 ? <Box sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh'
+          }}>
+            <CircularProgress color='secondary' />
+          </Box> : ((isFiltersEmpty && !showAll) ? <LaunchPage /> : <RepositoriesList />))
+        }
+      </Container>
+    </MainLayout>
   )
 }
-const HomePageWithLayout = withLayout(MainLayout)(HomePage);
-export default HomePageWithLayout;
+
+export default HomePage;

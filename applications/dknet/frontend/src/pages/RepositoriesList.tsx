@@ -13,6 +13,7 @@ import { vars } from '../theme/variables';
 import { useResponsive } from '../hooks/useResponsive';
 import { Button, Fade, IconButton } from '@mui/material';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+import EmptyResultsLayout from '../components/EmptyResultsLayout';
 const { success500 } = vars;
 
 const styles = {
@@ -116,50 +117,31 @@ const RepositoriesList = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  const repos = context.results;
   return (
     <>
-      <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4}>
-        <Grid xs={7} md={7} lg={8} item>
-          <Grid spacing={2}>
-            <Grid item display='flex' justifyContent='flex-end' mb={2}>
-              <Grid container direction={'row'} justifyContent='space-between' alignItems='center'>
-                <Typography variant='h2'>
-                  <Typography component="span" variant='h2' color={vars.primary800}>{context.results.length} repositories</Typography>
-                  matching your criteria
-                </Typography>
-              </Grid>
-              <SortWidget />
-            </Grid>
+      <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4} height={'100%'}>
+        <Grid xs={7} md={7} lg={8} item height={'100%'}>
+          <Stack direction='row' justifyContent='space-between' alignItems='center' mb={2}>
+            <Typography variant='h2'>
+              <Typography component="span" variant='h2' color={vars.primary800}>{repos.length} repositories</Typography>
+              matching your criteria
+            </Typography>
+            <SortWidget />
+          </Stack>
+          <Grid container>
             {
-              context.results.length > 0
+              repos.length > 0
                 ? <Stack spacing={2}>
-                  {context.results.map((repository, index) =>
+                  {repos.map((repository, index) =>
                     <Grid item key={index} xs={12} justifyContent='flex-end'>
-                      <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={repository.pctMatch === context.results[0].pctMatch} />
+                      <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={repository.pctMatch === repos[0].pctMatch} />
                     </Grid>
                   )}
                 </Stack>
-                : <>
-                  <Typography sx={styles.noResultsText} variant='h2'>No results found matching the filters criteria.</Typography>
-                  {showGeneralist === false
-                    ? <>
-                      <Typography
-                        onClick={() => setShowGeneralist(true)}
-                        sx={styles.generalistLink}
-                        variant='h5'>
-                        Try one of our generalist repository
-                      </Typography>
-                    </>
-                    : <Stack spacing={2}>
-                      {context.allGeneralistRepositories.map((repository, index) =>
-                        <Grid sx={styles.generalistContainer} item key={index} xs={12} justifyContent='flex-end'>
-                          <RepositoryCard key={repository.code} repository={repository} isBestMatch={false} />
-                        </Grid>
-                      )}
-                    </Stack>
-                  }
-                </>
+                : <Grid item xs={12}>
+                  <EmptyResultsLayout />
+                </Grid>
             }
           </Grid>
         </Grid>
@@ -177,8 +159,7 @@ const RepositoriesList = () => {
         </Grid>
       </Grid>
 
-      {/* Scroll to explore overlay - shows when NOT at bottom, hides when reaching bottom */}
-      <Fade in={!isAtBottom} timeout={100}>
+      {repos.length > 0 && <Fade in={!isAtBottom} timeout={100}>
         <Box
           sx={styles.scrollOverlay}
         >
@@ -194,7 +175,7 @@ const RepositoriesList = () => {
             />
           </IconButton>
         </Box>
-      </Fade>
+      </Fade>}
     </>
   )
 }

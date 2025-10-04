@@ -32,7 +32,7 @@ const LaunchPage = () => {
               showAll: true
             })}
           >
-            Browse Data
+            Browse all data
           </Button>
         </Stack>
       </Grid>
