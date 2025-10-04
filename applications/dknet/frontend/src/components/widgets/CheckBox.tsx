@@ -3,7 +3,6 @@ import React from "react";
 //components
 import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
 import CustomFormControlLabel from "./CustomFormControlLabel";
 import { useFilterContext } from "../../context/Context";
 import { vars } from '../../theme/variables'
@@ -76,7 +75,7 @@ function BpCheckbox(props: CheckboxProps) {
   );
 }
 
-const CheckBoxWidget = ({ data, filter, sx }: any) => {
+const CheckBoxWidget = ({ data, filter }: any) => {
   const { context, setContext } = useFilterContext()
   const selectedData = context.filterValues[filter.code] || []
 

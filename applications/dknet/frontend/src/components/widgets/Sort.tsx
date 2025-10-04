@@ -69,8 +69,8 @@ const SortWidget = () => {
         aria-controls={open ? 'sortMenu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        startIcon={<FilterListIcon/>}
-        endIcon={<ArrowDropDownIcon/>}
+        startIcon={<FilterListIcon />}
+        endIcon={<ArrowDropDownIcon />}
         onClick={handleClick}
         sx={{ width: '10rem' }}
       >
@@ -81,19 +81,21 @@ const SortWidget = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        PaperProps={{ sx: {
-          borderRadius: '12px',
-        } }}
+        PaperProps={{
+          sx: {
+            borderRadius: '12px',
+          }
+        }}
         sx={{
           '& ul': {
-            padding:0,
+            padding: 0,
             margin: '1rem',
           }
         }}
       >
         {labels.map((label) => (
           <SortMenuItem key={label} value={label}>
-            <Radio checked={selectedValue===label} value={label} onChange={handleChange}/>
+            <Radio checked={selectedValue === label} value={label} onChange={handleChange} />
             <ListItemText primary={label} />
           </SortMenuItem>
         ))}

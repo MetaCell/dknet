@@ -3,7 +3,6 @@ import { useFilterContext } from '../context/Context'
 
 //components
 import withLayout from "../useLayout";
-import Box from '@mui/material/Box';
 import MainLayout from "../Layouts/Main";
 import Container from "@mui/material/Container";
 import RepositoriesList from "./RepositoriesList";

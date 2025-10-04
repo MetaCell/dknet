@@ -11,11 +11,16 @@ import AboutDialog from "./AboutDialog";
 
 //icons
 import dknetlogo from '../assets/dknetlogo.png';
+import FiltersAssistantDialog from "./FilterAssistantDialog/FiltersAssistantDialog";
+import { useFilterContext } from "../context/Context";
+import { hasActiveFilters, resetFilters } from "../utils/helpers";
 
 
 
 const Header = () => {
-  const [ openAboutDialog, setOpenDialogWindow ] = useState(false);
+  const [openAboutDialog, setOpenDialogWindow] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const { context, setContext } = useFilterContext()
 
   const handleOpen = () => {
     setOpenDialogWindow(true);
@@ -32,29 +37,44 @@ const Header = () => {
     )
   }
 
+  const onClearFilters = () => {
+    setContext({
+      ...context,
+      showAll: true,
+      filterValues: resetFilters(context.filters)
+    })
+  }
+
+  const hasFiltersApplied = hasActiveFilters(context.filterValues)
+
+
   return (
     <AppBar position="static" sx={{ background: 'transparent', boxShadow: 'none' }}>
       <Container fixed>
         <Toolbar disableGutters>
-          <Box sx={{ display: 'flex',  justifyContent: 'space-between' }} width={1}>
-            <Box sx={{  display: 'flex',  mr: 1 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between' }} width={1}>
+            <Box sx={{ display: 'flex', mr: 1 }}>
               <img src={dknetlogo} alt="dknet logo" style={{ height: '40px', width: '40px' }} />
               <Typography variant="h6" component="div" ml={1.25}>
                 dkNET
               </Typography>
             </Box>
 
-            <Box sx={{  display: 'flex' }}>
+            <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', '& .MuiButton-root': { p: '0.625rem 1rem' } }}>
+              <Button variant="text" disabled={!hasFiltersApplied} onClick={onClearFilters}>Reset Query</Button>
+              <Button variant="text" onClick={() => setOpen(true)}>Open Guided Query</Button>
               <Button variant="text" onClick={redirectToFeedback}>Send us feedback</Button>
               <Button variant="outlined" onClick={handleOpen}>About dkNET Repo</Button>
-              <AboutDialog open={openAboutDialog} onClose={handleClose}/>
+              <AboutDialog open={openAboutDialog} onClose={handleClose} />
             </Box>
 
           </Box>
 
         </Toolbar>
+        <FiltersAssistantDialog open={open} setOpen={setOpen} />
+
       </Container>
-    </AppBar>
+    </AppBar >
   );
 };
 

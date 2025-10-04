@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Stack, Tooltip, Slide, colors } from '@mui/material';
+import { Box, Typography, Stack, Tooltip, Slide } from '@mui/material';
 import QuestionBox from './QuestionBox';
 import CheckBoxWidget from '../widgets/CheckBox';
 import DialogStepFooter from './DialogStepFooter';
