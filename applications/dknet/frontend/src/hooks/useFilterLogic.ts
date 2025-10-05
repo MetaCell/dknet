@@ -1,11 +1,11 @@
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useFilterContext } from '../context/Context';
 import { QuestionTab } from '../utils/types';
 
 export const useFilterLogic = () => {
   const { context, setContext } = useFilterContext();
 
-  const isFiltersEmpty = useCallback(() => {
+  const isFiltersEmpty = useMemo(() => {
     return Object.values(context.filterValues).every(value => value === undefined);
   }, [context.filterValues]);
 
@@ -46,7 +46,7 @@ export const useFilterLogic = () => {
 
   return {
     context,
-    isFiltersEmpty: isFiltersEmpty(),
+    isFiltersEmpty,
     handleSingleOptionSelect,
     isOptionSelectedForMultiple,
     isOptionSelectedForSingle,
