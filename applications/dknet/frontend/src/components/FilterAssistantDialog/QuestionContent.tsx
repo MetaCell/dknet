@@ -5,8 +5,8 @@ import CheckBoxWidget from '../widgets/CheckBox';
 import DialogStepFooter from './DialogStepFooter';
 import ExpandableText from '../ExpandableText';
 import { vars } from '../../theme/variables';
-import { QuestionTab, ResponsiveConfig } from '../../utils/types';
-import { INPUT_TYPES } from '../../utils/constants';
+import { QuestionTab } from '../../utils/types';
+import { INPUT_TYPES, MAX_CONTENT_WIDTH } from '../../utils/constants';
 import { useFilterLogic } from '../../hooks/useFilterLogic';
 
 const { grey200, primary25, primary600 } = vars;
@@ -132,7 +132,6 @@ const styles = {
 
 interface QuestionContentProps {
   currentQuestion: QuestionTab;
-  config: ResponsiveConfig;
   value: number;
   questionsTabs: QuestionTab[];
   onOptionClick: (question: QuestionTab, data: any) => void;
@@ -143,7 +142,6 @@ interface QuestionContentProps {
 
 const QuestionContent: React.FC<QuestionContentProps> = ({
   currentQuestion,
-  config,
   value,
   questionsTabs,
   onOptionClick,
@@ -235,7 +233,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
         timeout={600}
         appear
       >
-        <Box maxWidth={config.questionMaxWidth} width="100%" sx={styles.slideContainer}>
+        <Box maxWidth={MAX_CONTENT_WIDTH} width="100%" sx={styles.slideContainer}>
           <Box sx={styles.headerContainer}>
             <Stack sx={styles.headerStack} spacing={1}>
               <Typography textAlign="left" variant="h3">
@@ -256,7 +254,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
       </Slide>
       {/* Fixed Footer - Always Visible */}
       <Box sx={styles.footerContainer}>
-        <Box maxWidth={config.questionMaxWidth} width="100%">
+        <Box maxWidth={MAX_CONTENT_WIDTH} width="100%">
           <DialogStepFooter
             handlePrev={onPrev}
             value={value}

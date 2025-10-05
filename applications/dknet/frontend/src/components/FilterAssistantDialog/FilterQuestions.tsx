@@ -5,10 +5,10 @@ import QuestionContent from './QuestionContent';
 import PreviewPanel from './PreviewPanel';
 import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation';
 import { useFilterLogic } from '../../hooks/useFilterLogic';
-import { useResponsiveConfig } from '../../hooks/useResponsiveConfig';
 import { FilterQuestionsProps } from '../../utils/types';
 import { vars } from '../../theme/variables';
 import { useSidebarVisibility } from "../../hooks/useSidebarVisibility";
+import { PREVIEW_WIDTH, SIDEBAR_WIDTH } from "../../utils/constants";
 
 const { grey100, grey300 } = vars;
 
@@ -41,7 +41,6 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
   closeDialog,
   showPreview
 }) => {
-  const config = useResponsiveConfig();
   const { isFiltersEmpty, handleSingleOptionSelect, filterValues, results } = useFilterLogic();
   const { showSidebar } = useSidebarVisibility({ showPreview });
 
@@ -68,9 +67,9 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 
   // Calculate main content width based on sidebar and preview visibility
   const getMainContentWidth = () => {
-    const sidebarWidth = showSidebar ? config.sidebarWidth : '0';
+    const sidebarWidth = showSidebar ? SIDEBAR_WIDTH : '0';
     if (showPreview) {
-      return `calc(100% - ${sidebarWidth} - ${config.previewWidth})`;
+      return `calc(100% - ${sidebarWidth} - ${PREVIEW_WIDTH})`;
     }
     return `calc(100% - ${sidebarWidth})`;
   };
@@ -78,9 +77,9 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
   return (
     <Box sx={styles.container}>
       <Box sx={{
-        width: showSidebar ? config.sidebarWidth : '0',
-        minWidth: showSidebar ? config.sidebarWidth : '0',
-        maxWidth: showSidebar ? config.sidebarWidth : '0',
+        width: showSidebar ? SIDEBAR_WIDTH : '0',
+        minWidth: showSidebar ? SIDEBAR_WIDTH : '0',
+        maxWidth: showSidebar ? SIDEBAR_WIDTH : '0',
         overflow: 'hidden',
         transition: 'all 0.3s ease-in-out',
         opacity: showSidebar ? 1 : 0,
@@ -91,7 +90,6 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
           value={value}
           handleChange={handleChange}
           progress={progress}
-          config={config}
           filterValues={filterValues}
         />
       </Box>
@@ -100,7 +98,6 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
         <Box sx={styles.innerContent}>
           <QuestionContent
             currentQuestion={currentQuestion}
-            config={config}
             value={value}
             questionsTabs={questionsTabs}
             onOptionClick={handleOptionSelect}
@@ -113,7 +110,6 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 
       <PreviewPanel
         showPreview={showPreview}
-        config={config}
         isFiltersEmpty={isFiltersEmpty}
         results={results}
         closeDialog={closeDialog}

@@ -14,35 +14,25 @@ export const INPUT_TYPES = {
   HIERARCHY: 'HIERARCHY'
 } as const;
 
+
+export const SIDEBAR_WIDTH = '18.75rem'; 
+export const PREVIEW_WIDTH = '25rem'; 
+export const MAX_CONTENT_WIDTH = '40rem';
+
 export const RESPONSIVE_CONFIGS = {
   tablet: {
-    sidebarWidth: '18.75rem',
     showPreviewByDefault: false,
-    previewWidth: '20rem',
-    questionMaxWidth: '40rem',
   },
   laptop: {
-    sidebarWidth: '18.75rem',
     showPreviewByDefault: true,
-    previewWidth: '20rem',
-    questionMaxWidth: '40rem',
   },
   smallDesktop: {
-    sidebarWidth: '18.75rem',
     showPreviewByDefault: true,
-    previewWidth: '25rem',
-    questionMaxWidth: '42rem',
   },
   desktop: {
-    sidebarWidth: '18.75rem',
     showPreviewByDefault: true,
-    previewWidth: '25rem',
-    questionMaxWidth: '45rem',
   },
   default: {
-    sidebarWidth: '18.75rem',
     showPreviewByDefault: true,
-    previewWidth: '20rem',
-    questionMaxWidth: '40rem',
   }
 } as const;

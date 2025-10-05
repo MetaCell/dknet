@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react';
 import { Box, Typography, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
 import { vars } from '../../theme/variables';
-import { ResponsiveConfig, ResultItem } from '../../utils/types';
+import { ResultItem } from '../../utils/types';
 import { isTopMatch } from '../../utils/helpers';
+import { PREVIEW_WIDTH } from '../../utils/constants';
 
 const {
   grey200,
@@ -15,11 +16,11 @@ const {
 } = vars;
 
 const styles = {
-  container: (showPreview: boolean, config: ResponsiveConfig) => ({
+  container: (showPreview: boolean) => ({
     transition: 'all ease-in-out .3s',
-    width: showPreview ? config.previewWidth : '0',
-    minWidth: showPreview ? config.previewWidth : '0',
-    maxWidth: showPreview ? config.previewWidth : '0',
+    width: showPreview ? PREVIEW_WIDTH : '0',
+    minWidth: showPreview ? PREVIEW_WIDTH : '0',
+    maxWidth: showPreview ? PREVIEW_WIDTH : '0',
     opacity: showPreview ? 1 : 0,
     background: white,
     borderLeft: showPreview ? `1px solid ${grey200}` : 'none',
@@ -99,7 +100,6 @@ const styles = {
 
 interface PreviewPanelProps {
   showPreview: boolean;
-  config: ResponsiveConfig;
   isFiltersEmpty: boolean;
   results: ResultItem[];
   closeDialog: () => void;
@@ -107,7 +107,6 @@ interface PreviewPanelProps {
 
 const PreviewPanel: React.FC<PreviewPanelProps> = ({
   showPreview,
-  config,
   isFiltersEmpty,
   results,
   closeDialog
@@ -130,7 +129,7 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({
 
   return (
     <Box
-      sx={styles.container(showPreview, config)}
+      sx={styles.container(showPreview)}
     >
       <Stack spacing={2} sx={styles.headerBox}>
         <Typography variant="h4">Preview of results</Typography>

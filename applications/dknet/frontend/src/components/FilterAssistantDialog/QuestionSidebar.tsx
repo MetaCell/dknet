@@ -2,10 +2,11 @@ import React, { useCallback } from 'react';
 import { Box, Typography, Button, Tabs, Tab } from '@mui/material';
 import ProgressBar from '../widgets/ProgressBar';
 import { vars } from '../../theme/variables';
-import { QuestionTab, ResponsiveConfig } from '../../utils/types';
+import { QuestionTab } from '../../utils/types';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useFilterContext } from '../../context/Context';
 import { resetFilters } from '../../utils/helpers';
+import { SIDEBAR_WIDTH } from '../../utils/constants';
 const { grey500, primary700, primary600, white, grey300 } = vars;
 
 const styles = {
@@ -89,7 +90,6 @@ interface QuestionSidebarProps {
   value: number;
   handleChange: (event: React.SyntheticEvent, newValue: number) => void;
   progress: number;
-  config: ResponsiveConfig;
   filterValues: { [key: string]: any };
 }
 
@@ -103,7 +103,6 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
   value,
   handleChange,
   progress,
-  config,
   filterValues
 }) => {
   const { context, setContext } = useFilterContext();
@@ -136,7 +135,7 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
 
 
   return (
-    <Box sx={styles.container(config.sidebarWidth)}>
+    <Box sx={styles.container(SIDEBAR_WIDTH)}>
       <Box sx={styles.leftBlock}>
         <Box sx={styles.header}>
           <Typography variant='h4'>Questions</Typography>

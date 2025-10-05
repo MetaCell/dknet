@@ -24,10 +24,7 @@ export interface FilterQuestionsProps {
 }
 
 export interface ResponsiveConfig {
-  sidebarWidth: string;
   showPreviewByDefault: boolean;
-  previewWidth: string;
-  questionMaxWidth: string;
 }
 
 export interface ResultItem {

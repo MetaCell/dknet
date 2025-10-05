@@ -22,6 +22,9 @@ const Header = () => {
   const [open, setOpen] = React.useState(false);
   const { context, setContext } = useFilterContext()
 
+  const showResetQuery = (context.results.length > 0 && context.filters.length > 0) && (!hasActiveFilters(context.filterValues) || context.showAll);
+
+
   const handleOpen = () => {
     setOpenDialogWindow(true);
   };
@@ -61,7 +64,9 @@ const Header = () => {
             </Box>
 
             <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', '& .MuiButton-root': { p: '0.625rem 1rem' } }}>
-              <Button variant="text" disabled={!hasFiltersApplied} onClick={onClearFilters}>Reset Query</Button>
+              {showResetQuery &&
+                <Button variant="text" disabled={!hasFiltersApplied} onClick={onClearFilters}>Reset Query</Button>
+              }
               <Button variant="text" onClick={() => setOpen(true)}>Open Guided Query</Button>
               <Button variant="text" onClick={redirectToFeedback}>Send us feedback</Button>
               <Button variant="outlined" onClick={handleOpen}>About dkNET Repo</Button>
@@ -72,7 +77,6 @@ const Header = () => {
 
         </Toolbar>
         <FiltersAssistantDialog open={open} setOpen={setOpen} />
-
       </Container>
     </AppBar >
   );

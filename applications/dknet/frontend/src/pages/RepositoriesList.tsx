@@ -121,7 +121,7 @@ const RepositoriesList = () => {
   return (
     <>
       <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4} height={'100%'}>
-        <Grid xs={7} md={7} lg={8} item height={'100%'}>
+        <Grid xs={8} md={8} lg={8} item height={'100%'}>
           <Stack direction='row' justifyContent='space-between' alignItems='center' mb={2}>
             <Typography variant='h2'>
               <Typography component="span" variant='h2' color={vars.primary800}>{repos.length} repositories</Typography>
@@ -145,7 +145,7 @@ const RepositoriesList = () => {
             }
           </Grid>
         </Grid>
-        <Grid xs={5} md={5} lg={4} item>
+        <Grid xs={4} md={4} lg={4} item>
           <Stack spacing={2}>
             <Filters />
             <Box sx={styles.learnMoreBox}>
