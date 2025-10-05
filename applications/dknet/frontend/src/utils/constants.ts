@@ -16,39 +16,33 @@ export const INPUT_TYPES = {
 
 export const RESPONSIVE_CONFIGS = {
   tablet: {
-    sidebarWidth: '19rem',
+    sidebarWidth: '18.75rem',
     showPreviewByDefault: false,
-    previewWidth: '24rem',
-    questionMaxWidth: '38rem',
+    previewWidth: '20rem',
+    questionMaxWidth: '40rem',
   },
   laptop: {
-    sidebarWidth: '20rem',
+    sidebarWidth: '18.75rem',
     showPreviewByDefault: true,
-    previewWidth: '25rem',
+    previewWidth: '20rem',
     questionMaxWidth: '40rem',
   },
   smallDesktop: {
-    sidebarWidth: '21rem',
+    sidebarWidth: '18.75rem',
     showPreviewByDefault: true,
-    previewWidth: '26rem',
+    previewWidth: '25rem',
     questionMaxWidth: '42rem',
   },
   desktop: {
-    sidebarWidth: '22rem',
-    showPreviewByDefault: true,
-    previewWidth: '28rem',
-    questionMaxWidth: '45rem',
-  },
-  tooSmall: {
-    sidebarWidth: '18rem',
-    showPreviewByDefault: false,
-    previewWidth: '20rem',
-    questionMaxWidth: '30rem',
-  },
-  default: {
-    sidebarWidth: '20rem',
+    sidebarWidth: '18.75rem',
     showPreviewByDefault: true,
     previewWidth: '25rem',
+    questionMaxWidth: '45rem',
+  },
+  default: {
+    sidebarWidth: '18.75rem',
+    showPreviewByDefault: true,
+    previewWidth: '20rem',
     questionMaxWidth: '40rem',
   }
 } as const;
