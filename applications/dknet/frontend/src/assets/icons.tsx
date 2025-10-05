@@ -302,7 +302,7 @@ export const EmptyStateIllustration = () => (
 );
 
 
-export const SmallScreenIcon = (props: SvgIconProps) => (
+export const SmallScreenIcon = () => (
   <svg width="152" height="108" viewBox="0 0 152 108" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_2532_47390)">
       <path d="M149.638 60.918H94.4732C93.1684 60.918 92.1107 61.9936 92.1107 63.3205V105.245C92.1107 106.572 93.1684 107.648 94.4732 107.648H149.638C150.942 107.648 152 106.572 152 105.245V63.3205C152 61.9936 150.942 60.918 149.638 60.918Z" fill="#F2F4F7" />

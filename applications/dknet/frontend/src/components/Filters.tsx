@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { useFilterContext } from '../context/Context'
 
 //components
@@ -30,13 +30,13 @@ const Filters = () => {
   const hierarchicalFilters = filters
     .filter((filter) => filter.inputType === "HIERARCHY" && filter.label !== undefined)
 
-  const onClearFilters = () => {
+  const onClearFilters = useCallback(() => {
     setContext({
       ...context,
       showAll: true,
       filterValues: resetFilters(context.filters)
     })
-  }
+  }, [context, setContext]);
 
   const hasFiltersApplied = hasActiveFilters(context.filterValues)
 

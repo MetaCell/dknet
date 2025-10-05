@@ -10,15 +10,13 @@ const {
   primary600, primary700, primary25, primary200,
   error600, error25,
   warning25, warning700, warning500,
-  success50, success700, success500,
+  success50, success700,
   checkboxBorderColor,
   cardChipBgColor,
   warning50,
   warning300,
   dialogBoxShadow,
   primary500,
-  iconButtonFocusShadow,
-  iconButtonHoverShadow,
   primary800,
   primary50,
   checkboxBgChecked,
@@ -134,6 +132,9 @@ const theme = createTheme({
     },
     MuiCssBaseline: {
       styleOverrides: `
+      body {padding: 0 !important; margin: 0;
+      overflow-y: scroll !important;
+      }
       ::-webkit-scrollbar {
         width: 0.5rem;
         height: 0.5rem;

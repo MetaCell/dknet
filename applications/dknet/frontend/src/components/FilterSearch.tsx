@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 //components
 import Box from '@mui/material/Box'
@@ -26,7 +26,7 @@ const {
 const FilterSearch = () => {
   const { context, setContext } = useFilterContext();
 
-  const onChangeFilterValue = (value, filter) => {
+  const onChangeFilterValue = useCallback((value, filter) => {
     setContext({
       ...context,
       filterValues: {
@@ -34,7 +34,7 @@ const FilterSearch = () => {
         [filter.code]: value
       }
     })
-  }
+  }, [context, setContext]);
 
   return (
     <>

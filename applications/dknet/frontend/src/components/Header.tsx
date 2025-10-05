@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 //components
 import AppBar from '@mui/material/AppBar';
@@ -25,28 +25,29 @@ const Header = () => {
   const showResetQuery = (context.results.length > 0 && context.filters.length > 0) && (!hasActiveFilters(context.filterValues) || context.showAll);
 
 
-  const handleOpen = () => {
+  const handleOpen = useCallback(() => {
     setOpenDialogWindow(true);
-  };
+  }, []);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpenDialogWindow(false);
-  };
+  }, []);
 
-  const redirectToFeedback = () => {
+  const redirectToFeedback = useCallback(() => {
     window.open(
       'https://docs.google.com/forms/d/e/1FAIpQLSf1aD1Skpp4kV8w3cadMjdRdll3es9h3tj6b6jO8h0s1P9-iA/viewform',
       '_blank'
     )
-  }
+  }, []);
 
-  const onClearFilters = () => {
+
+  const onClearFilters = useCallback(() => {
     setContext({
       ...context,
       showAll: true,
       filterValues: resetFilters(context.filters)
     })
-  }
+  }, [context, setContext]);
 
   const hasFiltersApplied = hasActiveFilters(context.filterValues)
 

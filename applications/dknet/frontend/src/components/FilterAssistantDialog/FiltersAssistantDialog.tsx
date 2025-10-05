@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 import { useFilterContext } from '../../context/Context'
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -42,38 +42,37 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpen(false);
-  };
+  }, [setOpen]);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const updateProgress = useCallback((number) => {
+    const newProgressValue = (number / (questionsTabs.length - 1)) * 100
+    setProgress(newProgressValue)
+  }, [questionsTabs.length]);
+
+  const handleChange = useCallback((event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue);
     updateProgress(newValue);
-  };
+  }, [updateProgress]);
 
-
-  const onClickNext = () => {
+  const onClickNext = useCallback(() => {
     if (tabValue !== (questionsTabs.length - 1)) {
       setTabValue(tabValue + 1)
       updateProgress(tabValue + 1)
     }
-  }
+  }, [tabValue, questionsTabs.length, updateProgress]);
 
-  const onClickPrev = () => {
+  const onClickPrev = useCallback(() => {
     setTabValue(tabValue - 1)
     updateProgress(tabValue - 1)
-  }
+  }, [tabValue, updateProgress]);
 
-  const updateProgress = (number) => {
-    const newProgressValue = (number / (questionsTabs.length - 1)) * 100
-    setProgress(newProgressValue)
-  }
-
-  const closeDialog = () => {
+  const closeDialog = useCallback(() => {
     setOpen(false);
     setTabValue(0);
     setProgress(0);
-  }
+  }, [setOpen]);
 
   return (
     <Dialog

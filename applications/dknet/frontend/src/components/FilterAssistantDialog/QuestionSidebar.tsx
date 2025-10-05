@@ -108,13 +108,13 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
   const { context, setContext } = useFilterContext();
 
   // Handler for resetting all filters
-  const handleResetFilters = () => {
+  const handleResetFilters = useCallback(() => {
     setContext({
       ...context,
       showAll: false,
       filterValues: resetFilters(context.allFilters)
     });
-  };
+  }, [context, setContext]);
 
   // Helper function to check if a question has any selected filters
   const hasSelectedFilters = useCallback((question: QuestionTab): boolean => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Box, Typography, Button, Stack } from "@mui/material";
 import { useFilterContext } from "../context/Context";
 import { resetFilters } from "../utils/helpers";
@@ -7,12 +7,12 @@ import { EmptyStateIllustration } from "../assets/icons";
 const EmptyResultsLayout = () => {
   const { context, setContext } = useFilterContext();
 
-  const onClearFilters = () => {
+  const onClearFilters = useCallback(() => {
     setContext({
       ...context,
       filterValues: resetFilters(context.filters)
     });
-  };
+  }, [context, setContext]);
 
   return (
     <Box sx={{

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 
 //components
 import Box from '@mui/material/Box'
@@ -26,7 +26,8 @@ const {
 const CustomRadioGroup = ({ data }) => {
   const { context, setContext } = useFilterContext()
   const filter = context.allFilters.find((filter: any) => filter.code === data.code)
-  const onRadioChange = (e: any) => {
+
+  const onRadioChange = useCallback((e: any) => {
     const newValue = filter.options.find(row => row.code === e.target.value)
     setContext({
       ...context,
@@ -35,9 +36,9 @@ const CustomRadioGroup = ({ data }) => {
         [data.code]: newValue
       }
     })
-  }
+  }, [filter.options, context, setContext, data.code]);
 
-  const onClearFilter = () => {
+  const onClearFilter = useCallback(() => {
     setContext({
       ...context,
       showAll: true,
@@ -46,7 +47,7 @@ const CustomRadioGroup = ({ data }) => {
         [data.code]: undefined
       }
     })
-  }
+  }, [context, setContext, data.code]);
 
   return (
     <Box display='flex' flexDirection='column' gap={1}>

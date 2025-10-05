@@ -64,15 +64,14 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 
   const currentQuestion = questionsTabs[value];
 
-
   // Calculate main content width based on sidebar and preview visibility
-  const getMainContentWidth = () => {
+  const getMainContentWidth = useCallback(() => {
     const sidebarWidth = showSidebar ? SIDEBAR_WIDTH : '0';
     if (showPreview) {
       return `calc(100% - ${sidebarWidth} - ${PREVIEW_WIDTH})`;
     }
     return `calc(100% - ${sidebarWidth})`;
-  };
+  }, [showSidebar, showPreview]);
 
   return (
     <Box sx={styles.container}>
