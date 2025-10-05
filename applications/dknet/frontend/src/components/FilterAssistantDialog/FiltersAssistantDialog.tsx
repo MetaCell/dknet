@@ -13,6 +13,7 @@ import { PreviewIcon } from "../../assets/icons";
 import { Box, Divider } from "@mui/material";
 import { vars } from "../../theme/variables";
 import { useResponsive } from '../../hooks/useResponsive';
+import { hasActiveFilters } from "../../utils/helpers";
 
 const {
   grey200,
@@ -74,6 +75,9 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
     setProgress(0);
   }, [setOpen]);
 
+  const hasFiltersApplied = hasActiveFilters(context.filterValues)
+  console.log(hasFiltersApplied, context.results.length === 0);
+
   return (
     <Dialog
       open={open}
@@ -105,9 +109,9 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
             onClick={() => {
               handleClose();
             }}
-            disabled={context.results.length === 0 && !context.showAll}
+            disabled={context.results.length === 0 || !hasFiltersApplied}
           >
-            Go To Results ({context.results.length})
+            Go To Results ({hasFiltersApplied ? context.results.length : 0})
           </Button>
           <Divider orientation="vertical" sx={{ height: '2rem', background: grey200 }} />
           <IconButton className={`outlined ${showPreview ? 'active' : ''}`} onClick={() => setShowPreview(!showPreview)}>
