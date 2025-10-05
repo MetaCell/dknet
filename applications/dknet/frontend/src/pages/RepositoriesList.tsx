@@ -124,7 +124,7 @@ const RepositoriesList = () => {
         <Grid xs={8} md={8} lg={8} item height={'100%'}>
           <Stack direction='row' justifyContent='space-between' alignItems='center' mb={2}>
             <Typography variant='h2'>
-              <Typography component="span" variant='h2' color={vars.primary800}>{repos.length} repositories</Typography>
+              <Typography component="span" variant='h2' color={vars.primary800}>{repos.length} repositories</Typography> {" "}
               matching your criteria
             </Typography>
             <SortWidget />
