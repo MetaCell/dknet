@@ -6,7 +6,7 @@ import DialogStepFooter from './DialogStepFooter';
 import ExpandableText from '../ExpandableText';
 import { vars } from '../../theme/variables';
 import { QuestionTab } from '../../utils/types';
-import { INPUT_TYPES, MAX_CONTENT_WIDTH } from '../../utils/constants';
+import { INPUT_TYPES, MIN_CONTENT_WIDTH } from '../../utils/constants';
 import { useFilterLogic } from '../../hooks/useFilterLogic';
 
 const { grey200, primary25, primary600 } = vars;
@@ -35,18 +35,20 @@ const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
-    py: 4,
-    px: 3
+    overflow: 'hidden',
   },
 
   slideContainer: {
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
-    minHeight: 0
+    minHeight: 0,
+    overflow: 'auto',
+    pt: 4,
+    pb: 2,
+    px: 3,
   },
 
   headerContainer: {
@@ -66,15 +68,17 @@ const styles = {
     justifyContent: 'center',
     width: '100%',
     flex: 1,
-    minHeight: 0,
+    minHeight: '20rem',
   },
 
   footerContainer: {
     display: 'flex',
     justifyContent: 'center',
     flexShrink: 0,
-    mt: 2,
     width: '100%',
+    pb: 4,
+    pt: 2,
+    px: 3,
   },
 
   getMultipleChoiceContainer: (optionsCount: number) => {
@@ -233,7 +237,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
         timeout={600}
         appear
       >
-        <Box maxWidth={MAX_CONTENT_WIDTH} width="100%" sx={styles.slideContainer}>
+        <Box maxWidth={MIN_CONTENT_WIDTH} width="100%" sx={styles.slideContainer}>
           <Box sx={styles.headerContainer}>
             <Stack sx={styles.headerStack} spacing={1}>
               <Typography textAlign="left" variant="h3">
@@ -254,7 +258,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
       </Slide>
       {/* Fixed Footer - Always Visible */}
       <Box sx={styles.footerContainer}>
-        <Box maxWidth={MAX_CONTENT_WIDTH} width="100%">
+        <Box maxWidth={MIN_CONTENT_WIDTH} width="100%">
           <DialogStepFooter
             handlePrev={onPrev}
             value={value}

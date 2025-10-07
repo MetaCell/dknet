@@ -38,7 +38,7 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
 
   // Set initial preview state based on screen size
   const [showPreview, setShowPreview] = useState(() => {
-    return screenSize !== 'tooSmall';
+    return screenSize !== 'tooSmall' && screenSize !== 'tablet' && screenSize !== 'laptop';
   });
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
@@ -76,7 +76,6 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   }, [setOpen]);
 
   const hasFiltersApplied = hasActiveFilters(context.filterValues)
-  console.log(hasFiltersApplied, context.results.length === 0);
 
   return (
     <Dialog

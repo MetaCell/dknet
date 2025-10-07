@@ -66,9 +66,9 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
 
   // Calculate main content width based on sidebar and preview visibility
   const getMainContentWidth = useCallback(() => {
-    const sidebarWidth = showSidebar ? SIDEBAR_WIDTH : '0';
+    const sidebarWidth = showSidebar ? `${SIDEBAR_WIDTH}px` : '0px';
     if (showPreview) {
-      return `calc(100% - ${sidebarWidth} - ${PREVIEW_WIDTH})`;
+      return `calc(100% - ${sidebarWidth} - ${PREVIEW_WIDTH}px)`;
     }
     return `calc(100% - ${sidebarWidth})`;
   }, [showSidebar, showPreview]);
@@ -76,9 +76,9 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
   return (
     <Box sx={styles.container}>
       <Box sx={{
-        width: showSidebar ? SIDEBAR_WIDTH : '0',
-        minWidth: showSidebar ? SIDEBAR_WIDTH : '0',
-        maxWidth: showSidebar ? SIDEBAR_WIDTH : '0',
+        width: showSidebar ? `${SIDEBAR_WIDTH}px` : '0',
+        minWidth: showSidebar ? `${SIDEBAR_WIDTH}px` : '0',
+        maxWidth: showSidebar ? `${SIDEBAR_WIDTH}px` : '0',
         overflow: 'hidden',
         transition: 'all 0.3s ease-in-out',
         opacity: showSidebar ? 1 : 0,

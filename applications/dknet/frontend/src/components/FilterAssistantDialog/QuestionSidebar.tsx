@@ -10,9 +10,9 @@ import { SIDEBAR_WIDTH } from '../../utils/constants';
 const { grey500, primary700, primary600, white, grey300 } = vars;
 
 const styles = {
-  container: (sidebarWidth: string) => ({
+  container: (sidebarWidth: number) => ({
     height: '100%',
-    width: sidebarWidth,
+    width: `${sidebarWidth}px`,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between'

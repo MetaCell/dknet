@@ -15,9 +15,9 @@ export const INPUT_TYPES = {
 } as const;
 
 
-export const SIDEBAR_WIDTH = '18.75rem'; 
-export const PREVIEW_WIDTH = '25rem'; 
-export const MAX_CONTENT_WIDTH = '40rem';
+export const SIDEBAR_WIDTH = 300; 
+export const PREVIEW_WIDTH = 400; 
+export const MIN_CONTENT_WIDTH = 640;
 
 export const RESPONSIVE_CONFIGS = {
   tablet: {
