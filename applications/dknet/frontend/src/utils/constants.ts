@@ -22,17 +22,22 @@ export const MIN_CONTENT_WIDTH = 640;
 export const RESPONSIVE_CONFIGS = {
   tablet: {
     showPreviewByDefault: false,
+    homePageImageWidth: '11.25rem',
   },
   laptop: {
     showPreviewByDefault: true,
+    homePageImageWidth: '14.25rem',
   },
   smallDesktop: {
     showPreviewByDefault: true,
+    homePageImageWidth: '23.0625rem',
   },
   desktop: {
     showPreviewByDefault: true,
+    homePageImageWidth: '23.0625rem',
   },
   default: {
     showPreviewByDefault: true,
+    homePageImageWidth: '14.25rem',
   }
 } as const;

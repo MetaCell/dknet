@@ -14,6 +14,7 @@ import { Box, Divider } from "@mui/material";
 import { vars } from "../../theme/variables";
 import { useResponsive } from '../../hooks/useResponsive';
 import { hasActiveFilters } from "../../utils/helpers";
+import { RESPONSIVE_CONFIGS } from "../../utils/constants";
 
 const {
   grey200,
@@ -36,16 +37,22 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const { context } = useFilterContext()
   const { screenSize } = useResponsive();
 
-  // Set initial preview state based on screen size
+  // Set initial preview state based on screen size config
   const [showPreview, setShowPreview] = useState(() => {
-    return screenSize !== 'tooSmall' && screenSize !== 'tablet' && screenSize !== 'laptop';
+    const config = RESPONSIVE_CONFIGS[screenSize] || RESPONSIVE_CONFIGS.default;
+    return config.showPreviewByDefault;
   });
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
   const handleClose = useCallback(() => {
     setOpen(false);
-  }, [setOpen]);
+    setTabValue(0);
+    setProgress(0);
+    // Reset preview state to default based on screen size config
+    const config = RESPONSIVE_CONFIGS[screenSize] || RESPONSIVE_CONFIGS.default;
+    setShowPreview(config.showPreviewByDefault);
+  }, [setOpen, screenSize]);
 
   const updateProgress = useCallback((number) => {
     const newProgressValue = (number / (questionsTabs.length - 1)) * 100
@@ -73,7 +80,10 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
     setOpen(false);
     setTabValue(0);
     setProgress(0);
-  }, [setOpen]);
+    // Reset preview state to default based on screen size config
+    const config = RESPONSIVE_CONFIGS[screenSize] || RESPONSIVE_CONFIGS.default;
+    setShowPreview(config.showPreviewByDefault);
+  }, [setOpen, screenSize]);
 
   const hasFiltersApplied = hasActiveFilters(context.filterValues)
 

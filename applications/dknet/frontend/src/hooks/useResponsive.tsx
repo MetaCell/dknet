@@ -5,8 +5,10 @@ export type ScreenSize = 'tooSmall' | 'tablet' | 'laptop' | 'smallDesktop' | 'de
 
 export const useResponsive = () => {
   // Define breakpoints based on MUI default theme
-  const isTooSmall = useMediaQuery(theme.breakpoints.down('sm'));
-  // < 600px → too small (phones)
+  const isTooSmallWidth = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTooSmallHeight = useMediaQuery('(max-height: 600px)');
+  const isTooSmall = isTooSmallWidth || isTooSmallHeight;
+  // < 600px width or < 600px height → too small (phones)
 
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
   // 600–899px → tablet
