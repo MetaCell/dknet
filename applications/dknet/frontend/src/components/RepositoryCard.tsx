@@ -83,15 +83,17 @@ const RepositoryCard = (props) => {
   const { isBestMatch, repository } = props;
   const filterLabels = Object.values(repository.attributes)[0] as Array<string>
 
+  const isBestMatchCheck = isBestMatch && Boolean(Object.keys(context.filterValues).length)
+
   const getClass = useCallback(() => {
-    return isBestMatch ? "successCard" : ""
-  }, [isBestMatch])
+    return isBestMatchCheck ? "successCard" : ""
+  }, [isBestMatchCheck])
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
     <Card id={"result_" + props.resultIndex} sx={styles.card} className={getClass()}>
       {
-        isBestMatch &&
+        isBestMatchCheck &&
         <Box sx={styles.badgeContainer}>
           <Chip label="Best Match" className="cardBadge" />
         </Box>
