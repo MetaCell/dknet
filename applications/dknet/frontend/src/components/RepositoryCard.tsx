@@ -89,6 +89,13 @@ const RepositoryCard = (props) => {
     return isBestMatchCheck ? "successCard" : ""
   }, [isBestMatchCheck])
 
+  const getScoreDisplay = useCallback((pctMatch: number | undefined) => {
+    if (pctMatch !== undefined && pctMatch > 0) {
+      return ` - Score ${pctMatch}%`;
+    }
+    return '';
+  }, []);
+
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
     <Card id={"result_" + props.resultIndex} sx={styles.card} className={getClass()}>
@@ -110,7 +117,7 @@ const RepositoryCard = (props) => {
                   color="grey.800"
                   sx={styles.link}
                 >
-                  {repository.label} {repository.pctMatch !== undefined ? repository.pctMatch ? ` - Score ${repository.pctMatch}%` : "" : ``}
+                  {repository.label}{getScoreDisplay(repository.pctMatch)}
                 </Link>
               </Tooltip>
               <ArrowOutwardIcon />
