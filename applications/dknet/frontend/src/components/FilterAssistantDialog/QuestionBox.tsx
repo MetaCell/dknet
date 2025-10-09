@@ -2,7 +2,13 @@ import React from "react";
 
 import Box from '@mui/material/Box';
 
-const QuestionBox = (props: any) => {
+interface QuestionBoxProps {
+  maxWidth?: string;
+  children?: React.ReactNode;
+  inputType?: string;
+}
+
+const QuestionBox = (props: QuestionBoxProps) => {
   return (
     <Box sx={{
       background: '#FFF',
