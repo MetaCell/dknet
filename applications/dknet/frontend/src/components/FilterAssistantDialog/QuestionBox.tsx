@@ -13,7 +13,7 @@ const QuestionBox = (props: any) => {
       flex: 1,
       overflow: 'auto',
       height: '100%',
-      maxWidth: props.maxWidth || '100%',
+      maxWidth: '100%',
       display: 'flex',
       flexDirection: 'column',
     }}>

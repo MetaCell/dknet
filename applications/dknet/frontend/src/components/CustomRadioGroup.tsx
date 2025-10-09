@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 
 //components
 import Box from '@mui/material/Box'
@@ -14,7 +14,8 @@ import RadioGroupWidget from "./widgets/RadioWidget";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import { useFilterContext } from "../context/Context";
-import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
+import Button from "@mui/material/Button/Button"
+import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 
 
 const {
@@ -25,28 +26,28 @@ const {
 const CustomRadioGroup = ({ data }) => {
   const { context, setContext } = useFilterContext()
   const filter = context.allFilters.find((filter: any) => filter.code === data.code)
-  const onRadioChange = (e: any) => {
+
+  const onRadioChange = useCallback((e: any) => {
     const newValue = filter.options.find(row => row.code === e.target.value)
     setContext({
       ...context,
-      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: newValue
       }
     })
-  }
+  }, [filter.options, context, setContext, data.code]);
 
-  const onClearFilter = () => {
+  const onClearFilter = useCallback(() => {
     setContext({
       ...context,
-      showAll: false,
+      showAll: true,
       filterValues: {
         ...context.filterValues,
         [data.code]: undefined
       }
     })
-  }
+  }, [context, setContext, data.code]);
 
   return (
     <Box display='flex' flexDirection='column' gap={1}>
@@ -57,22 +58,27 @@ const CustomRadioGroup = ({ data }) => {
         }}
       >
         <Stack direction="row" alignItems='center' justifyContent="space-between">
-          <Typography component='h4'>
+          <Typography variant='h4' flex={1}>
             {data.label}
           </Typography>
-          <Stack direction="row">
+          <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
             <Tooltip title={data.description}>
-              <IconButton sx={{ p: '2px' }}>
+              <IconButton sx={{ height: 'fit-content', p: 0 }}>
                 <HelpOutlineIcon sx={{
                   color: grey400,
                 }} />
               </IconButton>
             </Tooltip>
-            <IconButton sx={{ p: '2px' }} onClick={onClearFilter}>
-              <CleaningServicesOutlinedIcon sx={{
-                color: '#98A2B3'
-              }} />
-            </IconButton>
+            <Button
+              variant='text'
+              onClick={onClearFilter}
+              startIcon={<FilterListOffIcon />}
+              disabled={!context.filterValues?.[data.code]}
+              sx={{
+                height: 'fit-content',
+                minHeight: 0,
+                p: 0,
+              }}>Reset filter</Button>
           </Stack>
         </Stack>
       </FormLabel>

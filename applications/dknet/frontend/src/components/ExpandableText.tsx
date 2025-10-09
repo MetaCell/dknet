@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Box, Typography, Button, Fade } from '@mui/material';
 import { vars } from '../theme/variables';
 
@@ -36,9 +36,9 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({
   const displayText = isExpanded ? text : text.slice(0, 250);
   const shouldShowMoreButton = text.length > 250; // Approximate 3 lines
 
-  const toggleExpanded = () => {
+  const toggleExpanded = useCallback(() => {
     setIsExpanded(!isExpanded);
-  };
+  }, [isExpanded]);
 
   return (
     <Box>

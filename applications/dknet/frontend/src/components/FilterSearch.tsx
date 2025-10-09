@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 //components
 import Box from '@mui/material/Box'
@@ -10,11 +10,11 @@ import FormLabel from '@mui/material/FormLabel'
 import Tooltip from "@mui/material/Tooltip"
 import IconButton from "@mui/material/IconButton"
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
-import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
-
+import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 import { useFilterContext } from "../context/Context";
 import CustomAutoComplete from "./widgets/CustomAutoComplete";
 import { vars } from "../theme/variables";
+import { Button } from "@mui/material";
 
 const {
   grey700,
@@ -26,16 +26,15 @@ const {
 const FilterSearch = () => {
   const { context, setContext } = useFilterContext();
 
-  const onChangeFilterValue = (value, filter) => {
+  const onChangeFilterValue = useCallback((value, filter) => {
     setContext({
       ...context,
-      showAll: false,
       filterValues: {
         ...context.filterValues,
         [filter.code]: value
       }
     })
-  }
+  }, [context, setContext]);
 
   return (
     <>
@@ -47,31 +46,36 @@ const FilterSearch = () => {
           }}
         >
           <Stack direction="row" alignItems='center' justifyContent="space-between">
-            <Typography component='h4'>
-                Data Type
+            <Typography variant="h4" flex={1}>
+              Data Type
             </Typography>
-            <Stack direction="row">
+            <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
               <Tooltip title={"Data Type"}>
-                <IconButton sx={{ p: '2px' }}>
+                <IconButton sx={{ height: 'fit-content', p: 0 }}>
                   <HelpOutlineIcon sx={{
                     color: grey400,
                   }} />
                 </IconButton>
               </Tooltip>
-              <IconButton sx={{ p: '2px' }} onClick={() => {
-                setContext({
-                  ...context,
-                  showAll: false,
-                  filterValues: {
-                    ...context.filterValues,
-                    [context.allFilters[0].code]: undefined
-                  }
-                })
-              }}>
-                <CleaningServicesOutlinedIcon sx={{
-                  color: '#98A2B3'
-                }} />
-              </IconButton>
+              <Button sx={{
+                height: 'fit-content',
+                minHeight: 0,
+                p: 0,
+              }}
+                disabled={!context.filterValues?.[context.allFilters[0].code]}
+                variant='text'
+                onClick={() => {
+                  setContext({
+                    ...context,
+                    showAll: true,
+                    filterValues: {
+                      ...context.filterValues,
+                      [context.allFilters[0].code]: undefined
+                    }
+                  })
+                }}
+                startIcon={<FilterListOffIcon />}
+              >Reset filter</Button>
             </Stack>
           </Stack>
         </FormLabel>
@@ -81,7 +85,8 @@ const FilterSearch = () => {
             sx={{
               p: '8px', display: 'flex', alignItems: 'center', border: '1px solid #EAECF0',
               borderRadius: '12px',
-              minWidth: '150px'
+              boxShadow: 'none',
+              maxWidth: '100%',
             }}
           >
             <CustomAutoComplete
@@ -100,12 +105,12 @@ const FilterSearch = () => {
         <FormLabel
           component="legend"
           sx={{
-            color: grey700
+            color: grey700,
           }}
         >
           <Stack direction="row" alignItems='center' justifyContent="space-between">
-            <Typography component='h4'>
-                Domain
+            <Typography variant="h4" flex={1}>
+              Domain
             </Typography>
             <Stack direction="row">
               <Tooltip title={"Domain"}>
@@ -115,20 +120,21 @@ const FilterSearch = () => {
                   }} />
                 </IconButton>
               </Tooltip>
-              <IconButton sx={{ p: '2px' }} onClick={() => {
-                setContext({
-                  ...context,
-                  showAll: false,
-                  filterValues: {
-                    ...context.filterValues,
-                    [context.allFilters[1].code]: undefined
-                  }
-                })
-              }}>
-                <CleaningServicesOutlinedIcon sx={{
-                  color: '#98A2B3'
-                }} />
-              </IconButton>
+              <Button
+                variant='text'
+                disabled={!context.filterValues?.[context.allFilters[1].code]}
+                onClick={() => {
+                  setContext({
+                    ...context,
+                    showAll: true,
+                    filterValues: {
+                      ...context.filterValues,
+                      [context.allFilters[1].code]: undefined
+                    }
+                  })
+                }}
+                startIcon={<FilterListOffIcon />}
+              >Reset filter</Button>
             </Stack>
           </Stack>
         </FormLabel>
@@ -138,7 +144,8 @@ const FilterSearch = () => {
             sx={{
               p: '8px', display: 'flex', alignItems: 'center', border: '1px solid #EAECF0',
               borderRadius: '12px',
-              minWidth: '150px'
+              boxShadow: 'none',
+              maxWidth: '100%',
             }}
           >
             <CustomAutoComplete

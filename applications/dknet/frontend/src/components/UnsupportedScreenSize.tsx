@@ -1,61 +1,52 @@
 import React from 'react';
-import { Box, Typography, Paper } from '@mui/material';
-import { vars } from '../theme/variables';
-
-const { grey700, grey500, primary600, grey50 } = vars;
+import { Box, Typography } from '@mui/material';
+import { SmallScreenIcon } from '../assets/icons';
 
 const UnsupportedScreenSize: React.FC = () => {
   return (
     <Box
       sx={{
-        height: '100vh',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
         width: '100vw',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: grey50,
-        padding: 2
+        height: '100vh',
+        backgroundRepeat: 'repeat',
+        backgroundSize: '48px 48px',
+        zIndex: 9999,
+        overflow: 'auto',
       }}
     >
-      <Paper
-        elevation={3}
+      <Box
         sx={{
-          padding: 4,
+          position: 'absolute',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',
+          height: '100%',
           textAlign: 'center',
-          maxWidth: '400px',
-          borderRadius: '12px'
+          zIndex: 10,
+          background: 'rgba(255, 255, 255, 0.25)',
+          backdropFilter: 'blur(40px)',
         }}
       >
-        <Typography
-          variant="h4"
-          sx={{
-            color: primary600,
-            fontWeight: 600,
-            marginBottom: 2
-          }}
-        >
-          Screen Too Small
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: grey700,
-            marginBottom: 2,
-            lineHeight: 1.6
-          }}
-        >
-          This application requires a minimum screen resolution of 768px width to function properly.
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{
-            color: grey500,
-            fontStyle: 'italic'
-          }}
-        >
-          Please use a tablet, laptop, or desktop computer to access the full application experience.
-        </Typography>
-      </Paper>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+          <SmallScreenIcon />
+          <Typography
+            variant="h2"
+            mt={1}
+          >
+            Your browser is too small
+          </Typography>
+          <Typography variant="subtitle2" color="grey.600" textAlign="center">
+            This application requires a minimum width and height <br /> of 768px. Please adjust your window to continue.
+          </Typography>
+        </Box>
+      </Box>
     </Box>
   );
 };
