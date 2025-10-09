@@ -64,7 +64,7 @@ const Header = () => {
               </Typography>
             </Box>
 
-            <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', '& .MuiButton-root': { p: '0.625rem 1rem' } }}>
+            <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', '& .MuiButton-root': { sx: { padding: '0.625rem .5rem' }, md: { padding: '0.625rem 1rem' } } }}>
               {showResetQuery &&
                 <Button variant="text" disabled={!hasFiltersApplied} onClick={onClearFilters}>Reset Query</Button>
               }

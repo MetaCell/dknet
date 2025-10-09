@@ -122,8 +122,8 @@ const RepositoriesList = () => {
   return (
     <>
       <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4} height={'100%'}>
-        <Grid xs={8} md={8} lg={8} item height={'100%'}>
-          <Stack direction='row' justifyContent='space-between' alignItems='center' mb={2}>
+        <Grid xs={8} sm={6} md={8} lg={8} item height={'100%'}>
+          <Stack direction='row' justifyContent='space-between' alignItems='center' mb={2} gap={2} flexWrap="wrap" width={'100%'}>
             <Typography variant='h2'>
               <Typography component="span" variant='h2' color={vars.primary800}>{repos.length} repositories</Typography> {" "}
               matching your criteria
@@ -133,7 +133,7 @@ const RepositoriesList = () => {
           <Grid container>
             {
               repos.length > 0
-                ? <Stack spacing={2}>
+                ? <Stack spacing={2} width={'100%'}>
                   {repos.map((repository, index) =>
                     <Grid item key={index} xs={12} justifyContent='flex-end'>
                       <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={isTopMatch(repository, index, repos)} />
@@ -146,8 +146,8 @@ const RepositoriesList = () => {
             }
           </Grid>
         </Grid>
-        <Grid xs={4} md={4} lg={4} item>
-          <Stack spacing={2}>
+        <Grid xs={4} sm={6} md={4} lg={4} item>
+          <Stack spacing={2} width={'100%'}>
             <Filters />
             <Box sx={styles.learnMoreBox}>
               <Stack spacing={2} alignItems='flex-start'>
