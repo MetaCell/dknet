@@ -14,6 +14,7 @@ import { useResponsive } from '../hooks/useResponsive';
 import { Button, Fade, IconButton } from '@mui/material';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import EmptyResultsLayout from '../components/EmptyResultsLayout';
+import { isTopMatch } from '../utils/helpers';
 const { success500 } = vars;
 
 const styles = {
@@ -135,7 +136,7 @@ const RepositoriesList = () => {
                 ? <Stack spacing={2}>
                   {repos.map((repository, index) =>
                     <Grid item key={index} xs={12} justifyContent='flex-end'>
-                      <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={repository.pctMatch === repos[0].pctMatch} />
+                      <RepositoryCard resultIndex={index} key={repository.code} repository={repository} isBestMatch={isTopMatch(repository, index, repos)} />
                     </Grid>
                   )}
                 </Stack>
