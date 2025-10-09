@@ -60,3 +60,7 @@ export const hasActiveFilters = (filterValues: { [key: string]: any }): boolean 
     (Array.isArray(value) ? value.length > 0 : true)
   );
 }
+
+export const isFiltersEmpty = (filterValues: { [key: string]: any }): boolean => {
+  return Object.values(filterValues).every(value => value === undefined);
+}

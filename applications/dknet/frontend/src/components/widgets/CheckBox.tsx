@@ -5,7 +5,8 @@ import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
 import CustomFormControlLabel from "./CustomFormControlLabel";
 import { useFilterContext } from "../../context/Context";
-import { vars } from '../../theme/variables'
+import { vars } from '../../theme/variables';
+import { isFiltersEmpty } from '../../utils/helpers';
 
 const {
   checkboxBorderColor,
@@ -92,7 +93,7 @@ const CheckBoxWidget = ({ data, filter }: any) => {
       ...context.filterValues,
       [filter.code]: newValue.length !== 0 ? newValue : undefined
     }
-    const willBeEmpty = Object.values(updatedFilterValues).every(value => value === undefined)
+    const willBeEmpty = isFiltersEmpty(updatedFilterValues)
 
     setContext({
       ...context,

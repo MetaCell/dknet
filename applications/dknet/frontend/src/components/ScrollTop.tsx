@@ -4,6 +4,7 @@ import { TopIcon } from "../assets/icons";
 import { vars } from "../theme/variables";
 import FiltersAssistantDialog from "./FilterAssistantDialog/FiltersAssistantDialog";
 import { useFilterContext } from "../context/Context";
+import { isFiltersEmpty } from "../utils/helpers";
 
 const { primary600 } = vars;
 
@@ -27,10 +28,10 @@ const scrollTop = () => {
 const ScrollToTop = () => {
   const [open, setOpen] = React.useState(false);
   const { context } = useFilterContext();
-  const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
+  const isFilterValuesEmpty = isFiltersEmpty(context.filterValues);
   const { allRepositories, allFilters, showAll } = context;
 
-  const showScrollToTop = (allRepositories.length > 0 && allFilters.length > 0) && (!isFiltersEmpty || showAll);
+  const showScrollToTop = (allRepositories.length > 0 && allFilters.length > 0) && (!isFilterValuesEmpty || showAll);
 
   const openFilterAssistant = () => {
     setOpen(true);

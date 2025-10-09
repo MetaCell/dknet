@@ -1,13 +1,10 @@
 import { useCallback } from 'react';
 import { useFilterContext } from '../context/Context';
 import { QuestionTab } from '../utils/types';
+import { isFiltersEmpty as isFiltersEmptyHelper } from '../utils/helpers';
 
 export const useFilterLogic = () => {
   const { context, setContext } = useFilterContext();
-
-  const isFiltersEmpty = useCallback(() => {
-    return Object.values(context.filterValues).every(value => value === undefined);
-  }, [context.filterValues]);
 
   const handleSingleOptionSelect = useCallback((question: QuestionTab, data: any) => {
     const currentValue = context?.filterValues[question.code];
@@ -46,7 +43,7 @@ export const useFilterLogic = () => {
 
   return {
     context,
-    isFiltersEmpty: isFiltersEmpty(),
+    isFiltersEmpty: isFiltersEmptyHelper(context.filterValues),
     handleSingleOptionSelect,
     isOptionSelectedForMultiple,
     isOptionSelectedForSingle,

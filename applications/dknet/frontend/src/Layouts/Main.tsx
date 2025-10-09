@@ -9,13 +9,14 @@ import FiltersAssistantDialog from "../components/FilterAssistantDialog/FiltersA
 import { useFilterContext } from "../context/Context";
 import { RESPONSIVE_BREAKPOINTS } from '../utils/constants';
 import { useResponsive } from '../hooks/useResponsive';
+import { isFiltersEmpty } from '../utils/helpers';
 
 const MainLayout = ({ children }) => {
   const [open, setOpen] = React.useState(false);
   const { context } = useFilterContext();
   const { allRepositories, allFilters, showAll } = context;
   const { screenSize } = useResponsive();
-  const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
+  const isFilterValuesEmpty = isFiltersEmpty(context.filterValues);
 
   const viewFilterAssistant = () => {
     setOpen(true);
@@ -33,7 +34,7 @@ const MainLayout = ({ children }) => {
       <Container>
         <Header />
         {
-          (allRepositories.length === 0 && allFilters.length === 0) || (!isFiltersEmpty || showAll) ? <></> : (
+          (allRepositories.length === 0 && allFilters.length === 0) || (!isFilterValuesEmpty || showAll) ? <></> : (
             <Grid container spacing={2} justifyContent='center' textAlign='center' mt={screenSize === RESPONSIVE_BREAKPOINTS.TABLET ? 4 : 8}>
               <Grid item xs={12} sm={8}>
                 <Stack spacing={1}>

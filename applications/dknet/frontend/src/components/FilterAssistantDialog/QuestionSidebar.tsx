@@ -111,7 +111,7 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
   const handleResetFilters = useCallback(() => {
     setContext({
       ...context,
-      showAll: false,
+      showAll: true,
       filterValues: resetFilters(context.allFilters)
     });
   }, [context, setContext]);

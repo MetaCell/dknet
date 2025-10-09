@@ -8,12 +8,13 @@ import RepositoriesList from "./RepositoriesList";
 import LaunchPage from "./LaunchPage";
 import Box from '@mui/material/Box/Box';
 import { CircularProgress } from '@mui/material';
+import { isFiltersEmpty } from '../utils/helpers';
 
 
 
 const HomePage = () => {
   const { context } = useFilterContext();
-  const isFiltersEmpty = Object.values(context.filterValues).every(value => value === undefined);
+  const isFilterValuesEmpty = isFiltersEmpty(context.filterValues);
   const { allRepositories, allFilters, showAll } = context;
 
   return (
@@ -27,7 +28,7 @@ const HomePage = () => {
             height: '100vh'
           }}>
             <CircularProgress color='secondary' />
-          </Box> : ((isFiltersEmpty && !showAll) ? <LaunchPage /> : <RepositoriesList />))
+          </Box> : ((isFilterValuesEmpty && !showAll) ? <LaunchPage /> : <RepositoriesList />))
         }
       </Container>
     </MainLayout>
