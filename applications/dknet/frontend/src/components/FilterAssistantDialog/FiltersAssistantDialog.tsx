@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 import { useFilterContext } from '../../context/Context'
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -13,6 +13,8 @@ import { PreviewIcon } from "../../assets/icons";
 import { Box, Divider } from "@mui/material";
 import { vars } from "../../theme/variables";
 import { useResponsive } from '../../hooks/useResponsive';
+import { hasActiveFilters } from "../../utils/helpers";
+import { RESPONSIVE_CONFIGS } from "../../utils/constants";
 
 const {
   grey200,
@@ -35,45 +37,55 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
   const { context } = useFilterContext()
   const { screenSize } = useResponsive();
 
-  // Set initial preview state based on screen size
+  // Set initial preview state based on screen size config
   const [showPreview, setShowPreview] = useState(() => {
-    return screenSize !== 'tooSmall';
+    const config = RESPONSIVE_CONFIGS[screenSize] || RESPONSIVE_CONFIGS.default;
+    return config.showPreviewByDefault;
   });
 
   const questionsTabs = context.allFilters.filter((option) => (option.question && option.inputType !== "READONLY"))
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpen(false);
-  };
+    setTabValue(0);
+    setProgress(0);
+    // Reset preview state to default based on screen size config
+    const config = RESPONSIVE_CONFIGS[screenSize] || RESPONSIVE_CONFIGS.default;
+    setShowPreview(config.showPreviewByDefault);
+  }, [setOpen, screenSize]);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const updateProgress = useCallback((number) => {
+    const newProgressValue = (number / (questionsTabs.length - 1)) * 100
+    setProgress(newProgressValue)
+  }, [questionsTabs.length]);
+
+  const handleChange = useCallback((event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue);
     updateProgress(newValue);
-  };
+  }, [updateProgress]);
 
-
-  const onClickNext = () => {
+  const onClickNext = useCallback(() => {
     if (tabValue !== (questionsTabs.length - 1)) {
       setTabValue(tabValue + 1)
       updateProgress(tabValue + 1)
     }
-  }
+  }, [tabValue, questionsTabs.length, updateProgress]);
 
-  const onClickPrev = () => {
+  const onClickPrev = useCallback(() => {
     setTabValue(tabValue - 1)
     updateProgress(tabValue - 1)
-  }
+  }, [tabValue, updateProgress]);
 
-  const updateProgress = (number) => {
-    const newProgressValue = (number / (questionsTabs.length - 1)) * 100
-    setProgress(newProgressValue)
-  }
-
-  const closeDialog = () => {
+  const closeDialog = useCallback(() => {
     setOpen(false);
     setTabValue(0);
     setProgress(0);
-  }
+    // Reset preview state to default based on screen size config
+    const config = RESPONSIVE_CONFIGS[screenSize] || RESPONSIVE_CONFIGS.default;
+    setShowPreview(config.showPreviewByDefault);
+  }, [setOpen, screenSize]);
+
+  const hasFiltersApplied = hasActiveFilters(context.filterValues)
 
   return (
     <Dialog
@@ -105,11 +117,10 @@ export default function FiltersAssistantDialog({ open, setOpen }) {
             aria-label="close"
             onClick={() => {
               handleClose();
-              document.getElementById('result_0').scrollIntoView({ behavior: 'smooth' });
             }}
-            disabled={context.results.length === 0 && !context.showAll}
+            disabled={context.results.length === 0 || !hasFiltersApplied}
           >
-            Go To Results ({context.results.length})
+            Go To Results ({hasFiltersApplied ? context.results.length : 0})
           </Button>
           <Divider orientation="vertical" sx={{ height: '2rem', background: grey200 }} />
           <IconButton className={`outlined ${showPreview ? 'active' : ''}`} onClick={() => setShowPreview(!showPreview)}>

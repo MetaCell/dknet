@@ -3,7 +3,6 @@ import React from "react";
 //components
 import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
 import CustomFormControlLabel from "./CustomFormControlLabel";
 import { useFilterContext } from "../../context/Context";
 import { vars } from '../../theme/variables'
@@ -87,13 +86,18 @@ const CheckBoxWidget = ({ data, filter }: any) => {
     } else {
       newValue = selectedData.filter(row => row.code !== e.target.value)
     }
+
+    // Check if this will be the last filter being removed
+    const updatedFilterValues = {
+      ...context.filterValues,
+      [filter.code]: newValue.length !== 0 ? newValue : undefined
+    }
+    const willBeEmpty = Object.values(updatedFilterValues).every(value => value === undefined)
+
     setContext({
       ...context,
-      showAll: false,
-      filterValues: {
-        ...context.filterValues,
-        [filter.code]: newValue.length !== 0 ? newValue : undefined
-      }
+      showAll: willBeEmpty,
+      filterValues: updatedFilterValues
     })
   }
 
@@ -105,9 +109,7 @@ const CheckBoxWidget = ({ data, filter }: any) => {
           value={data.code}
           onChange={onChangeCheckbox}
         />}
-      label={<Typography variant="h4">
-        {data.label}
-      </Typography>}
+      label={data.label}
       value={undefined}
     />
   );
