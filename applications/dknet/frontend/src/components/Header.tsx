@@ -44,6 +44,15 @@ const Header = () => {
       currentView: 'launch',
       filterValues: resetFilters(context.filters)
     })
+    setOpen(true);
+  }, [context, setContext]);
+
+  const handleLogoClick = useCallback(() => {
+    setContext({
+      ...context,
+      currentView: 'launch',
+      filterValues: resetFilters(context.filters)
+    });
   }, [context, setContext]);
 
   return (
@@ -51,7 +60,7 @@ const Header = () => {
       <Container fixed>
         <Toolbar disableGutters>
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }} width={1}>
-            <Box sx={{ display: 'flex', mr: 1 }}>
+            <Box sx={{ display: 'flex', mr: 1, cursor: 'pointer' }} onClick={handleLogoClick}>
               <img src={dknetlogo} alt="dknet logo" style={{ height: '40px', width: '40px' }} />
               <Typography variant="h6" component="div" ml={1.25}>
                 dkNET
