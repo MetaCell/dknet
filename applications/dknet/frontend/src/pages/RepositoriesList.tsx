@@ -17,6 +17,8 @@ import EmptyResultsLayout from '../components/EmptyResultsLayout';
 import { isTopMatch } from '../utils/helpers';
 const { success500 } = vars;
 
+const SCROLL_BOTTOM_SPACE = 100;
+
 const styles = {
   noResultsText: {
     textAlign: 'center',
@@ -105,7 +107,7 @@ const RepositoriesList = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       // Check if user is within 100px of the bottom
-      const isNearBottom = windowHeight + scrollTop >= documentHeight - 100;
+      const isNearBottom = windowHeight + scrollTop >= documentHeight - SCROLL_BOTTOM_SPACE;
       setIsAtBottom(isNearBottom);
     };
 

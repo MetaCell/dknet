@@ -65,7 +65,7 @@ const FilterSearch = () => {
             <Typography variant="h4" flex={1}>
               Data Type
             </Typography>
-            <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
+            <Stack direction="row" alignItems='center' flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
               <Tooltip title={"Data Type"}>
                 <IconButton sx={{ height: 'fit-content', p: 0 }}>
                   <HelpOutlineIcon sx={{
@@ -119,7 +119,7 @@ const FilterSearch = () => {
             <Typography variant="h4" flex={1}>
               Domain
             </Typography>
-            <Stack direction="row">
+            <Stack direction="row" alignItems="center" justifyContent="space-between">
               <Tooltip title={"Domain"}>
                 <IconButton sx={{ p: '2px' }}>
                   <HelpOutlineIcon sx={{

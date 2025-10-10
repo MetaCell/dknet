@@ -117,7 +117,7 @@ const RepositoryCard = (props) => {
                   color="grey.800"
                   sx={styles.link}
                 >
-                  {repository.label}{getScoreDisplay(repository.pctMatch)}
+                  {repository.label} {getScoreDisplay(repository.pctMatch)}
                 </Link>
               </Tooltip>
               <ArrowOutwardIcon />
