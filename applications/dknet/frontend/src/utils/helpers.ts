@@ -51,10 +51,10 @@ export const resetFilters = (filters) => {
 }
 
 export const isTopMatch = (item: ResultItem, index: number, results: ResultItem[]): boolean => {
-  if (results.length === 0 || isNaN(item.pctMatch || 0)) {
+  if (!results || results.length === 0) {
     return false;
   }
-  return index === 0 || (results.length > 0 && item.pctMatch === results[0].pctMatch);
+  return index === 0 || item.pctMatch === results[0].pctMatch;
 }
 
 export const hasActiveFilters = (filterValues: { [key: string]: any }): boolean => {
