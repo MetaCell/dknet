@@ -33,7 +33,7 @@ const Filters = () => {
   const onClearFilters = useCallback(() => {
     setContext({
       ...context,
-      showAll: true,
+      currentView: 'repositories',
       filterValues: resetFilters(context.filters)
     })
   }, [context, setContext]);

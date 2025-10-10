@@ -1,4 +1,4 @@
-import { FilterType, FilterOptionColor } from '../config/enums'
+import { FilterType } from '../config/enums'
 
 export interface IRepositoryAttributes {
   [key: string]: string[]
@@ -41,5 +41,6 @@ export interface IFilterContext {
   allGeneralistRepositories: IRepository[],
   results: IRepository[],
   filters: any[],
-  showAll: boolean
+  showAll: boolean,
+  currentView: 'launch' | 'repositories'
 }

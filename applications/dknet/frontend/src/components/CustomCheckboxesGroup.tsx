@@ -24,13 +24,15 @@ const CustomCheckboxesGroup = ({ data }) => {
   const { context, setContext } = useFilterContext()
 
   const onClearFilter = () => {
+    const newFilterValues = {
+      ...context.filterValues,
+      [data.code]: undefined
+    };
+
     setContext({
       ...context,
-      showAll: true,
-      filterValues: {
-        ...context.filterValues,
-        [data.code]: undefined
-      }
+      currentView: 'repositories',
+      filterValues: newFilterValues
     })
   }
 

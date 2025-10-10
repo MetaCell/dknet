@@ -13,7 +13,7 @@ import AboutDialog from "./AboutDialog";
 import dknetlogo from '../assets/dknetlogo.png';
 import FiltersAssistantDialog from "./FilterAssistantDialog/FiltersAssistantDialog";
 import { useFilterContext } from "../context/Context";
-import { hasActiveFilters, resetFilters } from "../utils/helpers";
+import { resetFilters } from "../utils/helpers";
 
 
 
@@ -21,9 +21,6 @@ const Header = () => {
   const [openAboutDialog, setOpenDialogWindow] = useState(false);
   const [open, setOpen] = React.useState(false);
   const { context, setContext } = useFilterContext()
-
-  const showResetQuery = (context.results.length > 0 && context.filters.length > 0) && (!hasActiveFilters(context.filterValues) || context.showAll);
-
 
   const handleOpen = useCallback(() => {
     setOpenDialogWindow(true);
@@ -44,7 +41,7 @@ const Header = () => {
   const onClearFilters = useCallback(() => {
     setContext({
       ...context,
-      showAll: false,
+      currentView: 'launch',
       filterValues: resetFilters(context.filters)
     })
   }, [context, setContext]);
@@ -62,7 +59,7 @@ const Header = () => {
             </Box>
 
             <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', '& .MuiButton-root': { sx: { padding: '0.625rem .5rem' }, md: { padding: '0.625rem 1rem' } } }}>
-              {showResetQuery &&
+              {context.currentView === 'repositories' &&
                 <Button variant="text" onClick={onClearFilters}>Reset Query</Button>
               }
               <Button variant="text" onClick={() => setOpen(true)}>Open Guided Query</Button>

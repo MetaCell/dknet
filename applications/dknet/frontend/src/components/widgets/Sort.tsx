@@ -27,7 +27,7 @@ const SortWidget = () => {
     setSelectedValue(event.target.value);
     setContext({
       ...context,
-      showAll: false,
+      currentView: 'repositories',
       sortBy: event.target.value
     })
   };

@@ -36,6 +36,22 @@ const FilterSearch = () => {
     })
   }, [context, setContext]);
 
+  const handleResetFilter = useCallback((filterIndex: number) => {
+    const newFilterValues = {
+      ...context.filterValues,
+      [context.allFilters[filterIndex].code]: undefined
+    };
+
+    setContext({
+      ...context,
+      currentView: 'repositories',
+      filterValues: newFilterValues
+    })
+  }, [context, setContext]);
+
+  const handleResetDomain = useCallback(() => handleResetFilter(1), [handleResetFilter]);
+  const handleResetType = useCallback(() => handleResetFilter(0), [handleResetFilter]);
+
   return (
     <>
       <Box display='flex' flexDirection='column' gap={1}>
@@ -64,16 +80,7 @@ const FilterSearch = () => {
               }}
                 disabled={!context.filterValues?.[context.allFilters[0].code]}
                 variant='text'
-                onClick={() => {
-                  setContext({
-                    ...context,
-                    showAll: true,
-                    filterValues: {
-                      ...context.filterValues,
-                      [context.allFilters[0].code]: undefined
-                    }
-                  })
-                }}
+                onClick={handleResetType}
                 startIcon={<FilterListOffIcon />}
               >Reset filter</Button>
             </Stack>
@@ -123,16 +130,7 @@ const FilterSearch = () => {
               <Button
                 variant='text'
                 disabled={!context.filterValues?.[context.allFilters[1].code]}
-                onClick={() => {
-                  setContext({
-                    ...context,
-                    showAll: true,
-                    filterValues: {
-                      ...context.filterValues,
-                      [context.allFilters[1].code]: undefined
-                    }
-                  })
-                }}
+                onClick={handleResetDomain}
                 startIcon={<FilterListOffIcon />}
               >Reset filter</Button>
             </Stack>

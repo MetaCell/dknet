@@ -76,7 +76,7 @@ const SwitchWidget = ({ data }: any) => {
     }
     setContext({
       ...context,
-      showAll: false,
+      currentView: 'repositories',
       filterValues: {
         ...context.filterValues,
         [data.code]: newValue
@@ -104,7 +104,7 @@ const SwitchWidget = ({ data }: any) => {
           <IconButton sx={{ p: '2px' }}>
             <CleaningServicesOutlinedIcon sx={{
               color: '#98A2B3'
-            }}/>
+            }} />
           </IconButton>
         </Stack>
       </Stack>}

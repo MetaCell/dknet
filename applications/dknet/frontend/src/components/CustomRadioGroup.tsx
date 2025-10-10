@@ -39,13 +39,15 @@ const CustomRadioGroup = ({ data }) => {
   }, [filter.options, context, setContext, data.code]);
 
   const onClearFilter = useCallback(() => {
+    const newFilterValues = {
+      ...context.filterValues,
+      [data.code]: undefined
+    };
+
     setContext({
       ...context,
-      showAll: true,
-      filterValues: {
-        ...context.filterValues,
-        [data.code]: undefined
-      }
+      currentView: 'repositories',
+      filterValues: newFilterValues
     })
   }, [context, setContext, data.code]);
 

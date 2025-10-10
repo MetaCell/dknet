@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useFilterContext } from '../context/Context'
 
 //components
@@ -13,9 +13,23 @@ import { isFiltersEmpty } from '../utils/helpers';
 
 
 const HomePage = () => {
-  const { context } = useFilterContext();
+  const { context, setContext } = useFilterContext();
   const isFilterValuesEmpty = isFiltersEmpty(context.filterValues);
-  const { allRepositories, allFilters, showAll } = context;
+  const { allRepositories, allFilters, showAll, currentView } = context;
+
+  // Determine which view should be shown
+  const shouldShowLaunch = isFilterValuesEmpty && !showAll;
+
+  // Update currentView in context when the view changes
+  useEffect(() => {
+    const newView = shouldShowLaunch ? 'launch' : 'repositories';
+    if (currentView !== newView) {
+      setContext({
+        ...context,
+        currentView: newView
+      });
+    }
+  }, [shouldShowLaunch, currentView, context, setContext]);
 
   return (
     <MainLayout>
@@ -28,7 +42,7 @@ const HomePage = () => {
             height: '100vh'
           }}>
             <CircularProgress color='secondary' />
-          </Box> : ((isFilterValuesEmpty && !showAll) ? <LaunchPage /> : <RepositoriesList />))
+          </Box> : (shouldShowLaunch ? <LaunchPage /> : <RepositoriesList />))
         }
       </Container>
     </MainLayout>

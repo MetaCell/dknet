@@ -55,9 +55,17 @@ export const FilterProvider = ({ children }) => {
     results: [],
     filters: filters,
     showAll: false,
+    currentView: 'launch',
   });
 
-  const setContext = (newContext) => _setContext(_sortRepositories(scoreRepositories(filterRepositories(newContext))))
+  const setContext = (newContext) => {
+    // Automatically sync showAll with currentView
+    const updatedContext = {
+      ...newContext,
+      showAll: newContext.currentView === 'repositories'
+    };
+    _setContext(_sortRepositories(scoreRepositories(filterRepositories(updatedContext))));
+  };
 
   if (filters.length === 0 || repositories.length === 0) {
     getData().then((data) => {
@@ -84,7 +92,7 @@ export const FilterProvider = ({ children }) => {
     const results = [];
     const filterValues = { ...newContext.filterValues }
     Object.entries(filterValues).forEach(([key, value]) => {
-      if(value === undefined || (Array.isArray(value) && value.length===0)) {
+      if (value === undefined || (Array.isArray(value) && value.length === 0)) {
         delete filterValues[key]
       }
     })
@@ -169,7 +177,7 @@ export const FilterProvider = ({ children }) => {
   const _sortRepositories = (newContext: IFilterContext): IFilterContext => {
     const sortFilters = newContext.allFilters.filter(f => f.inputType === FilterType.ScoreBool);
     const genericFilter = sortFilters[0];
-    let results = newContext.results.map((repo: IRepository): IRepository  => ({
+    let results = newContext.results.map((repo: IRepository): IRepository => ({
       ...repo,
       score: repo.attributes[genericFilter.code].includes(genericFilter.options[0].code) ? repo.score : 0,
       pctMatch: repo.attributes[genericFilter.code].includes(genericFilter.options[0].code) ? repo.pctMatch : undefined,
@@ -178,10 +186,10 @@ export const FilterProvider = ({ children }) => {
 
     // extend all sort functions to iterate all score filters and priorities all the results which value is the first option of the filter
 
-    if(newContext.sortBy === 'Alphabetical (A-Z)'){
+    if (newContext.sortBy === 'Alphabetical (A-Z)') {
       results = newContext.results.sort((a, b) => a.label.localeCompare(b.label));
     }
-    else if(newContext.sortBy === 'Alphabetical (Z-A)'){
+    else if (newContext.sortBy === 'Alphabetical (Z-A)') {
       results = newContext.results.sort((a, b) => a.label.localeCompare(b.label)).reverse();
     }
     else {
@@ -199,7 +207,7 @@ export const FilterProvider = ({ children }) => {
     }
   }
 
-  const sortRepositories = (sortValue:string) => {
+  const sortRepositories = (sortValue: string) => {
     _setContext({
       ..._sortRepositories(scoreRepositories(context)),
       sortBy: sortValue

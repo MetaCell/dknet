@@ -6,7 +6,6 @@ import { styled } from "@mui/material/styles";
 import CustomFormControlLabel from "./CustomFormControlLabel";
 import { useFilterContext } from "../../context/Context";
 import { vars } from '../../theme/variables';
-import { isFiltersEmpty } from '../../utils/helpers';
 
 const {
   checkboxBorderColor,
@@ -88,16 +87,14 @@ const CheckBoxWidget = ({ data, filter }: any) => {
       newValue = selectedData.filter(row => row.code !== e.target.value)
     }
 
-    // Check if this will be the last filter being removed
     const updatedFilterValues = {
       ...context.filterValues,
       [filter.code]: newValue.length !== 0 ? newValue : undefined
     }
-    const willBeEmpty = isFiltersEmpty(updatedFilterValues)
 
     setContext({
       ...context,
-      showAll: willBeEmpty,
+      currentView: 'repositories',
       filterValues: updatedFilterValues
     })
   }
