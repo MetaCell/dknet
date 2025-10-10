@@ -160,7 +160,7 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({
         ))}
       </List>
       {
-        !isFiltersEmpty && results.length !== 0 && <Box sx={styles.fadeOverlay(showPreview)} />
+        !isFiltersEmpty && <Box sx={styles.fadeOverlay(showPreview)} />
       }
     </Box>
   );
