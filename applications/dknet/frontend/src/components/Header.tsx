@@ -44,13 +44,10 @@ const Header = () => {
   const onClearFilters = useCallback(() => {
     setContext({
       ...context,
-      showAll: true,
+      showAll: false,
       filterValues: resetFilters(context.filters)
     })
   }, [context, setContext]);
-
-  const hasFiltersApplied = hasActiveFilters(context.filterValues)
-
 
   return (
     <AppBar position="static" sx={{ background: 'transparent', boxShadow: 'none' }}>
@@ -66,7 +63,7 @@ const Header = () => {
 
             <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', '& .MuiButton-root': { sx: { padding: '0.625rem .5rem' }, md: { padding: '0.625rem 1rem' } } }}>
               {showResetQuery &&
-                <Button variant="text" disabled={!hasFiltersApplied} onClick={onClearFilters}>Reset Query</Button>
+                <Button variant="text" onClick={onClearFilters}>Reset Query</Button>
               }
               <Button variant="text" onClick={() => setOpen(true)}>Open Guided Query</Button>
               <Button variant="text" onClick={redirectToFeedback}>Send us feedback</Button>

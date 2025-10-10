@@ -1,7 +1,6 @@
 import { useCallback, useMemo } from 'react';
 import { useFilterContext } from '../context/Context';
 import { QuestionTab } from '../utils/types';
-import { isFiltersEmpty as isFiltersEmptyHelper } from '../utils/helpers';
 
 export const useFilterLogic = () => {
   const { context, setContext } = useFilterContext();
