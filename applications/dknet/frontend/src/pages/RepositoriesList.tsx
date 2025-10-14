@@ -83,8 +83,11 @@ const RepositoriesList = () => {
   const [showGeneralist, setShowGeneralist] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [hasScroll, setHasScroll] = useState(false);
   const { context } = useFilterContext();
   const { screenSize } = useResponsive();
+  const repos = context.results;
+  const reposListRef = React.useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (showGeneralist) {
@@ -107,6 +110,20 @@ const RepositoriesList = () => {
       const documentHeight = document.documentElement.scrollHeight;
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+      // Check if repos list container has content that requires scrolling
+      // We measure from the top of the repos list to the bottom of the page
+      if (reposListRef.current) {
+        const reposListTop = reposListRef.current.getBoundingClientRect().top + scrollTop;
+        const reposListHeight = reposListRef.current.scrollHeight;
+        const availableHeight = windowHeight - (reposListTop - scrollTop);
+
+        // Only show scroll indicator if repos list content exceeds available viewport space
+        setHasScroll(reposListHeight > availableHeight);
+      } else {
+        // Fallback to page-level check if ref is not available
+        setHasScroll(documentHeight > windowHeight);
+      }
+
       // Check if user has scrolled away from top or is back at top
       if (scrollTop > 0) {
         setHasScrolled(true);
@@ -121,14 +138,16 @@ const RepositoriesList = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Check initial position
-    handleScroll();
+    // Delay the initial check to ensure DOM is fully rendered
+    const timeoutId = setTimeout(() => {
+      handleScroll();
+    }, 100);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
     };
-  }, []);
-  const repos = context.results;
+  }, [repos.length]);
   return (
     <>
       <Grid container spacing={screenSize === 'tooSmall' ? 2 : 4} height={'100%'}>
@@ -140,7 +159,7 @@ const RepositoriesList = () => {
             </Typography>
             <SortWidget />
           </Stack>
-          <Grid container>
+          <Grid container ref={reposListRef}>
             {
               repos.length > 0
                 ? <Stack spacing={2} width={'100%'}>
@@ -170,7 +189,7 @@ const RepositoriesList = () => {
         </Grid>
       </Grid>
 
-      {repos.length > 0 && <Fade in={!isAtBottom && !hasScrolled} timeout={300}>
+      {repos.length > 0 && <Fade in={!isAtBottom && !hasScrolled && hasScroll} timeout={300}>
         <Box
           sx={styles.scrollOverlay}
         >
