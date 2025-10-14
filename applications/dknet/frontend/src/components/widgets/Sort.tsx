@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useFilterContext } from "../../context/Context";
 
 //components
@@ -23,21 +23,23 @@ const SortWidget = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [selectedValue, setSelectedValue] = React.useState('Highest Score');
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
+  const handleMenuItemClick = useCallback((label: string) => {
+    setSelectedValue(label);
     setContext({
       ...context,
       currentView: 'repositories',
-      sortBy: event.target.value
-    })
-  };
+      sortBy: label
+    });
+    setAnchorEl(null);
+  }, [context, setContext]);
+
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setAnchorEl(null);
-  };
+  }, []);
 
   if (context.results.length === 0) {
     return <></>;
@@ -70,6 +72,7 @@ const SortWidget = () => {
           <MenuItem
             key={label}
             value={label}
+            onClick={() => handleMenuItemClick(label)}
             sx={{
               padding: '9px 10px',
               '& .MuiTypography-root': {
@@ -82,14 +85,15 @@ const SortWidget = () => {
               },
               '& .MuiRadio-root': {
                 padding: 0,
-                marginRight: '0.5rem'
+                marginRight: '0.5rem',
+                pointerEvents: 'none'
               },
               '&:hover': {
                 borderRadius: '6px'
               }
             }}
           >
-            <Radio checked={selectedValue === label} value={label} onChange={handleChange} />
+            <Radio checked={selectedValue === label} value={label} />
             <ListItemText primary={label} />
           </MenuItem>
         ))}
