@@ -77,6 +77,7 @@ const SwitchWidget = ({ data }: any) => {
     setContext({
       ...context,
       currentView: 'repositories',
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: newValue

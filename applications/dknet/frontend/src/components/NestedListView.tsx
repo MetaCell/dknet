@@ -7,6 +7,7 @@ import { useFilterContext } from "../context/Context";
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 import HelpTooltip from "./HelpTooltip";
 import { useResponsive } from "../hooks/useResponsive";
+import { hasRemainingFilters } from "../utils/helpers";
 
 const { grey700, grey200 } = vars;
 
@@ -89,7 +90,7 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
     setOpen(!open);
   }, [open]);
 
-  const onClearFilter = () => {
+  const onClearFilter = useCallback(() => {
     const newFilterValues = {
       ...context.filterValues,
       [data.code]: undefined
@@ -98,20 +99,22 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
     setContext({
       ...context,
       currentView: 'repositories',
+      showAll: !hasRemainingFilters(newFilterValues),
       filterValues: newFilterValues
     })
-  };
+  }, [context, setContext, data.code]);
 
-  const changeSelection = (event: ChangeEvent<HTMLInputElement>, value: string): any => {
+  const changeSelection = useCallback((event: ChangeEvent<HTMLInputElement>, value: string): any => {
     const newValue = data.options.find((item) => item.code === value);
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: newValue
       }
     })
-  }
+  }, [context, data, setContext]);
 
   return (<Box display='flex' flexDirection='column' gap={1}>
     <FormLabel component="legend" sx={formLabelStyles}>

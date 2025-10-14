@@ -39,7 +39,8 @@ const LaunchPage = () => {
             variant='outlined'
             onClick={() => setContext({
               ...context,
-              currentView: 'repositories'
+              currentView: 'repositories',
+              showAll: true,
             })}
           >
             Browse all data

@@ -16,6 +16,7 @@ export const useFilterLogic = () => {
       // Select the option
       setContext({
         ...context,
+         showAll: false,
         filterValues: {
           ...context.filterValues,
           [question.code]: data

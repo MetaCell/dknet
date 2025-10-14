@@ -34,6 +34,7 @@ const Filters = () => {
     setContext({
       ...context,
       currentView: 'repositories',
+      showAll: true,
       filterValues: resetFilters(context.filters)
     })
   }, [context, setContext]);

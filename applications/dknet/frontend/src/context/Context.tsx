@@ -62,7 +62,6 @@ export const FilterProvider = ({ children }) => {
     // Automatically sync showAll with currentView
     const updatedContext = {
       ...newContext,
-      showAll: newContext.currentView === 'repositories'
     };
     _setContext(_sortRepositories(scoreRepositories(filterRepositories(updatedContext))));
   };

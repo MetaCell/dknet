@@ -14,6 +14,7 @@ import { vars } from "../theme/variables";
 import { Button } from "@mui/material";
 import HelpTooltip from "./HelpTooltip";
 import { useResponsive } from "../hooks/useResponsive";
+import { hasRemainingFilters } from "../utils/helpers";
 
 const {
   grey700
@@ -44,12 +45,15 @@ const FilterSearch = () => {
   }, [openDomain]);
 
   const onChangeFilterValue = useCallback((value, filter) => {
+    const newFilterValues = {
+      ...context.filterValues,
+      [filter.code]: value
+    };
+
     setContext({
       ...context,
-      filterValues: {
-        ...context.filterValues,
-        [filter.code]: value
-      }
+      showAll: !hasRemainingFilters(newFilterValues),
+      filterValues: newFilterValues
     })
   }, [context, setContext]);
 
@@ -62,6 +66,7 @@ const FilterSearch = () => {
     setContext({
       ...context,
       currentView: 'repositories',
+      showAll: !hasRemainingFilters(newFilterValues),
       filterValues: newFilterValues
     })
   }, [context, setContext]);

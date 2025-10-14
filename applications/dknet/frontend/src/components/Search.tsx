@@ -15,6 +15,7 @@ const Search = () => {
   const onChangeFilterValue = (value, filter) => {
     setContext({
       ...context,
+      showAll: false,
       currentView: 'repositories',
       filterValues: {
         ...context.filterValues,

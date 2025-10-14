@@ -13,7 +13,7 @@ import { useResponsive } from '../hooks/useResponsive';
 const MainLayout = ({ children }) => {
   const [open, setOpen] = React.useState(false);
   const { context } = useFilterContext();
-  const { currentView } = context;
+  const { allRepositories, allFilters, currentView } = context;
   const { screenSize } = useResponsive();
 
   const viewFilterAssistant = useCallback(() => {
@@ -32,7 +32,7 @@ const MainLayout = ({ children }) => {
       <Container>
         <Header />
         {
-          currentView === 'launch' && (
+          (allRepositories.length === 0 && allFilters.length === 0) || currentView === 'repositories' ? <></> : (
             <Grid container spacing={2} justifyContent='center' textAlign='center' mt={screenSize === RESPONSIVE_BREAKPOINTS.TABLET ? 4 : 8}>
               <Grid item xs={12} sm={8}>
                 <Stack spacing={1}>

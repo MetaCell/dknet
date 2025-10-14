@@ -14,6 +14,7 @@ import { vars } from "../theme/variables";
 import { Button } from "@mui/material"
 import { useResponsive } from "../hooks/useResponsive"
 import HelpTooltip from "./HelpTooltip"
+import { hasRemainingFilters } from "../utils/helpers"
 
 const {
   grey700
@@ -42,6 +43,7 @@ const CustomCheckboxesGroup = ({ data }) => {
     setContext({
       ...context,
       currentView: 'repositories',
+      showAll: !hasRemainingFilters(newFilterValues),
       filterValues: newFilterValues
     })
   }, [context, data.code, setContext]);

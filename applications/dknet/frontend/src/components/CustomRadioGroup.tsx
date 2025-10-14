@@ -15,6 +15,7 @@ import Button from "@mui/material/Button/Button"
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 import HelpTooltip from "./HelpTooltip";
 import { useResponsive } from "../hooks/useResponsive";
+import { hasRemainingFilters } from "../utils/helpers"
 
 
 const {
@@ -39,6 +40,7 @@ const CustomRadioGroup = ({ data }) => {
     const newValue = filter.options.find(row => row.code === e.target.value)
     setContext({
       ...context,
+      showAll: false,
       filterValues: {
         ...context.filterValues,
         [data.code]: newValue
@@ -55,6 +57,7 @@ const CustomRadioGroup = ({ data }) => {
     setContext({
       ...context,
       currentView: 'repositories',
+      showAll: !hasRemainingFilters(newFilterValues),
       filterValues: newFilterValues
     })
   }, [context, setContext, data.code]);

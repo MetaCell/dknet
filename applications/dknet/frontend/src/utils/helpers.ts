@@ -67,3 +67,9 @@ export const hasActiveFilters = (filterValues: { [key: string]: any }): boolean 
 export const isFiltersEmpty = (filterValues: { [key: string]: any }): boolean => {
   return Object.values(filterValues).every(value => value === undefined);
 }
+
+export const hasRemainingFilters = (filterValues: { [key: string]: any }): boolean => {
+  return Object.entries(filterValues).some(
+    ([, value]) => value !== undefined && (!Array.isArray(value) || value.length > 0)
+  );
+}

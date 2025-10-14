@@ -6,6 +6,7 @@ import { styled } from "@mui/material/styles";
 import CustomFormControlLabel from "./CustomFormControlLabel";
 import { useFilterContext } from "../../context/Context";
 import { vars } from '../../theme/variables';
+import { hasRemainingFilters } from "../../utils/helpers";
 
 const {
   checkboxBorderColor,
@@ -97,7 +98,7 @@ const CheckBoxWidget = ({ data, filter }: any) => {
 
     setContext({
       ...context,
-      currentView: 'repositories',
+      showAll: !hasRemainingFilters(updatedFilterValues),
       filterValues: updatedFilterValues
     })
   }, [selectedData, data, context, filter.code, setContext])
