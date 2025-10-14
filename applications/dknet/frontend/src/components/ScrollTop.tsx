@@ -1,5 +1,5 @@
-import { Box, Button, IconButton } from "@mui/material";
-import React from "react";
+import { Box, Button, Fade, IconButton } from "@mui/material";
+import React, { useState, useEffect, useCallback } from "react";
 import { TopIcon } from "../assets/icons";
 import { vars } from "../theme/variables";
 import FiltersAssistantDialog from "./FilterAssistantDialog/FiltersAssistantDialog";
@@ -27,40 +27,61 @@ const scrollTop = () => {
 
 const ScrollToTop = () => {
   const [open, setOpen] = React.useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const { context } = useFilterContext();
-  const isFilterValuesEmpty = isFiltersEmpty(context.filterValues);
-  const { allRepositories, allFilters, showAll } = context;
+  const { currentView } = context;
 
-  const showScrollToTop = (allRepositories.length > 0 && allFilters.length > 0) && (!isFilterValuesEmpty || showAll);
+  // Track scroll position to show/hide buttons
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  const openFilterAssistant = () => {
+      // Show buttons when scrolled down, hide when at top
+      if (scrollTop > 0) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Check initial position
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const showScrollToTop = currentView === "repositories" && hasScrolled;
+
+  const openFilterAssistant = useCallback(() => {
     setOpen(true);
-  };
-
-  if (!showScrollToTop) {
-    return null;
-  }
+  }, []);
 
   return (
     <>
-      <Box sx={{
-        position: 'fixed',
-        right: '1.5rem',
-        bottom: '1.5rem',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.5rem',
-        zIndex: 1000,
-      }}>
-        <Button sx={buttonStyle} variant="contained" onClick={openFilterAssistant}>Open Guided Query</Button>
+      <Fade in={showScrollToTop} timeout={300}>
+        <Box sx={{
+          position: 'fixed',
+          right: '1.5rem',
+          bottom: '1.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+          zIndex: 1000,
+        }}>
+          <Button sx={buttonStyle} variant="contained" onClick={openFilterAssistant}>Open Guided Query</Button>
 
-        <IconButton
-          onClick={scrollTop}
-          sx={buttonStyle}
-        >
-          <TopIcon />
-        </IconButton>
-      </Box>
+          <IconButton
+            onClick={scrollTop}
+            sx={buttonStyle}
+          >
+            <TopIcon />
+          </IconButton>
+        </Box>
+      </Fade>
       <FiltersAssistantDialog open={open} setOpen={setOpen} />
     </>
   );

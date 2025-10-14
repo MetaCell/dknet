@@ -46,9 +46,6 @@ const CustomCheckboxesGroup = ({ data }) => {
     })
   }, [context, data.code, setContext]);
 
-  console.log(data.options);
-
-
   return (
     <Box display='flex' flexDirection='column' gap={1}>
       <FormLabel

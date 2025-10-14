@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 //components
 import Header from "../components/Header";
@@ -13,12 +13,12 @@ import { useResponsive } from '../hooks/useResponsive';
 const MainLayout = ({ children }) => {
   const [open, setOpen] = React.useState(false);
   const { context } = useFilterContext();
-  const { allRepositories, allFilters, currentView } = context;
+  const { currentView } = context;
   const { screenSize } = useResponsive();
 
-  const viewFilterAssistant = () => {
+  const viewFilterAssistant = useCallback(() => {
     setOpen(true);
-  }
+  }, []);
 
   return (
     <Box sx={{
@@ -32,7 +32,7 @@ const MainLayout = ({ children }) => {
       <Container>
         <Header />
         {
-          (allRepositories.length === 0 && allFilters.length === 0) || currentView === 'repositories' ? <></> : (
+          currentView === 'launch' && (
             <Grid container spacing={2} justifyContent='center' textAlign='center' mt={screenSize === RESPONSIVE_BREAKPOINTS.TABLET ? 4 : 8}>
               <Grid item xs={12} sm={8}>
                 <Stack spacing={1}>

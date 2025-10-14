@@ -82,6 +82,7 @@ const styles = {
 const RepositoriesList = () => {
   const [showGeneralist, setShowGeneralist] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const { context } = useFilterContext();
   const { screenSize } = useResponsive();
 
@@ -99,12 +100,19 @@ const RepositoriesList = () => {
     });
   }, []);
 
-  // Handle scroll to detect bottom of page
+  // Handle scroll to detect bottom of page and track if user has scrolled
   useEffect(() => {
     const handleScroll = () => {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Check if user has scrolled away from top or is back at top
+      if (scrollTop > 0) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
 
       // Check if user is within 100px of the bottom
       const isNearBottom = windowHeight + scrollTop >= documentHeight - SCROLL_BOTTOM_SPACE;
@@ -162,7 +170,7 @@ const RepositoriesList = () => {
         </Grid>
       </Grid>
 
-      {repos.length > 0 && <Fade in={!isAtBottom} timeout={100}>
+      {repos.length > 0 && <Fade in={!isAtBottom && !hasScrolled} timeout={300}>
         <Box
           sx={styles.scrollOverlay}
         >
