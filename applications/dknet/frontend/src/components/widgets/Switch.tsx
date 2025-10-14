@@ -94,7 +94,7 @@ const SwitchWidget = ({ data }: any) => {
           {data.label}
         </Typography>
         <Stack direction="row">
-          <Tooltip title={data.description}>
+          <Tooltip arrow title={data.description}>
             <IconButton sx={{ p: '2px' }}>
               <HelpOutlineIcon sx={{
                 color: '#98A2B3',

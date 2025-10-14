@@ -17,7 +17,8 @@ import { FilterColor, FilterType } from "../config/enums";
 
 const styles = {
   card: {
-    position: 'relative'
+    position: 'relative',
+    cursor: 'pointer',
   },
   badgeContainer: {
     pr: 2.5,
@@ -85,6 +86,10 @@ const RepositoryCard = (props) => {
 
   const isBestMatchCheck = isBestMatch && Boolean(Object.keys(context.filterValues).length)
 
+  const handleCrdClick = useCallback(() => {
+    window.open(repository.url, '_blank', 'noopener,noreferrer');
+  }, [repository.url]);
+
   const getClass = useCallback(() => {
     return isBestMatchCheck ? "successCard" : ""
   }, [isBestMatchCheck])
@@ -98,7 +103,7 @@ const RepositoryCard = (props) => {
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
-    <Card id={"result_" + props.resultIndex} sx={styles.card} className={getClass()}>
+    <Card id={"result_" + props.resultIndex} sx={styles.card} className={getClass()} onClick={handleCrdClick}>
       {
         isBestMatchCheck &&
         <Box sx={styles.badgeContainer}>
@@ -109,7 +114,7 @@ const RepositoryCard = (props) => {
         <CardContent sx={styles.cardContent}>
           <Stack spacing={1}>
             <Box sx={styles.linkContainer}>
-              <Tooltip title={repository.label}>
+              <Tooltip arrow title={repository.label}>
                 <Link
                   href={repository.url}
                   target="_blank"

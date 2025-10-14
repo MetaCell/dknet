@@ -7,24 +7,41 @@ import Stack from '@mui/material/Stack'
 import Typography from "@mui/material/Typography"
 import FormGroup from "@mui/material/FormGroup"
 import FormLabel from '@mui/material/FormLabel'
-import Tooltip from "@mui/material/Tooltip"
-import IconButton from "@mui/material/IconButton"
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 import { useFilterContext } from "../context/Context";
 import CustomAutoComplete from "./widgets/CustomAutoComplete";
 import { vars } from "../theme/variables";
 import { Button } from "@mui/material";
+import HelpTooltip from "./HelpTooltip";
+import { useResponsive } from "../hooks/useResponsive";
 
 const {
-  grey700,
-  grey400
+  grey700
 } = vars;
 
 //icons
 
 const FilterSearch = () => {
   const { context, setContext } = useFilterContext();
+  const { isTablet, isTooSmall } = useResponsive();
+  const [openDataType, setOpenDataType] = React.useState(false);
+  const [openDomain, setOpenDomain] = React.useState(false);
+
+  const handleDataTypeTooltipClose = useCallback(() => {
+    setOpenDataType(false);
+  }, []);
+
+  const handleDataTypeTooltipOpen = useCallback(() => {
+    setOpenDataType(!openDataType);
+  }, [openDataType]);
+
+  const handleDomainTooltipClose = useCallback(() => {
+    setOpenDomain(false);
+  }, []);
+
+  const handleDomainTooltipOpen = useCallback(() => {
+    setOpenDomain(!openDomain);
+  }, [openDomain]);
 
   const onChangeFilterValue = useCallback((value, filter) => {
     setContext({
@@ -66,13 +83,14 @@ const FilterSearch = () => {
               Data Type
             </Typography>
             <Stack direction="row" alignItems='center' flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
-              <Tooltip title={"Data Type"}>
-                <IconButton sx={{ height: 'fit-content', p: 0 }}>
-                  <HelpOutlineIcon sx={{
-                    color: grey400,
-                  }} />
-                </IconButton>
-              </Tooltip>
+              <HelpTooltip
+                description="Data Type"
+                isTablet={isTablet}
+                isTooSmall={isTooSmall}
+                open={openDataType}
+                handleTooltipOpen={handleDataTypeTooltipOpen}
+                handleTooltipClose={handleDataTypeTooltipClose}
+              />
               <Button sx={{
                 height: 'fit-content',
                 minHeight: 0,
@@ -120,13 +138,14 @@ const FilterSearch = () => {
               Domain
             </Typography>
             <Stack direction="row" alignItems="center" justifyContent="space-between">
-              <Tooltip title={"Domain"}>
-                <IconButton sx={{ p: '2px' }}>
-                  <HelpOutlineIcon sx={{
-                    color: grey400,
-                  }} />
-                </IconButton>
-              </Tooltip>
+              <HelpTooltip
+                description="Domain"
+                isTablet={isTablet}
+                isTooSmall={isTooSmall}
+                open={openDomain}
+                handleTooltipOpen={handleDomainTooltipOpen}
+                handleTooltipClose={handleDomainTooltipClose}
+              />
               <Button
                 variant='text'
                 disabled={!context.filterValues?.[context.allFilters[1].code]}

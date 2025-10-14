@@ -5,9 +5,6 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from "@mui/material/Typography"
 import FormLabel from '@mui/material/FormLabel'
-import Tooltip from "@mui/material/Tooltip"
-import IconButton from "@mui/material/IconButton"
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
 
 import { vars } from "../theme/variables";
 import RadioGroupWidget from "./widgets/RadioWidget";
@@ -16,16 +13,27 @@ import FormControl from "@mui/material/FormControl";
 import { useFilterContext } from "../context/Context";
 import Button from "@mui/material/Button/Button"
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
+import HelpTooltip from "./HelpTooltip";
+import { useResponsive } from "../hooks/useResponsive";
 
 
 const {
-  grey700,
-  grey400
+  grey700
 } = vars;
 
 const CustomRadioGroup = ({ data }) => {
   const { context, setContext } = useFilterContext()
   const filter = context.allFilters.find((filter: any) => filter.code === data.code)
+  const { isTablet, isTooSmall } = useResponsive();
+  const [open, setOpen] = React.useState(false);
+
+  const handleTooltipClose = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  const handleTooltipOpen = useCallback(() => {
+    setOpen(!open);
+  }, [open]);
 
   const onRadioChange = useCallback((e: any) => {
     const newValue = filter.options.find(row => row.code === e.target.value)
@@ -64,13 +72,14 @@ const CustomRadioGroup = ({ data }) => {
             {data.label}
           </Typography>
           <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
-            <Tooltip title={data.description}>
-              <IconButton sx={{ height: 'fit-content', p: 0 }}>
-                <HelpOutlineIcon sx={{
-                  color: grey400,
-                }} />
-              </IconButton>
-            </Tooltip>
+            <HelpTooltip
+              description={data.description}
+              isTablet={isTablet}
+              isTooSmall={isTooSmall}
+              open={open}
+              handleTooltipOpen={handleTooltipOpen}
+              handleTooltipClose={handleTooltipClose}
+            />
             <Button
               variant='text'
               onClick={onClearFilter}

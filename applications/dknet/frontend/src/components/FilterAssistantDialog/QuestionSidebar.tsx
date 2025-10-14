@@ -119,16 +119,16 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
 
   // Helper function to check if a question has any selected filters
   const hasSelectedFilters = useCallback((question: QuestionTab): boolean => {
-    const selectedValue = filterValues[question.code];
+    const selectedValue = filterValues[question?.code];
 
     // For single select questions (SINGLE, BOOLEAN, HIERARCHY), check if there's a selected value with a code
-    if (question.inputType === 'SINGLE' || question.inputType === 'BOOLEAN' || question.inputType === 'HIERARCHY') {
-      return selectedValue && selectedValue.code;
+    if (question?.inputType === 'SINGLE' || question?.inputType === 'BOOLEAN' || question?.inputType === 'HIERARCHY') {
+      return selectedValue && selectedValue?.code;
     }
 
     // For multi select questions, check if array has any items
-    if (question.inputType === 'MULTI') {
-      return Array.isArray(selectedValue) && selectedValue.length > 0;
+    if (question?.inputType === 'MULTI') {
+      return Array.isArray(selectedValue) && selectedValue?.length > 0;
     }
 
     return false;
@@ -140,7 +140,7 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
       <Box sx={styles.leftBlock}>
         <Box sx={styles.header}>
           <Typography variant='h4'>Questions</Typography>
-          <Button variant="outlined" onClick={handleResetFilters}>Reset</Button>
+          <Button variant="outlined" onClick={handleResetFilters} disabled={!hasSelectedFilters(questionsTabs[value])}>Reset</Button>
         </Box>
         <Box sx={styles.tabs}>
           <Tabs

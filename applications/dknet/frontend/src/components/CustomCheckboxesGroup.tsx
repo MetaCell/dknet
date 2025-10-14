@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { useFilterContext } from "../context/Context"
 
 //components
@@ -8,22 +8,32 @@ import Typography from "@mui/material/Typography"
 import FormGroup from "@mui/material/FormGroup"
 import CheckBoxWidget from "./widgets/CheckBox"
 import FormLabel from '@mui/material/FormLabel'
-import Tooltip from "@mui/material/Tooltip"
-import IconButton from "@mui/material/IconButton"
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 
 import { vars } from "../theme/variables";
 import { Button } from "@mui/material"
+import { useResponsive } from "../hooks/useResponsive"
+import HelpTooltip from "./HelpTooltip"
 
 const {
-  grey700,
-  grey400
+  grey700
 } = vars;
+
 const CustomCheckboxesGroup = ({ data }) => {
   const { context, setContext } = useFilterContext()
+  const { isTablet, isTooSmall } = useResponsive();
 
-  const onClearFilter = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleTooltipClose = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  const handleTooltipOpen = useCallback(() => {
+    setOpen(!open);
+  }, [open]);
+
+  const onClearFilter = useCallback(() => {
     const newFilterValues = {
       ...context.filterValues,
       [data.code]: undefined
@@ -34,7 +44,10 @@ const CustomCheckboxesGroup = ({ data }) => {
       currentView: 'repositories',
       filterValues: newFilterValues
     })
-  }
+  }, [context, data.code, setContext]);
+
+  console.log(data.options);
+
 
   return (
     <Box display='flex' flexDirection='column' gap={1}>
@@ -49,13 +62,14 @@ const CustomCheckboxesGroup = ({ data }) => {
             {data.label}
           </Typography>
           <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
-            <Tooltip title={data.description}>
-              <IconButton sx={{ height: 'fit-content', p: 0 }}>
-                <HelpOutlineIcon sx={{
-                  color: grey400,
-                }} />
-              </IconButton>
-            </Tooltip>
+            <HelpTooltip
+              description={data.description}
+              isTablet={isTablet}
+              isTooSmall={isTooSmall}
+              open={open}
+              handleTooltipOpen={handleTooltipOpen}
+              handleTooltipClose={handleTooltipClose}
+            />
             <Button
               variant='text'
               onClick={onClearFilter}
@@ -74,9 +88,9 @@ const CustomCheckboxesGroup = ({ data }) => {
       </FormLabel>
       <FormGroup>
         {
-          data.options.map((row, index) =>
+          data.options.map((row) =>
             <CheckBoxWidget
-              key={"checkbox_" + index}
+              key={"checkbox_" + row.code}
               data={row}
               filter={data}
             />)

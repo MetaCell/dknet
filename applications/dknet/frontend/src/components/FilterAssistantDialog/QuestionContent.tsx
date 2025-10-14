@@ -178,7 +178,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
         {currentQuestion?.options.map((data, index) => {
           const isLastItem = index === currentQuestion?.options.length - 1;
           return (
-            <Tooltip title={data.label} key={data?.label}>
+            <Tooltip arrow title={data.label} key={data?.label}>
               <Box sx={{
                 ...styles.getItemSx(getCheckedStateForMultiple(currentQuestion, data) === 'checked-state'),
                 ...styles.getMultipleChoiceItem(shouldExpandHeight, isLastItem),

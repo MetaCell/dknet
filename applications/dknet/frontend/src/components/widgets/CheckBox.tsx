@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 //components
 import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
@@ -77,9 +77,12 @@ function BpCheckbox(props: CheckboxProps) {
 
 const CheckBoxWidget = ({ data, filter }: any) => {
   const { context, setContext } = useFilterContext()
-  const selectedData = context.filterValues[filter.code] || []
+  const selectedData = React.useMemo(
+    () => context.filterValues[filter.code] || [],
+    [context.filterValues, filter.code]
+  )
 
-  const onChangeCheckbox = (e) => {
+  const onChangeCheckbox = useCallback((e) => {
     let newValue = null
     if (e.target.checked) {
       newValue = [...selectedData, data]
@@ -97,7 +100,7 @@ const CheckBoxWidget = ({ data, filter }: any) => {
       currentView: 'repositories',
       filterValues: updatedFilterValues
     })
-  }
+  }, [selectedData, data, context, filter.code, setContext])
 
   return (
     <CustomFormControlLabel

@@ -685,6 +685,26 @@ const theme = createTheme({
         }
       }
     },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          backgroundColor: grey800,
+          borderRadius: '0.5rem',
+          padding: '0.375rem 0.75rem',
+        },
+        arrow: {
+          color: grey800,
+        },
+        popper: {
+          '&.MuiTooltip-popper[data-popper-placement*="bottom"]': {
+            '& .MuiTooltip-tooltip': {
+              marginTop: '.5rem'
+
+            }
+          },
+        }
+      }
+    }
 
   }
 });

@@ -1,13 +1,14 @@
-import React, { ChangeEvent, FC, memo } from "react";
-import { Box, Button, FormLabel, IconButton, List, ListItem, Stack, Tooltip, Typography } from "@mui/material";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import React, { ChangeEvent, FC, memo, useCallback } from "react";
+import { Box, Button, FormLabel, List, ListItem, Stack, Typography } from "@mui/material";
 import CustomizedRadios from "./widgets/RadioWidget";
 import RadioGroup from "@mui/material/RadioGroup";
 import { vars } from "../theme/variables";
 import { useFilterContext } from "../context/Context";
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
+import HelpTooltip from "./HelpTooltip";
+import { useResponsive } from "../hooks/useResponsive";
 
-const { grey700, grey400, grey200 } = vars;
+const { grey700, grey200 } = vars;
 
 interface Item {
   code: string,
@@ -29,10 +30,6 @@ interface NestedListViewProps {
 
 const formLabelStyles = {
   color: grey700,
-};
-
-const iconButtonStyles = {
-  height: 'fit-content', p: 0
 };
 
 const listStyles = {
@@ -81,6 +78,16 @@ NestedListItem.displayName = 'NestedListItem';
 
 const NestedListView: FC<NestedListViewProps> = ({ data }) => {
   const { context, setContext } = useFilterContext();
+  const { isTablet, isTooSmall } = useResponsive();
+  const [open, setOpen] = React.useState(false);
+
+  const handleTooltipClose = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  const handleTooltipOpen = useCallback(() => {
+    setOpen(!open);
+  }, [open]);
 
   const onClearFilter = () => {
     const newFilterValues = {
@@ -111,11 +118,14 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
       <Stack direction="row" alignItems='center' justifyContent="space-between">
         <Typography variant='h4' flex={1}>{data.label}</Typography>
         <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
-          <Tooltip title={data.question}>
-            <IconButton sx={iconButtonStyles}>
-              <HelpOutlineIcon sx={{ color: grey400 }} />
-            </IconButton>
-          </Tooltip>
+          <HelpTooltip
+            description={data.question || ''}
+            isTablet={isTablet}
+            isTooSmall={isTooSmall}
+            open={open}
+            handleTooltipOpen={handleTooltipOpen}
+            handleTooltipClose={handleTooltipClose}
+          />
           <Button
             variant='text'
             onClick={onClearFilter}
