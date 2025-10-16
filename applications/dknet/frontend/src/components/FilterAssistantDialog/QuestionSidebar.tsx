@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { Box, Typography, Button, Tabs, Tab } from '@mui/material';
 import ProgressBar from '../widgets/ProgressBar';
 import { vars } from '../../theme/variables';
@@ -32,7 +32,6 @@ const styles = {
   tabs: {
     pl: 1,
     flexGrow: 1,
-    display: 'flex',
     maxHeight: 'calc(100% - 5rem)',
     overflow: 'auto',
     "& .MuiTab-root": {
@@ -106,6 +105,21 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
   filterValues
 }) => {
   const { context, setContext } = useFilterContext();
+  const tabsContainerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to active tab when value changes
+  useEffect(() => {
+    if (tabsContainerRef.current) {
+      const activeTab = tabsContainerRef.current.querySelector(`#vertical-tab-${value}`);
+      if (activeTab) {
+        activeTab.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'nearest'
+        });
+      }
+    }
+  }, [value]);
 
   // Handler for resetting all filters
   const handleResetFilters = useCallback(() => {
@@ -142,7 +156,7 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
           <Typography variant='h4'>Questions</Typography>
           <Button variant="outlined" onClick={handleResetFilters} disabled={!hasSelectedFilters(questionsTabs[value])}>Reset</Button>
         </Box>
-        <Box sx={styles.tabs}>
+        <Box ref={tabsContainerRef} sx={styles.tabs}>
           <Tabs
             orientation="vertical"
             variant="scrollable"
