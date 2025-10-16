@@ -113,6 +113,9 @@ const CheckBoxWidget = ({ data, filter }: any) => {
         />}
       label={data.label}
       value={undefined}
+      sx={{
+        padding: 2
+      }}
     />
   );
 };

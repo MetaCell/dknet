@@ -21,7 +21,6 @@ const styles = {
     boxShadow: isChecked ? `0 0 0 0.0625rem ${primary600}` : 'none',
     width: '100%',
     minHeight: '3rem',
-    padding: 2,
 
     '&:hover': {
       border: `0.0625rem solid`,
