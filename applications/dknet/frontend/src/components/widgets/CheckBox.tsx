@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 //components
 import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
 import CustomFormControlLabel from "./CustomFormControlLabel";
 import { useFilterContext } from "../../context/Context";
-import { vars } from '../../theme/variables'
+import { vars } from '../../theme/variables';
+import { hasRemainingFilters } from "../../utils/helpers";
 
 const {
   checkboxBorderColor,
@@ -78,24 +78,30 @@ function BpCheckbox(props: CheckboxProps) {
 
 const CheckBoxWidget = ({ data, filter }: any) => {
   const { context, setContext } = useFilterContext()
-  const selectedData = context.filterValues[filter.code] || []
+  const selectedData = React.useMemo(
+    () => context.filterValues[filter.code] || [],
+    [context.filterValues, filter.code]
+  )
 
-  const onChangeCheckbox = (e) => {
+  const onChangeCheckbox = useCallback((e) => {
     let newValue = null
     if (e.target.checked) {
       newValue = [...selectedData, data]
     } else {
       newValue = selectedData.filter(row => row.code !== e.target.value)
     }
+
+    const updatedFilterValues = {
+      ...context.filterValues,
+      [filter.code]: newValue.length !== 0 ? newValue : undefined
+    }
+
     setContext({
       ...context,
-      showAll: false,
-      filterValues: {
-        ...context.filterValues,
-        [filter.code]: newValue.length !== 0 ? newValue : undefined
-      }
+      showAll: !hasRemainingFilters(updatedFilterValues),
+      filterValues: updatedFilterValues
     })
-  }
+  }, [selectedData, data, context, filter.code, setContext])
 
   return (
     <CustomFormControlLabel
@@ -105,10 +111,11 @@ const CheckBoxWidget = ({ data, filter }: any) => {
           value={data.code}
           onChange={onChangeCheckbox}
         />}
-      label={<Typography variant="h4">
-        {data.label}
-      </Typography>}
+      label={data.label}
       value={undefined}
+      sx={{
+        padding: 2
+      }}
     />
   );
 };

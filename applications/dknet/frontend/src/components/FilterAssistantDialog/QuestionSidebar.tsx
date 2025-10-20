@@ -1,17 +1,18 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { Box, Typography, Button, Tabs, Tab } from '@mui/material';
 import ProgressBar from '../widgets/ProgressBar';
 import { vars } from '../../theme/variables';
-import { QuestionTab, ResponsiveConfig } from '../../utils/types';
+import { QuestionTab } from '../../utils/types';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useFilterContext } from '../../context/Context';
 import { resetFilters } from '../../utils/helpers';
+import { SIDEBAR_WIDTH } from '../../utils/constants';
 const { grey500, primary700, primary600, white, grey300 } = vars;
 
 const styles = {
-  container: (sidebarWidth: string) => ({
+  container: (sidebarWidth: number) => ({
     height: '100%',
-    width: sidebarWidth,
+    width: `${sidebarWidth}px`,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between'
@@ -31,7 +32,6 @@ const styles = {
   tabs: {
     pl: 1,
     flexGrow: 1,
-    display: 'flex',
     maxHeight: 'calc(100% - 5rem)',
     overflow: 'auto',
     "& .MuiTab-root": {
@@ -89,7 +89,6 @@ interface QuestionSidebarProps {
   value: number;
   handleChange: (event: React.SyntheticEvent, newValue: number) => void;
   progress: number;
-  config: ResponsiveConfig;
   filterValues: { [key: string]: any };
 }
 
@@ -103,32 +102,47 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
   value,
   handleChange,
   progress,
-  config,
   filterValues
 }) => {
   const { context, setContext } = useFilterContext();
+  const tabsContainerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to active tab when value changes
+  useEffect(() => {
+    if (tabsContainerRef.current) {
+      const activeTab = tabsContainerRef.current.querySelector(`#vertical-tab-${value}`);
+      if (activeTab) {
+        activeTab.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'nearest'
+        });
+      }
+    }
+  }, [value]);
 
   // Handler for resetting all filters
   const handleResetFilters = useCallback(() => {
     setContext({
       ...context,
-      showAll: false,
       filterValues: resetFilters(context.allFilters)
     });
-  }, [context, setContext]);
+    // Go back to the first question
+    handleChange({} as React.SyntheticEvent, 0);
+  }, [context, setContext, handleChange]);
 
   // Helper function to check if a question has any selected filters
   const hasSelectedFilters = useCallback((question: QuestionTab): boolean => {
-    const selectedValue = filterValues[question.code];
+    const selectedValue = filterValues[question?.code];
 
     // For single select questions (SINGLE, BOOLEAN, HIERARCHY), check if there's a selected value with a code
-    if (question.inputType === 'SINGLE' || question.inputType === 'BOOLEAN' || question.inputType === 'HIERARCHY') {
-      return selectedValue && selectedValue.code;
+    if (question?.inputType === 'SINGLE' || question?.inputType === 'BOOLEAN' || question?.inputType === 'HIERARCHY') {
+      return selectedValue && selectedValue?.code;
     }
 
     // For multi select questions, check if array has any items
-    if (question.inputType === 'MULTI') {
-      return Array.isArray(selectedValue) && selectedValue.length > 0;
+    if (question?.inputType === 'MULTI') {
+      return Array.isArray(selectedValue) && selectedValue?.length > 0;
     }
 
     return false;
@@ -136,13 +150,13 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
 
 
   return (
-    <Box sx={styles.container(config.sidebarWidth)}>
+    <Box sx={styles.container(SIDEBAR_WIDTH)}>
       <Box sx={styles.leftBlock}>
         <Box sx={styles.header}>
           <Typography variant='h4'>Questions</Typography>
-          <Button variant="outlined" onClick={handleResetFilters}>Reset</Button>
+          <Button variant="outlined" onClick={handleResetFilters} disabled={!hasSelectedFilters(questionsTabs[value])}>Reset</Button>
         </Box>
-        <Box sx={styles.tabs}>
+        <Box ref={tabsContainerRef} sx={styles.tabs}>
           <Tabs
             orientation="vertical"
             variant="scrollable"

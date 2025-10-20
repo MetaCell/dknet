@@ -6,17 +6,17 @@ interface UseSidebarVisibilityProps {
 }
 
 export const useSidebarVisibility = ({ showPreview }: UseSidebarVisibilityProps) => {
-  const { isTablet } = useResponsive();
+  const { isTablet, isTooSmall, isLaptop } = useResponsive();
 
   const showSidebar = useMemo(() => {
-    // On tablet, hide sidebar when preview is shown
-    if (isTablet) {
+    // On tablet or too small screens, hide sidebar when preview is shown
+    if (isTablet || isTooSmall || isLaptop) {
       return !showPreview;
     }
     
     // On other screen sizes, always show sidebar
     return true;
-  }, [isTablet, showPreview]);
+  }, [isLaptop, isTablet, isTooSmall, showPreview]);
 
   return {
     showSidebar

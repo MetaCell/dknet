@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 //components
 import Header from "../components/Header";
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import FiltersAssistantDialog from "../components/FilterAssistantDialog/FiltersAssistantDialog";
 import { useFilterContext } from "../context/Context";
-import { useResponsive } from "../hooks/useResponsive";
+import { RESPONSIVE_BREAKPOINTS } from '../utils/constants';
+import { useResponsive } from '../hooks/useResponsive';
 
 const MainLayout = ({ children }) => {
   const [open, setOpen] = React.useState(false);
   const { context } = useFilterContext();
-  const { allRepositories, allFilters } = context;
+  const { allRepositories, allFilters, currentView } = context;
   const { screenSize } = useResponsive();
 
-  const viewFilterAssistant = () => {
+  const viewFilterAssistant = useCallback(() => {
     setOpen(true);
-  }
+  }, []);
 
   return (
     <Box sx={{
@@ -30,30 +31,28 @@ const MainLayout = ({ children }) => {
     }}>
       <Container>
         <Header />
-        <Grid container spacing={2} justifyContent='center' textAlign='center' mt={8}>
-          <Grid item xs={12} sm={8}>
-            <Typography variant='h1'>Find the right repository for your data.</Typography>
-            <Typography fontWeight='normal' fontSize='1rem' variant='subtitle1'>Explore, filter and find the best repositories for your data and needs.</Typography>
-          </Grid>
-          {
-            (allRepositories.length === 0 && allFilters.length === 0 ? <></> : (
-              <>
-                <Grid item xs={12} display="flex" justifyContent="center">
-                  <Button variant='contained' onClick={viewFilterAssistant} sx={{ width: '16.5rem', height: '3.75rem', fontSize: '1rem' }}>Click Here To Get Started</Button>
-                </Grid>
-                <Grid item xs={12} sm={8}>
-                  <Box mt={2} display='flex' alignItems='center' flexDirection='column' gap={1.5} justifyContent='center' width={1}>
-                    <Typography variant='subtitle2' mr={1}>You will be asked a series of questions based on your data requirements and priorities</Typography>
-                  </Box>
-                </Grid>
-              </>
-            ))
-          }
-        </Grid>
+        {
+          (allRepositories.length === 0 && allFilters.length === 0) || currentView === 'repositories' ? <></> : (
+            <Grid container spacing={2} justifyContent='center' textAlign='center' mt={screenSize === RESPONSIVE_BREAKPOINTS.TABLET ? 4 : 8}>
+              <Grid item xs={12} sm={8}>
+                <Stack spacing={1}>
+                  <Typography variant='h1'>Find the right repository for your data.</Typography>
+                  <Typography variant='subtitle2'>Explore, filter and find the best repositories for your data and needs.</Typography>
+                </Stack>
+              </Grid>
+              <Grid item xs={12} display="flex" justifyContent="center">
+                <Button variant='contained' onClick={viewFilterAssistant} sx={{ width: '16.5rem', height: '3.75rem', fontSize: '1rem' }}>Click Here To Get Started</Button>
+              </Grid>
+              <Grid item xs={12} sm={8}>
+                <Typography variant='subtitle2' textAlign='center'>You will be asked a series of questions based on your data requirements and priorities</Typography>
+              </Grid>
+            </Grid>
+          )
+        }
       </Container>
       <Box
-        pt={9}
-        pb={9}
+        pt={4}
+        pb={4}
       >
         {children}
       </Box>

@@ -51,5 +51,25 @@ export const resetFilters = (filters) => {
 }
 
 export const isTopMatch = (item: ResultItem, index: number, results: ResultItem[]): boolean => {
-  return (index === 0 || item.pctMatch === results[0]?.pctMatch) && !isNaN(item.pctMatch || 0);
+  if (!results || results.length === 0) {
+    return false;
+  }
+  return index === 0 || item.pctMatch === results[0].pctMatch;
+}
+
+export const hasActiveFilters = (filterValues: { [key: string]: any }): boolean => {
+  return Object.values(filterValues).some(value => 
+    value !== undefined && value !== null && 
+    (Array.isArray(value) ? value.length > 0 : true)
+  );
+}
+
+export const isFiltersEmpty = (filterValues: { [key: string]: any }): boolean => {
+  return Object.values(filterValues).every(value => value === undefined);
+}
+
+export const hasRemainingFilters = (filterValues: { [key: string]: any }): boolean => {
+  return Object.entries(filterValues).some(
+    ([, value]) => value !== undefined && (!Array.isArray(value) || value.length > 0)
+  );
 }

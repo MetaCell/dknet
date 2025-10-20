@@ -10,15 +10,13 @@ const {
   primary600, primary700, primary25, primary200,
   error600, error25,
   warning25, warning700, warning500,
-  success50, success700, success500,
+  success50, success700,
   checkboxBorderColor,
   cardChipBgColor,
   warning50,
   warning300,
   dialogBoxShadow,
   primary500,
-  iconButtonFocusShadow,
-  iconButtonHoverShadow,
   primary800,
   primary50,
   checkboxBgChecked,
@@ -113,10 +111,12 @@ const theme = createTheme({
     },
     subtitle2: {
       fontSize: '0.875rem',
-      color: grey500
+      color: grey500,
+      fontWeight: 400
     },
     body2: {
       fontSize: '0.875rem',
+      color: grey600,
     },
     body1: {
 
@@ -132,6 +132,9 @@ const theme = createTheme({
     },
     MuiCssBaseline: {
       styleOverrides: `
+      body {padding: 0 !important; margin: 0;
+      overflow-y: scroll !important;
+      }
       ::-webkit-scrollbar {
         width: 0.5rem;
         height: 0.5rem;
@@ -419,7 +422,7 @@ const theme = createTheme({
               color: success700
             },
             '& .MuiSvgIcon-root': {
-              color: success500,
+              color: success50,
             }
           },
           '&.cardBadge': {
@@ -631,9 +634,25 @@ const theme = createTheme({
       styleOverrides: {
       }
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecorationColor: grey800,
+        }
+      }
+    },
     MuiInputBase: {
       styleOverrides: {
         root: {
+          '& .MuiButtonBase-root': {
+            '& .MuiSvgIcon-root': {
+              marginRight: 0,
+              marginLeft: '0.3125rem'
+            }
+          },
+          '&.Mui-focused': {
+            backgroundColor: 'transparent !important',
+          }
         }
       }
     },
@@ -648,7 +667,8 @@ const theme = createTheme({
       styleOverrides: {
         label: {
           lineHeight: 1,
-          flex: 1
+          flex: 1,
+          fontSize: '0.875rem',
         },
         root: {
           flexGrow: 1,
@@ -665,6 +685,26 @@ const theme = createTheme({
         }
       }
     },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          backgroundColor: grey800,
+          borderRadius: '0.5rem',
+          padding: '0.375rem 0.75rem',
+        },
+        arrow: {
+          color: grey800,
+        },
+        popper: {
+          '&.MuiTooltip-popper[data-popper-placement*="bottom"]': {
+            '& .MuiTooltip-tooltip': {
+              marginTop: '.5rem'
+
+            }
+          },
+        }
+      }
+    }
 
   }
 });

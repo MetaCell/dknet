@@ -5,8 +5,8 @@ import CheckBoxWidget from '../widgets/CheckBox';
 import DialogStepFooter from './DialogStepFooter';
 import ExpandableText from '../ExpandableText';
 import { vars } from '../../theme/variables';
-import { QuestionTab, ResponsiveConfig } from '../../utils/types';
-import { INPUT_TYPES } from '../../utils/constants';
+import { QuestionTab } from '../../utils/types';
+import { INPUT_TYPES, MIN_CONTENT_WIDTH } from '../../utils/constants';
 import { useFilterLogic } from '../../hooks/useFilterLogic';
 
 const { grey200, primary25, primary600 } = vars;
@@ -21,7 +21,6 @@ const styles = {
     boxShadow: isChecked ? `0 0 0 0.0625rem ${primary600}` : 'none',
     width: '100%',
     minHeight: '3rem',
-    padding: 2,
 
     '&:hover': {
       border: `0.0625rem solid`,
@@ -35,18 +34,20 @@ const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
-    py: 4,
-    px: 3
+    overflow: 'hidden',
   },
 
   slideContainer: {
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
-    minHeight: 0
+    minHeight: 0,
+    overflow: 'auto',
+    pt: 4,
+    pb: 2,
+    px: 3,
   },
 
   headerContainer: {
@@ -66,15 +67,17 @@ const styles = {
     justifyContent: 'center',
     width: '100%',
     flex: 1,
-    minHeight: 0,
+    minHeight: '20rem',
   },
 
   footerContainer: {
     display: 'flex',
     justifyContent: 'center',
     flexShrink: 0,
-    mt: 2,
     width: '100%',
+    pb: 4,
+    pt: 2,
+    px: 3,
   },
 
   getMultipleChoiceContainer: (optionsCount: number) => {
@@ -96,6 +99,11 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     marginBottom: isLastItem ? 1.5 : 0,
+
+    '& .MuiTypography-root': {
+      color: vars.grey700,
+      fontWeight: 500,
+    }
   }),
 
   getSingleChoiceContainer: (optionsCount: number) => {
@@ -108,6 +116,11 @@ const styles = {
       gridTemplateRows: shouldExpandHeight ? 'repeat(3, 1fr)' : 'auto',
       gap: 1.5,
       ...(shouldExpandHeight && { flex: 1, height: '100%' }),
+
+      '& .MuiTypography-root': {
+        color: vars.grey700,
+        fontWeight: 500,
+      }
     };
   },
 
@@ -122,7 +135,6 @@ const styles = {
 
 interface QuestionContentProps {
   currentQuestion: QuestionTab;
-  config: ResponsiveConfig;
   value: number;
   questionsTabs: QuestionTab[];
   onOptionClick: (question: QuestionTab, data: any) => void;
@@ -133,7 +145,6 @@ interface QuestionContentProps {
 
 const QuestionContent: React.FC<QuestionContentProps> = ({
   currentQuestion,
-  config,
   value,
   questionsTabs,
   onOptionClick,
@@ -155,7 +166,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
   const handleOptionClick = useCallback((e: React.MouseEvent, data: any) => {
     e.preventDefault();
     onOptionClick(currentQuestion, data);
-  }, [currentQuestion, onOptionClick]);
+  }, [onOptionClick, currentQuestion]);
 
   const renderMultipleChoiceOptions = () => {
     const optionsCount = currentQuestion?.options.length || 0;
@@ -166,7 +177,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
         {currentQuestion?.options.map((data, index) => {
           const isLastItem = index === currentQuestion?.options.length - 1;
           return (
-            <Tooltip title={data.label} key={data?.label}>
+            <Tooltip arrow title={data.label} key={data?.label}>
               <Box sx={{
                 ...styles.getItemSx(getCheckedStateForMultiple(currentQuestion, data) === 'checked-state'),
                 ...styles.getMultipleChoiceItem(shouldExpandHeight, isLastItem),
@@ -225,7 +236,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
         timeout={600}
         appear
       >
-        <Box maxWidth={config.questionMaxWidth} width="100%" sx={styles.slideContainer}>
+        <Box maxWidth={MIN_CONTENT_WIDTH} width="100%" sx={styles.slideContainer}>
           <Box sx={styles.headerContainer}>
             <Stack sx={styles.headerStack} spacing={1}>
               <Typography textAlign="left" variant="h3">
@@ -246,7 +257,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
       </Slide>
       {/* Fixed Footer - Always Visible */}
       <Box sx={styles.footerContainer}>
-        <Box maxWidth={config.questionMaxWidth} width="100%">
+        <Box maxWidth={MIN_CONTENT_WIDTH} width="100%">
           <DialogStepFooter
             handlePrev={onPrev}
             value={value}
