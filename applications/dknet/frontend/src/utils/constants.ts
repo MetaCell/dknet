@@ -25,7 +25,7 @@ export const RESPONSIVE_CONFIGS = {
     homePageImageWidth: '11.25rem',
   },
   laptop: {
-    showPreviewByDefault: true,
+    showPreviewByDefault: false,
     homePageImageWidth: '14.25rem',
   },
   smallDesktop: {
@@ -37,7 +37,7 @@ export const RESPONSIVE_CONFIGS = {
     homePageImageWidth: '23.0625rem',
   },
   default: {
-    showPreviewByDefault: true,
+    showPreviewByDefault: false,
     homePageImageWidth: '14.25rem',
   }
 } as const;

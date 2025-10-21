@@ -5,7 +5,7 @@ import { vars } from '../../theme/variables';
 import { QuestionTab } from '../../utils/types';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useFilterContext } from '../../context/Context';
-import { resetFilters } from '../../utils/helpers';
+import { hasActiveFilters, resetFilters } from '../../utils/helpers';
 import { SIDEBAR_WIDTH } from '../../utils/constants';
 const { grey500, primary700, primary600, white, grey300 } = vars;
 
@@ -106,6 +106,7 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
 }) => {
   const { context, setContext } = useFilterContext();
   const tabsContainerRef = useRef<HTMLDivElement>(null);
+  const hasFiltersApplied = hasActiveFilters(context.filterValues)
 
   // Auto-scroll to active tab when value changes
   useEffect(() => {
@@ -154,7 +155,7 @@ const QuestionSidebar: React.FC<QuestionSidebarProps> = ({
       <Box sx={styles.leftBlock}>
         <Box sx={styles.header}>
           <Typography variant='h4'>Questions</Typography>
-          <Button variant="outlined" onClick={handleResetFilters} disabled={!hasSelectedFilters(questionsTabs[value])}>Reset</Button>
+          <Button variant="outlined" onClick={handleResetFilters} disabled={!hasFiltersApplied}>Reset</Button>
         </Box>
         <Box ref={tabsContainerRef} sx={styles.tabs}>
           <Tabs
