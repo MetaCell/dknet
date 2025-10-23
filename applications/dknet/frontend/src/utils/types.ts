@@ -28,6 +28,7 @@ export interface ResponsiveConfig {
 }
 
 export interface ResultItem {
+  code: string;
   label: string;
   pctMatch?: number;
 }

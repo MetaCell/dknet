@@ -103,7 +103,7 @@ const RepositoryCard = (props) => {
 
   // TODO: add logic to display the correct icon/text/component based on the repository's dynamic attributes
   return (
-    <Card id={"result_" + props.resultIndex} sx={styles.card} className={getClass()} onClick={handleCrdClick}>
+    <Card id={repository.code} sx={styles.card} className={getClass()} onClick={handleCrdClick}>
       {
         isBestMatchCheck &&
         <Box sx={styles.badgeContainer}>

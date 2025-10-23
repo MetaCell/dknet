@@ -111,8 +111,16 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({
   results,
   closeDialog
 }) => {
-  const handleResultClick = useCallback(() => {
+  const handleResultClick = useCallback((repositoryCode: string) => {
     closeDialog();
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const element = document.getElementById(repositoryCode);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
   }, [closeDialog]);
 
   const getListItemButtonStyles = useCallback((el: ResultItem, index: number) => {
@@ -124,7 +132,7 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({
   }, [results]);
 
   const getPrimaryText = useCallback((el: ResultItem) => {
-    return !isNaN(el.pctMatch || 0) ? `${el.label} ${el.pctMatch}%` : el.label;
+    return !isNaN(el.pctMatch || 0) ? `${el.label} ${el.pctMatch ? ` ${el.pctMatch}%` : ''}` : el.label;
   }, []);
 
   return (
@@ -149,7 +157,7 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({
           <ListItem disablePadding key={`result-${index}`}>
             <ListItemButton
               sx={getListItemButtonStyles(el, index)}
-              onClick={handleResultClick}
+              onClick={() => handleResultClick(el.code)}
             >
               <ListItemText
                 primary={getPrimaryText(el)}
