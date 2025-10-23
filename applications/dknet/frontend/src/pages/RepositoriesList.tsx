@@ -180,9 +180,11 @@ const RepositoriesList = () => {
             <Filters />
             <Box sx={styles.learnMoreBox}>
               <Stack spacing={2} alignItems='flex-start'>
-                <Typography variant='h4' fontWeight={600}>Want to learn more on how we show you results?</Typography>
-                <Typography variant='body2'>Discover the rules and algorithms that show you results that you see.</Typography>
-                <Button variant="text">Learn more</Button>
+                <Typography variant='h4' fontWeight={600}>Looking for tutorials?</Typography>
+                <Typography variant='body2'>Check out a quick step-by-step walkthrough of the dkNET Repository Finder.</Typography>
+                <Button component="a" target='_blank' href="https://dknet.org/about/repository_finder" variant="text" sx={{
+                  padding: 0,
+                }}>See how it works</Button>
               </Stack>
             </Box>
           </Stack>
