@@ -16,6 +16,7 @@ const Search = () => {
     setContext({
       ...context,
       showAll: false,
+      currentView: 'repositories',
       filterValues: {
         ...context.filterValues,
         [filter.code]: value

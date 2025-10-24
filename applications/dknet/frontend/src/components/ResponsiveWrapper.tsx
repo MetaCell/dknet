@@ -9,11 +9,12 @@ interface ResponsiveWrapperProps {
 const ResponsiveWrapper: React.FC<ResponsiveWrapperProps> = ({ children }) => {
   const { canUseApp } = useResponsive();
 
-  if (!canUseApp) {
-    return <UnsupportedScreenSize />;
-  }
-
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      {!canUseApp && <UnsupportedScreenSize />}
+    </>
+  );
 };
 
 export default ResponsiveWrapper;

@@ -10,18 +10,17 @@ const {
   primary600, primary700, primary25, primary200,
   error600, error25,
   warning25, warning700, warning500,
-  success50, success700, success500,
+  success50, success700,
   checkboxBorderColor,
   cardChipBgColor,
   warning50,
   warning300,
   dialogBoxShadow,
   primary500,
-  iconButtonFocusShadow,
-  iconButtonHoverShadow,
   primary800,
   primary50,
-  checkboxBgChecked
+  checkboxBgChecked,
+  grey300
 } = vars;
 
 const theme = createTheme({
@@ -81,7 +80,7 @@ const theme = createTheme({
         fontSize: '1rem',
       }
     },
-    h1:{
+    h1: {
       fontWeight: 600,
       fontSize: "2.25rem",
       color: grey800,
@@ -92,39 +91,34 @@ const theme = createTheme({
         fontSize: '1.75rem',
       }
     },
-    h2:{
+    h2: {
       fontWeight: 600,
-      fontSize: "1.286rem",
+      fontSize: "1.125rem",
+      color: grey800
+    },
+    h3: {
+      fontSize: "1.25rem",
       color: grey800
     },
     h4: {
       fontWeight: 500,
-      lineHeight: '143%',
       color: grey700,
       fontSize: '0.875rem'
     },
     h5: {
-      fontWeight: 600,
       color: grey700,
       fontSize: '1rem'
     },
-    h6: {
-      fontWeight: 700,
-      color: grey900
-    },
     subtitle2: {
       fontSize: '0.875rem',
-      color: grey500
-    },
-    caption: {
-      fontWeight: 700,
-      fontSize: '0.875rem'
+      color: grey500,
+      fontWeight: 400
     },
     body2: {
       fontSize: '0.875rem',
-      fontWeight: 500
+      color: grey600,
     },
-    body1:{
+    body1: {
 
     }
   },
@@ -138,8 +132,12 @@ const theme = createTheme({
     },
     MuiCssBaseline: {
       styleOverrides: `
+      body {padding: 0 !important; margin: 0;
+      overflow-y: scroll !important;
+      }
       ::-webkit-scrollbar {
         width: 0.5rem;
+        height: 0.5rem;
       }
       ::-webkit-scrollbar-track {
         background: transparent;
@@ -148,16 +146,16 @@ const theme = createTheme({
         background: ${grey200};
         border-radius: 0.5rem;
       }
+      ::-webkit-scrollbar-thumb:hover {
+        background: ${grey300};
+      }
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
       .disclaimerBox {
         backgroundColor: ${warning25};
         border-radius: 0.75rem;
         border: 0.0625rem solid ${warning300};
-      }
-      .dialogSendBtn {
-        &.MuiButtonBase-root{
-          padding: 0;
-          color: ${primary700};
-        }
       }
       .goodProgress {
         color: ${primary600};
@@ -213,7 +211,7 @@ const theme = createTheme({
       }
       `
     },
-    
+
     MuiCheckbox: {
       styleOverrides: {
         root: {
@@ -262,7 +260,7 @@ const theme = createTheme({
           boxShadow: 'none',
           '&.successCard': {
             background: primary25,
-            border:`0.0625rem solid ${primary200}`,
+            border: `0.0625rem solid ${primary200}`,
           },
           '&:hover': {
             boxShadow: dialogBoxShadow
@@ -278,14 +276,14 @@ const theme = createTheme({
         }
       }
     },
-    
+
     MuiCardContent: {
       styleOverrides: {
         root: {
         }
       }
     },
-    MuiCardActionArea:     {
+    MuiCardActionArea: {
       styleOverrides: {
         root: {
         }
@@ -322,7 +320,7 @@ const theme = createTheme({
               borderColor: 'transparent'
             }
           },
-          '& .MuiSelect-root .Mui-focused':{
+          '& .MuiSelect-root .Mui-focused': {
             borderColor: 'transparent'
           }
         }
@@ -340,7 +338,7 @@ const theme = createTheme({
         text: {
           color: grey600,
           fontWeight: 600,
-          '&:hover':{
+          '&:hover': {
             backgroundColor: 'transparent',
             color: grey600
           }
@@ -382,6 +380,10 @@ const theme = createTheme({
             background: grey50,
             border: `0.0625rem solid ${checkboxBorderColor}`,
             boxShadow: '0rem 0.0625rem 0.125rem rgba(16, 24, 40, 0.05)',
+          },
+          '&.Mui-disabled': {
+            color: grey300,
+            borderColor: grey200,
           }
         }
       }
@@ -393,7 +395,7 @@ const theme = createTheme({
           background: cardChipBgColor,
           borderRadius: '1rem',
           height: 'auto',
-          '& .MuiChip-label':{
+          '& .MuiChip-label': {
             padding: 0,
             fontSize: '0.75rem',
             color: grey700,
@@ -407,26 +409,26 @@ const theme = createTheme({
           },
           '&.MuiChip-colorWarning': {
             backgroundColor: warning50,
-            '& .MuiChip-label':{
+            '& .MuiChip-label': {
               color: warning700
             },
-            '& .MuiSvgIcon-root':{
+            '& .MuiSvgIcon-root': {
               color: warning500,
             }
           },
           '&.MuiChip-colorSuccess': {
             backgroundColor: success50,
-            '& .MuiChip-label':{
+            '& .MuiChip-label': {
               color: success700
             },
-            '& .MuiSvgIcon-root':{
-              color: success500,
+            '& .MuiSvgIcon-root': {
+              color: success50,
             }
           },
           '&.cardBadge': {
             background: success50,
             borderRadius: '0rem 0rem 0.25rem 0.25rem',
-            '& .MuiChip-label':{
+            '& .MuiChip-label': {
               color: success700
             },
           }
@@ -436,31 +438,26 @@ const theme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
+          boxShadow: '0 1px 2px 0 rgba(16, 24, 40, 0.05)',
+          padding: '0.5rem',
+          borderRadius: '0.5rem',
+
           '&.outlined': {
-            borderRadius: '0.5rem',
-            padding: '0.5rem',
             border: `0.0625rem solid ${grey200}`,
             background: white,
-  
+
+
             '&:hover': {
-              boxShadow: iconButtonHoverShadow,
-              borderColor: checkboxBorderColor,
+              boxShadow: '0 1px 2px 0 rgba(16, 24, 40, 0.05), 0 0 0 4px #F2F4F7',
               background: grey50,
             },
-  
-            '&:focus': {
-              background: white,
-              borderColor: checkboxBorderColor,
-              boxShadow: iconButtonFocusShadow
-            },
-  
+
             '&.active': {
-              background: white,
               borderColor: checkboxBorderColor,
-              boxShadow: iconButtonFocusShadow
+              boxShadow: '0 1px 2px 0 rgba(16, 24, 40, 0.05), 0 0 0 4px #F2F4F7'
             },
           },
-          
+
         },
         colorPrimary: {
         }
@@ -473,11 +470,11 @@ const theme = createTheme({
           width: '1rem',
           height: '1rem'
         },
-        fontSizeMedium:{
+        fontSizeMedium: {
           width: '1.25rem',
           height: '1.25rem'
         },
-        fontSizeLarge:{
+        fontSizeLarge: {
           width: '2rem',
           height: '2rem'
         }
@@ -551,6 +548,20 @@ const theme = createTheme({
         },
       }
     },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: {
+          borderBottom: `1px solid ${grey200}`,
+          boxShadow: '0 1px 2px 0 rgba(16, 24, 40, 0.05)',
+          padding: '0 0.625rem 0 1.5rem',
+          height: '3.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '.5rem',
+        }
+      }
+    },
     MuiDialogContent: {
       styleOverrides: {
         root: {
@@ -583,8 +594,8 @@ const theme = createTheme({
           '& .MuiTypography-subtitle2': {
             fontWeight: 700
           },
-          '& .MuiIconButton-root':{
-            '&:hover':{
+          '& .MuiIconButton-root': {
+            '&:hover': {
               backgroundColor: grey50,
               borderRadius: '0.25rem'
             }
@@ -615,17 +626,33 @@ const theme = createTheme({
 
       }
     },
-    MuiDivider:{
-      styleOverrides:{
+    MuiDivider: {
+      styleOverrides: {
       }
     },
     MuiFormHelperText: {
       styleOverrides: {
       }
     },
-    MuiInputBase:{
-      styleOverrides:{
+    MuiLink: {
+      styleOverrides: {
         root: {
+          textDecorationColor: grey800,
+        }
+      }
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          '& .MuiButtonBase-root': {
+            '& .MuiSvgIcon-root': {
+              marginRight: 0,
+              marginLeft: '0.3125rem'
+            }
+          },
+          '&.Mui-focused': {
+            backgroundColor: 'transparent !important',
+          }
         }
       }
     },
@@ -636,11 +663,12 @@ const theme = createTheme({
         }
       }
     },
-    MuiFormControlLabel:{
-      styleOverrides:{
+    MuiFormControlLabel: {
+      styleOverrides: {
         label: {
           lineHeight: 1,
-          flex: 1
+          flex: 1,
+          fontSize: '0.875rem',
         },
         root: {
           flexGrow: 1,
@@ -657,6 +685,26 @@ const theme = createTheme({
         }
       }
     },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          backgroundColor: grey800,
+          borderRadius: '0.5rem',
+          padding: '0.375rem 0.75rem',
+        },
+        arrow: {
+          color: grey800,
+        },
+        popper: {
+          '&.MuiTooltip-popper[data-popper-placement*="bottom"]': {
+            '& .MuiTooltip-tooltip': {
+              marginTop: '.5rem'
+
+            }
+          },
+        }
+      }
+    }
 
   }
 });

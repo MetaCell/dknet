@@ -1,14 +1,15 @@
-import React, { ChangeEvent, FC, memo } from "react";
-import { Box, FormLabel, IconButton, List, ListItem, Stack, Tooltip, Typography } from "@mui/material";
-import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import React, { ChangeEvent, FC, memo, useCallback } from "react";
+import { Box, Button, FormLabel, List, ListItem, Stack, Typography } from "@mui/material";
 import CustomizedRadios from "./widgets/RadioWidget";
 import RadioGroup from "@mui/material/RadioGroup";
 import { vars } from "../theme/variables";
 import { useFilterContext } from "../context/Context";
+import FilterListOffIcon from '@mui/icons-material/FilterListOff';
+import HelpTooltip from "./HelpTooltip";
+import { useResponsive } from "../hooks/useResponsive";
+import { hasRemainingFilters } from "../utils/helpers";
 
-
-const { grey700, grey400, grey200 } = vars;
+const { grey700, grey200 } = vars;
 
 interface Item {
   code: string,
@@ -25,15 +26,11 @@ interface NestedListViewProps {
     options: Item[];
     code: string;
   };
-  
+
 }
 
 const formLabelStyles = {
   color: grey700,
-};
-
-const iconButtonStyles = {
-  p: '0.125rem',
 };
 
 const listStyles = {
@@ -82,19 +79,32 @@ NestedListItem.displayName = 'NestedListItem';
 
 const NestedListView: FC<NestedListViewProps> = ({ data }) => {
   const { context, setContext } = useFilterContext();
+  const { isTablet, isTooSmall } = useResponsive();
+  const [open, setOpen] = React.useState(false);
 
-  const onClearFilter = () => {
+  const handleTooltipClose = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  const handleTooltipOpen = useCallback(() => {
+    setOpen(!open);
+  }, [open]);
+
+  const onClearFilter = useCallback(() => {
+    const newFilterValues = {
+      ...context.filterValues,
+      [data.code]: undefined
+    };
+
     setContext({
       ...context,
-      showAll: false,
-      filterValues: {
-        ...context.filterValues,
-        [data.code]: undefined
-      }
+      currentView: 'repositories',
+      showAll: !hasRemainingFilters(newFilterValues),
+      filterValues: newFilterValues
     })
-  };
+  }, [context, setContext, data.code]);
 
-  const changeSelection = (event: ChangeEvent<HTMLInputElement>, value: string): any => {
+  const changeSelection = useCallback((event: ChangeEvent<HTMLInputElement>, value: string): any => {
     const newValue = data.options.find((item) => item.code === value);
     setContext({
       ...context,
@@ -104,21 +114,32 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
         [data.code]: newValue
       }
     })
-  }
+  }, [context, data, setContext]);
 
   return (<Box display='flex' flexDirection='column' gap={1}>
     <FormLabel component="legend" sx={formLabelStyles}>
       <Stack direction="row" alignItems='center' justifyContent="space-between">
-        <Typography component='h4'>{data.label}</Typography>
-        <Stack direction="row">
-          <Tooltip title={data.question}>
-            <IconButton sx={iconButtonStyles}>
-              <HelpOutlineIcon sx={{ color: grey400 }} />
-            </IconButton>
-          </Tooltip>
-          <IconButton sx={iconButtonStyles} onClick={onClearFilter}>
-            <CleaningServicesOutlinedIcon sx={{ color: grey400 }} />
-          </IconButton>
+        <Typography variant='h4' flex={1}>{data.label}</Typography>
+        <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
+          <HelpTooltip
+            description={data.question || ''}
+            isTablet={isTablet}
+            isTooSmall={isTooSmall}
+            open={open}
+            handleTooltipOpen={handleTooltipOpen}
+            handleTooltipClose={handleTooltipClose}
+          />
+          <Button
+            variant='text'
+            onClick={onClearFilter}
+            startIcon={<FilterListOffIcon />}
+            disabled={!context.filterValues?.[data.code]}
+            sx={{
+              height: 'fit-content',
+              minHeight: 0,
+              p: 0,
+            }}
+          >Reset filter</Button>
         </Stack>
       </Stack>
     </FormLabel>
