@@ -37,6 +37,7 @@ export default async function getFilters() {
         let InputIconsArray = fields['InputIcons'] ? fields['InputIcons'].split(';'):[];
         let InputColorsArray = fields['InputColors'] ? fields['InputColors'].split(';'):[];
         let InputWeightsArray = fields['InputWeights'] ? fields['InputWeights'].split(';'):[];
+        let cardInputsArray = fields['cardOptions'] ? fields['cardOptions'].split(';'):[];
         let answers = [];
         if (inputOptionsArray.length > 0){
           inputOptionsArray.forEach((inputOption,index) =>
@@ -45,12 +46,14 @@ export default async function getFilters() {
             const icon = InputIconsArray[index] || '';
             const colors = InputColorsArray[index] || '';
             const weighting = Number(InputWeightsArray[index]) || 1;
+            const cardInput = cardInputsArray[index] || '';
             answers.push({
               'code': code,
               'label': inputOption,
               'icon': icon.replace(/\s+/g, ''),
               'color': colors,
-              'weighting': weighting
+              'weighting': weighting,
+              'cardOption': cardInput
             });
           });
         }
@@ -63,8 +66,7 @@ export default async function getFilters() {
           'questionSubtitle': fields['Question subtitle'],
           'resultText': fields['Result text'],
           'description': fields['Help text'], // check if this is tooltip or description
-          'inputType':
-            fields['InputType'],
+          'inputType': fields['InputType'],
           //'enum': ["SINGLE","MULTI","BOOLEAN","READONLY"],
           //'enumNames': ["Single select","Multi select","Boolean", "Read only"],
           'weighting': fields['Weighting'], // This is the weighting for the filter as a whole

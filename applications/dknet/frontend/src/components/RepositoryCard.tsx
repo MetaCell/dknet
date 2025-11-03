@@ -156,7 +156,7 @@ const RepositoryCard = (props) => {
                               ? (<Chip label='All' color={FilterColor.Success} />)
                               : attributeValues.map((attribute: any) =>
                                 filter.options.map((option: any, index: any) => (option.code === attribute &&
-                                  <Chip key={"chip_" + index} label={option.label} color={filtersUsed.includes(attribute) ? FilterColor.Success : FilterColor.Info} />
+                                  <Chip key={"chip_" + index} label={option.cardOption ? option.cardOption : option.label} color={filtersUsed.includes(attribute) ? FilterColor.Success : FilterColor.Info} />
                                 ))
                               )
                           }

@@ -4,7 +4,6 @@ import { TopIcon } from "../assets/icons";
 import { vars } from "../theme/variables";
 import FiltersAssistantDialog from "./FilterAssistantDialog/FiltersAssistantDialog";
 import { useFilterContext } from "../context/Context";
-import { isFiltersEmpty } from "../utils/helpers";
 
 const { primary600 } = vars;
 
