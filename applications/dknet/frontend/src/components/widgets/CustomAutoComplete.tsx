@@ -32,20 +32,7 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
       disableClearable
       size="small"
       sx={{
-        width: '260px',
-        '& .MuiChip-label': {
-          display: "inline-block",
-          width: '70px',
-          whiteSpace: 'nowrap',
-          overflow: "hidden",
-          textOverflow: "ellipsis"
-        },
-        '& .MuiOutlinedInput-root': {
-          paddingRight: '10px !important',
-        },
-        '& .MuiAutocomplete-endAdornment': {
-          left: '100% !important'
-        }
+        width: '100%',
       }}
       value={value}
       getOptionLabel={(option: any) => option.label}
@@ -56,7 +43,7 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
       noOptionsText={<Typography variant="caption">{noOptionsText}</Typography>}
       renderTags={(value, getTagProps) =>
         value.map((option, index) => (
-          <Tooltip key={"tooltip_" + index} title={option.label}>
+          <Tooltip arrow key={"tooltip_" + index} title={option.label}>
             <Chip label={option.label} {...getTagProps({ index })} />
           </Tooltip>
         ))

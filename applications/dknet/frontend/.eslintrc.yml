@@ -44,10 +44,7 @@ rules:
   object-curly-spacing:
     - 2
     - always
-  indent:
-    - 2
-    - 2
-    - SwitchCase: 1
+  indent: off
   "@typescript-eslint/no-explicit-any": 0
 
 globals:
