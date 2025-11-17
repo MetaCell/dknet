@@ -52,6 +52,7 @@ const Header = () => {
     setContext({
       ...context,
       currentView: 'launch',
+      showAll: false,
       filterValues: resetFilters(context.filters)
     });
   }, [context, setContext]);
