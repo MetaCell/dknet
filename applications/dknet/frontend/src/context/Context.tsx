@@ -107,17 +107,15 @@ export const FilterProvider = ({ children }) => {
         const filterValue = Array.isArray(value) ? value : [value]
         const repositoryFilterValue = repository.attributes[filter.code]
         if (filter.inputType === FilterType.Hierarchy) {
-          let filterValueIndex = -1;
+          const selectedOptionIndex = filter.options.findIndex(opt => opt.code === filterValue[0].code);
+          if (selectedOptionIndex === 0) { return; }
           let repositoryFilterValueIndex = -1;
           filter.options.forEach((option, index) => {
-            if (filterValue[0].code === option.code) {
-              filterValueIndex = index;
-            }
             if (repositoryFilterValue.includes(option.code) && (repositoryFilterValueIndex === -1 || index > repositoryFilterValueIndex)) {
               repositoryFilterValueIndex = index;
             }
           });
-          if (filterValueIndex === -1 || repositoryFilterValueIndex === -1 || filterValueIndex > repositoryFilterValueIndex) {
+          if (selectedOptionIndex === -1 || repositoryFilterValueIndex === -1 || selectedOptionIndex > repositoryFilterValueIndex) {
             match = false;
           }
         } else {
@@ -148,6 +146,7 @@ export const FilterProvider = ({ children }) => {
     usedFilters.forEach(filter => {
       const value = filterValues[filter.code]
       const filterValue = Array.isArray(value) ? value : [value]
+      if (filter.inputType === FilterType.Hierarchy && filter.options[0]?.code === filterValue[0]?.code) { return; }
       newContext.results.forEach((repository) => {
         const repositoryFilterValue = repository.attributes[filter.code]
 
@@ -192,12 +191,36 @@ export const FilterProvider = ({ children }) => {
       results = newContext.results.sort((a, b) => a.label.localeCompare(b.label)).reverse();
     }
     else {
-      results = newContext.results.sort((a, b) => b.score - a.score || a.label.localeCompare(b.label)) //repositories.map((repository) => mapRepository(repository as IRepository))
-      sortFilters.forEach((filter) => {
-        const priorityValue = filter.options[0].code;
-        const tempResults = results.sort((a, b) => b.score - a.score || a.attributes[filter.code].includes(priorityValue) ? (b.attributes[filter.code].includes(priorityValue) ? 0 : -1) : (b.attributes[filter.code].includes(priorityValue) ? 1 : 0));
-        results = tempResults;
-      });
+      const dataTypeFilter = newContext.allFilters[0];
+      const dataTypeCode = dataTypeFilter?.code;
+      const isDataTypeFilterActive = dataTypeCode ? !!newContext.filterValues[dataTypeCode] : false;
+      const totalDataTypeOptions = dataTypeFilter?.options.length ?? 0;
+      const isGenericRepo = (repo: IRepository): boolean =>
+        repo.attributes[genericFilter.code]?.includes(genericFilter.options[1].code) ?? false;
+      const getDataTypeCount = (repo: IRepository): number => {
+        if (isGenericRepo(repo)) { return Number.MAX_SAFE_INTEGER; }
+        const types = dataTypeCode ? repo.attributes[dataTypeCode] : [];
+        if (!types || types.length === 0 || (totalDataTypeOptions > 0 && types.length >= totalDataTypeOptions)) {
+          return Number.MAX_SAFE_INTEGER - 1;
+        }
+        return types.length;
+      };
+      if (isDataTypeFilterActive) {
+        results = newContext.results.sort((a, b) => {
+          const countDiff = getDataTypeCount(a) - getDataTypeCount(b);
+          if (countDiff !== 0) { return countDiff; }
+          const scoreDiff = b.score - a.score;
+          if (scoreDiff !== 0) { return scoreDiff; }
+          return a.label.localeCompare(b.label);
+        });
+      } else {
+        results = newContext.results.sort((a, b) => b.score - a.score || a.label.localeCompare(b.label));
+        sortFilters.forEach((filter) => {
+          const priorityValue = filter.options[0].code;
+          const tempResults = results.sort((a, b) => b.score - a.score || a.attributes[filter.code].includes(priorityValue) ? (b.attributes[filter.code].includes(priorityValue) ? 0 : -1) : (b.attributes[filter.code].includes(priorityValue) ? 1 : 0));
+          results = tempResults;
+        });
+      }
     }
 
     return {
