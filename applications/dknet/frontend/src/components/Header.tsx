@@ -32,7 +32,7 @@ const Header = () => {
 
   const redirectToFeedback = useCallback(() => {
     window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLSf1aD1Skpp4kV8w3cadMjdRdll3es9h3tj6b6jO8h0s1P9-iA/viewform',
+      'https://docs.google.com/forms/d/e/1FAIpQLSd1uTNuPu5_jzfNrTpq6GxtXeffbUpyYIFuYZarCwV248DLFw/viewform',
       '_blank'
     )
   }, []);
