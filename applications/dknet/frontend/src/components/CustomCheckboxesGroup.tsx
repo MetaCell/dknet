@@ -11,7 +11,7 @@ import FormLabel from '@mui/material/FormLabel'
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 
 import { vars } from "../theme/variables";
-import { Button } from "@mui/material"
+import { Button, Tooltip } from "@mui/material"
 import { useResponsive } from "../hooks/useResponsive"
 import HelpTooltip from "./HelpTooltip"
 import { hasRemainingFilters } from "../utils/helpers"
@@ -88,11 +88,14 @@ const CustomCheckboxesGroup = ({ data }) => {
       <FormGroup>
         {
           data.options.map((row) =>
-            <CheckBoxWidget
-              key={"checkbox_" + row.code}
-              data={row}
-              filter={data}
-            />)
+            <Tooltip arrow placement="right" title={row.tooltip || ''} key={"checkbox_" + row.code}>
+              <Box>
+                <CheckBoxWidget
+                  data={row}
+                  filter={data}
+                />
+              </Box>
+            </Tooltip>)
         }
       </FormGroup>
     </Box >

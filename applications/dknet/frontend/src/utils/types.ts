@@ -1,6 +1,7 @@
 export interface QuestionOption {
   code: string;
   label: string;
+  tooltip?: string;
 }
 
 export interface QuestionTab {

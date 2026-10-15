@@ -18,7 +18,9 @@ export interface IFilterOptions {
   label: string,
   icon: string,
   color: string,
-  weighting?: number
+  weighting?: number,
+  cardOption?: string,
+  tooltip?: string
 }
 
 export interface IFilter {

@@ -49,15 +49,17 @@ const CustomAutoComplete = ({ options, placeholder, onChangeFilterValue, isOptio
         ))
       }
       renderOption={(props, option, { selected }) => (
-        <li {...props}>
-          <Checkbox
-            icon={icon}
-            checkedIcon={checkedIcon}
-            style={{ marginRight: 8 }}
-            checked={selected}
-          />
-          {option.label}
-        </li>
+        <Tooltip arrow placement="right" key={option.code} title={option.tooltip || ''}>
+          <li {...props}>
+            <Checkbox
+              icon={icon}
+              checkedIcon={checkedIcon}
+              style={{ marginRight: 8 }}
+              checked={selected}
+            />
+            {option.label}
+          </li>
+        </Tooltip>
       )}
       renderInput={(params) => (
         <TextField

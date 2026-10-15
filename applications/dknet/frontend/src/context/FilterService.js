@@ -22,7 +22,7 @@ export default async function getFilters() {
   filters = await axios.request({ url: url, method: 'get', headers: headers }).catch((error) =>
   {
     console.error(error);
-    return;
+    throw error;
   })
     .then((response) => {
     // Parse the response JSON
@@ -38,6 +38,7 @@ export default async function getFilters() {
         let InputColorsArray = fields['InputColors'] ? fields['InputColors'].split(';'):[];
         let InputWeightsArray = fields['InputWeights'] ? fields['InputWeights'].split(';'):[];
         let cardInputsArray = fields['cardOptions'] ? fields['cardOptions'].split(';'):[];
+        let inputTooltipsArray = fields['InputTooltips'] ? fields['InputTooltips'].split(';'):[];
         let answers = [];
         if (inputOptionsArray.length > 0){
           inputOptionsArray.forEach((inputOption,index) =>
@@ -47,13 +48,15 @@ export default async function getFilters() {
             const colors = InputColorsArray[index] || '';
             const weighting = Number(InputWeightsArray[index]) || 1;
             const cardInput = cardInputsArray[index] || '';
+            const tooltip = (inputTooltipsArray[index] || '').trim();
             answers.push({
               'code': code,
               'label': inputOption,
               'icon': icon.replace(/\s+/g, ''),
               'color': colors,
               'weighting': weighting,
-              'cardOption': cardInput
+              'cardOption': cardInput,
+              'tooltip': tooltip
             });
           });
         }

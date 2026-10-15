@@ -73,6 +73,14 @@ const Header = () => {
                 <Button variant="text" onClick={onClearFilters}>Reset Query</Button>
               }
               <Button variant="text" onClick={() => setOpen(true)}>Open Guided Query</Button>
+              <Button
+                variant="text"
+                href="https://dknet.org/about/repository_finder_help"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Help
+              </Button>
               <Button variant="text" onClick={redirectToFeedback}>Send us feedback</Button>
               <Button variant="outlined" onClick={handleOpen}>About dkNET Repo</Button>
               <AboutDialog open={openAboutDialog} onClose={handleClose} />

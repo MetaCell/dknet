@@ -16,7 +16,8 @@ interface Item {
   label: string,
   icon?: string,
   color?: string,
-  weighting?: 1
+  weighting?: 1,
+  tooltip?: string
 }
 
 interface NestedListViewProps {
@@ -70,7 +71,7 @@ const NestedListItem: FC<{ item: Item; depth: number; }> = memo(({ item, depth }
         pl: "0.625rem",
       }}
     >
-      <CustomizedRadios data={{ label: item.label, code: item.code }} />
+      <CustomizedRadios data={{ label: item.label, code: item.code, tooltip: item.tooltip }} />
     </Box>
   </ListItem>)
 });

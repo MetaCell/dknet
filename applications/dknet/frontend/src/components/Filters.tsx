@@ -21,14 +21,15 @@ const Filters = () => {
   // const switchFilters = filters
   //   .filter((filter) => filter.inputType === 'BOOLEAN' && filter.label !== undefined)
 
-  const radioFilters = filters
-    .filter((filter) => filter.inputType === "BOOLEAN" && filter.label !== undefined)
+  // Keep the Airtable FilterOrder so the sidebar matches the Guided Query sequence
+  const filterComponents = {
+    MULTI: CustomCheckboxesGroup,
+    HIERARCHY: NestedListView,
+    BOOLEAN: CustomRadioGroup,
+  }
 
-  const checkboxFilters = filters
-    .filter((filter) => filter.inputType === "MULTI" && filter.label !== undefined)
-
-  const hierarchicalFilters = filters
-    .filter((filter) => filter.inputType === "HIERARCHY" && filter.label !== undefined)
+  const sidebarFilters = filters
+    .filter((filter) => filterComponents[filter.inputType] && filter.label !== undefined)
 
   const onClearFilters = useCallback(() => {
     setContext({
@@ -66,15 +67,10 @@ const Filters = () => {
           }
         </FormGroup> */}
         {
-          checkboxFilters?.map((row, index) => <CustomCheckboxesGroup data={row} key={index} />)
-        }
-
-        {
-          hierarchicalFilters?.map((row, index) => <NestedListView data={row} key={index} />)
-        }
-
-        {
-          radioFilters?.map((row, index) => <CustomRadioGroup data={row} key={index} />)
+          sidebarFilters.map((row) => {
+            const FilterComponent = filterComponents[row.inputType]
+            return <FilterComponent data={row} key={row.code} />
+          })
         }
       </Stack>
     </Stack >
