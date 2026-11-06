@@ -28,7 +28,8 @@ export interface IFilter {
   label: string,
   inputType: FilterType,
   options: IFilterOptions[],
-  weighting?: number
+  weighting?: number,
+  filtersTooltip?: string
 }
 
 export interface IFilterContext {

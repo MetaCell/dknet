@@ -75,6 +75,7 @@ export default async function getFilters() {
           'weighting': fields['Weighting'], // This is the weighting for the filter as a whole
           'options': answers,
           'cardText': fields['Card Text'],
+          'filtersTooltip': fields['Filters tooltip'],
         };
       });
       return filters;

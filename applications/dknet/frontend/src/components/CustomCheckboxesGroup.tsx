@@ -62,7 +62,7 @@ const CustomCheckboxesGroup = ({ data }) => {
           </Typography>
           <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
             <HelpTooltip
-              description={data.description}
+              description={data.filtersTooltip || data.description || ''}
               isTablet={isTablet}
               isTooSmall={isTooSmall}
               open={open}

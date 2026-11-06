@@ -24,6 +24,7 @@ interface NestedListViewProps {
   data: {
     label: string;
     question?: string;
+    filtersTooltip?: string;
     options: Item[];
     code: string;
   };
@@ -123,7 +124,7 @@ const NestedListView: FC<NestedListViewProps> = ({ data }) => {
         <Typography variant='h4' flex={1}>{data.label}</Typography>
         <Stack direction="row" flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
           <HelpTooltip
-            description={data.question || ''}
+            description={data.filtersTooltip || data.question || ''}
             isTablet={isTablet}
             isTooSmall={isTooSmall}
             open={open}
