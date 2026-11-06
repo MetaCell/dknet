@@ -177,7 +177,7 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
         {currentQuestion?.options.map((data, index) => {
           const isLastItem = index === currentQuestion?.options.length - 1;
           return (
-            <Tooltip arrow title={data.label} key={data?.label}>
+            <Tooltip arrow title={data.tooltip || ''} key={data?.label}>
               <Box sx={{
                 ...styles.getItemSx(getCheckedStateForMultiple(currentQuestion, data) === 'checked-state'),
                 ...styles.getMultipleChoiceItem(shouldExpandHeight, isLastItem),
@@ -203,20 +203,21 @@ const QuestionContent: React.FC<QuestionContentProps> = ({
         {currentQuestion?.options.map((data, index) => {
           const isLastItem = index === currentQuestion?.options.length - 1;
           return (
-            <Box
-              key={`itemKey_${index}`}
-              sx={{
-                ...styles.getItemSx(getCheckedStateForSingle(currentQuestion, data) === 'checked-state'),
-                ...styles.getSingleChoiceItem(shouldExpandHeight, isLastItem),
-              }}
-              onClick={(e) => handleOptionClick(e, data)}
-            >
-              <Typography
-                variant="h4"
+            <Tooltip arrow title={data.tooltip || ''} key={`itemKey_${index}`}>
+              <Box
+                sx={{
+                  ...styles.getItemSx(getCheckedStateForSingle(currentQuestion, data) === 'checked-state'),
+                  ...styles.getSingleChoiceItem(shouldExpandHeight, isLastItem),
+                }}
+                onClick={(e) => handleOptionClick(e, data)}
               >
-                {data.label}
-              </Typography>
-            </Box>
+                <Typography
+                  variant="h4"
+                >
+                  {data.label}
+                </Typography>
+              </Box>
+            </Tooltip>
           );
         })}
       </Box>

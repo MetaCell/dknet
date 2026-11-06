@@ -18,7 +18,9 @@ export interface IFilterOptions {
   label: string,
   icon: string,
   color: string,
-  weighting?: number
+  weighting?: number,
+  cardOption?: string,
+  tooltip?: string
 }
 
 export interface IFilter {
@@ -26,7 +28,8 @@ export interface IFilter {
   label: string,
   inputType: FilterType,
   options: IFilterOptions[],
-  weighting?: number
+  weighting?: number,
+  filtersTooltip?: string
 }
 
 export interface IFilterContext {

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Radio, { type RadioProps } from '@mui/material/Radio';
+import Box from '@mui/material/Box';
+import Tooltip from '@mui/material/Tooltip';
 import CustomFormControlLabel from "./CustomFormControlLabel";
 import { vars } from '../../theme/variables.js'
 
@@ -64,6 +66,10 @@ function BpRadio(props: RadioProps) {
 
 export default function CustomizedRadios({ data }) {
   return (
-    <CustomFormControlLabel value={data.code} control={<BpRadio />} label={data?.label} />
+    <Tooltip arrow placement="right" title={data?.tooltip || ''}>
+      <Box>
+        <CustomFormControlLabel value={data.code} control={<BpRadio />} label={data?.label} />
+      </Box>
+    </Tooltip>
   );
 }

@@ -28,7 +28,7 @@ export default async function getRepositories(filters) {
   repositories = await axios.request({ url: url, method: 'get', headers: headers }).catch((error) =>
   {
     console.error(error);
-    return;
+    throw error;
   })
     .then((response) => {
 

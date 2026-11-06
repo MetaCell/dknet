@@ -89,7 +89,7 @@ const FilterSearch = () => {
             </Typography>
             <Stack direction="row" alignItems='center' flex={1} flexShrink={0} gap={1} justifyContent="flex-end">
               <HelpTooltip
-                description="Data Type"
+                description={context.allFilters[0]?.filtersTooltip || "Data Type"}
                 isTablet={isTablet}
                 isTooSmall={isTooSmall}
                 open={openDataType}
@@ -144,7 +144,7 @@ const FilterSearch = () => {
             </Typography>
             <Stack direction="row" alignItems="center" justifyContent="space-between">
               <HelpTooltip
-                description="Domain"
+                description={context.allFilters[1]?.filtersTooltip || "Domain"}
                 isTablet={isTablet}
                 isTooSmall={isTooSmall}
                 open={openDomain}
